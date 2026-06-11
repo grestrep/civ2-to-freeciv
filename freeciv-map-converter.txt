@@ -1,0 +1,169 @@
+--------------------------------------------------------
+BACKLOG
+--------------------------------------------------------
+
+NOT mapped the starting year
+
+1) diplomacy
+- mapped relationship but not "attitude"
+
+2) governments
+- mapped straight from civ2 but also gave option to override in the conversion file
+
+3) faction
+- gold is mapped directly from civ
+- NO slider (science, luxury, gold)
+
+4) unit
+- military
+ - fortify stance (done)
+ - sleep stance (done)
+ - veteran (done)
+
+- have not mapped orders for workers, engineers, caravans
+
+
+-home city (unit support cost do not show right, is this dependent on ruleset or government?)
+
+5) tile bonuses
+
+missing:
+-fruit on jungle
+-gems on jungle
+-ivory on glacier
+-oil on glacier
+
+6) support extraction for maps v44 (Civ2 MGE). Right not it supports v39 and 40 (CiC, etc)
+
+7) map Huts into map
+
+8) map barbarians
+
+9) mapping technologies
+parser currently decodes 12 byes (96 bits) of known techs per faction. We expanded it from 11 bytes to 12 bytes so we could code/decode one more tech - Writing
+we went from this:
+11 bytes = 88 bits = tech indexes 0..87
+to this:
+12 bytes = 96 bits = tech indexes 0..95
+
+10) map stuff
+supported map wrap (east west)
+
+--------------------------------------------------------
+--------------------------------------------------------
+changes made to builder to debug issue with ww79:
+--------------------------------------------------------
+- unit isolation (commented)
+- unit movement multiplier changed from x 3 to x 6
+- units start will all movement points regardless of what civ2 says
+- unit visibility info from civ2 disabled
+- east-west map wrap now copied over from civ2
+
+to do:
+- pollution mapping on tiles - incorrect
+- fix again invalid fortresses created in airbases
+
+--------------------------------------------------------
+--------------------------------------------------------
+
+--------------------------------------------------------
+Freeciv21 Parses/Uses That We Do Not Fully Do Yet
+--------------------------------------------------------
+
+
+1) Header date/turn from Civ2
+Freeciv21 reads:
+bytes >> head.turn >> head.year;
+We looked at this, but for our version 39 files it did not yield reliable literal years. We now support manual year override, but not reliable Civ2 date decoding.
+
+2) Difficulty
+Freeciv21 reads Civ2 difficulty and applies it to AI level:
+const auto level = g.head.difficulty < AI_LEVEL_COUNT
+  ? static_cast<ai_level>(g.head.difficulty)
+  : AI_LEVEL_DEFAULT;
+We currently force/normalize players to Normal difficulty instead.
+
+3) Players alive / human bitfields
+Freeciv21 reads:
+head.players_alive
+head.players_human
+and only creates alive players, marking human slots. We currently use *-conversion-config.json as the authority.
+
+4) Barbarian activity and barbarian player
+Freeciv21 reads barbarian state and creates barbarian player slot 0 if alive:
+server.nbarbarians = 1;
+We extract owner 0 units but skip them because owner 0 is not mapped.
+
+5) Tribe city style from Civ2
+Freeciv21 reads:
+tribe.city_style
+We set Freeciv city style from config manually.
+
+
+
+
+8) Known technologies from Civ2 bitfields
+Freeciv21 reads Civ2 known tech bitfields:
+std::array<std::uint8_t, 11> techs;
+We currently give broad/manual 1860s or scenario techs, not exact Civ2-known techs per faction.
+
+9) First-to-discover techs
+Freeciv21 reads:
+first_to_discover
+discovered_by
+We do not map first-discovered tech metadata.
+
+10) Wonder locations / built wonders
+Freeciv21 parses wonder city IDs:
+wonder_locations
+We map city improvements, but not true wonder ownership/location semantics into Freeciv global wonder state.
+
+11) Player private maps / fog of war
+Freeciv21 reads per-player visible improvements and sets known tiles/cities accordingly.
+We currently simplify visibility. We reveal known maps for some players and use broad known-map replacement, but not an exact Civ2 fog/private-map conversion.
+
+12) Worked city tiles
+Freeciv21 decodes Civ2 worked citizen tiles from city bytes and assigns worked tiles:
+setup_citizens(...)
+tile_set_worked(tile, pcity);
+We discussed this and use simplified specialist/labor handling. We do not yet decode exact worked tiles from Civ2 city citizen bytes.
+
+13) City happiness state
+Freeciv21 reads happy/unhappy/content citizens and applies city feelings.
+We mostly preserve population and specialists, not exact Civ2 happiness state.
+
+
+
+15) Unit links / stack display ordering
+Freeciv21 reads unit link fields. We extract links in reports, but do not use them in Freeciv output.
+
+16)Unit goto/orders
+Freeciv21 parses unit orders/goto fields structurally. We extract some order/goto bytes, but we do not recreate orders in Freeciv.
+
+Most Valuable Remaining Items
+If we wanted the next meaningful fidelity improvements, I’d rank them:
+
+1. Exact worked city tiles / citizens
+2. Exact per-player techs from Civ2 bitfields
+3. Tax/science/luxury rates
+4. Barbarian owner 0 handling
+5. Exact fog/private map visibility
+6. Wonders/global wonder state
+7. More exact unit orders/goto/activity
+The biggest “game feel” wins would be worked tiles and exact techs. The biggest “scenario completeness” wins would be barbarians and wonders.
+
+
+DONE:
+
+7) Tax/science/luxury rates
+Freeciv21 reads:
+pplayer->economic.tax = 10 * g.tribe_infos[i].tax;
+pplayer->economic.science = 10 * g.tribe_infos[i].science;
+pplayer->economic.luxury = 100 - tax - science;
+We extract tax/science in faction data, but I do not think we currently write those rates into the Freeciv save.
+
+14) City science/tax totals
+Freeciv21 city struct has:
+std::int16_t science;
+std::int16_t tax;
+We do not currently use per-city science/tax totals.

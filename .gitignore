@@ -1,0 +1,26 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+Desktop.ini
+.vscode/
+.idea/
+
+# Logs / temp
+*.log
+*.tmp
+*.temp
+*.bak
+*.orig
+
+# Node / local tooling
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Generated Freeciv outputs
+*.sav.zst
+
+# Local backups / scratch
+backup/

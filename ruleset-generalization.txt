@@ -1,0 +1,136 @@
+Yes. The main build.js areas that still encode civ2civ3-specific assumptions are:
+Map extras list and extra indexes
+build.js (line 1190)
+js
+
+
+
+const freeciv32ExtraNames = [
+  "Irrigation", "Mine", "Oil Well", "Oil Platform", ...
+  "Road", "Railroad", "Maglev", "River", ...
+  "Gold", "Iron", ...
+];
+
+This is probably the biggest one. Extra layer indexes are derived from this fixed list, so non-civ2civ3 rulesets with different extras/order/names could break.
+Civ2 feature to Freeciv extra names
+build.js (line 253)
+js
+
+
+
+["irrigation", "Irrigation"],
+["mines", "Mine"],
+["farmland", "Farmland"],
+["roads", "Road"],
+["railroads", "Railroad"],
+["forts", "Fort"],
+["fortresses", "Fortress"],
+["airbases", "Airbase"],
+["pollution", "Pollution"]
+
+These assume the target ruleset has those exact extra names.
+Resource aliases and names
+build.js (line 598)
+js
+
+
+
+"Gold", "Iron", "Game", "Furs", "Coal", "Fish", ...
+
+This affects resourceOverrides.remove and resource mapping. Other rulesets may use different resource names or no "Resources" bonus.
+Legacy resource slots by terrain
+build.js (line 433)
+js
+
+
+
+["g", ["Resources"]],
+["p", ["Buffalo", "Wheat"]],
+[" ", ["Fish", "Whales"]]
+
+Some of this is now supplemented by terrain ruleset parsing, but the fallback is still civ2civ3/Civ2-shaped.
+Production fallback to Coinage
+build.js (line 1182)
+js
+
+
+
+return { kind: "Building", name: "Coinage" };
+
+If another ruleset lacks Coinage, failed production mapping can still produce invalid builds.
+Palace logic
+build.js (line 1857)
+js
+
+
+
+const palace = freecivBuildingByName.get("Palace");
+
+This assumes palace is named/rule-named "Palace".
+Default government fallback
+build.js (line 1754)
+js
+
+
+
+... || "Despotism"
+
+If a ruleset does not have Despotism, or names it differently, fallback government can be invalid.
+Default style/nation/barbarian assumptions
+build.js (line 1780) and build.js (line 2247)
+js
+
+
+
+style: "European"
+nation: "Barbarian"
+barbarianType: "Land"
+
+These are target-ruleset assumptions, especially style and nation.
+Unit class names for land checks
+build.js (line 1470)
+js
+
+
+
+["Land", "Small Land", "Big Land", "Merchant"]
+
+If another ruleset uses different unit class names, land-unit validation may misclassify units.
+Unit activity IDs
+   build.js (line 1298)
+js
+
+
+
+Idle: 0,
+Fortified: 4,
+Sentry: 5,
+Fortifying: 10
+
+This is more Freeciv save-format logic than civ2civ3, but it is still hardcoded.
+Research sentinel names
+   build.js (line 2208)
+js
+
+
+
+return freecivName || "A_UNSET";
+
+And research bitstrings assume A_NONE exists:
+js
+
+
+
+name === "A_NONE"
+
+Usually stable in Freeciv, but still hardcoded.
+Fixed extra layer count
+   build.js (line 1695)
+js
+
+
+
+return 10;
+
+This assumes the target save needs exactly 10 extra bit layers.
+The best next target is probably extras: parse extras.ruleset or the save’s extra_vector, then build extraIndex dynamically instead of using freeciv32ExtraNames. That would remove the largest civ2civ3-specific block.

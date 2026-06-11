@@ -1,0 +1,144 @@
+new items completed in core builder (builder.js) after split from build21:
+
+- build - when mappping units, improvements, techs, government to freeciv save use the "rule_name" from freeciv ruleset if available instead of display Name.
+- extract - added preliminary support to load version 40 (Fantastic Worlds) scenarios - for example ruciwar, newworld
+- extract - fixed bug in extractor where only factions with owned cities were being extracted. Now it pulls a faction if it has at least a city or at least an active (not dead) unit
+- build/build21 - if unit is being transported, make it Sentry as well so that transported units are SKIPPED during turns
+- extract - fixed bug when extracing sav files (MGE v44) and leader/tribe names were empty in the save, extract.js grabs it from Rules.txt based on nationbyte - this happens on vanilla MGE saves, not actual custom scenarios
+- extract - show civ2 version name (Classic/CiC/FW/MGE) and also extracted faction count in terminal output
+- build - show count of unmapped units, improvements and techs in terminal output
+- build - [justinian] added support in conversion config for mapFeatureOverrides -> skipCiv2Features to disable tile features like airbase, railroad, etc.
+- build - [justinian] added support in conversion config for cityImprovementOverrides to add improvements/buildings to specific cities
+- build - [celticitaly] added support in conversion config for terrainOverrides to replace one type of tile terrain for another (for example replace tundra with hills)
+- build - [usa2013] added support in conversion config for mapFeatureTransforms to replace/upgrade one type of tile transform for another (for example, replace roads with railroads, or irrigation with farmland)
+- build - [usa2013] added support in conversion config for per faction techOverrides to add specific techs to factions manually
+- build/extract [hannibal-carthaginian] fixed bug where blank name cities were being skipped and extractor stopped reading any subsequent cities from list, preventing other cities from being mapped. Blank named cities are mapped now too.
+- build - implemented government for Barbarians in civ2 being mapped directly to freeciv, instead of it being hardcoded to "Despotism"
+- build - added support in mapFeatureTransforms to make "fort" a transform target - before it only supported fortresses.
+- build - added support in unit map to set a target unit's action (fortify/sentry) and also veteran type.
+- build - added support for a unit's "done_moving" attribute to be set to TRUE if they have a non-idle activity such as Fortifying, etc. This was added when the above was implemented (unit actions and veterancy in unit map)
+- extract - [quebec] Supported extracting Fantastic Worlds (v40) alternate city fields layout path (+46) we ran into parsing quebec in addition to original layout path (+48) -> info printed also in extract log
+- build - build terminal log now prints all factions and all cities where they have palaces, identifies factions with no starting palaces.
+- build - added support to grab scenario description from a file defined in "descriptionFile" build config path. Falls back to "description" field if missing.
+- build - [conquest mexico] added support to pick different description encoding ("descriptionEncoding": "windows-1252") in build config (to allow accented characters), as an alternative to the default "utf-8" encoding.
+- build - [gustavs russian war] added support to pick "inaccessible" as a replaceable terrain target in terrainOverrides.replace in conversion config.
+- build - [spanish pride] added support to remove specific resources from map using resourceOverrides.remove in conversion config.
+- extract - added support to print out in terminal the list of factions extracted and some faction info
+- build - [war cuba] added support in terrainOverrides.replace to also add a specific tile transform to the tile being replaced.
+- build - added support to print out number of mapped and unmapped techs per faction in terminal
+- build - [napoleonic eagles] added support in conversion config techOverrides -> "copyFromOwner" to copy final tech mapping from one faction to another
+- build - [congo] added support in terrainOverrides for "lake/lakes" as a target (terrain code '+')
+- build - [congo] made build dynamically grab terrain identifiers from terrain ruleset instead of hardcoded
+- build - [iranians] made terrainOverrides also re-map resources on tile based on slot when converting one terrain type to another
+- build - removed hardcoding of extras in code (terrain improvements, resource bonuses) and made them be from the map template (which in turn come from the ruleset definition) and from terrain.ruleset (for resources)
+- build - fixed bug in builder where wrap map attribute was not being set correctly
+- build - made production fallback to "Coinage" for civ2civ3 and classic, and "Settlers" otherwise
+- build - [holy roman empire] made treaty bits like "alliance" and "peace" to take priority over the "no contact" and "lastcontactturn=-1".
+          this prevents some relationships appearing as "NO CONTACT" even though in civ2 they appear as PEACE/ALLIANCE
+- build - [southeast asia] Added support to decode villages/huts and grassland shield directly from civ2 scn file based on reverse engineered math formulas plus the use of map seed.
+- build - Added support to map huts and grassland shield directly from civ2 scn file. Added capability in mapFeatureOverrides.skipCiv2Features conversion config attribute to skip "huts" in case no huts need to be mapped at all.
+
+
+--CHANGES----------------------------------------------------------------------------------------------------------------------------------------------
+- change - if NEVER MET, then do not put AI love values? For example if you have not met someone, your attitude is Neutral
+- clear orders for settlers and workers do they dont have invalid fortify stances or stances only applicable to military units
+- celtic italy - there was an issue of mismatched diplomacy - when alliances are found between 2 factions, those take priority over the 'not met gate'
+- holy roman - start as bavaria, it shows as no contact/never met with Franconian however in civ 2 it shows as Peace / no embassy with franconia. Same thing with Saxon
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+why is this happening? ww79 map
+-----------------------
+Removing American unferried Armor in Mountains at (61, 53)
+Removing American unferried Armor in Swamp at (41, 89)
+Removing Indian unferried Armor in Mountains at (87, 50)
+Removing Indian unferried Howitzer in Mountains at (84, 51)
+Removing Indian unferried Howitzer in Mountains at (90, 49)
+Removing Indian unferried Mech. Inf. in Mountains at (89, 49)
+
+--------------
+- to port
+--------------
+
+The Birth of America (Michael Daumen)
+the french and indian war (Carl Fritz) - [seven years war in north america]
+quebec - conquest of the great lakes (Alex Mor)
+fall of the aztecs
+conquest of mexico
+100 years war
+al-andalus
+the visigoths
+bonaparte (john ellis)
+pitt's war at sea (seven years war in the carribean)
+gustav's III russian war (Jonas Hasselrot)
+alba de america (Balsinde)
+spanish pride, iberian pride (Balsinde)
+7 Years War (Michael Jezenka)
+Spanish Civil War. The Defense of Madrid (Balsinde)
+libertad o muerte
+the age of philip II - the time of thunder (Balsinde)
+war of cuba (Balsinde)
+american empire (exile, charles magee)
+The Danube Empire (Michael Jeszenka)
+Rome's History v1.02 by Florian Borchert
+The Great Crusades (joel andre)
+Reconquista version date 17.11.1998 (St.Otto)
+The Habsburg Bid for Mastery by (Michael J.Daumen)
+THE ARAB CONQUESTS v2.0 by (Aleksei Andrievski)  
+The War of 1812 (techumseh and INSURGENT) - [both versions, insurgent's is a huge one]
+7 years wars (peter robbins) - [french and indian war in north america]
+The African Wars (Allard H.S. Höfelt)
+English Civil War (Philipp Blanz)
+Age of the Vikings v.01 (Joel André)
+THE NAPOLEONIC EAGLES v1.01 (Markus Eklund)
+The Great Game: Russia and England in Central Asia (Michael J. Daumen)
+The Italian Wars (Exile)
+The Anglo-Boer War (Allard H.S. Höfelt)
+Congo! (Techumseh)
+Third Punic War (Stefan Härtel)
+The Iranians (Stefan Härtel)
+THE QUEST FOR ASIA: The Conquests of Alexander the Great v2.0 (Stefan Härtel)
+The Holy Wars v2.0 (Stefan Härtel)
+THE MONGOLS: TIMUR KHAN (Markus Eklund)
+EGYPT (EYN)
+war of the roses (Nick Clark)
+The Spanish-American War: The Carribean v1.0 (Andrew Hoekzema)
+BRAVEHEART English Version 2.2 (François Baire)
+Brown Man's Burden (Carl Fritz)
+Homer's Age (H.S. Höfelt)
+Roman Empire (Michael Jeszenka)
+Sons of Heracles (Stefan Härtel)
+Peloponnesian War (Alex Mor)
+GRANDES INVASIONS by (Emmanuel Ruellan in French)
+Quest for Asia - Darius the Great (Stefan Härtel)
+Quest for Asia - The Persian Empire (Stefan Härtel)
+The Holy Roman Empire (Jesús Muñoz Fernández)
+Southeast Asia (Charles Kimball)
+
+-----------currently in progress, need to fix multiple things
+Moscow: The Third Rome (need to fix and complete unit and tech mapping)
+Charlemagne (Mr. Temba) (need to fix and complete unit and tech mapping)
+The Crimson Manuscript: War in Granada (Balsinde) - fix some terrains
+The River War (Allard Höfelt)
+Seize the Crown
+-----------
+
+Africa (unknown)
+HARALD FAIRHAIR v1.00 (Markus Eklund)
+The Conquest of Greece (unknown)
+Hellas (John Ellis)
+Hellenistic Age (Gabriele Quaglia)
+Wars of the Mediterranean (Paul Mutică)
+Colonial Wars (Jesús Balsinde)
+Karl XII's Invasion of Russia (Markus Eklund)
+Great Northern War (1700-1721) (Jonas Hasselrot)
+War of Crimea and the Crisis of the Balcans 1852 v1.0 (xxx)
+Indian Wars - War for the Great Plains (Andrew Hoekzema)
+Colonial Empire - Africa v2.00 (Ricardo Logus)
+The Ascendance of Europe Version 2.3 by (Nick Holzapfel)
+The Turks (Markus Eklund)
+The Vietnam War (B. Stein.)
+Up the Deadly Boot (The Italian Campaign) by John Petroski
+WORLD WAR I by John Petroski
+Artaxeres: The Fall of the Spartan Hegemony (Stefan Hartel)
+Pharaoh: the Golden Age of the 18th Dynasty (Stefan Hartel)
+Colonization scenario by Gary Longo: https://www.moddb.com/games/civilization-ii/downloads/colonization-of-the-new-world-civ2-scenario
