@@ -1,5 +1,13 @@
 # Civ2 to Freeciv Converter
 
+Node.js scripts to convert a Civilization 2 .SCN or .SAV file into Freeciv 3.2+ format.
+It supports decoding Civ2 Classic, Conflicts in Civilization (CiC), Fantastic Worlds (FW), and Multiplayer Gold Edition (MGE) .SCN or .SAV files.
+
+At a high level the workflow is as follows:
+
+1) extract.js -> this script decodes a Civ2 SCN/SAV file into JSON human-readable files
+2) build.js -> this script takes as input the files from Extract.js and outputs a playable Freeciv save file. For this to work, you have to provide a "Conversion Config" file to map certain Civ2 elements over to Freeciv representations. More documentation on this below.
+
 Shared converter scripts for Civ2 `.SCN` / `.SAV` files.
 
 ## Workflow
@@ -37,6 +45,67 @@ template-improvement-map.json
 template-tech-map.json
 template-government-map.json
 ```
+
+## Extract Config
+
+`extract-config.json` tells the extractor where the Civ2 scenario/save is and
+where to write extracted data. It lives in the scenario folder and paths are
+resolved relative to that file:
+
+```json
+{
+  "input": "Havana.scn",
+  "outputPrefix": "havana",
+  "outputDir": "extracted-civ2",
+  "rules": "Rules.txt"
+}
+```
+
+Fields:
+
+- `input`: required Civ2 `.SCN` or `.SAV` file.
+- `rules`: optional Civ2 `RULES.TXT` file. Strongly recommended when available.
+- `outputDir`: optional output folder. Defaults to `extracted-civ2`.
+- `outputPrefix`: optional generated-file prefix. Defaults to the input filename without extension.
+
+The `rules` file lets the extractor name Civ2 units, improvements, technologies,
+governments, leaders, plurals, and adjectives. If `rules` is omitted, extraction
+can still run, but generated mapping templates and faction metadata may be less
+complete.
+
+The extractor writes files such as:
+
+```text
+<prefix>-map-and-cities.json
+<prefix>-factions.json
+<prefix>-diplomacy.json
+<prefix>-technologies.json
+<prefix>-units.json
+<prefix>-cities.csv
+<prefix>-units.csv
+<prefix>-map-preview.txt
+<prefix>-native-map-preview.txt
+<prefix>-road-preview.txt
+<prefix>-native-road-preview.txt
+<prefix>-river-preview.txt
+<prefix>-native-river-preview.txt
+<prefix>-freeciv-map-fragment.sav
+<prefix>-freeciv-native-map-fragment.sav
+<prefix>-freeciv-city-fragment.sav
+template-unit-map.json
+template-improvement-map.json
+template-tech-map.json
+template-government-map.json
+```
+
+Recommended extraction workflow:
+
+1. Put `extract-config.json` in the scenario folder.
+2. Set `input` to the Civ2 scenario/save file.
+3. Set `rules` to the matching `RULES.TXT` if one exists.
+4. Run `extract.js`.
+5. Copy or rename the generated `template-*-map.json` files into scenario-specific map files.
+6. Reference the extracted JSON and map files from `build-config.json`.
 
 ## Build Config
 
