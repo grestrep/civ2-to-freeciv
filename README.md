@@ -24,6 +24,16 @@ Run build from a scenario folder:
 node D:\freeciv\projects\civ2-freeciv-converter\build.js --build-config build-config.json
 ```
 
+You can temporarily override the conversion config from the command line:
+
+```bat
+node D:\freeciv\projects\civ2-freeciv-converter\build.js --build-config build-config.json --config alternate-conversion-config.json
+```
+
+`--config` only overrides the `conversionConfig` file. Other inputs still come
+from `build-config.json`. The override path is resolved from the current working
+directory, so run the command from the scenario folder or use an absolute path.
+
 Each scenario folder owns its own config and mapping files:
 
 ```text
@@ -203,6 +213,12 @@ A typical build config looks like this:
   "unitHomecityReport": "extracted-civ2/havana-unit-homecity-issues.json"
 }
 ```
+
+Current builder mode:
+
+- The builder currently writes the canonical `freeciv21V3` output.
+- `outputs.freeciv21V3` must be present in `build-config.json`.
+- The sample `"mode": "freeciv21V3"` field is informational/reserved for future use; the current builder does not switch modes from that field.
 
 ### Template
 
@@ -457,6 +473,45 @@ Nation, government, style, unit, improvement, tech, terrain, extra, and resource
 names are target-ruleset dependent. If the Freeciv server says a nation is
 invalid, check that the `nation` value exists in the target ruleset's nations
 file.
+
+When filling mapping files and config values, prefer names from the target
+Freeciv ruleset files. The builder accepts display names and, where supported by
+the ruleset, `rule_name` values for units, improvements, technologies, and
+governments. Terrain, extras, and resources are resolved from `terrain.ruleset`
+and the template's `extras_vector`.
+
+### Barbarians
+
+Civ2 owner candidate `0` is the barbarian player. If the extracted scenario has
+barbarian cities or units and `players` does not contain an entry with
+`"owner": 0`, the builder adds a default barbarian player:
+
+```json
+{
+  "owner": 0,
+  "name": "Barbarians",
+  "gender": "male",
+  "nation": "Barbarian",
+  "style": "European",
+  "color": [80, 80, 80],
+  "barbarianType": "Land"
+}
+```
+
+To change only the barbarian style, provide the minimum override:
+
+```json
+{
+  "owner": 0,
+  "style": "European"
+}
+```
+
+Any provided barbarian fields are merged over the defaults. `barbarianType`
+defaults to `Land` when omitted or empty. Barbarian government is handled like
+other players: if `government` is provided, that value is used; otherwise the
+builder attempts to map the extracted Civ2 government through the government
+map.
 
 ### Player Tech Overrides
 
@@ -749,6 +804,46 @@ Important lines include:
 The validation report contains more detail than the terminal output and should
 be checked whenever the server refuses to load a generated save.
 
+### Reading The Validation Report
+
+`validationReport` is the best place to debug a build without opening the save
+by hand. Useful sections include:
+
+- `totals`: generated map size, player/city/unit counts, grouped unmapped report counts, empty-map skipped unit instances, mapped-but-unplaced unit instances, production fallbacks, and home-city issue counts.
+- `inputs`: resolved source files used by the build.
+- `productionFallback`: whether fallback production used `Coinage` or `Settlers`.
+- `extras`: template extras, Civ2 feature mappings, huts, resource-extra count, and missing feature mappings.
+- `activities`: unit activity names and ids read from the template `activities_vector`.
+- `unitClasses`: unit classes read from `units.ruleset`, including land/air classification.
+- `terrainOverrides`: configured terrain replacements, applied replacements, added extras, and dynamic terrain identifier sets.
+- `resourceOverrides`: resources found in `terrain.ruleset`, resources matched to `extras_vector`, removed resources, and applied removals.
+- `cityImprovementOverrides`: configured city improvement edits, applied edits, unmatched city names, and duplicate city-name matches.
+- `playerTechOverrides`: configured and applied per-player tech overrides.
+- `players`: per-player owner, nation, city count, unit count, current research, and research progress.
+- `unmapped`: grouped unit, improvement, and tech mapping issues.
+- `unitHomecityIssues`: units whose Civ2 home city could not be assigned.
+- `diplomacy` and `visibility`: diplomacy and map-knowledge summaries.
+
+The grouped `unmapped` entries are useful for fixing map files. The instance
+counts in `totals` are better for judging actual map impact.
+
+## Testing Generated Saves
+
+After build, the converter writes both an uncompressed `.sav` and compressed
+`.sav.zst` next to the configured output path. Freeciv normally loads the
+compressed file directly.
+
+A practical smoke test is:
+
+1. Run `build.js`.
+2. Review the terminal output for unmapped entries, mapped-but-unplaced units, and factions without Palace.
+3. Open the generated `.sav.zst` with the target Freeciv or Freeciv21 server.
+4. Wait for the server to finish loading the save.
+5. Check whether warnings are only cosmetic, such as invalid nations being substituted, or fatal, such as unknown buildings, missing city fields, invalid research, or savegame load failure.
+
+If the server refuses to load the save, start with `validationReport`, then the
+specific unmapped reports, then the affected mapping/config file.
+
 ## Common Warnings And Errors
 
 ### Invalid Nation
@@ -804,6 +899,16 @@ scenario needs a capital.
 Check the generated save's `wrap` setting and the extractor's inferred map
 shape. The builder writes `WRAPX` for horizontally wrapping Civ2 maps and an
 empty wrap setting for non-wrapping maps.
+
+## Known Limitations
+
+- Test of Time versions `49` and `50` have been analyzed, but normal extraction/build support is not complete.
+- The current builder output mode is fixed to `freeciv21V3`; the build config `mode` field does not select another output mode yet.
+- Unit `veteran` overrides are numeric. They are validated as `0..3`, but veterancy levels are not yet fully dynamic per target ruleset/unit.
+- `terrainOverrides.replace.add` can add tile improvements/extras to changed tiles, but it does not currently add resource bonuses.
+- Resource removal is global by resource name; there is no per-tile resource override yet.
+- The template and ruleset files must match. Mixing a `civ2` template with `civ2civ3` ruleset files can produce saves that look structurally valid but fail in the server.
+- Freeciv nation availability depends on the target ruleset's nation files. A converted Civ2 faction may need to use a different Freeciv nation name.
 
 ## Generated Vs Manual Files
 
