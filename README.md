@@ -1,14 +1,14 @@
 # Civ2 to Freeciv Converter
 
-Node.js scripts to convert a Civilization 2 .SCN or .SAV file into Freeciv 3.2+ format.
+Node.js scripts to convert a Civilization 2 .SCN or .SAV file to Freeciv 3.2+ format. It has been tested to output Freeciv saves for the "civ2civ3" and "classic" rulesets but other rulesets are possible as well.
 It supports decoding Civ2 Classic, Conflicts in Civilization (CiC), Fantastic Worlds (FW), and Multiplayer Gold Edition (MGE) .SCN or .SAV files.
 
 At a high level the workflow is as follows:
 
-1) extract.js -> this script decodes a Civ2 SCN/SAV file into JSON human-readable files
-2) build.js -> this script takes as input the files from Extract.js and outputs a playable Freeciv save file. For this to work, you have to provide a "Conversion Config" file to map certain Civ2 elements over to Freeciv representations. More documentation on this below.
+1) extract.js: This script decodes a Civ2 SCN/SAV file into JSON human-readable files.
+2) build.js: This script takes as input the files from Extract.js and outputs a playable Freeciv save file. For this to work, you have to provide a "Conversion Config" file to map certain Civ2 elements over to Freeciv representations. More documentation on this below.
 
-Shared converter scripts for Civ2 `.SCN` / `.SAV` files.
+You can find a sample conversion scenario (Civ2 WW2 scenario) inside the "sample" folder that you can use as a starting point. It contains also extract and build bat files that you can use for your workflow.
 
 ## Workflow
 
@@ -97,6 +97,21 @@ template-improvement-map.json
 template-tech-map.json
 template-government-map.json
 ```
+
+The `template-*-map.json` files are starter mapping files. They are not used
+directly unless you point `build-config.json` at them. The usual workflow is to
+copy or rename them to scenario-specific files such as `havana-unit-map.json`,
+fill in the Freeciv target names, and reference those files from `build-config.json`.
+
+- `template-unit-map.json`: maps Civ2 unit names from `RULES.TXT` to Freeciv unit names.
+- `template-improvement-map.json`: maps Civ2 city improvement/wonder names to Freeciv building names.
+- `template-tech-map.json`: maps Civ2 technology names to Freeciv advance names.
+- `template-government-map.json`: maps Civ2 government names to Freeciv government names.
+
+Each map value can be an empty string to intentionally skip that Civ2 item during
+build. For units, an empty value means units of that Civ2 type are not written to
+the Freeciv save. For improvements, techs, and governments, empty values mean
+the corresponding item is not mapped.
 
 Recommended extraction workflow:
 
