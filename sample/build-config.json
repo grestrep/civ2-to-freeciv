@@ -1,0 +1,32 @@
+{
+  "mode": "freeciv21V3",
+  "scenario": {
+    "name": "WW2 - Civ2",
+    "authors": "Lucius Papirius Cursor",
+    "description": "",
+    "descriptionFile": "WWII.txt"
+  },
+  "template": "../templates/freeciv-template-civ2civ3.sav",
+  "freecivUnitsRuleset": "D:/freeciv/3.2.1/qt6/data/civ2civ3/units.ruleset",
+  "freecivBuildingsRuleset": "D:/freeciv/3.2.1/qt6/data/civ2civ3/buildings.ruleset",
+  "freecivTechsRuleset": "D:/freeciv/3.2.1/qt6/data/civ2civ3/techs.ruleset",
+  "freecivTerrainRuleset": "D:/freeciv/3.2.1/qt6/data/civ2civ3/terrain.ruleset",
+  "extracted": "extracted-civ2/ww2-map-and-cities.json",
+  "diplomacy": "extracted-civ2/ww2-diplomacy.json",
+  "mapFragment": "extracted-civ2/ww2-freeciv-map-fragment.sav",
+  "technologies": "extracted-civ2/ww2-technologies.json",
+  "unmappedUnitsReport": "extracted-civ2/ww2-unmapped-units.json",
+  "unmappedTechsReport": "extracted-civ2/ww2-unmapped-techs.json",
+  "unmappedImprovementsReport": "extracted-civ2/ww2-unmapped-improvements.json",
+  "unitHomecityReport": "extracted-civ2/ww2-unit-homecity-issues.json",
+  "outputs": {
+    "default": "ww2-freeciv-scenario.sav",
+    "nativeV2": "ww2-freeciv-scenario-v2.sav",
+    "freeciv21V3": "ww2-freeciv-scenario-v3.sav"
+  },
+  "conversionConfig": "ww2-conversion-config.json",
+  "governmentMap": "ww2-government-map.json",
+  "unitMap": "ww2-unit-map.json",
+  "improvementMap": "ww2-improvement-map.json",
+  "techMap": "ww2-tech-map.json"
+}

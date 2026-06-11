@@ -1,0 +1,345 @@
+[map]
+have_huts=FALSE
+have_resources=FALSE
+t0000="       tthht                                                   ttt   tttttt"
+t0001="        htht                                                   ttt  ttttttt"
+t0002="        haat                                   g               ttft ttfffft"
+t0003="       ght                     ttttt     t     g              tffttttffffff"
+t0004="       ggtg                    ttttttt   tttt  g              tftttttffffff"
+t0005="         g                   tthfffftt   ttt                tttttttttffffff"
+t0006="              t              tthffffftt  ttt      tt      ttttttttttfffffff"
+t0007="             t               thffff ft   tt     ttt    tttttttttttffffggfgf"
+t0008="                             thffffffft   tt  tttttt tttttttttftttffffggggg"
+t0009="              t             thffffffff   tt  tttttt tttftttfffttttfffffffgf"
+t0010="                             hffffffff   tttttffttt tttftffffffttttfgffffff"
+t0011="                            tffffff   t  tfttfffftf ftfftffftffttttffffffff"
+t0012="                            fhffffff   tttfffffthtfffftfttfffffttttffffffff"
+t0013="                            hfff f f  tttgfftffhffgftftfftffffftttfgfffffff"
+t0014="     t                      hf f fff   tffffffgfhfffffttffffffffttfffffffff"
+t0015="                           fffg  fff  tfffffffffhgffffffffffffftttfffffffff"
+t0016="                   t      tfhfff ggffftffgffffffhgfffffffffpffffttffffhhhff"
+t0017="g                       gtth ffp gfgfffgfffffffhfffffffffffffffftffffghhhhh"
+t0018="gg                 t     gthfffg f f fffffffffffhgfffffffffffffffffffgghhhh"
+t0019="gg                     gggthgfg  gffffpffffgffffhgffffffffffgffffffffgggfff"
+t0020="ghg              t      ggthff   fffffffffffffffhfgffffffffffffgffffffgpfff"
+t0021="ggg              t     gpphff   g g ffffffffffffhfgfffffffffffffffgffffffff"
+t0022="hgg                hg   ggmfgg  fgfg fffffpffffffhffffffgfgffffgfffffffffff"
+t0023="g                 h      mfff   f gg ffffffffgfffhfffffpggffffpfffffffffffg"
+t0024="g g               mh    gghgf   gfg fgffgffffggffhgggffffggffggfffffggffffh"
+t0025="g                 g     gmf g  g g  g fffgffffffgfgfgfffgfffgfffffffgffgfgh"
+t0026="gg                gh     hgfgg  fgg ggggffffffgffhffgffffggffgfgffffgfffffh"
+t0027="g                gf     hhfgg  gp f gp gggggfggffhgggffffggfffggfffffffffgh"
+t0028="hg                hg    ghfgpg  g gfggggggggggggghfgfffffggffpgfggffffffffg"
+t0029="g                 h    ghfggg    gggfggggggfggfgghggggfffpgfggfgpffffffffgh"
+t0030="gg                pg    hg gg g  ggggggggggggggggghpgpggfgfgggfggggggfggfgg"
+t0031="g              gg p    gg gpg   g pgfggfgggggpggghgfpggsgfffggggggggggggggg"
+t0032="gg              pggg    gg g g  gggggggggggggfpggghggggggggffffgfgggggggggg"
+t0033="g              hg hg      g g   gfgghpggpggggpggfghgpgfggggfgggggggggpggggg"
+t0034="hg             gg  hg      gg  g gfggggggggggggggghgggfgsgsfffggsggggpggpgg"
+t0035="g              gg gg     p gg   gggggpgggggggggggghgggggpggfgggsgpfgggggggg"
+t0036="g              pg  pg    p gg  ggggpgggfggfpgggggghgfggggggfffgggggpggggggg"
+t0037="               g ggpg    g g   gggfggpgggggfgggggfhggfgsgpgffgggggggggggggg"
+t0038="                p hgg    g  g g ggggggggggggggggggghgsgfsgggffgpggggggggpgg"
+t0039="               g ggfg   gg g g gggppggggpggfgggggghhggggsgggffgggfggggggggg"
+t0040="               hg gggg   g     gggpggggggggggghgpgghhgsgggggfffgggggggggggg"
+t0041="               p  ggg   hpg    gggggffggggggggggggghgggggfsggfggpgpgpghhghg"
+t0042="               h  hggg   g     fpgfggfgpggpggggggfgghgspsgggggfggggggghhhhh"
+t0043="                  ggg    g     ggggggggpgggpggpggggghggggggpggfggffghhhhhhg"
+t0044="                  gggg   p     gpgfggggpggggggggfggphhggggpsgggggggggmmhhhm"
+t0045="                  gfg   gf    gggfgggggggggpgggggggghhgggggggggggggmmmmmgmg"
+t0046="                  pg   gggpgg gggfgspggggggggggggggggggsggggggg pggmmphmmmm"
+t0047="                 gg   sgggggggggggsgggggpfgggggggggggggggggggg pggpdgpmmmmm"
+t0048="                  g   ggggggpgggggsgggpgggggggggggpgggggg gggg ggppddphmmmm"
+t0049="                    g gggggfggggggsggggggfgpgggpgpggpggggggppd ddpddphmmmmm"
+t0050="                     gggggggfgggggsgggggggfgggggggpggggggggppg dddpdphmmmmm"
+t0051="                  gggggggggggggggssggggggggpggggggggggggpgpppdddddppphmmmmg"
+t0052="                   gggggfpgpggpgggssggggggggggggggggggggpppppgddddppghhmmmm"
+t0053="                  gggggggfggppggggsgggfggggggggggpppgggpgpgpppppppgghhmmmmm"
+t0054="                   gggggfgggggggpgggggggggggghgggppdpgppg ggpppppppphhmmmmm"
+t0055="                   ggpgpggfggggpggggggggpgggggggpdddpppp gppppgpggphmmmmmmm"
+t0056="                    gggpfggpgggggpggpgfgggggggggpddddpppp ddggpmmpmhmmmmmmm"
+t0057="                   gggggfgpgpfggggggggggggpgggggpddddggp   ppppmmmmmmmmmmmm"
+t0058="                    ggggpggggffgggpgggggggggggggpddpddppp  dpppmmmmmmmmmmmm"
+t0059="                    ggggggghgghgggggggggggggggpgsps ddpp   dppgpmmmmmmmmmmm"
+t0060="                     pgpgggppgffgfggggggggggpgpgpsp  ddpp  ddggpppmmmmmmmmm"
+t0061="                    ggpggfffgghggfgggggggggggggpgpp  ppp   dddppppmmmmmmmmm"
+t0062="                     ggpggfgggggggggggggggggggggs    pppp  dpdddpppmmmmmmmm"
+t0063="                    gggpgfpgggfggggggggg ggggggp     ppd   dddddpgmmmmmmmmm"
+t0064="                     ggggggfggghhgggg g  gpgdpgpp    pppp  ppdddpppmmmmmmmm"
+t0065="                    ggggggfhhgphhggg g  gggggggp     gpp  dpdddpppmmmmmmmmm"
+t0066="                     ggpgghhmmggfhgg g   gggpggp     ppppddddddppppmmmmmmmm"
+t0067="                    ggggghmmmggppmg  g  ggpggghg   pppgpdpddddppppmmmmmmmmm"
+t0068="                     fphghmmmfgggffg gg ggggpggp   gppgpddddddgpgpppmmmmmmm"
+t0069="                     ghghmmmmggpghg   gggggggphp   gpgpdddddddpppgpmmmmmmmm"
+t0070="                     fhhghhmhggggph       gggggp   pppppddddddppgpppmmmmmmm"
+t0071="                 gh  ghgfmgg hggpmg       hfggdp   pppppddddddppgppmmmmmpmp"
+t0072="                  hhhhgggmggg fghhg        hmfgp   pppdpdpddpdppppphmmmmmmm"
+t0073="                gghhhmgggmgg hggmdg        hmmmp  pppgpdddgddpgpphhmmmmppph"
+t0074="                 ghppfmp hhhg hfggg        ghhmmp  ppgppddddddgpppphmmmphhh"
+t0075="                 hphpfm p ph  hgggg        ffhhm   ppppddddddppgpphmmhhhggg"
+t0076="                 gpphpgf   ph  hggh         fffhg  pgppdddddddpppphmmhggpgp"
+t0077="                 ghphgg    h  hfhhg        ghhfh   ppppddddddpppphmmghpgggg"
+t0078="                 gphppg     h  hhfg   gg    hhhfh  ppppdpdddddpgphhmmhggggg"
+t0079="                 ghphp     ph  hhpg  gffp  hhmhgg   pppdddddddgpphmmhgpgggg"
+t0080="                 ghgph      p  ffhhg gfhhpfmhpmhg    gppddddddppghmmmhggggg"
+t0081="                 gghhg     gh  h    ffhphfhhpphgg   ppgpdgddddpghmmmghggggg"
+t0082="                 gghpp    p gh  h  gpfhpphhphphhg   pppgpddddgpphmmmmhggpgg"
+t0083="                 ggppg   p  ph g  gph pghhppmhphg   ppppddpdddpphmmmmhggpgg"
+t0084="                 ggphg       h  h  ghhphhpppphphm   pppppdddddpphmmmmhggggg"
+t0085="                 ghhh    p   h  p gphhmhp gphphh    ppppddddddpphmmmhggggpp"
+t0086="                 ggppp p  p  gp h  ghphphhhh mhmh   pppppdddddpghmmmhgggggg"
+t0087="                 ppph    p   hp h  ghg gppphmh p    phhppdddddpphmmmhggpggg"
+t0088="                  gghm    p   pp g gp g ppppphhmh   pppmmpddpdphhmmmhpggggg"
+t0089="                 ggp         h  p      gpgppppph    mpphppddddphmmmhpggpggg"
+t0090="                  gp         p   h      pggpgpgph   mppphppdddphmmmhppgpggg"
+t0091="                 ggp         p   p     ggpgppgghhggmhddphgpdddpmmmmhpgggggg"
+t0092="                   m       phh   h    p fppgpggphmmmgddphppppdpmhmhhpgggggp"
+t0093="                    g      p    p    h gpppgpggphphpdddphpdpppphmhmhpgggpgg"
+t0094="                    gggggg              pdppgsggpmhpdpddphppggphhhhhpgggggg"
+t0095="                gg  ggggg         p    hddppggggphggdddphgpppphhmhhgpgggggg"
+t0096="               gphgggpphhg        p     pddpgggsspmggdppphppppphhpppppgggpg"
+t0097="              gpdmgfpfhhh              hdddpggggsphggppgpppppphpppppgpggghg"
+t0098="              gdddmmhhhffp  h          gpdddpgggggpmhgppdppdpdhhppddphggggg"
+t0099="             gddddhhhhppp              pdddppsgpsghgmhgddhpdpppppddpppggghg"
+t0100="              pdddddddddp              gpdddppgggsphphhpdphppgpppddphmgggph"
+t0101="             gddddddddddg              pddddppggggpmpmhpdphpppgpddpppgggghg"
+t0102="              dddddddddddg             gpdddddggggghmphpppphpppppdpgdhggghh"
+t0103="             gdddddddddddg      g      pddddddgggsghmpmhpddhgpppddpppgggphg"
+t0104="              pdddddddddddggg    g   g gpdddddpggggghmpphdpdppdppdpppppgpgg"
+t0105="             gddddddddddddggg   gggggg dddddddpggggghhpppddphppgdddghggghhg"
+t0106="             gdddddddddddddppgg gpgggpph ddddddpgsssphhhpdddppgppddpppggphp"
+t0107="            gddddddddddddddppgggddpdgdg pddddddpgsg ghmmpdddhpppddpppggghhg"
+t0108="             dddddddddddddddddpgdddddpd hpddddddpgg  hphhhdddhppdddpphggghg"
+t0109="            dddddddddddddddddddddddddpd ppdddddddgp  hhhmhddppppdpddpggghpg"
+t0110="            gdddddddddddddddddddddddddp ppdpddddddd  ghhphmpdppgddddpggppgg"
+t0111="           gdddddddddddddddddddddddddpd hppdddddddp  hphhmpdphppdpddhgggggg"
+t0112="           gdddddddddddddddddddddddddpdd ppddddddddp ggphhmpdpmppdpdpgggggg"
+t0113="           dddddddddddddhhdddddddddddpd  hpdddddddp  ggpdphphphppddppgggggg"
+t0114="           pdddddddddddddmhddddddddddpdd  hgdddddddp  gpgdhmhppdppddppggggg"
+t0115="           ddddddddddddddhddddddddddpddd  hpdddddddp ggddphppdhphpdphgggggg"
+t0116="           gddddddddddddddhddddddddddpdd   ppdddddddp gpddppddgphhppdgggggg"
+t0117="          gpddddddddddddddddhdddddddgddm  hpdddddddp   pddpdddhphppppgggggg"
+t0118="          gpdddddddddddddddddmdddddddpdhd  hgdddddddp   dddpddhphpppppggggg"
+t0119="         gppddddddddddddddddddddddddpdhm   mgddddddp    pdpgdgggggggggggggg"
+startpos_count=0
+source0000="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0001="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0002="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0003="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0004="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0005="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0006="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0007="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0008="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0009="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0010="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0011="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0012="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0013="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0014="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0015="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0016="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0017="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0018="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0019="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0020="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0021="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0022="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0023="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0024="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0025="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0026="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0027="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0028="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0029="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0030="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0031="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0032="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0033="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0034="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0035="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0036="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0037="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0038="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0039="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0040="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0041="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0042="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0043="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0044="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0045="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0046="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0047="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0048="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0049="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0050="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0051="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0052="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0053="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0054="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0055="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0056="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0057="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0058="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0059="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0060="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0061="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0062="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0063="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0064="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0065="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0066="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0067="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0068="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0069="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0070="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0071="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0072="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0073="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0074="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0075="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0076="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0077="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0078="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0079="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0080="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0081="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0082="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0083="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0084="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0085="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0086="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0087="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0088="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0089="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0090="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0091="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0092="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0093="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0094="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0095="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0096="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0097="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0098="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0099="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0100="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0101="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0102="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0103="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0104="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0105="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0106="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0107="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0108="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0109="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0110="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0111="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0112="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0113="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0114="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0115="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0116="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0117="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0118="000000000000000000000000000000000000000000000000000000000000000000000000000"
+source0119="000000000000000000000000000000000000000000000000000000000000000000000000000"
+
+; Native-width Freeciv terrain fragment. Civ2 doubled x coordinates are remapped with floor(x / 2).
+; city="Berlin", x=27, y=48, civ2x=54, populationSize=20, sizeCandidate=255, ownerCandidate=3
+; city="Vienna", x=29, y=65, civ2x=59, populationSize=12, sizeCandidate=9, ownerCandidate=3
+; city="Munich", x=27, y=63, civ2x=55, populationSize=14, sizeCandidate=3, ownerCandidate=3
+; city="Rome", x=28, y=82, civ2x=56, populationSize=12, sizeCandidate=3, ownerCandidate=3
+; city="Milan", x=26, y=73, civ2x=53, populationSize=10, sizeCandidate=3, ownerCandidate=3
+; city="Venice", x=28, y=72, civ2x=56, populationSize=9, sizeCandidate=2, ownerCandidate=3
+; city="Taranto", x=30, y=87, civ2x=61, populationSize=6, sizeCandidate=2, ownerCandidate=3
+; city="Vichy", x=23, y=64, civ2x=46, populationSize=6, sizeCandidate=0, ownerCandidate=7
+; city="Marseilles", x=24, y=73, civ2x=49, populationSize=12, sizeCandidate=4, ownerCandidate=7
+; city="St. Nazaire", x=20, y=58, civ2x=40, populationSize=12, sizeCandidate=4, ownerCandidate=7
+; city="Tunis", x=25, y=94, civ2x=50, populationSize=4, sizeCandidate=3, ownerCandidate=7
+; city="Algiers", x=21, y=95, civ2x=43, populationSize=7, sizeCandidate=2, ownerCandidate=7
+; city="Casablanca", x=15, y=97, civ2x=31, populationSize=5, sizeCandidate=2, ownerCandidate=7
+; city="Beirut", x=39, y=93, civ2x=79, populationSize=7, sizeCandidate=2, ownerCandidate=7
+; city="Damascus", x=41, y=93, civ2x=83, populationSize=5, sizeCandidate=2, ownerCandidate=7
+; city="London", x=20, y=43, civ2x=41, populationSize=20, sizeCandidate=2, ownerCandidate=6
+; city="Southampton", x=19, y=46, civ2x=38, populationSize=16, sizeCandidate=10, ownerCandidate=6
+; city="Manchester", x=18, y=39, civ2x=37, populationSize=20, sizeCandidate=9, ownerCandidate=6
+; city="Belfast", x=16, y=31, civ2x=33, populationSize=11, sizeCandidate=10, ownerCandidate=6
+; city="Newcastle", x=19, y=32, civ2x=38, populationSize=18, sizeCandidate=5, ownerCandidate=6
+; city="Edinburgh", x=19, y=26, civ2x=38, populationSize=12, sizeCandidate=8, ownerCandidate=6
+; city="Washington", x=0, y=31, civ2x=1, populationSize=24, sizeCandidate=6, ownerCandidate=6
+; city="New York", x=1, y=22, civ2x=2, populationSize=30, sizeCandidate=8, ownerCandidate=6
+; city="Alexandria", x=36, y=105, civ2x=73, populationSize=10, sizeCandidate=11, ownerCandidate=6
+; city="Cologne", x=25, y=54, civ2x=50, populationSize=16, sizeCandidate=5, ownerCandidate=3
+; city="Kiel", x=25, y=43, civ2x=51, populationSize=12, sizeCandidate=5, ownerCandidate=3
+; city="Frankfurt", x=26, y=58, civ2x=52, populationSize=12, sizeCandidate=5, ownerCandidate=3
+; city="Dresden", x=28, y=54, civ2x=56, populationSize=15, sizeCandidate=2, ownerCandidate=3
+; city="Prague", x=29, y=59, civ2x=59, populationSize=12, sizeCandidate=5, ownerCandidate=3
+; city="Warsaw", x=31, y=51, civ2x=63, populationSize=10, sizeCandidate=2, ownerCandidate=3
+; city="Konigsberg", x=31, y=44, civ2x=62, populationSize=8, sizeCandidate=1, ownerCandidate=3
+; city="Krakow", x=31, y=57, civ2x=63, populationSize=8, sizeCandidate=1, ownerCandidate=3
+; city="Budapest", x=31, y=67, civ2x=63, populationSize=8, sizeCandidate=0, ownerCandidate=3
+; city="Bucharest", x=33, y=74, civ2x=66, populationSize=12, sizeCandidate=1, ownerCandidate=3
+; city="Tripoli", x=27, y=104, civ2x=54, populationSize=7, sizeCandidate=2, ownerCandidate=3
+; city="Oslo", x=26, y=29, civ2x=53, populationSize=5, sizeCandidate=1, ownerCandidate=3
+; city="Bergen", x=24, y=25, civ2x=49, populationSize=3, sizeCandidate=0, ownerCandidate=3
+; city="Tobruk", x=32, y=105, civ2x=65, populationSize=5, sizeCandidate=0, ownerCandidate=3
+; city="Madrid", x=19, y=79, civ2x=39, populationSize=8, sizeCandidate=0, ownerCandidate=4
+; city="Tangiers", x=17, y=95, civ2x=35, populationSize=3, sizeCandidate=0, ownerCandidate=4
+; city="Lisbon", x=17, y=82, civ2x=34, populationSize=5, sizeCandidate=0, ownerCandidate=4
+; city="Barcelona", x=22, y=77, civ2x=45, populationSize=5, sizeCandidate=0, ownerCandidate=4
+; city="Zaragosa", x=20, y=75, civ2x=41, populationSize=4, sizeCandidate=0, ownerCandidate=4
+; city="Seville", x=18, y=87, civ2x=37, populationSize=7, sizeCandidate=0, ownerCandidate=4
+; city="Vigo", x=17, y=73, civ2x=35, populationSize=4, sizeCandidate=0, ownerCandidate=4
+; city="Valencia", x=21, y=84, civ2x=42, populationSize=5, sizeCandidate=0, ownerCandidate=4
+; city="Cadiz", x=17, y=89, civ2x=35, populationSize=4, sizeCandidate=0, ownerCandidate=4
+; city="Ankara", x=39, y=82, civ2x=78, populationSize=6, sizeCandidate=0, ownerCandidate=2
+; city="Istanbul", x=35, y=80, civ2x=70, populationSize=8, sizeCandidate=0, ownerCandidate=2
+; city="Izmir", x=35, y=86, civ2x=70, populationSize=3, sizeCandidate=0, ownerCandidate=2
+; city="Antioch", x=39, y=87, civ2x=79, populationSize=4, sizeCandidate=0, ownerCandidate=2
+; city="Kars", x=44, y=80, civ2x=88, populationSize=2, sizeCandidate=0, ownerCandidate=2
+; city="Baghdad", x=46, y=97, civ2x=93, populationSize=5, sizeCandidate=0, ownerCandidate=6
+; city="Basra", x=50, y=107, civ2x=101, populationSize=4, sizeCandidate=3, ownerCandidate=6
+; city="Mosul", x=46, y=90, civ2x=92, populationSize=3, sizeCandidate=2, ownerCandidate=6
+; city="Suez", x=38, y=107, civ2x=77, populationSize=10, sizeCandidate=0, ownerCandidate=6
+; city="Jerusalem", x=40, y=102, civ2x=80, populationSize=6, sizeCandidate=5, ownerCandidate=6
+; city="Leningrad", x=34, y=26, civ2x=68, populationSize=14, sizeCandidate=3, ownerCandidate=1
+; city="Riga", x=32, y=36, civ2x=64, populationSize=12, sizeCandidate=2, ownerCandidate=1
+; city="Minsk", x=34, y=43, civ2x=69, populationSize=11, sizeCandidate=1, ownerCandidate=1
+; city="Smolensk", x=36, y=38, civ2x=72, populationSize=12, sizeCandidate=1, ownerCandidate=1
+; city="Odessa", x=35, y=65, civ2x=71, populationSize=6, sizeCandidate=1, ownerCandidate=1
+; city="Sevastopol", x=37, y=68, civ2x=74, populationSize=8, sizeCandidate=1, ownerCandidate=1
+; city="Moscow", x=38, y=34, civ2x=76, populationSize=18, sizeCandidate=1, ownerCandidate=1
+; city="Sverdlovsk", x=51, y=36, civ2x=102, populationSize=15, sizeCandidate=3, ownerCandidate=1
+; city="Krasnovodsk", x=51, y=76, civ2x=102, populationSize=1, sizeCandidate=1, ownerCandidate=1
+; city="Astrakhan", x=48, y=61, civ2x=97, populationSize=12, sizeCandidate=0, ownerCandidate=1
+; city="Grozny", x=46, y=68, civ2x=92, populationSize=11, sizeCandidate=1, ownerCandidate=1
+; city="Dnepropetrovsk", x=37, y=57, civ2x=75, populationSize=7, sizeCandidate=1, ownerCandidate=1
+; city="Kuibyshev", x=46, y=42, civ2x=92, populationSize=12, sizeCandidate=1, ownerCandidate=1
+; city="Rostov", x=41, y=62, civ2x=82, populationSize=10, sizeCandidate=1, ownerCandidate=1
+; city="Kiev", x=35, y=53, civ2x=71, populationSize=14, sizeCandidate=1, ownerCandidate=1
+; city="Maikop", x=43, y=66, civ2x=86, populationSize=12, sizeCandidate=1, ownerCandidate=1
+; city="Kharkov", x=39, y=53, civ2x=79, populationSize=13, sizeCandidate=1, ownerCandidate=1
+; city="Stalingrad", x=44, y=54, civ2x=88, populationSize=15, sizeCandidate=1, ownerCandidate=1
+; city="Kazan", x=46, y=36, civ2x=92, populationSize=7, sizeCandidate=2, ownerCandidate=1
+; city="Kursk", x=38, y=46, civ2x=76, populationSize=8, sizeCandidate=0, ownerCandidate=1
+; city="Magnitogorsk", x=52, y=41, civ2x=105, populationSize=14, sizeCandidate=1, ownerCandidate=1
+; city="Orsk", x=53, y=46, civ2x=106, populationSize=12, sizeCandidate=0, ownerCandidate=1
+; city="Murmansk", x=36, y=5, civ2x=73, populationSize=3, sizeCandidate=1, ownerCandidate=1
+; city="Gorky", x=42, y=32, civ2x=84, populationSize=11, sizeCandidate=0, ownerCandidate=1
+; city="Vologda", x=39, y=26, civ2x=78, populationSize=4, sizeCandidate=1, ownerCandidate=1
+; city="Batum", x=43, y=77, civ2x=87, populationSize=3, sizeCandidate=0, ownerCandidate=1
+; city="Voronezh", x=41, y=41, civ2x=83, populationSize=9, sizeCandidate=0, ownerCandidate=1
+; city="Uralsk", x=50, y=53, civ2x=101, populationSize=9, sizeCandidate=0, ownerCandidate=1
+; city="Krasnoyarsk", x=73, y=40, civ2x=146, populationSize=12, sizeCandidate=1, ownerCandidate=1
+; city="Novosibirsk", x=67, y=44, civ2x=134, populationSize=10, sizeCandidate=1, ownerCandidate=1
+; city="Omsk", x=60, y=43, civ2x=121, populationSize=12, sizeCandidate=1, ownerCandidate=1
+; city="Helsinki", x=32, y=28, civ2x=64, populationSize=4, sizeCandidate=1, ownerCandidate=3
+; city="Belgrade", x=31, y=72, civ2x=62, populationSize=8, sizeCandidate=0, ownerCandidate=5
+; city="Stockholm", x=29, y=26, civ2x=58, populationSize=6, sizeCandidate=0, ownerCandidate=5
+; city="Tehran", x=51, y=93, civ2x=103, populationSize=4, sizeCandidate=1, ownerCandidate=5
+; city="Amsterdam", x=23, y=46, civ2x=46, populationSize=8, sizeCandidate=0, ownerCandidate=5
+; city="Bordeaux", x=21, y=69, civ2x=43, populationSize=8, sizeCandidate=1, ownerCandidate=7
+; city="Cherbourg", x=20, y=49, civ2x=41, populationSize=8, sizeCandidate=3, ownerCandidate=7
+; city="Paris", x=22, y=53, civ2x=45, populationSize=20, sizeCandidate=3, ownerCandidate=7
+; city="Strasbourg", x=24, y=61, civ2x=49, populationSize=10, sizeCandidate=8, ownerCandidate=7
+; city="Scapa Flow", x=20, y=22, civ2x=40, populationSize=2, sizeCandidate=4, ownerCandidate=6
+; city="Athens", x=33, y=91, civ2x=67, populationSize=8, sizeCandidate=0, ownerCandidate=6

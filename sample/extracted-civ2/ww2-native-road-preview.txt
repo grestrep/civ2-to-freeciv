@@ -1,0 +1,120 @@
+       tthht                                                   ttt   tttttt
+        htht                                                   ttt  ttttttt
+        haat                                   g               ttft ttfffft
+       ght                     ttttt     t     g              tffttttffffff
+       g#tg                    ttttt##   tttt  g              tftttttffffff
+         g                   tt#ffffM#   ttt                tttttttttffffff
+              t              tthffff##t  ttt      tt      ttttttttttfffffff
+             #               t#ffff ft   tt     ttt    tttttttttttffffggfgf
+                             thfffff#ft   tt  tttttt tttttttttftttffffggggg
+              t             thfffff#ff   tt  tttttt tttftttfffttttfffffffgf
+                             hfffff#ff   tttttffttt tttftffffffttttfgffffff
+                            tffffff   t  tfttfffftf ftfftffftffttttffffffff
+                            fhfffff#   tttfffffthtfffftfttfffffttttffffffff
+                            hfff f f  tttgfftffhffgftftfftffffftttfgfffffff
+     #                      #f f ff#   tffffffgfhfffffttffffffffttfffffffff
+                           fffg  fff  tfffffffffhgffffffffffffftttfffffffff
+                   t      tfhfff gg#ff#ffgffffffhgfffffffffpffffttffffhhhff
+g                       gtth ffp gfgff#gfffffffhfffffffffffffffftffffghhhhh
+gg                 t     gthfffg f # fffffffffffhgfffffffffffffffffffgghhhh
+##                     gggthgfg  g#fff#ffffgffffhgffffffffffgffffffffgggfff
+###              #      ggthff   ffffff#ffffffffhfgffffffffffffgffffffgpfff
+###              t     gpphff   g # ffffffffffffhfgfffffffffffffffgffffffff
+#N#                hS   ggmfgg  fg#g ff#ffpffffffhffffffgfgffffgfffffffffff
+#                 h      mfff   f #g ffffffffgfffhfffffpggffffpfffffffffffg
+# #               mh    ##hgf   gf# fgf#gffffggffhgggffffggffggfffffggffffh
+#                 #     Bmf #  # #  g fffgffffffgfgfgfffgfffgfffffffgffgfgh
+gg                #E     h#f#S  f#L gg#Vffffffgffhffgffffggffgfgffffgfffffh
+#                #f     hhf##  ## f gp #ggggfggffhgggffffggfffggfffffffffgh
+##                h#    ghf###  H #fgg###gggggggghfgfffffggffpgfggffffffffg
+#                 #    ghfOg#    ##gfg##g##fggfgghggggfffpgfggfgpffffffffgh
+##                ##    hg #g g  #g#ggg#gg##gggg##hpgpggfgfgggfggggggfggfgg
+W              #B #    gg #pg   # p#f##fg##ggpgg#hgfpggsgfffggggggggggggggg
+##              ###N    gg g g  #ggg######G#gfpggghggggggggffffgfgggggggggg
+#              ## ##      g g   #fgg####p###gp#gfgh#pgfggggfgggggggggpggggg
+##             gg  ##      gg  # #fgg#M#g##gg##gggh##gfgsgsfffggsggggpggpgg
+g              gg ##     p gg   #gg######ggg###gg#h##gggpggfgggsgpfgggggggg
+g              pg  #g    p gg  #R#gp###f#gfp##K#gghSfggggggfffgggggpggggggg
+               g ###g    g g   ##gf####g###fg##g#fh##fgsgpgffggggggggggg##g
+                # ###    g  g g #gg#S###ggg#g###gg###sgfsgggffgpgggggggg###
+               g #M#g   gg g g ######ggg###fg##gg#hh###gsgggffgggfgggg#####
+               hg ####   #     g#g#####gg#####h#p#ghh#s#ggggfffgggggg#gg#K#
+               p  ###   ###    #gg##ffg##V##g####gghM#g##fs##fggpg##pghh#h#
+               h  ####   #     ###f#gf#pg##g##K#gfggh#sps#####fggg###ghhhhh
+                  ##L    K     #ggM#g##p########ggg#h#ggggg#O#f##ff#hhhhhhg
+                  ####   #     K##f#g###gg######fg#phh#gggps####g##N#mmhhhm
+                  ###   ##    ###f#####gg#gpg##gg#g#hhgg##g###ggg##mmmmmgmg
+                  #S   A##### ##gf##p#K##g#gggggg##g#O#sg#gg##g #g#mmphmmmm
+                 ##   sg####g######g###g#f##g#g#ggg###gggggggg #gg#dgpmmmmm
+                  #   ggg##B##ggg#sgg###ggg####g#gpg##ggg g#gg g#ppddphmmmm
+                    C ##g##f#g####s#g##ggf#pg#g##p#g##gggggppd ddpddphmmmmm
+                     #######fgg##gsgg####gf#gggggg##g#gggggppg dddpdphmmmmm
+                  gg#########g#W#ss######gg##g#gg####gg#pgpppdddddppphmmmmg
+                   gg############gss#g###g####ggg###ggg#pppppgddddppghhmmmm
+                  ggg#P#######g#g#sK#g#K##g###g#g#U#gggpgpgpppppppgghhmmmmm
+                   gg####C##D#g##g####g###g#S##g###d#gppg ggpppppppphhmmmmm
+                   gg#######################g###pd#dpppp gppppgpggphmmmmmmm
+                    ####f#####g##pg###f##g####g#pd#ddpppp ddggpmmpmhmmmmmmm
+                   ###ggf####f#K#g###D##g####gg#pddddggp   ppppmmmmmmmmmmmm
+                    S#####F###f##g#gg##ggg#ggggg#ddpddppp  dpppmmmmmmmmmmmm
+                    #########P##gg########ggg#p###s ddpp   dppgpmmmmmmmmmmm
+                     #########ffgfggg######g#gp##s#  ddpp  ddggpppmmmmmmmmm
+                    ####S#ff###g#f##g#g####g#gg#A#p  ppp   dddppppmmmmmmmmm
+                     #####f####gggg##gg##R#gggg#s    pppp  dpdddpppmmmmmmmm
+                    #####f#M##fggg##g##g ###g###     ppd   dddddpgmmmmmmmmm
+                     ##V###f####hg### #  ####pgp#    pppp  ppdddpppmmmmmmmm
+                    ######f##V#hhg#O #  ####g##p     gpp  dpdddpppmmmmmmmmm
+                     #####h#mm##fh## #   g#M####     ppppddddddppppmmmmmmmm
+                    #####hm#m##B#mg  #  gg##g#h#   #ppgpdpddddppppmmmmmmmmm
+                     f#h###mmf###ff# S# gg###gG#   #ppgpddddddgpgpppmmmmmmm
+                     Bhghmm#mg###hg   #g###g###p   gpgpdddddddpppgpmmmmmmmm
+                     fhh#hhmh####ph       gggg#p   pppppddddddppgpppmmmmmmm
+                 #h  ###fm## h###mg       hfg##p   pppppddddddppgppmmmmmpmp
+                  hhhhgg####V fBh##        hmfgp   pppdpdpddpdppppphmmmmmmm
+                #Vhhh#g#MmM# h##m##        hmmmp  #ppgpdddgddpgpphhmmmmppph
+                 #h##fm# hhh# hf#B#        #hhmmp  #pgppddddddgpppphmmmphhh
+                 h#hZf# # #h  h####        ffhhm   #pppddddddppgpphmmhhhggg
+                 ###h##f   #h  hg#h         fffhg  Kgppdddddddpppphmmhggpgp
+                 #h#h#B    #  hfhh#        Bhhfh   #p#pddddddpppphmmghpgggg
+                 gph###     h  hhf#   gg    hhhfh  ##ppdpdddddpgphhmmhggggg
+                 #hMh#     #h  hh##  gff#  hhmhgg   pppdddddddgpphmmhgpgggg
+                 #h##h      #  ffhhI gfhhpfmKpmhg    gppddddddppghmmmhggggg
+                 ##hhg     #h  h    ffh#hfhh#phgg   ppgpdgddddpghmmmghggggg
+                 L#h##    p Rh  h  ####A#hh#h#hhg   pppgpddddgpphmmmmhggpgg
+                 #g###   #  #h g  ##h ##hhp#mhphg   ppppddpdddpphmmmmhggpgg
+                 ###hV       #  h  #hh#hhpp##hphm   pppppdddddpphmmmmhggggg
+                 ##hh    p   h  p ##hhmh# g#hphh    ppppddddddpphmmmhggggpp
+                 g#### #  p  ## h  Ihph#hhhh mhmh   pppppdddddpghmmmhgggggg
+                 #S#h    p   hT h  #hg A#pphmh p    phhppdddddpphmmmhggpggg
+                  ##hm    p   ## # gp g #pppph#mh   pppmmpddpdphhmmmhpggggg
+                 C##         h  #      ##gpppp#h    mpphppddddphmmmhpggpggg
+                  ##         p   #      #g#pgpM#h   mppphppdddphmmmhppgpggg
+                 gg#         p   A     ###gppg#hhg#mhddphgpdddpmmmmhpgggggg
+                   #       phh   h    p f###pg##hmmm#ddphppppdpmhmhhpgggggp
+                    #      #    #    h BpD#gp##phphTdddphpdpppphmhmhpgggpgg
+                    #####T              #d#pgs##pmh#d#ddphppggphhhhhpgggggg
+                #T  #A#g#         #    #ddppg##gph##dddphgpppphhmhhgpgggggg
+               ##h#####h##        p     #ddpg##sspm##dppphppppphhpppppgggpg
+              #Cdm#fpfhhh              hdddpg#B#sp#ggppgpppppphpppppgpggghg
+              #dddmmhhhffp  #          gpdddpg##gg#mhgppdppdpdhhppddphggggg
+             gddddhhhhppp              pdddpps##s#hgmhgddhpdpppppddpppggghg
+              pdddddddddp              #pdddppg#gsphphhpdphppgpppddphmgggph
+             gddddddddddg              #dd#dppggggpmpmhpdphpppgpddpppgggghg
+              dddddddddddg             #Jdddddggggghmphpppphpppppdpgdhggghh
+             gddddddddddd#      #      #ddddddgggsghmpmhpddhgpppddpppgggphg
+              pddddddddddd#T#    #   # #pdddddpggg#ghmpphdpdppdppdpppppgpgg
+             gdddddddddddd##g   Tg##A# dd#ddd#pgg##ghhpppddphppgdddghggghhg
+             gdddddddddddddppgg #pgg###h ddddddpgsssphhhpdddppgppddpppggphp
+            gdddddddddddddd#pgg#ddp##dS pddddddpgsB ghmmpdddhpppddpppggghhg
+             dddddddddddddddddpgddddd#d hpddddddpg#  hphhhdddhppdddpphggghg
+            ddddddddddddddddddddddddd## ppddddddd##  hhhmhddppppdpddpggghpg
+            gddddddddddddddddddddddddd# ppdpddddddd  ghhphmpdppgddddpggppgg
+           gdddddddddddddddddddddddddpd hppd#dddddp  hphhmpdphppdpddhgggggg
+           gdddddddddddddddddddddddddpdd ppddddddddp ggphhmpdpmppdpdpgggggg
+           dddddddddddddhhdddddddddddpd  hpdddddddp  ggpdphphphppddppgggggg
+           pdddddddddddddmhddddddddddpdd  hgdddddddp  gpgdhmhppdppddppggggg
+           ddddddddddddddhddddddddddpddd  hpdddddddp ggddphppdhphpdphgggggg
+           gddddddddddddddhddddddddddpdd   ppdddddddp gpddppddgphhppdgggggg
+          gpddddddddddddddddhdddddddgddm  hpdddddddp   pddpdddhphppppgggggg
+          gpdddddddddddddddddmdddddddpdhd  hgdddddddp   dddpddhphpppppggggg
+         gppddddddddddddddddddddddddpdhm   mgddddddp    pdpgdgggggggggggggg

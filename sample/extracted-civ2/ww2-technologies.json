@@ -1,0 +1,4366 @@
+{
+  "input": "ww2.SCN",
+  "header": {
+    "magic": "CIVILIZE\u0000",
+    "marker": 26,
+    "version": 39
+  },
+  "calendar": {
+    "notes": [
+      "Raw candidate fields only; the visible Civ2 month/year is not decoded from these yet.",
+      "In the Civil War scenario, turnCounterCandidate 1 displays as July 1861 and 2 displays as August 1861."
+    ],
+    "turnCounterCandidate": 1,
+    "turnCounterOffset": 28,
+    "dateWordCandidate": 23285,
+    "dateWordHex": "0x5af5",
+    "dateWordOffset": 30,
+    "rawHeaderBytes0x10To0x27": "16 00 04 00 d4 00 00 00 16 00 00 00 01 00 f5 5a ff ff 7f 00 00 00 00 03"
+  },
+  "layout": "Classic/CiC",
+  "inferred": {
+    "civ2TechCount": 100,
+    "rulesTechnologyCount": 100,
+    "firstToDiscoverOffset": 266,
+    "discoveredByOffset": 366,
+    "wonderLocationsOffset": 466,
+    "techsOffsetInTribeInfoRecord": 88,
+    "techsBytesInTribeInfoRecord": 12,
+    "techsBitCapacityInTribeInfoRecord": 96
+  },
+  "notes": [
+    "Technology definitions are parsed from the @CIVILIZE section of rules.txt.",
+    "Per-faction known technologies are decoded from the 12-byte tribe-info technology bitfield at offset +88.",
+    "The extractor uses the @CIVILIZE rules.txt entry count, capped at 100, as the technology slot count.",
+    "The per-faction bitfield is decoded as 12 bytes / 96 bits; rule entries beyond bit 95 are listed as notRepresentableInKnownTechBitfield until any remaining per-faction storage is identified.",
+    "globalTechnologies uses the Civ2 header first_to_discover and discovered_by arrays. discoveredByOwners are raw owner-candidate bits."
+  ],
+  "technologies": [
+    {
+      "index": 0,
+      "name": "Advanced Flight",
+      "aiValue": 4,
+      "modifier": -2,
+      "prerequisite1": "Rad",
+      "prerequisite2": "Too",
+      "epoch": 3,
+      "category": 4,
+      "abbreviation": "AFl",
+      "raw": "Advanced Flight,    4,-2,  Rad, Too, 3, 4    ; AFl"
+    },
+    {
+      "index": 1,
+      "name": "Alphabet",
+      "aiValue": 5,
+      "modifier": 1,
+      "prerequisite1": "nil",
+      "prerequisite2": "nil",
+      "epoch": 0,
+      "category": 3,
+      "abbreviation": "Alp",
+      "raw": "Alphabet,           5, 1,  nil, nil, 0, 3    ; Alp"
+    },
+    {
+      "index": 2,
+      "name": "Amphibious Warfare",
+      "aiValue": 3,
+      "modifier": -2,
+      "prerequisite1": "Nav",
+      "prerequisite2": "Tac",
+      "epoch": 3,
+      "category": 0,
+      "abbreviation": "Amp",
+      "raw": "Amphibious Warfare, 3,-2,  Nav, Tac, 3, 0    ; Amp"
+    },
+    {
+      "index": 3,
+      "name": "Astronomy",
+      "aiValue": 4,
+      "modifier": 1,
+      "prerequisite1": "Mys",
+      "prerequisite2": "Mat",
+      "epoch": 1,
+      "category": 3,
+      "abbreviation": "Ast",
+      "raw": "Astronomy,          4, 1,  Mys, Mat, 1, 3    ; Ast"
+    },
+    {
+      "index": 4,
+      "name": "Atomic Theory",
+      "aiValue": 4,
+      "modifier": -1,
+      "prerequisite1": "ToG",
+      "prerequisite2": "Phy",
+      "epoch": 2,
+      "category": 3,
+      "abbreviation": "Ato",
+      "raw": "Atomic Theory,      4,-1,  ToG, Phy, 2, 3    ; Ato"
+    },
+    {
+      "index": 5,
+      "name": "Automobile",
+      "aiValue": 6,
+      "modifier": -1,
+      "prerequisite1": "Cmb",
+      "prerequisite2": "Stl",
+      "epoch": 3,
+      "category": 4,
+      "abbreviation": "Aut",
+      "raw": "Automobile,         6,-1,  Cmb, Stl, 3, 4    ; Aut"
+    },
+    {
+      "index": 6,
+      "name": "Banking",
+      "aiValue": 4,
+      "modifier": 1,
+      "prerequisite1": "Tra",
+      "prerequisite2": "Rep",
+      "epoch": 1,
+      "category": 1,
+      "abbreviation": "Ban",
+      "raw": "Banking,            4, 1,  Tra, Rep, 1, 1    ; Ban"
+    },
+    {
+      "index": 7,
+      "name": "Bridge Building",
+      "aiValue": 4,
+      "modifier": 0,
+      "prerequisite1": "Iro",
+      "prerequisite2": "Cst",
+      "epoch": 0,
+      "category": 4,
+      "abbreviation": "Bri",
+      "raw": "Bridge Building,    4, 0,  Iro, Cst, 0, 4    ; Bri"
+    },
+    {
+      "index": 8,
+      "name": "Bronze Working",
+      "aiValue": 6,
+      "modifier": -1,
+      "prerequisite1": "nil",
+      "prerequisite2": "nil",
+      "epoch": 0,
+      "category": 4,
+      "abbreviation": "Bro",
+      "raw": "Bronze Working,     6,-1,  nil, nil, 0, 4    ; Bro"
+    },
+    {
+      "index": 9,
+      "name": "Ceremonial Burial",
+      "aiValue": 5,
+      "modifier": 0,
+      "prerequisite1": "nil",
+      "prerequisite2": "nil",
+      "epoch": 0,
+      "category": 2,
+      "abbreviation": "Cer",
+      "raw": "Ceremonial Burial,  5, 0,  nil, nil, 0, 2    ; Cer"
+    },
+    {
+      "index": 10,
+      "name": "Chemistry",
+      "aiValue": 5,
+      "modifier": -1,
+      "prerequisite1": "Uni",
+      "prerequisite2": "Med",
+      "epoch": 1,
+      "category": 3,
+      "abbreviation": "Che",
+      "raw": "Chemistry,          5,-1,  Uni, Med, 1, 3    ; Che"
+    },
+    {
+      "index": 11,
+      "name": "Chivalry",
+      "aiValue": 4,
+      "modifier": -2,
+      "prerequisite1": "Feu",
+      "prerequisite2": "Hor",
+      "epoch": 1,
+      "category": 0,
+      "abbreviation": "Chi",
+      "raw": "Chivalry,           4,-2,  Feu, Hor, 1, 0    ; Chi"
+    },
+    {
+      "index": 12,
+      "name": "Code of Laws",
+      "aiValue": 4,
+      "modifier": 1,
+      "prerequisite1": "Alp",
+      "prerequisite2": "nil",
+      "epoch": 0,
+      "category": 2,
+      "abbreviation": "CoL",
+      "raw": "Code of Laws,       4, 1,  Alp, nil, 0, 2    ; CoL"
+    },
+    {
+      "index": 13,
+      "name": "Combined Arms",
+      "aiValue": 5,
+      "modifier": -1,
+      "prerequisite1": "Mob",
+      "prerequisite2": "AFl",
+      "epoch": 3,
+      "category": 0,
+      "abbreviation": "CA",
+      "raw": "Combined Arms,      5,-1,  Mob, AFl, 3, 0    ; CA"
+    },
+    {
+      "index": 14,
+      "name": "Combustion",
+      "aiValue": 5,
+      "modifier": -1,
+      "prerequisite1": "Ref",
+      "prerequisite2": "Exp",
+      "epoch": 2,
+      "category": 4,
+      "abbreviation": "Cmb",
+      "raw": "Combustion,         5,-1,  Ref, Exp, 2, 4    ; Cmb"
+    },
+    {
+      "index": 15,
+      "name": "Communism",
+      "aiValue": 5,
+      "modifier": 0,
+      "prerequisite1": "Phi",
+      "prerequisite2": "Ind",
+      "epoch": 2,
+      "category": 2,
+      "abbreviation": "Cmn",
+      "raw": "Communism,          5, 0,  Phi, Ind, 2, 2    ; Cmn"
+    },
+    {
+      "index": 16,
+      "name": "Computers",
+      "aiValue": 4,
+      "modifier": 1,
+      "prerequisite1": "Min",
+      "prerequisite2": "MP",
+      "epoch": 3,
+      "category": 4,
+      "abbreviation": "Cmp",
+      "raw": "Computers,          4, 1,  Min, MP,  3, 4    ; Cmp"
+    },
+    {
+      "index": 17,
+      "name": "Conscription",
+      "aiValue": 7,
+      "modifier": -1,
+      "prerequisite1": "Dem",
+      "prerequisite2": "Met",
+      "epoch": 2,
+      "category": 0,
+      "abbreviation": "Csc",
+      "raw": "Conscription,       7,-1,  Dem, Met, 2, 0    ; Csc"
+    },
+    {
+      "index": 18,
+      "name": "Construction",
+      "aiValue": 4,
+      "modifier": 0,
+      "prerequisite1": "Mas",
+      "prerequisite2": "Cur",
+      "epoch": 0,
+      "category": 4,
+      "abbreviation": "Cst",
+      "raw": "Construction,       4, 0,  Mas, Cur, 0, 4    ; Cst"
+    },
+    {
+      "index": 19,
+      "name": "The Corporation",
+      "aiValue": 4,
+      "modifier": 0,
+      "prerequisite1": "Ind",
+      "prerequisite2": "Eco",
+      "epoch": 2,
+      "category": 1,
+      "abbreviation": "Cor",
+      "raw": "The Corporation,    4, 0,  Ind, Eco, 2, 1    ; Cor"
+    },
+    {
+      "index": 20,
+      "name": "Currency",
+      "aiValue": 4,
+      "modifier": 1,
+      "prerequisite1": "Bro",
+      "prerequisite2": "nil",
+      "epoch": 0,
+      "category": 1,
+      "abbreviation": "Cur",
+      "raw": "Currency,           4, 1,  Bro, nil, 0, 1    ; Cur"
+    },
+    {
+      "index": 21,
+      "name": "Democracy",
+      "aiValue": 5,
+      "modifier": 1,
+      "prerequisite1": "Ban",
+      "prerequisite2": "Inv",
+      "epoch": 2,
+      "category": 2,
+      "abbreviation": "Dem",
+      "raw": "Democracy,          5, 1,  Ban, Inv, 2, 2    ; Dem"
+    },
+    {
+      "index": 22,
+      "name": "Economics",
+      "aiValue": 4,
+      "modifier": 1,
+      "prerequisite1": "Uni",
+      "prerequisite2": "Ban",
+      "epoch": 2,
+      "category": 1,
+      "abbreviation": "Eco",
+      "raw": "Economics,          4, 1,  Uni, Ban, 2, 1    ; Eco"
+    },
+    {
+      "index": 23,
+      "name": "Electricity",
+      "aiValue": 4,
+      "modifier": 0,
+      "prerequisite1": "Met",
+      "prerequisite2": "Mag",
+      "epoch": 2,
+      "category": 4,
+      "abbreviation": "E1",
+      "raw": "Electricity,        4, 0,  Met, Mag, 2, 4    ; E1"
+    },
+    {
+      "index": 24,
+      "name": "Electronics",
+      "aiValue": 4,
+      "modifier": 1,
+      "prerequisite1": "E1",
+      "prerequisite2": "Cor",
+      "epoch": 3,
+      "category": 4,
+      "abbreviation": "E2",
+      "raw": "Electronics,        4, 1,  E1,  Cor, 3, 4    ; E2"
+    },
+    {
+      "index": 25,
+      "name": "Engineering",
+      "aiValue": 4,
+      "modifier": 0,
+      "prerequisite1": "Whe",
+      "prerequisite2": "Cst",
+      "epoch": 0,
+      "category": 4,
+      "abbreviation": "Eng",
+      "raw": "Engineering,        4, 0,  Whe, Cst, 0, 4    ; Eng"
+    },
+    {
+      "index": 26,
+      "name": "Environmentalism",
+      "aiValue": 3,
+      "modifier": 1,
+      "prerequisite1": "Rec",
+      "prerequisite2": "SFl",
+      "epoch": 3,
+      "category": 2,
+      "abbreviation": "Env",
+      "raw": "Environmentalism,   3, 1,  Rec, SFl, 3, 2    ; Env"
+    },
+    {
+      "index": 27,
+      "name": "Espionage",
+      "aiValue": 2,
+      "modifier": -1,
+      "prerequisite1": "Cmn",
+      "prerequisite2": "Dem",
+      "epoch": 3,
+      "category": 0,
+      "abbreviation": "Esp",
+      "raw": "Espionage,          2,-1,  Cmn, Dem, 3, 0    ; Esp"
+    },
+    {
+      "index": 28,
+      "name": "Explosives",
+      "aiValue": 5,
+      "modifier": 0,
+      "prerequisite1": "Gun",
+      "prerequisite2": "Che",
+      "epoch": 2,
+      "category": 4,
+      "abbreviation": "Exp",
+      "raw": "Explosives,         5, 0,  Gun, Che, 2, 4    ; Exp"
+    },
+    {
+      "index": 29,
+      "name": "Feudalism",
+      "aiValue": 4,
+      "modifier": -1,
+      "prerequisite1": "War",
+      "prerequisite2": "Mon",
+      "epoch": 0,
+      "category": 0,
+      "abbreviation": "Feu",
+      "raw": "Feudalism,          4,-1,  War, Mon, 0, 0    ; Feu"
+    },
+    {
+      "index": 30,
+      "name": "Flight",
+      "aiValue": 4,
+      "modifier": -1,
+      "prerequisite1": "Cmb",
+      "prerequisite2": "ToG",
+      "epoch": 2,
+      "category": 4,
+      "abbreviation": "Fli",
+      "raw": "Flight,             4,-1,  Cmb, ToG, 2, 4    ; Fli"
+    },
+    {
+      "index": 31,
+      "name": "Fundamentalism",
+      "aiValue": 3,
+      "modifier": -2,
+      "prerequisite1": "MT",
+      "prerequisite2": "Csc",
+      "epoch": 2,
+      "category": 2,
+      "abbreviation": "Fun",
+      "raw": "Fundamentalism,     3,-2,  MT,  Csc, 2, 2    ; Fun"
+    },
+    {
+      "index": 32,
+      "name": "Fusion Power",
+      "aiValue": 3,
+      "modifier": 0,
+      "prerequisite1": "NP",
+      "prerequisite2": "Sup",
+      "epoch": 3,
+      "category": 3,
+      "abbreviation": "FP",
+      "raw": "Fusion Power,       3, 0,  NP,  Sup, 3, 3    ; FP"
+    },
+    {
+      "index": 33,
+      "name": "Genetic Engineering",
+      "aiValue": 3,
+      "modifier": 2,
+      "prerequisite1": "Med",
+      "prerequisite2": "Cor",
+      "epoch": 3,
+      "category": 3,
+      "abbreviation": "Gen",
+      "raw": "Genetic Engineering,3, 2,  Med, Cor, 3, 3    ; Gen"
+    },
+    {
+      "index": 34,
+      "name": "Guerrilla Warfare",
+      "aiValue": 4,
+      "modifier": 1,
+      "prerequisite1": "Cmn",
+      "prerequisite2": "Tac",
+      "epoch": 3,
+      "category": 0,
+      "abbreviation": "Gue",
+      "raw": "Guerrilla Warfare,  4, 1,  Cmn, Tac, 3, 0    ; Gue"
+    },
+    {
+      "index": 35,
+      "name": "Gunpowder",
+      "aiValue": 8,
+      "modifier": -2,
+      "prerequisite1": "Inv",
+      "prerequisite2": "Iro",
+      "epoch": 1,
+      "category": 0,
+      "abbreviation": "Gun",
+      "raw": "Gunpowder,          8,-2,  Inv, Iro, 1, 0    ; Gun"
+    },
+    {
+      "index": 36,
+      "name": "Horseback Riding",
+      "aiValue": 4,
+      "modifier": -1,
+      "prerequisite1": "nil",
+      "prerequisite2": "nil",
+      "epoch": 0,
+      "category": 0,
+      "abbreviation": "Hor",
+      "raw": "Horseback Riding,   4,-1,  nil, nil, 0, 0    ; Hor"
+    },
+    {
+      "index": 37,
+      "name": "Industrialization",
+      "aiValue": 6,
+      "modifier": 0,
+      "prerequisite1": "RR",
+      "prerequisite2": "Ban",
+      "epoch": 2,
+      "category": 1,
+      "abbreviation": "Ind",
+      "raw": "Industrialization,  6, 0,  RR,  Ban, 2, 1    ; Ind"
+    },
+    {
+      "index": 38,
+      "name": "Invention",
+      "aiValue": 6,
+      "modifier": 0,
+      "prerequisite1": "Eng",
+      "prerequisite2": "Lit",
+      "epoch": 1,
+      "category": 4,
+      "abbreviation": "Inv",
+      "raw": "Invention,          6, 0,  Eng, Lit, 1, 4    ; Inv"
+    },
+    {
+      "index": 39,
+      "name": "Iron Working",
+      "aiValue": 5,
+      "modifier": -1,
+      "prerequisite1": "Bro",
+      "prerequisite2": "War",
+      "epoch": 0,
+      "category": 4,
+      "abbreviation": "Iro",
+      "raw": "Iron Working,       5,-1,  Bro, War, 0, 4    ; Iro"
+    },
+    {
+      "index": 40,
+      "name": "Labor Union",
+      "aiValue": 4,
+      "modifier": -1,
+      "prerequisite1": "MP",
+      "prerequisite2": "Gue",
+      "epoch": 3,
+      "category": 2,
+      "abbreviation": "Lab",
+      "raw": "Labor Union,        4,-1,  MP,  Gue, 3, 2    ; Lab"
+    },
+    {
+      "index": 41,
+      "name": "The Laser",
+      "aiValue": 4,
+      "modifier": 0,
+      "prerequisite1": "NP",
+      "prerequisite2": "MP",
+      "epoch": 3,
+      "category": 3,
+      "abbreviation": "Las",
+      "raw": "The Laser,          4, 0,  NP,  MP,  3, 3    ; Las"
+    },
+    {
+      "index": 42,
+      "name": "Leadership",
+      "aiValue": 5,
+      "modifier": -1,
+      "prerequisite1": "Chi",
+      "prerequisite2": "Gun",
+      "epoch": 1,
+      "category": 0,
+      "abbreviation": "Ldr",
+      "raw": "Leadership,         5,-1,  Chi, Gun, 1, 0    ; Ldr"
+    },
+    {
+      "index": 43,
+      "name": "Literacy",
+      "aiValue": 5,
+      "modifier": 2,
+      "prerequisite1": "Wri",
+      "prerequisite2": "CoL",
+      "epoch": 0,
+      "category": 3,
+      "abbreviation": "Lit",
+      "raw": "Literacy,           5, 2,  Wri, CoL, 0, 3    ; Lit"
+    },
+    {
+      "index": 44,
+      "name": "Machine Tools",
+      "aiValue": 4,
+      "modifier": -2,
+      "prerequisite1": "Stl",
+      "prerequisite2": "Tac",
+      "epoch": 2,
+      "category": 4,
+      "abbreviation": "Too",
+      "raw": "Machine Tools,      4,-2,  Stl, Tac, 2, 4    ; Too"
+    },
+    {
+      "index": 45,
+      "name": "Magnetism",
+      "aiValue": 4,
+      "modifier": -1,
+      "prerequisite1": "Phy",
+      "prerequisite2": "Iro",
+      "epoch": 1,
+      "category": 3,
+      "abbreviation": "Mag",
+      "raw": "Magnetism,          4,-1,  Phy, Iro, 1, 3    ; Mag"
+    },
+    {
+      "index": 46,
+      "name": "Map Making",
+      "aiValue": 6,
+      "modifier": -1,
+      "prerequisite1": "Alp",
+      "prerequisite2": "nil",
+      "epoch": 0,
+      "category": 1,
+      "abbreviation": "Map",
+      "raw": "Map Making,         6,-1,  Alp, nil, 0, 1    ; Map"
+    },
+    {
+      "index": 47,
+      "name": "Masonry",
+      "aiValue": 4,
+      "modifier": 1,
+      "prerequisite1": "nil",
+      "prerequisite2": "nil",
+      "epoch": 0,
+      "category": 4,
+      "abbreviation": "Mas",
+      "raw": "Masonry,            4, 1,  nil, nil, 0, 4    ; Mas"
+    },
+    {
+      "index": 48,
+      "name": "Mass Production",
+      "aiValue": 5,
+      "modifier": 0,
+      "prerequisite1": "Aut",
+      "prerequisite2": "Cor",
+      "epoch": 3,
+      "category": 4,
+      "abbreviation": "MP",
+      "raw": "Mass Production,    5, 0,  Aut, Cor, 3, 4    ; MP"
+    },
+    {
+      "index": 49,
+      "name": "Mathematics",
+      "aiValue": 4,
+      "modifier": -1,
+      "prerequisite1": "Alp",
+      "prerequisite2": "Mas",
+      "epoch": 0,
+      "category": 3,
+      "abbreviation": "Mat",
+      "raw": "Mathematics,        4,-1,  Alp, Mas, 0, 3    ; Mat"
+    },
+    {
+      "index": 50,
+      "name": "Medicine",
+      "aiValue": 4,
+      "modifier": 0,
+      "prerequisite1": "Phi",
+      "prerequisite2": "Tra",
+      "epoch": 1,
+      "category": 1,
+      "abbreviation": "Med",
+      "raw": "Medicine,           4, 0,  Phi, Tra, 1, 1    ; Med"
+    },
+    {
+      "index": 51,
+      "name": "Metallurgy",
+      "aiValue": 6,
+      "modifier": -2,
+      "prerequisite1": "Gun",
+      "prerequisite2": "Uni",
+      "epoch": 1,
+      "category": 0,
+      "abbreviation": "Met",
+      "raw": "Metallurgy,         6,-2,  Gun, Uni, 1, 0    ; Met"
+    },
+    {
+      "index": 52,
+      "name": "Miniaturization",
+      "aiValue": 4,
+      "modifier": 1,
+      "prerequisite1": "Too",
+      "prerequisite2": "E2",
+      "epoch": 3,
+      "category": 4,
+      "abbreviation": "Min",
+      "raw": "Miniaturization,    4, 1,  Too, E2,  3, 4    ; Min"
+    },
+    {
+      "index": 53,
+      "name": "Mobile Warfare",
+      "aiValue": 8,
+      "modifier": -1,
+      "prerequisite1": "Aut",
+      "prerequisite2": "Tac",
+      "epoch": 3,
+      "category": 0,
+      "abbreviation": "Mob",
+      "raw": "Mobile Warfare,     8,-1,  Aut, Tac, 3, 0    ; Mob"
+    },
+    {
+      "index": 54,
+      "name": "Monarchy",
+      "aiValue": 5,
+      "modifier": 1,
+      "prerequisite1": "Cer",
+      "prerequisite2": "CoL",
+      "epoch": 0,
+      "category": 2,
+      "abbreviation": "Mon",
+      "raw": "Monarchy,           5, 1,  Cer, CoL, 0, 2    ; Mon"
+    },
+    {
+      "index": 55,
+      "name": "Monotheism",
+      "aiValue": 5,
+      "modifier": 1,
+      "prerequisite1": "Phi",
+      "prerequisite2": "PT",
+      "epoch": 1,
+      "category": 2,
+      "abbreviation": "MT",
+      "raw": "Monotheism,         5, 1,  Phi, PT,  1, 2    ; MT"
+    },
+    {
+      "index": 56,
+      "name": "Mysticism",
+      "aiValue": 4,
+      "modifier": 0,
+      "prerequisite1": "Cer",
+      "prerequisite2": "nil",
+      "epoch": 0,
+      "category": 2,
+      "abbreviation": "Mys",
+      "raw": "Mysticism,          4, 0,  Cer, nil, 0, 2    ; Mys"
+    },
+    {
+      "index": 57,
+      "name": "Navigation",
+      "aiValue": 6,
+      "modifier": -1,
+      "prerequisite1": "Sea",
+      "prerequisite2": "Ast",
+      "epoch": 1,
+      "category": 1,
+      "abbreviation": "Nav",
+      "raw": "Navigation,         6,-1,  Sea, Ast, 1, 1    ; Nav"
+    },
+    {
+      "index": 58,
+      "name": "Nuclear Fission",
+      "aiValue": 6,
+      "modifier": -2,
+      "prerequisite1": "Ato",
+      "prerequisite2": "MP",
+      "epoch": 3,
+      "category": 3,
+      "abbreviation": "NF",
+      "raw": "Nuclear Fission,    6,-2,  Ato, MP,  3, 3    ; NF"
+    },
+    {
+      "index": 59,
+      "name": "Nuclear Power",
+      "aiValue": 3,
+      "modifier": 0,
+      "prerequisite1": "NF",
+      "prerequisite2": "E2",
+      "epoch": 3,
+      "category": 3,
+      "abbreviation": "NP",
+      "raw": "Nuclear Power,      3, 0,  NF,  E2,  3, 3    ; NP"
+    },
+    {
+      "index": 60,
+      "name": "Philosophy",
+      "aiValue": 6,
+      "modifier": 1,
+      "prerequisite1": "Mys",
+      "prerequisite2": "Lit",
+      "epoch": 1,
+      "category": 2,
+      "abbreviation": "Phi",
+      "raw": "Philosophy,         6, 1,  Mys, Lit, 1, 2    ; Phi"
+    },
+    {
+      "index": 61,
+      "name": "Physics",
+      "aiValue": 4,
+      "modifier": -1,
+      "prerequisite1": "Nav",
+      "prerequisite2": "Lit",
+      "epoch": 1,
+      "category": 3,
+      "abbreviation": "Phy",
+      "raw": "Physics,            4,-1,  Nav, Lit, 1, 3    ; Phy"
+    },
+    {
+      "index": 62,
+      "name": "Plastics",
+      "aiValue": 4,
+      "modifier": 1,
+      "prerequisite1": "Ref",
+      "prerequisite2": "SFl",
+      "epoch": 3,
+      "category": 4,
+      "abbreviation": "Pla",
+      "raw": "Plastics,           4, 1,  Ref, SFl, 3, 4    ; Pla"
+    },
+    {
+      "index": 63,
+      "name": "Plumbing",
+      "aiValue": 4,
+      "modifier": 0,
+      "prerequisite1": "no",
+      "prerequisite2": "no",
+      "epoch": 1,
+      "category": 4,
+      "abbreviation": "Plu",
+      "raw": "Plumbing,           4, 0,  no,  no,  1, 4    ; Plu  (Cst & Pot)"
+    },
+    {
+      "index": 64,
+      "name": "Polytheism",
+      "aiValue": 4,
+      "modifier": 0,
+      "prerequisite1": "Cer",
+      "prerequisite2": "Hor",
+      "epoch": 0,
+      "category": 2,
+      "abbreviation": "PT",
+      "raw": "Polytheism,         4, 0,  Cer, Hor, 0, 2    ; PT"
+    },
+    {
+      "index": 65,
+      "name": "Pottery",
+      "aiValue": 4,
+      "modifier": 1,
+      "prerequisite1": "nil",
+      "prerequisite2": "nil",
+      "epoch": 0,
+      "category": 1,
+      "abbreviation": "Pot",
+      "raw": "Pottery,            4, 1,  nil, nil, 0, 1    ; Pot"
+    },
+    {
+      "index": 66,
+      "name": "Radio",
+      "aiValue": 5,
+      "modifier": -1,
+      "prerequisite1": "Fli",
+      "prerequisite2": "E1",
+      "epoch": 3,
+      "category": 4,
+      "abbreviation": "Rad",
+      "raw": "Radio,              5,-1,  Fli, E1,  3, 4    ; Rad"
+    },
+    {
+      "index": 67,
+      "name": "Railroad",
+      "aiValue": 6,
+      "modifier": 0,
+      "prerequisite1": "SE",
+      "prerequisite2": "Bri",
+      "epoch": 2,
+      "category": 1,
+      "abbreviation": "RR",
+      "raw": "Railroad,           6, 0,  SE, Bri,  2, 1    ; RR"
+    },
+    {
+      "index": 68,
+      "name": "Recycling",
+      "aiValue": 2,
+      "modifier": 1,
+      "prerequisite1": "MP",
+      "prerequisite2": "Dem",
+      "epoch": 3,
+      "category": 2,
+      "abbreviation": "Rec",
+      "raw": "Recycling,          2, 1,  MP, Dem,  3, 2    ; Rec"
+    },
+    {
+      "index": 69,
+      "name": "Refining",
+      "aiValue": 4,
+      "modifier": 0,
+      "prerequisite1": "Che",
+      "prerequisite2": "Cor",
+      "epoch": 2,
+      "category": 4,
+      "abbreviation": "Ref",
+      "raw": "Refining,           4, 0,  Che, Cor, 2, 4    ; Ref"
+    },
+    {
+      "index": 70,
+      "name": "Refrigeration",
+      "aiValue": 3,
+      "modifier": 1,
+      "prerequisite1": "E1",
+      "prerequisite2": "San",
+      "epoch": 3,
+      "category": 1,
+      "abbreviation": "Rfg",
+      "raw": "Refrigeration,      3, 1,  E1,  San, 3, 1    ; Rfg"
+    },
+    {
+      "index": 71,
+      "name": "The Republic",
+      "aiValue": 5,
+      "modifier": 1,
+      "prerequisite1": "CoL",
+      "prerequisite2": "Lit",
+      "epoch": 0,
+      "category": 2,
+      "abbreviation": "Rep",
+      "raw": "The Republic,       5, 1,  CoL, Lit, 0, 2    ; Rep"
+    },
+    {
+      "index": 72,
+      "name": "Robotics",
+      "aiValue": 5,
+      "modifier": -2,
+      "prerequisite1": "Cmp",
+      "prerequisite2": "Mob",
+      "epoch": 3,
+      "category": 0,
+      "abbreviation": "Rob",
+      "raw": "Robotics,           5,-2,  Cmp, Mob, 3, 0    ; Rob"
+    },
+    {
+      "index": 73,
+      "name": "Rocketry",
+      "aiValue": 6,
+      "modifier": -2,
+      "prerequisite1": "AFl",
+      "prerequisite2": "E2",
+      "epoch": 3,
+      "category": 0,
+      "abbreviation": "Roc",
+      "raw": "Rocketry,           6,-2,  AFl, E2,  3, 0    ; Roc"
+    },
+    {
+      "index": 74,
+      "name": "Sanitation",
+      "aiValue": 4,
+      "modifier": 2,
+      "prerequisite1": "Med",
+      "prerequisite2": "Eng",
+      "epoch": 2,
+      "category": 1,
+      "abbreviation": "San",
+      "raw": "Sanitation,         4, 2,  Med, Eng, 2, 1    ; San"
+    },
+    {
+      "index": 75,
+      "name": "Seafaring",
+      "aiValue": 4,
+      "modifier": 1,
+      "prerequisite1": "Map",
+      "prerequisite2": "Pot",
+      "epoch": 0,
+      "category": 1,
+      "abbreviation": "Sea",
+      "raw": "Seafaring,          4, 1,  Map, Pot, 0, 1    ; Sea"
+    },
+    {
+      "index": 76,
+      "name": "Space Flight",
+      "aiValue": 4,
+      "modifier": 1,
+      "prerequisite1": "Cmp",
+      "prerequisite2": "Roc",
+      "epoch": 3,
+      "category": 3,
+      "abbreviation": "SFl",
+      "raw": "Space Flight,       4, 1,  Cmp, Roc, 3, 3    ; SFl"
+    },
+    {
+      "index": 77,
+      "name": "Stealth",
+      "aiValue": 3,
+      "modifier": -2,
+      "prerequisite1": "Sup",
+      "prerequisite2": "Rob",
+      "epoch": 3,
+      "category": 0,
+      "abbreviation": "Sth",
+      "raw": "Stealth,            3,-2,  Sup, Rob, 3, 0    ; Sth"
+    },
+    {
+      "index": 78,
+      "name": "Steam Engine",
+      "aiValue": 4,
+      "modifier": -1,
+      "prerequisite1": "Phy",
+      "prerequisite2": "Inv",
+      "epoch": 2,
+      "category": 3,
+      "abbreviation": "SE",
+      "raw": "Steam Engine,       4,-1,  Phy, Inv, 2, 3    ; SE"
+    },
+    {
+      "index": 79,
+      "name": "Steel",
+      "aiValue": 4,
+      "modifier": -1,
+      "prerequisite1": "E1",
+      "prerequisite2": "Ind",
+      "epoch": 2,
+      "category": 4,
+      "abbreviation": "Stl",
+      "raw": "Steel,              4,-1,  E1,  Ind, 2, 4    ; Stl"
+    },
+    {
+      "index": 80,
+      "name": "Superconductor",
+      "aiValue": 4,
+      "modifier": 1,
+      "prerequisite1": "Pla",
+      "prerequisite2": "Las",
+      "epoch": 3,
+      "category": 3,
+      "abbreviation": "Sup",
+      "raw": "Superconductor,     4, 1,  Pla, Las, 3, 3    ; Sup"
+    },
+    {
+      "index": 81,
+      "name": "Tactics",
+      "aiValue": 6,
+      "modifier": -1,
+      "prerequisite1": "Csc",
+      "prerequisite2": "Ldr",
+      "epoch": 2,
+      "category": 0,
+      "abbreviation": "Tac",
+      "raw": "Tactics,            6,-1,  Csc, Ldr, 2, 0    ; Tac"
+    },
+    {
+      "index": 82,
+      "name": "Theology",
+      "aiValue": 3,
+      "modifier": 2,
+      "prerequisite1": "MT",
+      "prerequisite2": "Feu",
+      "epoch": 1,
+      "category": 2,
+      "abbreviation": "The",
+      "raw": "Theology,           3, 2,  MT,  Feu, 1, 2    ; The"
+    },
+    {
+      "index": 83,
+      "name": "Theory of Gravity",
+      "aiValue": 4,
+      "modifier": 0,
+      "prerequisite1": "Ast",
+      "prerequisite2": "Uni",
+      "epoch": 1,
+      "category": 3,
+      "abbreviation": "ToG",
+      "raw": "Theory of Gravity,  4, 0,  Ast, Uni, 1, 3    ; ToG"
+    },
+    {
+      "index": 84,
+      "name": "Trade",
+      "aiValue": 4,
+      "modifier": 2,
+      "prerequisite1": "Cur",
+      "prerequisite2": "CoL",
+      "epoch": 0,
+      "category": 1,
+      "abbreviation": "Tra",
+      "raw": "Trade,              4, 2,  Cur, CoL, 0, 1    ; Tra"
+    },
+    {
+      "index": 85,
+      "name": "University",
+      "aiValue": 5,
+      "modifier": 1,
+      "prerequisite1": "Mat",
+      "prerequisite2": "Phi",
+      "epoch": 1,
+      "category": 3,
+      "abbreviation": "Uni",
+      "raw": "University,         5, 1,  Mat, Phi, 1, 3    ; Uni"
+    },
+    {
+      "index": 86,
+      "name": "Warrior Code",
+      "aiValue": 4,
+      "modifier": -1,
+      "prerequisite1": "nil",
+      "prerequisite2": "nil",
+      "epoch": 0,
+      "category": 0,
+      "abbreviation": "War",
+      "raw": "Warrior Code,       4,-1,  nil, nil, 0, 0    ; War"
+    },
+    {
+      "index": 87,
+      "name": "The Wheel",
+      "aiValue": 4,
+      "modifier": -1,
+      "prerequisite1": "Hor",
+      "prerequisite2": "nil",
+      "epoch": 0,
+      "category": 4,
+      "abbreviation": "Whe",
+      "raw": "The Wheel,          4,-1,  Hor, nil, 0, 4    ; Whe"
+    },
+    {
+      "index": 88,
+      "name": "Writing",
+      "aiValue": 4,
+      "modifier": 2,
+      "prerequisite1": "Alp",
+      "prerequisite2": "nil",
+      "epoch": 0,
+      "category": 3,
+      "abbreviation": "Wri",
+      "raw": "Writing,            4, 2,  Alp, nil, 0, 3    ; Wri"
+    },
+    {
+      "index": 89,
+      "name": "Future Technology",
+      "aiValue": 1,
+      "modifier": 0,
+      "prerequisite1": "FP",
+      "prerequisite2": "Rec",
+      "epoch": 3,
+      "category": 3,
+      "abbreviation": "...",
+      "raw": "Future Technology,  1, 0,  FP,  Rec, 3, 3    ; ..."
+    },
+    {
+      "index": 90,
+      "name": "User Def Tech A",
+      "aiValue": 3,
+      "modifier": 0,
+      "prerequisite1": "no",
+      "prerequisite2": "no",
+      "epoch": 0,
+      "category": 0,
+      "abbreviation": "U1",
+      "raw": "User Def Tech A,    3, 0,  no,  no,  0, 0    ; U1"
+    },
+    {
+      "index": 91,
+      "name": "User Def Tech B",
+      "aiValue": 3,
+      "modifier": 0,
+      "prerequisite1": "no",
+      "prerequisite2": "no",
+      "epoch": 0,
+      "category": 0,
+      "abbreviation": "U2",
+      "raw": "User Def Tech B,    3, 0,  no,  no,  0, 0    ; U2"
+    },
+    {
+      "index": 92,
+      "name": "User Def Tech C",
+      "aiValue": 3,
+      "modifier": 0,
+      "prerequisite1": "no",
+      "prerequisite2": "no",
+      "epoch": 0,
+      "category": 0,
+      "abbreviation": "U3",
+      "raw": "User Def Tech C,    3, 0,  no,  no,  0, 0    ; U3"
+    },
+    {
+      "index": 93,
+      "name": "Extra Advance 1",
+      "aiValue": 3,
+      "modifier": 0,
+      "prerequisite1": "no",
+      "prerequisite2": "no",
+      "epoch": 0,
+      "category": 0,
+      "abbreviation": "X1",
+      "raw": "Extra Advance 1,    3, 0,  no,  no,  0, 0    ; X1"
+    },
+    {
+      "index": 94,
+      "name": "Extra Advance 2",
+      "aiValue": 3,
+      "modifier": 0,
+      "prerequisite1": "no",
+      "prerequisite2": "no",
+      "epoch": 0,
+      "category": 0,
+      "abbreviation": "X2",
+      "raw": "Extra Advance 2,    3, 0,  no,  no,  0, 0    ; X2"
+    },
+    {
+      "index": 95,
+      "name": "Extra Advance 3",
+      "aiValue": 3,
+      "modifier": 0,
+      "prerequisite1": "no",
+      "prerequisite2": "no",
+      "epoch": 0,
+      "category": 0,
+      "abbreviation": "X3",
+      "raw": "Extra Advance 3,    3, 0,  no,  no,  0, 0    ; X3"
+    },
+    {
+      "index": 96,
+      "name": "Extra Advance 4",
+      "aiValue": 3,
+      "modifier": 0,
+      "prerequisite1": "no",
+      "prerequisite2": "no",
+      "epoch": 0,
+      "category": 0,
+      "abbreviation": "X4",
+      "raw": "Extra Advance 4,    3, 0,  no,  no,  0, 0    ; X4"
+    },
+    {
+      "index": 97,
+      "name": "Extra Advance 5",
+      "aiValue": 3,
+      "modifier": 0,
+      "prerequisite1": "no",
+      "prerequisite2": "no",
+      "epoch": 0,
+      "category": 0,
+      "abbreviation": "X5",
+      "raw": "Extra Advance 5,    3, 0,  no,  no,  0, 0    ; X5"
+    },
+    {
+      "index": 98,
+      "name": "Extra Advance 6",
+      "aiValue": 3,
+      "modifier": 0,
+      "prerequisite1": "no",
+      "prerequisite2": "no",
+      "epoch": 0,
+      "category": 0,
+      "abbreviation": "X6",
+      "raw": "Extra Advance 6,    3, 0,  no,  no,  0, 0    ; X6"
+    },
+    {
+      "index": 99,
+      "name": "Extra Advance 7",
+      "aiValue": 3,
+      "modifier": 0,
+      "prerequisite1": "no",
+      "prerequisite2": "no",
+      "epoch": 0,
+      "category": 0,
+      "abbreviation": "X7",
+      "raw": "Extra Advance 7,    3, 0,  no,  no,  0, 0    ; X7"
+    }
+  ],
+  "globalTechnologies": [
+    {
+      "index": 0,
+      "name": "Advanced Flight",
+      "abbreviation": "AFl",
+      "firstToDiscoverRaw": 254,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 1,
+      "name": "Alphabet",
+      "abbreviation": "Alp",
+      "firstToDiscoverRaw": 255,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 2,
+      "name": "Amphibious Warfare",
+      "abbreviation": "Amp",
+      "firstToDiscoverRaw": 15,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 3,
+      "name": "Astronomy",
+      "abbreviation": "Ast",
+      "firstToDiscoverRaw": 0,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 4,
+      "name": "Atomic Theory",
+      "abbreviation": "Ato",
+      "firstToDiscoverRaw": 5,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 5,
+      "name": "Automobile",
+      "abbreviation": "Aut",
+      "firstToDiscoverRaw": 0,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 6,
+      "name": "Banking",
+      "abbreviation": "Ban",
+      "firstToDiscoverRaw": 3,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 7,
+      "name": "Bridge Building",
+      "abbreviation": "Bri",
+      "firstToDiscoverRaw": 0,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 8,
+      "name": "Bronze Working",
+      "abbreviation": "Bro",
+      "firstToDiscoverRaw": 30,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 9,
+      "name": "Ceremonial Burial",
+      "abbreviation": "Cer",
+      "firstToDiscoverRaw": 0,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 10,
+      "name": "Chemistry",
+      "abbreviation": "Che",
+      "firstToDiscoverRaw": 43,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 11,
+      "name": "Chivalry",
+      "abbreviation": "Chi",
+      "firstToDiscoverRaw": 0,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 12,
+      "name": "Code of Laws",
+      "abbreviation": "CoL",
+      "firstToDiscoverRaw": 15,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 13,
+      "name": "Combined Arms",
+      "abbreviation": "CA",
+      "firstToDiscoverRaw": 0,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 14,
+      "name": "Combustion",
+      "abbreviation": "Cmb",
+      "firstToDiscoverRaw": 4,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 15,
+      "name": "Communism",
+      "abbreviation": "Cmn",
+      "firstToDiscoverRaw": 0,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 16,
+      "name": "Computers",
+      "abbreviation": "Cmp",
+      "firstToDiscoverRaw": 1,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 17,
+      "name": "Conscription",
+      "abbreviation": "Csc",
+      "firstToDiscoverRaw": 0,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 18,
+      "name": "Construction",
+      "abbreviation": "Cst",
+      "firstToDiscoverRaw": 15,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 19,
+      "name": "The Corporation",
+      "abbreviation": "Cor",
+      "firstToDiscoverRaw": 0,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 20,
+      "name": "Currency",
+      "abbreviation": "Cur",
+      "firstToDiscoverRaw": 20,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 21,
+      "name": "Democracy",
+      "abbreviation": "Dem",
+      "firstToDiscoverRaw": 0,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 22,
+      "name": "Economics",
+      "abbreviation": "Eco",
+      "firstToDiscoverRaw": 15,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 23,
+      "name": "Electricity",
+      "abbreviation": "E1",
+      "firstToDiscoverRaw": 0,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 24,
+      "name": "Electronics",
+      "abbreviation": "E2",
+      "firstToDiscoverRaw": 22,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 25,
+      "name": "Engineering",
+      "abbreviation": "Eng",
+      "firstToDiscoverRaw": 0,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 26,
+      "name": "Environmentalism",
+      "abbreviation": "Env",
+      "firstToDiscoverRaw": 95,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 27,
+      "name": "Espionage",
+      "abbreviation": "Esp",
+      "firstToDiscoverRaw": 0,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 28,
+      "name": "Explosives",
+      "abbreviation": "Exp",
+      "firstToDiscoverRaw": 21,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 29,
+      "name": "Feudalism",
+      "abbreviation": "Feu",
+      "firstToDiscoverRaw": 0,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 30,
+      "name": "Flight",
+      "abbreviation": "Fli",
+      "firstToDiscoverRaw": 22,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 31,
+      "name": "Fundamentalism",
+      "abbreviation": "Fun",
+      "firstToDiscoverRaw": 0,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 32,
+      "name": "Fusion Power",
+      "abbreviation": "FP",
+      "firstToDiscoverRaw": 255,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 33,
+      "name": "Genetic Engineering",
+      "abbreviation": "Gen",
+      "firstToDiscoverRaw": 255,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 34,
+      "name": "Guerrilla Warfare",
+      "abbreviation": "Gue",
+      "firstToDiscoverRaw": 255,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 35,
+      "name": "Gunpowder",
+      "abbreviation": "Gun",
+      "firstToDiscoverRaw": 255,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 36,
+      "name": "Horseback Riding",
+      "abbreviation": "Hor",
+      "firstToDiscoverRaw": 255,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 37,
+      "name": "Industrialization",
+      "abbreviation": "Ind",
+      "firstToDiscoverRaw": 255,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 38,
+      "name": "Invention",
+      "abbreviation": "Inv",
+      "firstToDiscoverRaw": 255,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 39,
+      "name": "Iron Working",
+      "abbreviation": "Iro",
+      "firstToDiscoverRaw": 255,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 40,
+      "name": "Labor Union",
+      "abbreviation": "Lab",
+      "firstToDiscoverRaw": 255,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 41,
+      "name": "The Laser",
+      "abbreviation": "Las",
+      "firstToDiscoverRaw": 255,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 42,
+      "name": "Leadership",
+      "abbreviation": "Ldr",
+      "firstToDiscoverRaw": 19,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 43,
+      "name": "Literacy",
+      "abbreviation": "Lit",
+      "firstToDiscoverRaw": 0,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 44,
+      "name": "Machine Tools",
+      "abbreviation": "Too",
+      "firstToDiscoverRaw": 0,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 45,
+      "name": "Magnetism",
+      "abbreviation": "Mag",
+      "firstToDiscoverRaw": 0,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 46,
+      "name": "Map Making",
+      "abbreviation": "Map",
+      "firstToDiscoverRaw": 0,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 47,
+      "name": "Masonry",
+      "abbreviation": "Mas",
+      "firstToDiscoverRaw": 0,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 48,
+      "name": "Mass Production",
+      "abbreviation": "MP",
+      "firstToDiscoverRaw": 0,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 49,
+      "name": "Mathematics",
+      "abbreviation": "Mat",
+      "firstToDiscoverRaw": 0,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 50,
+      "name": "Medicine",
+      "abbreviation": "Med",
+      "firstToDiscoverRaw": 0,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 51,
+      "name": "Metallurgy",
+      "abbreviation": "Met",
+      "firstToDiscoverRaw": 0,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 52,
+      "name": "Miniaturization",
+      "abbreviation": "Min",
+      "firstToDiscoverRaw": 0,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 53,
+      "name": "Mobile Warfare",
+      "abbreviation": "Mob",
+      "firstToDiscoverRaw": 0,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 54,
+      "name": "Monarchy",
+      "abbreviation": "Mon",
+      "firstToDiscoverRaw": 0,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 55,
+      "name": "Monotheism",
+      "abbreviation": "MT",
+      "firstToDiscoverRaw": 0,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 56,
+      "name": "Mysticism",
+      "abbreviation": "Mys",
+      "firstToDiscoverRaw": 0,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 57,
+      "name": "Navigation",
+      "abbreviation": "Nav",
+      "firstToDiscoverRaw": 0,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 58,
+      "name": "Nuclear Fission",
+      "abbreviation": "NF",
+      "firstToDiscoverRaw": 0,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 59,
+      "name": "Nuclear Power",
+      "abbreviation": "NP",
+      "firstToDiscoverRaw": 0,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 60,
+      "name": "Philosophy",
+      "abbreviation": "Phi",
+      "firstToDiscoverRaw": 0,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 61,
+      "name": "Physics",
+      "abbreviation": "Phy",
+      "firstToDiscoverRaw": 0,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 62,
+      "name": "Plastics",
+      "abbreviation": "Pla",
+      "firstToDiscoverRaw": 0,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 63,
+      "name": "Plumbing",
+      "abbreviation": "Plu",
+      "firstToDiscoverRaw": 0,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 64,
+      "name": "Polytheism",
+      "abbreviation": "PT",
+      "firstToDiscoverRaw": 0,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 65,
+      "name": "Pottery",
+      "abbreviation": "Pot",
+      "firstToDiscoverRaw": 0,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 66,
+      "name": "Radio",
+      "abbreviation": "Rad",
+      "firstToDiscoverRaw": 0,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 67,
+      "name": "Railroad",
+      "abbreviation": "RR",
+      "firstToDiscoverRaw": 0,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 68,
+      "name": "Recycling",
+      "abbreviation": "Rec",
+      "firstToDiscoverRaw": 0,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 69,
+      "name": "Refining",
+      "abbreviation": "Ref",
+      "firstToDiscoverRaw": 0,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 70,
+      "name": "Refrigeration",
+      "abbreviation": "Rfg",
+      "firstToDiscoverRaw": 0,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 71,
+      "name": "The Republic",
+      "abbreviation": "Rep",
+      "firstToDiscoverRaw": 0,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 72,
+      "name": "Robotics",
+      "abbreviation": "Rob",
+      "firstToDiscoverRaw": 0,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 73,
+      "name": "Rocketry",
+      "abbreviation": "Roc",
+      "firstToDiscoverRaw": 0,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 74,
+      "name": "Sanitation",
+      "abbreviation": "San",
+      "firstToDiscoverRaw": 0,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 75,
+      "name": "Seafaring",
+      "abbreviation": "Sea",
+      "firstToDiscoverRaw": 0,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 76,
+      "name": "Space Flight",
+      "abbreviation": "SFl",
+      "firstToDiscoverRaw": 0,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 77,
+      "name": "Stealth",
+      "abbreviation": "Sth",
+      "firstToDiscoverRaw": 0,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 78,
+      "name": "Steam Engine",
+      "abbreviation": "SE",
+      "firstToDiscoverRaw": 0,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 79,
+      "name": "Steel",
+      "abbreviation": "Stl",
+      "firstToDiscoverRaw": 0,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 80,
+      "name": "Superconductor",
+      "abbreviation": "Sup",
+      "firstToDiscoverRaw": 0,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 81,
+      "name": "Tactics",
+      "abbreviation": "Tac",
+      "firstToDiscoverRaw": 0,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 82,
+      "name": "Theology",
+      "abbreviation": "The",
+      "firstToDiscoverRaw": 0,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 83,
+      "name": "Theory of Gravity",
+      "abbreviation": "ToG",
+      "firstToDiscoverRaw": 0,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 84,
+      "name": "Trade",
+      "abbreviation": "Tra",
+      "firstToDiscoverRaw": 0,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 85,
+      "name": "University",
+      "abbreviation": "Uni",
+      "firstToDiscoverRaw": 0,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 86,
+      "name": "Warrior Code",
+      "abbreviation": "War",
+      "firstToDiscoverRaw": 0,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 87,
+      "name": "The Wheel",
+      "abbreviation": "Whe",
+      "firstToDiscoverRaw": 0,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 88,
+      "name": "Writing",
+      "abbreviation": "Wri",
+      "firstToDiscoverRaw": 0,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 89,
+      "name": "Future Technology",
+      "abbreviation": "...",
+      "firstToDiscoverRaw": 0,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 90,
+      "name": "User Def Tech A",
+      "abbreviation": "U1",
+      "firstToDiscoverRaw": 0,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 91,
+      "name": "User Def Tech B",
+      "abbreviation": "U2",
+      "firstToDiscoverRaw": 0,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 92,
+      "name": "User Def Tech C",
+      "abbreviation": "U3",
+      "firstToDiscoverRaw": 0,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 93,
+      "name": "Extra Advance 1",
+      "abbreviation": "X1",
+      "firstToDiscoverRaw": 0,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 94,
+      "name": "Extra Advance 2",
+      "abbreviation": "X2",
+      "firstToDiscoverRaw": 0,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 95,
+      "name": "Extra Advance 3",
+      "abbreviation": "X3",
+      "firstToDiscoverRaw": 0,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 96,
+      "name": "Extra Advance 4",
+      "abbreviation": "X4",
+      "firstToDiscoverRaw": 0,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 97,
+      "name": "Extra Advance 5",
+      "abbreviation": "X5",
+      "firstToDiscoverRaw": 0,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 98,
+      "name": "Extra Advance 6",
+      "abbreviation": "X6",
+      "firstToDiscoverRaw": 0,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    },
+    {
+      "index": 99,
+      "name": "Extra Advance 7",
+      "abbreviation": "X7",
+      "firstToDiscoverRaw": 0,
+      "discoveredByRaw": 0,
+      "discoveredByOwners": []
+    }
+  ],
+  "byOwner": [
+    {
+      "ownerCandidate": 0,
+      "leader": "",
+      "currentResearchIndex": null,
+      "currentResearchName": "",
+      "researchProgress": 0,
+      "techsOffset": 2352,
+      "techsRawBytes": "00 00 00 00 00 00 00 00 00 00 00 00",
+      "knownTechnologyCount": 0,
+      "knownTechnologies": []
+    },
+    {
+      "ownerCandidate": 1,
+      "leader": "Stalin",
+      "currentResearchIndex": null,
+      "currentResearchName": "",
+      "researchProgress": 35,
+      "techsOffset": 3748,
+      "techsRawBytes": "fa df 9e 72 fc fc ee 33 ef cc fe 01",
+      "knownTechnologyCount": 63,
+      "knownTechnologies": [
+        {
+          "index": 1,
+          "name": "Alphabet",
+          "abbreviation": "Alp"
+        },
+        {
+          "index": 3,
+          "name": "Astronomy",
+          "abbreviation": "Ast"
+        },
+        {
+          "index": 4,
+          "name": "Atomic Theory",
+          "abbreviation": "Ato"
+        },
+        {
+          "index": 5,
+          "name": "Automobile",
+          "abbreviation": "Aut"
+        },
+        {
+          "index": 6,
+          "name": "Banking",
+          "abbreviation": "Ban"
+        },
+        {
+          "index": 7,
+          "name": "Bridge Building",
+          "abbreviation": "Bri"
+        },
+        {
+          "index": 8,
+          "name": "Bronze Working",
+          "abbreviation": "Bro"
+        },
+        {
+          "index": 9,
+          "name": "Ceremonial Burial",
+          "abbreviation": "Cer"
+        },
+        {
+          "index": 10,
+          "name": "Chemistry",
+          "abbreviation": "Che"
+        },
+        {
+          "index": 11,
+          "name": "Chivalry",
+          "abbreviation": "Chi"
+        },
+        {
+          "index": 12,
+          "name": "Code of Laws",
+          "abbreviation": "CoL"
+        },
+        {
+          "index": 14,
+          "name": "Combustion",
+          "abbreviation": "Cmb"
+        },
+        {
+          "index": 15,
+          "name": "Communism",
+          "abbreviation": "Cmn"
+        },
+        {
+          "index": 17,
+          "name": "Conscription",
+          "abbreviation": "Csc"
+        },
+        {
+          "index": 18,
+          "name": "Construction",
+          "abbreviation": "Cst"
+        },
+        {
+          "index": 19,
+          "name": "The Corporation",
+          "abbreviation": "Cor"
+        },
+        {
+          "index": 20,
+          "name": "Currency",
+          "abbreviation": "Cur"
+        },
+        {
+          "index": 23,
+          "name": "Electricity",
+          "abbreviation": "E1"
+        },
+        {
+          "index": 25,
+          "name": "Engineering",
+          "abbreviation": "Eng"
+        },
+        {
+          "index": 28,
+          "name": "Explosives",
+          "abbreviation": "Exp"
+        },
+        {
+          "index": 29,
+          "name": "Feudalism",
+          "abbreviation": "Feu"
+        },
+        {
+          "index": 30,
+          "name": "Flight",
+          "abbreviation": "Fli"
+        },
+        {
+          "index": 34,
+          "name": "Guerrilla Warfare",
+          "abbreviation": "Gue"
+        },
+        {
+          "index": 35,
+          "name": "Gunpowder",
+          "abbreviation": "Gun"
+        },
+        {
+          "index": 36,
+          "name": "Horseback Riding",
+          "abbreviation": "Hor"
+        },
+        {
+          "index": 37,
+          "name": "Industrialization",
+          "abbreviation": "Ind"
+        },
+        {
+          "index": 38,
+          "name": "Invention",
+          "abbreviation": "Inv"
+        },
+        {
+          "index": 39,
+          "name": "Iron Working",
+          "abbreviation": "Iro"
+        },
+        {
+          "index": 42,
+          "name": "Leadership",
+          "abbreviation": "Ldr"
+        },
+        {
+          "index": 43,
+          "name": "Literacy",
+          "abbreviation": "Lit"
+        },
+        {
+          "index": 44,
+          "name": "Machine Tools",
+          "abbreviation": "Too"
+        },
+        {
+          "index": 45,
+          "name": "Magnetism",
+          "abbreviation": "Mag"
+        },
+        {
+          "index": 46,
+          "name": "Map Making",
+          "abbreviation": "Map"
+        },
+        {
+          "index": 47,
+          "name": "Masonry",
+          "abbreviation": "Mas"
+        },
+        {
+          "index": 49,
+          "name": "Mathematics",
+          "abbreviation": "Mat"
+        },
+        {
+          "index": 50,
+          "name": "Medicine",
+          "abbreviation": "Med"
+        },
+        {
+          "index": 51,
+          "name": "Metallurgy",
+          "abbreviation": "Met"
+        },
+        {
+          "index": 53,
+          "name": "Mobile Warfare",
+          "abbreviation": "Mob"
+        },
+        {
+          "index": 54,
+          "name": "Monarchy",
+          "abbreviation": "Mon"
+        },
+        {
+          "index": 55,
+          "name": "Monotheism",
+          "abbreviation": "MT"
+        },
+        {
+          "index": 56,
+          "name": "Mysticism",
+          "abbreviation": "Mys"
+        },
+        {
+          "index": 57,
+          "name": "Navigation",
+          "abbreviation": "Nav"
+        },
+        {
+          "index": 60,
+          "name": "Philosophy",
+          "abbreviation": "Phi"
+        },
+        {
+          "index": 61,
+          "name": "Physics",
+          "abbreviation": "Phy"
+        },
+        {
+          "index": 64,
+          "name": "Polytheism",
+          "abbreviation": "PT"
+        },
+        {
+          "index": 65,
+          "name": "Pottery",
+          "abbreviation": "Pot"
+        },
+        {
+          "index": 66,
+          "name": "Radio",
+          "abbreviation": "Rad"
+        },
+        {
+          "index": 67,
+          "name": "Railroad",
+          "abbreviation": "RR"
+        },
+        {
+          "index": 69,
+          "name": "Refining",
+          "abbreviation": "Ref"
+        },
+        {
+          "index": 70,
+          "name": "Refrigeration",
+          "abbreviation": "Rfg"
+        },
+        {
+          "index": 71,
+          "name": "The Republic",
+          "abbreviation": "Rep"
+        },
+        {
+          "index": 74,
+          "name": "Sanitation",
+          "abbreviation": "San"
+        },
+        {
+          "index": 75,
+          "name": "Seafaring",
+          "abbreviation": "Sea"
+        },
+        {
+          "index": 78,
+          "name": "Steam Engine",
+          "abbreviation": "SE"
+        },
+        {
+          "index": 79,
+          "name": "Steel",
+          "abbreviation": "Stl"
+        },
+        {
+          "index": 81,
+          "name": "Tactics",
+          "abbreviation": "Tac"
+        },
+        {
+          "index": 82,
+          "name": "Theology",
+          "abbreviation": "The"
+        },
+        {
+          "index": 83,
+          "name": "Theory of Gravity",
+          "abbreviation": "ToG"
+        },
+        {
+          "index": 84,
+          "name": "Trade",
+          "abbreviation": "Tra"
+        },
+        {
+          "index": 85,
+          "name": "University",
+          "abbreviation": "Uni"
+        },
+        {
+          "index": 86,
+          "name": "Warrior Code",
+          "abbreviation": "War"
+        },
+        {
+          "index": 87,
+          "name": "The Wheel",
+          "abbreviation": "Whe"
+        },
+        {
+          "index": 88,
+          "name": "Writing",
+          "abbreviation": "Wri"
+        }
+      ]
+    },
+    {
+      "ownerCandidate": 2,
+      "leader": "Inonu",
+      "currentResearchIndex": null,
+      "currentResearchName": "",
+      "researchProgress": 0,
+      "techsOffset": 5144,
+      "techsRawBytes": "fa 5f 9e 72 f8 fc ee 33 ef cc fe 01",
+      "knownTechnologyCount": 61,
+      "knownTechnologies": [
+        {
+          "index": 1,
+          "name": "Alphabet",
+          "abbreviation": "Alp"
+        },
+        {
+          "index": 3,
+          "name": "Astronomy",
+          "abbreviation": "Ast"
+        },
+        {
+          "index": 4,
+          "name": "Atomic Theory",
+          "abbreviation": "Ato"
+        },
+        {
+          "index": 5,
+          "name": "Automobile",
+          "abbreviation": "Aut"
+        },
+        {
+          "index": 6,
+          "name": "Banking",
+          "abbreviation": "Ban"
+        },
+        {
+          "index": 7,
+          "name": "Bridge Building",
+          "abbreviation": "Bri"
+        },
+        {
+          "index": 8,
+          "name": "Bronze Working",
+          "abbreviation": "Bro"
+        },
+        {
+          "index": 9,
+          "name": "Ceremonial Burial",
+          "abbreviation": "Cer"
+        },
+        {
+          "index": 10,
+          "name": "Chemistry",
+          "abbreviation": "Che"
+        },
+        {
+          "index": 11,
+          "name": "Chivalry",
+          "abbreviation": "Chi"
+        },
+        {
+          "index": 12,
+          "name": "Code of Laws",
+          "abbreviation": "CoL"
+        },
+        {
+          "index": 14,
+          "name": "Combustion",
+          "abbreviation": "Cmb"
+        },
+        {
+          "index": 17,
+          "name": "Conscription",
+          "abbreviation": "Csc"
+        },
+        {
+          "index": 18,
+          "name": "Construction",
+          "abbreviation": "Cst"
+        },
+        {
+          "index": 19,
+          "name": "The Corporation",
+          "abbreviation": "Cor"
+        },
+        {
+          "index": 20,
+          "name": "Currency",
+          "abbreviation": "Cur"
+        },
+        {
+          "index": 23,
+          "name": "Electricity",
+          "abbreviation": "E1"
+        },
+        {
+          "index": 25,
+          "name": "Engineering",
+          "abbreviation": "Eng"
+        },
+        {
+          "index": 28,
+          "name": "Explosives",
+          "abbreviation": "Exp"
+        },
+        {
+          "index": 29,
+          "name": "Feudalism",
+          "abbreviation": "Feu"
+        },
+        {
+          "index": 30,
+          "name": "Flight",
+          "abbreviation": "Fli"
+        },
+        {
+          "index": 35,
+          "name": "Gunpowder",
+          "abbreviation": "Gun"
+        },
+        {
+          "index": 36,
+          "name": "Horseback Riding",
+          "abbreviation": "Hor"
+        },
+        {
+          "index": 37,
+          "name": "Industrialization",
+          "abbreviation": "Ind"
+        },
+        {
+          "index": 38,
+          "name": "Invention",
+          "abbreviation": "Inv"
+        },
+        {
+          "index": 39,
+          "name": "Iron Working",
+          "abbreviation": "Iro"
+        },
+        {
+          "index": 42,
+          "name": "Leadership",
+          "abbreviation": "Ldr"
+        },
+        {
+          "index": 43,
+          "name": "Literacy",
+          "abbreviation": "Lit"
+        },
+        {
+          "index": 44,
+          "name": "Machine Tools",
+          "abbreviation": "Too"
+        },
+        {
+          "index": 45,
+          "name": "Magnetism",
+          "abbreviation": "Mag"
+        },
+        {
+          "index": 46,
+          "name": "Map Making",
+          "abbreviation": "Map"
+        },
+        {
+          "index": 47,
+          "name": "Masonry",
+          "abbreviation": "Mas"
+        },
+        {
+          "index": 49,
+          "name": "Mathematics",
+          "abbreviation": "Mat"
+        },
+        {
+          "index": 50,
+          "name": "Medicine",
+          "abbreviation": "Med"
+        },
+        {
+          "index": 51,
+          "name": "Metallurgy",
+          "abbreviation": "Met"
+        },
+        {
+          "index": 53,
+          "name": "Mobile Warfare",
+          "abbreviation": "Mob"
+        },
+        {
+          "index": 54,
+          "name": "Monarchy",
+          "abbreviation": "Mon"
+        },
+        {
+          "index": 55,
+          "name": "Monotheism",
+          "abbreviation": "MT"
+        },
+        {
+          "index": 56,
+          "name": "Mysticism",
+          "abbreviation": "Mys"
+        },
+        {
+          "index": 57,
+          "name": "Navigation",
+          "abbreviation": "Nav"
+        },
+        {
+          "index": 60,
+          "name": "Philosophy",
+          "abbreviation": "Phi"
+        },
+        {
+          "index": 61,
+          "name": "Physics",
+          "abbreviation": "Phy"
+        },
+        {
+          "index": 64,
+          "name": "Polytheism",
+          "abbreviation": "PT"
+        },
+        {
+          "index": 65,
+          "name": "Pottery",
+          "abbreviation": "Pot"
+        },
+        {
+          "index": 66,
+          "name": "Radio",
+          "abbreviation": "Rad"
+        },
+        {
+          "index": 67,
+          "name": "Railroad",
+          "abbreviation": "RR"
+        },
+        {
+          "index": 69,
+          "name": "Refining",
+          "abbreviation": "Ref"
+        },
+        {
+          "index": 70,
+          "name": "Refrigeration",
+          "abbreviation": "Rfg"
+        },
+        {
+          "index": 71,
+          "name": "The Republic",
+          "abbreviation": "Rep"
+        },
+        {
+          "index": 74,
+          "name": "Sanitation",
+          "abbreviation": "San"
+        },
+        {
+          "index": 75,
+          "name": "Seafaring",
+          "abbreviation": "Sea"
+        },
+        {
+          "index": 78,
+          "name": "Steam Engine",
+          "abbreviation": "SE"
+        },
+        {
+          "index": 79,
+          "name": "Steel",
+          "abbreviation": "Stl"
+        },
+        {
+          "index": 81,
+          "name": "Tactics",
+          "abbreviation": "Tac"
+        },
+        {
+          "index": 82,
+          "name": "Theology",
+          "abbreviation": "The"
+        },
+        {
+          "index": 83,
+          "name": "Theory of Gravity",
+          "abbreviation": "ToG"
+        },
+        {
+          "index": 84,
+          "name": "Trade",
+          "abbreviation": "Tra"
+        },
+        {
+          "index": 85,
+          "name": "University",
+          "abbreviation": "Uni"
+        },
+        {
+          "index": 86,
+          "name": "Warrior Code",
+          "abbreviation": "War"
+        },
+        {
+          "index": 87,
+          "name": "The Wheel",
+          "abbreviation": "Whe"
+        },
+        {
+          "index": 88,
+          "name": "Writing",
+          "abbreviation": "Wri"
+        }
+      ]
+    },
+    {
+      "ownerCandidate": 3,
+      "leader": "Hitler",
+      "currentResearchIndex": 73,
+      "currentResearchName": "Rocketry",
+      "researchProgress": 1,
+      "techsOffset": 6540,
+      "techsRawBytes": "ff df 9e 73 fc fc ee 33 ef cc fe 01",
+      "knownTechnologyCount": 66,
+      "knownTechnologies": [
+        {
+          "index": 0,
+          "name": "Advanced Flight",
+          "abbreviation": "AFl"
+        },
+        {
+          "index": 1,
+          "name": "Alphabet",
+          "abbreviation": "Alp"
+        },
+        {
+          "index": 2,
+          "name": "Amphibious Warfare",
+          "abbreviation": "Amp"
+        },
+        {
+          "index": 3,
+          "name": "Astronomy",
+          "abbreviation": "Ast"
+        },
+        {
+          "index": 4,
+          "name": "Atomic Theory",
+          "abbreviation": "Ato"
+        },
+        {
+          "index": 5,
+          "name": "Automobile",
+          "abbreviation": "Aut"
+        },
+        {
+          "index": 6,
+          "name": "Banking",
+          "abbreviation": "Ban"
+        },
+        {
+          "index": 7,
+          "name": "Bridge Building",
+          "abbreviation": "Bri"
+        },
+        {
+          "index": 8,
+          "name": "Bronze Working",
+          "abbreviation": "Bro"
+        },
+        {
+          "index": 9,
+          "name": "Ceremonial Burial",
+          "abbreviation": "Cer"
+        },
+        {
+          "index": 10,
+          "name": "Chemistry",
+          "abbreviation": "Che"
+        },
+        {
+          "index": 11,
+          "name": "Chivalry",
+          "abbreviation": "Chi"
+        },
+        {
+          "index": 12,
+          "name": "Code of Laws",
+          "abbreviation": "CoL"
+        },
+        {
+          "index": 14,
+          "name": "Combustion",
+          "abbreviation": "Cmb"
+        },
+        {
+          "index": 15,
+          "name": "Communism",
+          "abbreviation": "Cmn"
+        },
+        {
+          "index": 17,
+          "name": "Conscription",
+          "abbreviation": "Csc"
+        },
+        {
+          "index": 18,
+          "name": "Construction",
+          "abbreviation": "Cst"
+        },
+        {
+          "index": 19,
+          "name": "The Corporation",
+          "abbreviation": "Cor"
+        },
+        {
+          "index": 20,
+          "name": "Currency",
+          "abbreviation": "Cur"
+        },
+        {
+          "index": 23,
+          "name": "Electricity",
+          "abbreviation": "E1"
+        },
+        {
+          "index": 24,
+          "name": "Electronics",
+          "abbreviation": "E2"
+        },
+        {
+          "index": 25,
+          "name": "Engineering",
+          "abbreviation": "Eng"
+        },
+        {
+          "index": 28,
+          "name": "Explosives",
+          "abbreviation": "Exp"
+        },
+        {
+          "index": 29,
+          "name": "Feudalism",
+          "abbreviation": "Feu"
+        },
+        {
+          "index": 30,
+          "name": "Flight",
+          "abbreviation": "Fli"
+        },
+        {
+          "index": 34,
+          "name": "Guerrilla Warfare",
+          "abbreviation": "Gue"
+        },
+        {
+          "index": 35,
+          "name": "Gunpowder",
+          "abbreviation": "Gun"
+        },
+        {
+          "index": 36,
+          "name": "Horseback Riding",
+          "abbreviation": "Hor"
+        },
+        {
+          "index": 37,
+          "name": "Industrialization",
+          "abbreviation": "Ind"
+        },
+        {
+          "index": 38,
+          "name": "Invention",
+          "abbreviation": "Inv"
+        },
+        {
+          "index": 39,
+          "name": "Iron Working",
+          "abbreviation": "Iro"
+        },
+        {
+          "index": 42,
+          "name": "Leadership",
+          "abbreviation": "Ldr"
+        },
+        {
+          "index": 43,
+          "name": "Literacy",
+          "abbreviation": "Lit"
+        },
+        {
+          "index": 44,
+          "name": "Machine Tools",
+          "abbreviation": "Too"
+        },
+        {
+          "index": 45,
+          "name": "Magnetism",
+          "abbreviation": "Mag"
+        },
+        {
+          "index": 46,
+          "name": "Map Making",
+          "abbreviation": "Map"
+        },
+        {
+          "index": 47,
+          "name": "Masonry",
+          "abbreviation": "Mas"
+        },
+        {
+          "index": 49,
+          "name": "Mathematics",
+          "abbreviation": "Mat"
+        },
+        {
+          "index": 50,
+          "name": "Medicine",
+          "abbreviation": "Med"
+        },
+        {
+          "index": 51,
+          "name": "Metallurgy",
+          "abbreviation": "Met"
+        },
+        {
+          "index": 53,
+          "name": "Mobile Warfare",
+          "abbreviation": "Mob"
+        },
+        {
+          "index": 54,
+          "name": "Monarchy",
+          "abbreviation": "Mon"
+        },
+        {
+          "index": 55,
+          "name": "Monotheism",
+          "abbreviation": "MT"
+        },
+        {
+          "index": 56,
+          "name": "Mysticism",
+          "abbreviation": "Mys"
+        },
+        {
+          "index": 57,
+          "name": "Navigation",
+          "abbreviation": "Nav"
+        },
+        {
+          "index": 60,
+          "name": "Philosophy",
+          "abbreviation": "Phi"
+        },
+        {
+          "index": 61,
+          "name": "Physics",
+          "abbreviation": "Phy"
+        },
+        {
+          "index": 64,
+          "name": "Polytheism",
+          "abbreviation": "PT"
+        },
+        {
+          "index": 65,
+          "name": "Pottery",
+          "abbreviation": "Pot"
+        },
+        {
+          "index": 66,
+          "name": "Radio",
+          "abbreviation": "Rad"
+        },
+        {
+          "index": 67,
+          "name": "Railroad",
+          "abbreviation": "RR"
+        },
+        {
+          "index": 69,
+          "name": "Refining",
+          "abbreviation": "Ref"
+        },
+        {
+          "index": 70,
+          "name": "Refrigeration",
+          "abbreviation": "Rfg"
+        },
+        {
+          "index": 71,
+          "name": "The Republic",
+          "abbreviation": "Rep"
+        },
+        {
+          "index": 74,
+          "name": "Sanitation",
+          "abbreviation": "San"
+        },
+        {
+          "index": 75,
+          "name": "Seafaring",
+          "abbreviation": "Sea"
+        },
+        {
+          "index": 78,
+          "name": "Steam Engine",
+          "abbreviation": "SE"
+        },
+        {
+          "index": 79,
+          "name": "Steel",
+          "abbreviation": "Stl"
+        },
+        {
+          "index": 81,
+          "name": "Tactics",
+          "abbreviation": "Tac"
+        },
+        {
+          "index": 82,
+          "name": "Theology",
+          "abbreviation": "The"
+        },
+        {
+          "index": 83,
+          "name": "Theory of Gravity",
+          "abbreviation": "ToG"
+        },
+        {
+          "index": 84,
+          "name": "Trade",
+          "abbreviation": "Tra"
+        },
+        {
+          "index": 85,
+          "name": "University",
+          "abbreviation": "Uni"
+        },
+        {
+          "index": 86,
+          "name": "Warrior Code",
+          "abbreviation": "War"
+        },
+        {
+          "index": 87,
+          "name": "The Wheel",
+          "abbreviation": "Whe"
+        },
+        {
+          "index": 88,
+          "name": "Writing",
+          "abbreviation": "Wri"
+        }
+      ]
+    },
+    {
+      "ownerCandidate": 4,
+      "leader": "Franco",
+      "currentResearchIndex": null,
+      "currentResearchName": "",
+      "researchProgress": 0,
+      "techsOffset": 7936,
+      "techsRawBytes": "fa 5f 9e 72 f8 fc ee 33 ef cc fe 01",
+      "knownTechnologyCount": 61,
+      "knownTechnologies": [
+        {
+          "index": 1,
+          "name": "Alphabet",
+          "abbreviation": "Alp"
+        },
+        {
+          "index": 3,
+          "name": "Astronomy",
+          "abbreviation": "Ast"
+        },
+        {
+          "index": 4,
+          "name": "Atomic Theory",
+          "abbreviation": "Ato"
+        },
+        {
+          "index": 5,
+          "name": "Automobile",
+          "abbreviation": "Aut"
+        },
+        {
+          "index": 6,
+          "name": "Banking",
+          "abbreviation": "Ban"
+        },
+        {
+          "index": 7,
+          "name": "Bridge Building",
+          "abbreviation": "Bri"
+        },
+        {
+          "index": 8,
+          "name": "Bronze Working",
+          "abbreviation": "Bro"
+        },
+        {
+          "index": 9,
+          "name": "Ceremonial Burial",
+          "abbreviation": "Cer"
+        },
+        {
+          "index": 10,
+          "name": "Chemistry",
+          "abbreviation": "Che"
+        },
+        {
+          "index": 11,
+          "name": "Chivalry",
+          "abbreviation": "Chi"
+        },
+        {
+          "index": 12,
+          "name": "Code of Laws",
+          "abbreviation": "CoL"
+        },
+        {
+          "index": 14,
+          "name": "Combustion",
+          "abbreviation": "Cmb"
+        },
+        {
+          "index": 17,
+          "name": "Conscription",
+          "abbreviation": "Csc"
+        },
+        {
+          "index": 18,
+          "name": "Construction",
+          "abbreviation": "Cst"
+        },
+        {
+          "index": 19,
+          "name": "The Corporation",
+          "abbreviation": "Cor"
+        },
+        {
+          "index": 20,
+          "name": "Currency",
+          "abbreviation": "Cur"
+        },
+        {
+          "index": 23,
+          "name": "Electricity",
+          "abbreviation": "E1"
+        },
+        {
+          "index": 25,
+          "name": "Engineering",
+          "abbreviation": "Eng"
+        },
+        {
+          "index": 28,
+          "name": "Explosives",
+          "abbreviation": "Exp"
+        },
+        {
+          "index": 29,
+          "name": "Feudalism",
+          "abbreviation": "Feu"
+        },
+        {
+          "index": 30,
+          "name": "Flight",
+          "abbreviation": "Fli"
+        },
+        {
+          "index": 35,
+          "name": "Gunpowder",
+          "abbreviation": "Gun"
+        },
+        {
+          "index": 36,
+          "name": "Horseback Riding",
+          "abbreviation": "Hor"
+        },
+        {
+          "index": 37,
+          "name": "Industrialization",
+          "abbreviation": "Ind"
+        },
+        {
+          "index": 38,
+          "name": "Invention",
+          "abbreviation": "Inv"
+        },
+        {
+          "index": 39,
+          "name": "Iron Working",
+          "abbreviation": "Iro"
+        },
+        {
+          "index": 42,
+          "name": "Leadership",
+          "abbreviation": "Ldr"
+        },
+        {
+          "index": 43,
+          "name": "Literacy",
+          "abbreviation": "Lit"
+        },
+        {
+          "index": 44,
+          "name": "Machine Tools",
+          "abbreviation": "Too"
+        },
+        {
+          "index": 45,
+          "name": "Magnetism",
+          "abbreviation": "Mag"
+        },
+        {
+          "index": 46,
+          "name": "Map Making",
+          "abbreviation": "Map"
+        },
+        {
+          "index": 47,
+          "name": "Masonry",
+          "abbreviation": "Mas"
+        },
+        {
+          "index": 49,
+          "name": "Mathematics",
+          "abbreviation": "Mat"
+        },
+        {
+          "index": 50,
+          "name": "Medicine",
+          "abbreviation": "Med"
+        },
+        {
+          "index": 51,
+          "name": "Metallurgy",
+          "abbreviation": "Met"
+        },
+        {
+          "index": 53,
+          "name": "Mobile Warfare",
+          "abbreviation": "Mob"
+        },
+        {
+          "index": 54,
+          "name": "Monarchy",
+          "abbreviation": "Mon"
+        },
+        {
+          "index": 55,
+          "name": "Monotheism",
+          "abbreviation": "MT"
+        },
+        {
+          "index": 56,
+          "name": "Mysticism",
+          "abbreviation": "Mys"
+        },
+        {
+          "index": 57,
+          "name": "Navigation",
+          "abbreviation": "Nav"
+        },
+        {
+          "index": 60,
+          "name": "Philosophy",
+          "abbreviation": "Phi"
+        },
+        {
+          "index": 61,
+          "name": "Physics",
+          "abbreviation": "Phy"
+        },
+        {
+          "index": 64,
+          "name": "Polytheism",
+          "abbreviation": "PT"
+        },
+        {
+          "index": 65,
+          "name": "Pottery",
+          "abbreviation": "Pot"
+        },
+        {
+          "index": 66,
+          "name": "Radio",
+          "abbreviation": "Rad"
+        },
+        {
+          "index": 67,
+          "name": "Railroad",
+          "abbreviation": "RR"
+        },
+        {
+          "index": 69,
+          "name": "Refining",
+          "abbreviation": "Ref"
+        },
+        {
+          "index": 70,
+          "name": "Refrigeration",
+          "abbreviation": "Rfg"
+        },
+        {
+          "index": 71,
+          "name": "The Republic",
+          "abbreviation": "Rep"
+        },
+        {
+          "index": 74,
+          "name": "Sanitation",
+          "abbreviation": "San"
+        },
+        {
+          "index": 75,
+          "name": "Seafaring",
+          "abbreviation": "Sea"
+        },
+        {
+          "index": 78,
+          "name": "Steam Engine",
+          "abbreviation": "SE"
+        },
+        {
+          "index": 79,
+          "name": "Steel",
+          "abbreviation": "Stl"
+        },
+        {
+          "index": 81,
+          "name": "Tactics",
+          "abbreviation": "Tac"
+        },
+        {
+          "index": 82,
+          "name": "Theology",
+          "abbreviation": "The"
+        },
+        {
+          "index": 83,
+          "name": "Theory of Gravity",
+          "abbreviation": "ToG"
+        },
+        {
+          "index": 84,
+          "name": "Trade",
+          "abbreviation": "Tra"
+        },
+        {
+          "index": 85,
+          "name": "University",
+          "abbreviation": "Uni"
+        },
+        {
+          "index": 86,
+          "name": "Warrior Code",
+          "abbreviation": "War"
+        },
+        {
+          "index": 87,
+          "name": "The Wheel",
+          "abbreviation": "Whe"
+        },
+        {
+          "index": 88,
+          "name": "Writing",
+          "abbreviation": "Wri"
+        }
+      ]
+    },
+    {
+      "ownerCandidate": 5,
+      "leader": "Neutral Leader",
+      "currentResearchIndex": null,
+      "currentResearchName": "",
+      "researchProgress": 0,
+      "techsOffset": 9332,
+      "techsRawBytes": "fa 9f 9e 32 dc ec ce 33 e7 cc fe 01",
+      "knownTechnologyCount": 57,
+      "knownTechnologies": [
+        {
+          "index": 1,
+          "name": "Alphabet",
+          "abbreviation": "Alp"
+        },
+        {
+          "index": 3,
+          "name": "Astronomy",
+          "abbreviation": "Ast"
+        },
+        {
+          "index": 4,
+          "name": "Atomic Theory",
+          "abbreviation": "Ato"
+        },
+        {
+          "index": 5,
+          "name": "Automobile",
+          "abbreviation": "Aut"
+        },
+        {
+          "index": 6,
+          "name": "Banking",
+          "abbreviation": "Ban"
+        },
+        {
+          "index": 7,
+          "name": "Bridge Building",
+          "abbreviation": "Bri"
+        },
+        {
+          "index": 8,
+          "name": "Bronze Working",
+          "abbreviation": "Bro"
+        },
+        {
+          "index": 9,
+          "name": "Ceremonial Burial",
+          "abbreviation": "Cer"
+        },
+        {
+          "index": 10,
+          "name": "Chemistry",
+          "abbreviation": "Che"
+        },
+        {
+          "index": 11,
+          "name": "Chivalry",
+          "abbreviation": "Chi"
+        },
+        {
+          "index": 12,
+          "name": "Code of Laws",
+          "abbreviation": "CoL"
+        },
+        {
+          "index": 15,
+          "name": "Communism",
+          "abbreviation": "Cmn"
+        },
+        {
+          "index": 17,
+          "name": "Conscription",
+          "abbreviation": "Csc"
+        },
+        {
+          "index": 18,
+          "name": "Construction",
+          "abbreviation": "Cst"
+        },
+        {
+          "index": 19,
+          "name": "The Corporation",
+          "abbreviation": "Cor"
+        },
+        {
+          "index": 20,
+          "name": "Currency",
+          "abbreviation": "Cur"
+        },
+        {
+          "index": 23,
+          "name": "Electricity",
+          "abbreviation": "E1"
+        },
+        {
+          "index": 25,
+          "name": "Engineering",
+          "abbreviation": "Eng"
+        },
+        {
+          "index": 28,
+          "name": "Explosives",
+          "abbreviation": "Exp"
+        },
+        {
+          "index": 29,
+          "name": "Feudalism",
+          "abbreviation": "Feu"
+        },
+        {
+          "index": 34,
+          "name": "Guerrilla Warfare",
+          "abbreviation": "Gue"
+        },
+        {
+          "index": 35,
+          "name": "Gunpowder",
+          "abbreviation": "Gun"
+        },
+        {
+          "index": 36,
+          "name": "Horseback Riding",
+          "abbreviation": "Hor"
+        },
+        {
+          "index": 38,
+          "name": "Invention",
+          "abbreviation": "Inv"
+        },
+        {
+          "index": 39,
+          "name": "Iron Working",
+          "abbreviation": "Iro"
+        },
+        {
+          "index": 42,
+          "name": "Leadership",
+          "abbreviation": "Ldr"
+        },
+        {
+          "index": 43,
+          "name": "Literacy",
+          "abbreviation": "Lit"
+        },
+        {
+          "index": 45,
+          "name": "Magnetism",
+          "abbreviation": "Mag"
+        },
+        {
+          "index": 46,
+          "name": "Map Making",
+          "abbreviation": "Map"
+        },
+        {
+          "index": 47,
+          "name": "Masonry",
+          "abbreviation": "Mas"
+        },
+        {
+          "index": 49,
+          "name": "Mathematics",
+          "abbreviation": "Mat"
+        },
+        {
+          "index": 50,
+          "name": "Medicine",
+          "abbreviation": "Med"
+        },
+        {
+          "index": 51,
+          "name": "Metallurgy",
+          "abbreviation": "Met"
+        },
+        {
+          "index": 54,
+          "name": "Monarchy",
+          "abbreviation": "Mon"
+        },
+        {
+          "index": 55,
+          "name": "Monotheism",
+          "abbreviation": "MT"
+        },
+        {
+          "index": 56,
+          "name": "Mysticism",
+          "abbreviation": "Mys"
+        },
+        {
+          "index": 57,
+          "name": "Navigation",
+          "abbreviation": "Nav"
+        },
+        {
+          "index": 60,
+          "name": "Philosophy",
+          "abbreviation": "Phi"
+        },
+        {
+          "index": 61,
+          "name": "Physics",
+          "abbreviation": "Phy"
+        },
+        {
+          "index": 64,
+          "name": "Polytheism",
+          "abbreviation": "PT"
+        },
+        {
+          "index": 65,
+          "name": "Pottery",
+          "abbreviation": "Pot"
+        },
+        {
+          "index": 66,
+          "name": "Radio",
+          "abbreviation": "Rad"
+        },
+        {
+          "index": 69,
+          "name": "Refining",
+          "abbreviation": "Ref"
+        },
+        {
+          "index": 70,
+          "name": "Refrigeration",
+          "abbreviation": "Rfg"
+        },
+        {
+          "index": 71,
+          "name": "The Republic",
+          "abbreviation": "Rep"
+        },
+        {
+          "index": 74,
+          "name": "Sanitation",
+          "abbreviation": "San"
+        },
+        {
+          "index": 75,
+          "name": "Seafaring",
+          "abbreviation": "Sea"
+        },
+        {
+          "index": 78,
+          "name": "Steam Engine",
+          "abbreviation": "SE"
+        },
+        {
+          "index": 79,
+          "name": "Steel",
+          "abbreviation": "Stl"
+        },
+        {
+          "index": 81,
+          "name": "Tactics",
+          "abbreviation": "Tac"
+        },
+        {
+          "index": 82,
+          "name": "Theology",
+          "abbreviation": "The"
+        },
+        {
+          "index": 83,
+          "name": "Theory of Gravity",
+          "abbreviation": "ToG"
+        },
+        {
+          "index": 84,
+          "name": "Trade",
+          "abbreviation": "Tra"
+        },
+        {
+          "index": 85,
+          "name": "University",
+          "abbreviation": "Uni"
+        },
+        {
+          "index": 86,
+          "name": "Warrior Code",
+          "abbreviation": "War"
+        },
+        {
+          "index": 87,
+          "name": "The Wheel",
+          "abbreviation": "Whe"
+        },
+        {
+          "index": 88,
+          "name": "Writing",
+          "abbreviation": "Wri"
+        }
+      ]
+    },
+    {
+      "ownerCandidate": 6,
+      "leader": "Churchill",
+      "currentResearchIndex": 0,
+      "currentResearchName": "Advanced Flight",
+      "researchProgress": 184,
+      "techsOffset": 10728,
+      "techsRawBytes": "fe df fe 73 fc fc ff 33 ef cc fe 01",
+      "knownTechnologyCount": 69,
+      "knownTechnologies": [
+        {
+          "index": 1,
+          "name": "Alphabet",
+          "abbreviation": "Alp"
+        },
+        {
+          "index": 2,
+          "name": "Amphibious Warfare",
+          "abbreviation": "Amp"
+        },
+        {
+          "index": 3,
+          "name": "Astronomy",
+          "abbreviation": "Ast"
+        },
+        {
+          "index": 4,
+          "name": "Atomic Theory",
+          "abbreviation": "Ato"
+        },
+        {
+          "index": 5,
+          "name": "Automobile",
+          "abbreviation": "Aut"
+        },
+        {
+          "index": 6,
+          "name": "Banking",
+          "abbreviation": "Ban"
+        },
+        {
+          "index": 7,
+          "name": "Bridge Building",
+          "abbreviation": "Bri"
+        },
+        {
+          "index": 8,
+          "name": "Bronze Working",
+          "abbreviation": "Bro"
+        },
+        {
+          "index": 9,
+          "name": "Ceremonial Burial",
+          "abbreviation": "Cer"
+        },
+        {
+          "index": 10,
+          "name": "Chemistry",
+          "abbreviation": "Che"
+        },
+        {
+          "index": 11,
+          "name": "Chivalry",
+          "abbreviation": "Chi"
+        },
+        {
+          "index": 12,
+          "name": "Code of Laws",
+          "abbreviation": "CoL"
+        },
+        {
+          "index": 14,
+          "name": "Combustion",
+          "abbreviation": "Cmb"
+        },
+        {
+          "index": 15,
+          "name": "Communism",
+          "abbreviation": "Cmn"
+        },
+        {
+          "index": 17,
+          "name": "Conscription",
+          "abbreviation": "Csc"
+        },
+        {
+          "index": 18,
+          "name": "Construction",
+          "abbreviation": "Cst"
+        },
+        {
+          "index": 19,
+          "name": "The Corporation",
+          "abbreviation": "Cor"
+        },
+        {
+          "index": 20,
+          "name": "Currency",
+          "abbreviation": "Cur"
+        },
+        {
+          "index": 21,
+          "name": "Democracy",
+          "abbreviation": "Dem"
+        },
+        {
+          "index": 22,
+          "name": "Economics",
+          "abbreviation": "Eco"
+        },
+        {
+          "index": 23,
+          "name": "Electricity",
+          "abbreviation": "E1"
+        },
+        {
+          "index": 24,
+          "name": "Electronics",
+          "abbreviation": "E2"
+        },
+        {
+          "index": 25,
+          "name": "Engineering",
+          "abbreviation": "Eng"
+        },
+        {
+          "index": 28,
+          "name": "Explosives",
+          "abbreviation": "Exp"
+        },
+        {
+          "index": 29,
+          "name": "Feudalism",
+          "abbreviation": "Feu"
+        },
+        {
+          "index": 30,
+          "name": "Flight",
+          "abbreviation": "Fli"
+        },
+        {
+          "index": 34,
+          "name": "Guerrilla Warfare",
+          "abbreviation": "Gue"
+        },
+        {
+          "index": 35,
+          "name": "Gunpowder",
+          "abbreviation": "Gun"
+        },
+        {
+          "index": 36,
+          "name": "Horseback Riding",
+          "abbreviation": "Hor"
+        },
+        {
+          "index": 37,
+          "name": "Industrialization",
+          "abbreviation": "Ind"
+        },
+        {
+          "index": 38,
+          "name": "Invention",
+          "abbreviation": "Inv"
+        },
+        {
+          "index": 39,
+          "name": "Iron Working",
+          "abbreviation": "Iro"
+        },
+        {
+          "index": 42,
+          "name": "Leadership",
+          "abbreviation": "Ldr"
+        },
+        {
+          "index": 43,
+          "name": "Literacy",
+          "abbreviation": "Lit"
+        },
+        {
+          "index": 44,
+          "name": "Machine Tools",
+          "abbreviation": "Too"
+        },
+        {
+          "index": 45,
+          "name": "Magnetism",
+          "abbreviation": "Mag"
+        },
+        {
+          "index": 46,
+          "name": "Map Making",
+          "abbreviation": "Map"
+        },
+        {
+          "index": 47,
+          "name": "Masonry",
+          "abbreviation": "Mas"
+        },
+        {
+          "index": 48,
+          "name": "Mass Production",
+          "abbreviation": "MP"
+        },
+        {
+          "index": 49,
+          "name": "Mathematics",
+          "abbreviation": "Mat"
+        },
+        {
+          "index": 50,
+          "name": "Medicine",
+          "abbreviation": "Med"
+        },
+        {
+          "index": 51,
+          "name": "Metallurgy",
+          "abbreviation": "Met"
+        },
+        {
+          "index": 52,
+          "name": "Miniaturization",
+          "abbreviation": "Min"
+        },
+        {
+          "index": 53,
+          "name": "Mobile Warfare",
+          "abbreviation": "Mob"
+        },
+        {
+          "index": 54,
+          "name": "Monarchy",
+          "abbreviation": "Mon"
+        },
+        {
+          "index": 55,
+          "name": "Monotheism",
+          "abbreviation": "MT"
+        },
+        {
+          "index": 56,
+          "name": "Mysticism",
+          "abbreviation": "Mys"
+        },
+        {
+          "index": 57,
+          "name": "Navigation",
+          "abbreviation": "Nav"
+        },
+        {
+          "index": 60,
+          "name": "Philosophy",
+          "abbreviation": "Phi"
+        },
+        {
+          "index": 61,
+          "name": "Physics",
+          "abbreviation": "Phy"
+        },
+        {
+          "index": 64,
+          "name": "Polytheism",
+          "abbreviation": "PT"
+        },
+        {
+          "index": 65,
+          "name": "Pottery",
+          "abbreviation": "Pot"
+        },
+        {
+          "index": 66,
+          "name": "Radio",
+          "abbreviation": "Rad"
+        },
+        {
+          "index": 67,
+          "name": "Railroad",
+          "abbreviation": "RR"
+        },
+        {
+          "index": 69,
+          "name": "Refining",
+          "abbreviation": "Ref"
+        },
+        {
+          "index": 70,
+          "name": "Refrigeration",
+          "abbreviation": "Rfg"
+        },
+        {
+          "index": 71,
+          "name": "The Republic",
+          "abbreviation": "Rep"
+        },
+        {
+          "index": 74,
+          "name": "Sanitation",
+          "abbreviation": "San"
+        },
+        {
+          "index": 75,
+          "name": "Seafaring",
+          "abbreviation": "Sea"
+        },
+        {
+          "index": 78,
+          "name": "Steam Engine",
+          "abbreviation": "SE"
+        },
+        {
+          "index": 79,
+          "name": "Steel",
+          "abbreviation": "Stl"
+        },
+        {
+          "index": 81,
+          "name": "Tactics",
+          "abbreviation": "Tac"
+        },
+        {
+          "index": 82,
+          "name": "Theology",
+          "abbreviation": "The"
+        },
+        {
+          "index": 83,
+          "name": "Theory of Gravity",
+          "abbreviation": "ToG"
+        },
+        {
+          "index": 84,
+          "name": "Trade",
+          "abbreviation": "Tra"
+        },
+        {
+          "index": 85,
+          "name": "University",
+          "abbreviation": "Uni"
+        },
+        {
+          "index": 86,
+          "name": "Warrior Code",
+          "abbreviation": "War"
+        },
+        {
+          "index": 87,
+          "name": "The Wheel",
+          "abbreviation": "Whe"
+        },
+        {
+          "index": 88,
+          "name": "Writing",
+          "abbreviation": "Wri"
+        }
+      ]
+    },
+    {
+      "ownerCandidate": 7,
+      "leader": "Petain",
+      "currentResearchIndex": null,
+      "currentResearchName": "",
+      "researchProgress": 0,
+      "techsOffset": 12124,
+      "techsRawBytes": "fe df 9e 72 f8 fc ef 33 ef cc fe 01",
+      "knownTechnologyCount": 64,
+      "knownTechnologies": [
+        {
+          "index": 1,
+          "name": "Alphabet",
+          "abbreviation": "Alp"
+        },
+        {
+          "index": 2,
+          "name": "Amphibious Warfare",
+          "abbreviation": "Amp"
+        },
+        {
+          "index": 3,
+          "name": "Astronomy",
+          "abbreviation": "Ast"
+        },
+        {
+          "index": 4,
+          "name": "Atomic Theory",
+          "abbreviation": "Ato"
+        },
+        {
+          "index": 5,
+          "name": "Automobile",
+          "abbreviation": "Aut"
+        },
+        {
+          "index": 6,
+          "name": "Banking",
+          "abbreviation": "Ban"
+        },
+        {
+          "index": 7,
+          "name": "Bridge Building",
+          "abbreviation": "Bri"
+        },
+        {
+          "index": 8,
+          "name": "Bronze Working",
+          "abbreviation": "Bro"
+        },
+        {
+          "index": 9,
+          "name": "Ceremonial Burial",
+          "abbreviation": "Cer"
+        },
+        {
+          "index": 10,
+          "name": "Chemistry",
+          "abbreviation": "Che"
+        },
+        {
+          "index": 11,
+          "name": "Chivalry",
+          "abbreviation": "Chi"
+        },
+        {
+          "index": 12,
+          "name": "Code of Laws",
+          "abbreviation": "CoL"
+        },
+        {
+          "index": 14,
+          "name": "Combustion",
+          "abbreviation": "Cmb"
+        },
+        {
+          "index": 15,
+          "name": "Communism",
+          "abbreviation": "Cmn"
+        },
+        {
+          "index": 17,
+          "name": "Conscription",
+          "abbreviation": "Csc"
+        },
+        {
+          "index": 18,
+          "name": "Construction",
+          "abbreviation": "Cst"
+        },
+        {
+          "index": 19,
+          "name": "The Corporation",
+          "abbreviation": "Cor"
+        },
+        {
+          "index": 20,
+          "name": "Currency",
+          "abbreviation": "Cur"
+        },
+        {
+          "index": 23,
+          "name": "Electricity",
+          "abbreviation": "E1"
+        },
+        {
+          "index": 25,
+          "name": "Engineering",
+          "abbreviation": "Eng"
+        },
+        {
+          "index": 28,
+          "name": "Explosives",
+          "abbreviation": "Exp"
+        },
+        {
+          "index": 29,
+          "name": "Feudalism",
+          "abbreviation": "Feu"
+        },
+        {
+          "index": 30,
+          "name": "Flight",
+          "abbreviation": "Fli"
+        },
+        {
+          "index": 35,
+          "name": "Gunpowder",
+          "abbreviation": "Gun"
+        },
+        {
+          "index": 36,
+          "name": "Horseback Riding",
+          "abbreviation": "Hor"
+        },
+        {
+          "index": 37,
+          "name": "Industrialization",
+          "abbreviation": "Ind"
+        },
+        {
+          "index": 38,
+          "name": "Invention",
+          "abbreviation": "Inv"
+        },
+        {
+          "index": 39,
+          "name": "Iron Working",
+          "abbreviation": "Iro"
+        },
+        {
+          "index": 42,
+          "name": "Leadership",
+          "abbreviation": "Ldr"
+        },
+        {
+          "index": 43,
+          "name": "Literacy",
+          "abbreviation": "Lit"
+        },
+        {
+          "index": 44,
+          "name": "Machine Tools",
+          "abbreviation": "Too"
+        },
+        {
+          "index": 45,
+          "name": "Magnetism",
+          "abbreviation": "Mag"
+        },
+        {
+          "index": 46,
+          "name": "Map Making",
+          "abbreviation": "Map"
+        },
+        {
+          "index": 47,
+          "name": "Masonry",
+          "abbreviation": "Mas"
+        },
+        {
+          "index": 48,
+          "name": "Mass Production",
+          "abbreviation": "MP"
+        },
+        {
+          "index": 49,
+          "name": "Mathematics",
+          "abbreviation": "Mat"
+        },
+        {
+          "index": 50,
+          "name": "Medicine",
+          "abbreviation": "Med"
+        },
+        {
+          "index": 51,
+          "name": "Metallurgy",
+          "abbreviation": "Met"
+        },
+        {
+          "index": 53,
+          "name": "Mobile Warfare",
+          "abbreviation": "Mob"
+        },
+        {
+          "index": 54,
+          "name": "Monarchy",
+          "abbreviation": "Mon"
+        },
+        {
+          "index": 55,
+          "name": "Monotheism",
+          "abbreviation": "MT"
+        },
+        {
+          "index": 56,
+          "name": "Mysticism",
+          "abbreviation": "Mys"
+        },
+        {
+          "index": 57,
+          "name": "Navigation",
+          "abbreviation": "Nav"
+        },
+        {
+          "index": 60,
+          "name": "Philosophy",
+          "abbreviation": "Phi"
+        },
+        {
+          "index": 61,
+          "name": "Physics",
+          "abbreviation": "Phy"
+        },
+        {
+          "index": 64,
+          "name": "Polytheism",
+          "abbreviation": "PT"
+        },
+        {
+          "index": 65,
+          "name": "Pottery",
+          "abbreviation": "Pot"
+        },
+        {
+          "index": 66,
+          "name": "Radio",
+          "abbreviation": "Rad"
+        },
+        {
+          "index": 67,
+          "name": "Railroad",
+          "abbreviation": "RR"
+        },
+        {
+          "index": 69,
+          "name": "Refining",
+          "abbreviation": "Ref"
+        },
+        {
+          "index": 70,
+          "name": "Refrigeration",
+          "abbreviation": "Rfg"
+        },
+        {
+          "index": 71,
+          "name": "The Republic",
+          "abbreviation": "Rep"
+        },
+        {
+          "index": 74,
+          "name": "Sanitation",
+          "abbreviation": "San"
+        },
+        {
+          "index": 75,
+          "name": "Seafaring",
+          "abbreviation": "Sea"
+        },
+        {
+          "index": 78,
+          "name": "Steam Engine",
+          "abbreviation": "SE"
+        },
+        {
+          "index": 79,
+          "name": "Steel",
+          "abbreviation": "Stl"
+        },
+        {
+          "index": 81,
+          "name": "Tactics",
+          "abbreviation": "Tac"
+        },
+        {
+          "index": 82,
+          "name": "Theology",
+          "abbreviation": "The"
+        },
+        {
+          "index": 83,
+          "name": "Theory of Gravity",
+          "abbreviation": "ToG"
+        },
+        {
+          "index": 84,
+          "name": "Trade",
+          "abbreviation": "Tra"
+        },
+        {
+          "index": 85,
+          "name": "University",
+          "abbreviation": "Uni"
+        },
+        {
+          "index": 86,
+          "name": "Warrior Code",
+          "abbreviation": "War"
+        },
+        {
+          "index": 87,
+          "name": "The Wheel",
+          "abbreviation": "Whe"
+        },
+        {
+          "index": 88,
+          "name": "Writing",
+          "abbreviation": "Wri"
+        }
+      ]
+    }
+  ],
+  "notRepresentableInKnownTechBitfield": [
+    {
+      "index": 96,
+      "name": "Extra Advance 4",
+      "abbreviation": "X4"
+    },
+    {
+      "index": 97,
+      "name": "Extra Advance 5",
+      "abbreviation": "X5"
+    },
+    {
+      "index": 98,
+      "name": "Extra Advance 6",
+      "abbreviation": "X6"
+    },
+    {
+      "index": 99,
+      "name": "Extra Advance 7",
+      "abbreviation": "X7"
+    }
+  ]
+}

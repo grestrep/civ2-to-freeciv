@@ -1,0 +1,2162 @@
+{
+  "generatedAt": "2026-06-11T18:48:18.998Z",
+  "scenarioName": "",
+  "mode": "freeciv21V3",
+  "output": "D:\\freeciv\\projects\\civ2-freeciv-converter\\sample\\ww2-freeciv-scenario-v3.sav",
+  "inputs": {
+    "extracted": "D:\\freeciv\\projects\\civ2-freeciv-converter\\sample\\extracted-civ2\\ww2-map-and-cities.json",
+    "diplomacy": "D:\\freeciv\\projects\\civ2-freeciv-converter\\sample\\extracted-civ2\\ww2-diplomacy.json",
+    "technologies": "D:\\freeciv\\projects\\civ2-freeciv-converter\\sample\\extracted-civ2\\ww2-technologies.json",
+    "unitMap": "D:\\freeciv\\projects\\civ2-freeciv-converter\\sample\\ww2-unit-map.json",
+    "improvementMap": "D:\\freeciv\\projects\\civ2-freeciv-converter\\sample\\ww2-improvement-map.json",
+    "techMap": "D:\\freeciv\\projects\\civ2-freeciv-converter\\sample\\ww2-tech-map.json",
+    "governmentMap": "D:\\freeciv\\projects\\civ2-freeciv-converter\\sample\\ww2-government-map.json",
+    "freecivTerrainRuleset": "D:\\freeciv\\3.2.1\\qt6\\data\\civ2civ3\\terrain.ruleset"
+  },
+  "totals": {
+    "width": 75,
+    "height": 120,
+    "cities": 99,
+    "units": 421,
+    "extractedMappedUnits": 421,
+    "players": 8,
+    "unmappedImprovementEntries": 0,
+    "unmappedUnitEntries": 0,
+    "unmappedTechEntries": 0,
+    "skippedUnitEntries": 0,
+    "intentionallySkippedUnitInstances": 0,
+    "mappedButUnplacedUnitInstances": 0,
+    "coinageFallbacks": 0,
+    "unitHomecityIssueEntries": 13
+  },
+  "mapFeatureOverrides": {
+    "skippedCiv2Features": []
+  },
+  "mapFeatureTransforms": {
+    "replace": {}
+  },
+  "productionFallback": {
+    "ruleset": "civ2civ3/classic",
+    "kind": "Building",
+    "name": "Coinage"
+  },
+  "extras": {
+    "source": "template extras_vector",
+    "count": 38,
+    "layerCount": 10,
+    "names": [
+      "Irrigation",
+      "Mine",
+      "Oil Well",
+      "Oil Platform",
+      "Pollution",
+      "Hut",
+      "Farmland",
+      "Fallout",
+      "Fort",
+      "Fortress",
+      "Airstrip",
+      "Airbase",
+      "Buoy",
+      "Ruins",
+      "Road",
+      "Railroad",
+      "Maglev",
+      "River",
+      "Gold",
+      "Iron",
+      "Game",
+      "Furs",
+      "Coal",
+      "Fish",
+      "Fruit",
+      "Gems",
+      "Buffalo",
+      "Wheat",
+      "Oasis",
+      "Peat",
+      "Pheasant",
+      "Resources",
+      "Ivory",
+      "Silk",
+      "Spice",
+      "Whales",
+      "Wine",
+      "Oil"
+    ],
+    "civ2FeatureMappings": {
+      "airbases": "Airbase",
+      "farmland": "Farmland",
+      "fortresses": "Fortress",
+      "forts": "Fort",
+      "huts": "Hut",
+      "irrigation": "Irrigation",
+      "mines": "Mine",
+      "pollution": "Pollution",
+      "railroads": "Railroad",
+      "rivers": "River",
+      "roads": "Road"
+    },
+    "missingCiv2FeatureMappings": [],
+    "resourceExtraCount": 20,
+    "huts": {
+      "extractedNativeTileCount": 183,
+      "extractedFreecivTileCount": 366,
+      "writtenTileCount": 183,
+      "skipped": false,
+      "targetExtraName": "Hut",
+      "targetExtraPresent": true
+    }
+  },
+  "activities": {
+    "source": "template activities_vector",
+    "names": [
+      "Idle",
+      "Cultivate",
+      "Mine",
+      "Irrigate",
+      "Fortified",
+      "Sentry",
+      "Pillage",
+      "Goto",
+      "Explore",
+      "Transform",
+      "Fortifying",
+      "Clean",
+      "Base",
+      "Road",
+      "Convert",
+      "Plant"
+    ],
+    "ids": {
+      "Idle": 0,
+      "Cultivate": 1,
+      "Mine": 2,
+      "Irrigate": 3,
+      "Fortified": 4,
+      "Sentry": 5,
+      "Pillage": 6,
+      "Goto": 7,
+      "Explore": 8,
+      "Transform": 9,
+      "Fortifying": 10,
+      "Clean": 11,
+      "Base": 12,
+      "Road": 13,
+      "Convert": 14,
+      "Plant": 15
+    }
+  },
+  "unitClasses": {
+    "source": "units.ruleset unitclass sections",
+    "count": 9,
+    "classes": [
+      {
+        "name": "Missile",
+        "ruleName": "Missile",
+        "moveType": "",
+        "flags": [
+          "Missile",
+          "Unreachable",
+          "DoesntOccupyTile",
+          "Airliftable",
+          "HutFrighten",
+          "Aerial"
+        ],
+        "landLike": false,
+        "airLike": true
+      },
+      {
+        "name": "Land",
+        "ruleName": "Land",
+        "moveType": "",
+        "flags": [
+          "TerrainSpeed",
+          "DamageSlows",
+          "CanOccupyCity",
+          "BuildAnywhere",
+          "CollectRansom",
+          "ZOC",
+          "CanFortify",
+          "CanPillage",
+          "TerrainDefense",
+          "Airliftable",
+          "NonNatBombardTgt",
+          "Barracks",
+          "Ground"
+        ],
+        "landLike": true,
+        "airLike": false
+      },
+      {
+        "name": "Small Land",
+        "ruleName": "Small Land",
+        "moveType": "",
+        "flags": [
+          "TerrainSpeed",
+          "DamageSlows",
+          "BuildAnywhere",
+          "CollectRansom",
+          "ZOC",
+          "CanFortify",
+          "TerrainDefense",
+          "DoesntOccupyTile",
+          "Airliftable",
+          "NonNatBombardTgt",
+          "Barracks",
+          "Ground"
+        ],
+        "landLike": true,
+        "airLike": false
+      },
+      {
+        "name": "Big Land",
+        "ruleName": "Big Land",
+        "moveType": "",
+        "flags": [
+          "TerrainSpeed",
+          "DamageSlows",
+          "CanOccupyCity",
+          "BuildAnywhere",
+          "CollectRansom",
+          "ZOC",
+          "CanFortify",
+          "KillCitizen",
+          "Airliftable",
+          "NonNatBombardTgt",
+          "Barracks",
+          "Ground"
+        ],
+        "landLike": true,
+        "airLike": false
+      },
+      {
+        "name": "Merchant",
+        "ruleName": "Merchant",
+        "moveType": "",
+        "flags": [
+          "BuildAnywhere",
+          "DoesntOccupyTile",
+          "ZOC",
+          "TerrainDefense",
+          "TerrainSpeed",
+          "Airliftable",
+          "NonNatBombardTgt",
+          "Barracks",
+          "Ground"
+        ],
+        "landLike": true,
+        "airLike": false
+      },
+      {
+        "name": "Sea",
+        "ruleName": "Sea",
+        "moveType": "",
+        "flags": [
+          "DamageSlows",
+          "AttackNonNative",
+          "AttFromNonNative"
+        ],
+        "landLike": false,
+        "airLike": false
+      },
+      {
+        "name": "Trireme",
+        "ruleName": "Trireme",
+        "moveType": "",
+        "flags": [
+          "ZOC",
+          "DamageSlows",
+          "AttFromNonNative"
+        ],
+        "landLike": false,
+        "airLike": false
+      },
+      {
+        "name": "Helicopter",
+        "ruleName": "Helicopter",
+        "moveType": "",
+        "flags": [
+          "Unreachable",
+          "DoesntOccupyTile",
+          "CanOccupyCity",
+          "CollectRansom",
+          "Airliftable",
+          "Aerial"
+        ],
+        "landLike": false,
+        "airLike": true
+      },
+      {
+        "name": "Air",
+        "ruleName": "Air",
+        "moveType": "",
+        "flags": [
+          "Unreachable",
+          "DoesntOccupyTile",
+          "CanPillage",
+          "Airliftable",
+          "HutFrighten",
+          "Aerial"
+        ],
+        "landLike": false,
+        "airLike": true
+      }
+    ]
+  },
+  "terrainOverrides": {
+    "replace": {},
+    "applied": [],
+    "featureAdds": [],
+    "freecivTerrainCount": 14,
+    "landIdentifiers": [
+      "a",
+      "d",
+      "f",
+      "g",
+      "h",
+      "j",
+      "m",
+      "p",
+      "s",
+      "t"
+    ],
+    "oceanicIdentifiers": [
+      " ",
+      "+",
+      ":"
+    ],
+    "grasslandIdentifier": "g",
+    "plainsIdentifier": "p",
+    "irrigableIdentifiers": [
+      "d",
+      "g",
+      "h",
+      "p",
+      "s"
+    ],
+    "mineableIdentifiers": [
+      "a",
+      "d",
+      "h",
+      "m",
+      "t"
+    ]
+  },
+  "resourceOverrides": {
+    "source": "terrain.ruleset resource sections + template extras_vector",
+    "count": 20,
+    "rulesetResourceCount": 20,
+    "names": [
+      "Buffalo",
+      "Coal",
+      "Fish",
+      "Fruit",
+      "Furs",
+      "Game",
+      "Gems",
+      "Gold",
+      "Iron",
+      "Ivory",
+      "Oasis",
+      "Oil",
+      "Peat",
+      "Pheasant",
+      "Resources",
+      "Silk",
+      "Spice",
+      "Whales",
+      "Wheat",
+      "Wine"
+    ],
+    "missingFromExtrasVector": [],
+    "remove": [],
+    "applied": {
+      "global": {},
+      "visibility": {},
+      "slotConversions": {},
+      "skippedSparseGrasslandResources": false,
+      "grasslandShields": {
+        "source": "extracted.features.grasslandShields",
+        "global": {
+          "extracted": 1004,
+          "written": 1004,
+          "alreadyPresent": 0,
+          "skippedMissingExtra": 0,
+          "skippedRemovedResource": 0,
+          "skippedNonGrassland": 0,
+          "skippedUnknownTile": 0
+        },
+        "visibility": {
+          "extracted": 7028,
+          "written": 7028,
+          "alreadyPresent": 0,
+          "skippedMissingExtra": 0,
+          "skippedRemovedResource": 0,
+          "skippedNonGrassland": 0,
+          "skippedUnknownTile": 0
+        }
+      }
+    }
+  },
+  "cityImprovementOverrides": {
+    "configured": {},
+    "applied": [],
+    "unmatchedCityNames": [],
+    "duplicateCityNameMatches": []
+  },
+  "playerTechOverrides": {
+    "configured": [],
+    "applied": []
+  },
+  "players": [
+    {
+      "playerId": 0,
+      "ownerCandidate": 1,
+      "name": "Stalin",
+      "nation": "Soviet",
+      "cities": 31,
+      "units": 92,
+      "extractedMappedUnits": 92,
+      "currentResearchCiv2": "",
+      "currentResearchFreeciv": "A_UNSET",
+      "researchProgress": 35
+    },
+    {
+      "playerId": 1,
+      "ownerCandidate": 2,
+      "name": "Inonu",
+      "nation": "Turkish",
+      "cities": 5,
+      "units": 12,
+      "extractedMappedUnits": 12,
+      "currentResearchCiv2": "",
+      "currentResearchFreeciv": "A_UNSET",
+      "researchProgress": 0
+    },
+    {
+      "playerId": 2,
+      "ownerCandidate": 3,
+      "name": "Hitler",
+      "nation": "German",
+      "cities": 22,
+      "units": 136,
+      "extractedMappedUnits": 136,
+      "currentResearchCiv2": "Rocketry",
+      "currentResearchFreeciv": "Rocketry",
+      "researchProgress": 1
+    },
+    {
+      "playerId": 3,
+      "ownerCandidate": 4,
+      "name": "Franco",
+      "nation": "Spanish",
+      "cities": 9,
+      "units": 15,
+      "extractedMappedUnits": 15,
+      "currentResearchCiv2": "",
+      "currentResearchFreeciv": "A_UNSET",
+      "researchProgress": 0
+    },
+    {
+      "playerId": 4,
+      "ownerCandidate": 5,
+      "name": "Neutral Leader",
+      "nation": "UN",
+      "cities": 4,
+      "units": 9,
+      "extractedMappedUnits": 9,
+      "currentResearchCiv2": "",
+      "currentResearchFreeciv": "A_UNSET",
+      "researchProgress": 0
+    },
+    {
+      "playerId": 5,
+      "ownerCandidate": 6,
+      "name": "Churchill",
+      "nation": "British",
+      "cities": 16,
+      "units": 112,
+      "extractedMappedUnits": 112,
+      "currentResearchCiv2": "Advanced Flight",
+      "currentResearchFreeciv": "Advanced Flight",
+      "researchProgress": 184
+    },
+    {
+      "playerId": 6,
+      "ownerCandidate": 7,
+      "name": "Petain",
+      "nation": "French",
+      "cities": 12,
+      "units": 37,
+      "extractedMappedUnits": 37,
+      "currentResearchCiv2": "",
+      "currentResearchFreeciv": "A_UNSET",
+      "researchProgress": 0
+    },
+    {
+      "playerId": 7,
+      "ownerCandidate": 0,
+      "name": "Barbarians",
+      "nation": "Barbarian",
+      "cities": 0,
+      "units": 8,
+      "extractedMappedUnits": 8,
+      "currentResearchCiv2": "",
+      "currentResearchFreeciv": "A_UNSET",
+      "researchProgress": 0
+    }
+  ],
+  "unmapped": {
+    "improvements": [],
+    "units": [],
+    "techs": []
+  },
+  "skippedUnits": [],
+  "coinageFallbacks": [],
+  "unitHomecityIssues": [
+    {
+      "civ2Name": "Alpine Troops",
+      "reason": "home city belongs to different mapped player",
+      "units": [
+        {
+          "index": 30,
+          "ownerCandidate": 7,
+          "x": 49,
+          "y": 73,
+          "homeCityIndex": 74,
+          "homeCityName": "Stalingrad",
+          "homeCityOwnerCandidate": 1
+        },
+        {
+          "index": 31,
+          "ownerCandidate": 7,
+          "x": 49,
+          "y": 73,
+          "homeCityIndex": 31,
+          "homeCityName": "Krakow",
+          "homeCityOwnerCandidate": 3
+        },
+        {
+          "index": 33,
+          "ownerCandidate": 7,
+          "x": 46,
+          "y": 64,
+          "homeCityIndex": 33,
+          "homeCityName": "Bucharest",
+          "homeCityOwnerCandidate": 3
+        },
+        {
+          "index": 64,
+          "ownerCandidate": 3,
+          "x": 63,
+          "y": 5,
+          "homeCityIndex": 66,
+          "homeCityName": "Astrakhan",
+          "homeCityOwnerCandidate": 1
+        },
+        {
+          "index": 90,
+          "ownerCandidate": 1,
+          "x": 146,
+          "y": 40,
+          "homeCityIndex": 90,
+          "homeCityName": "Stockholm",
+          "homeCityOwnerCandidate": 5
+        }
+      ]
+    },
+    {
+      "civ2Name": "Armor",
+      "reason": "home city belongs to different mapped player",
+      "units": [
+        {
+          "index": 131,
+          "ownerCandidate": 3,
+          "x": 56,
+          "y": 54,
+          "homeCityIndex": 15,
+          "homeCityName": "London",
+          "homeCityOwnerCandidate": 6
+        },
+        {
+          "index": 306,
+          "ownerCandidate": 6,
+          "x": 37,
+          "y": 39,
+          "homeCityIndex": 87,
+          "homeCityName": "Omsk",
+          "homeCityOwnerCandidate": 1
+        },
+        {
+          "index": 307,
+          "ownerCandidate": 6,
+          "x": 37,
+          "y": 39,
+          "homeCityIndex": 51,
+          "homeCityName": "Kars",
+          "homeCityOwnerCandidate": 2
+        },
+        {
+          "index": 315,
+          "ownerCandidate": 6,
+          "x": 2,
+          "y": 22,
+          "homeCityIndex": 59,
+          "homeCityName": "Minsk",
+          "homeCityOwnerCandidate": 1
+        },
+        {
+          "index": 316,
+          "ownerCandidate": 6,
+          "x": 2,
+          "y": 22,
+          "homeCityIndex": 60,
+          "homeCityName": "Smolensk",
+          "homeCityOwnerCandidate": 1
+        },
+        {
+          "index": 317,
+          "ownerCandidate": 6,
+          "x": 2,
+          "y": 22,
+          "homeCityIndex": 61,
+          "homeCityName": "Odessa",
+          "homeCityOwnerCandidate": 1
+        },
+        {
+          "index": 331,
+          "ownerCandidate": 6,
+          "x": 1,
+          "y": 31,
+          "homeCityIndex": 75,
+          "homeCityName": "Kazan",
+          "homeCityOwnerCandidate": 1
+        },
+        {
+          "index": 332,
+          "ownerCandidate": 6,
+          "x": 1,
+          "y": 31,
+          "homeCityIndex": 76,
+          "homeCityName": "Kursk",
+          "homeCityOwnerCandidate": 1
+        }
+      ]
+    },
+    {
+      "civ2Name": "Artillery",
+      "reason": "home city belongs to different mapped player",
+      "units": [
+        {
+          "index": 305,
+          "ownerCandidate": 6,
+          "x": 33,
+          "y": 31,
+          "homeCityIndex": 49,
+          "homeCityName": "Izmir",
+          "homeCityOwnerCandidate": 2
+        }
+      ]
+    },
+    {
+      "civ2Name": "Battleship",
+      "reason": "home city belongs to different mapped player",
+      "units": [
+        {
+          "index": 337,
+          "ownerCandidate": 6,
+          "x": 40,
+          "y": 22,
+          "homeCityIndex": 81,
+          "homeCityName": "Vologda",
+          "homeCityOwnerCandidate": 1
+        },
+        {
+          "index": 341,
+          "ownerCandidate": 6,
+          "x": 40,
+          "y": 22,
+          "homeCityIndex": 85,
+          "homeCityName": "Krasnoyarsk",
+          "homeCityOwnerCandidate": 1
+        }
+      ]
+    },
+    {
+      "civ2Name": "Cruiser",
+      "reason": "home city belongs to different mapped player",
+      "units": [
+        {
+          "index": 256,
+          "ownerCandidate": 7,
+          "x": 49,
+          "y": 73,
+          "homeCityIndex": 0,
+          "homeCityName": "Berlin",
+          "homeCityOwnerCandidate": 3
+        },
+        {
+          "index": 257,
+          "ownerCandidate": 7,
+          "x": 49,
+          "y": 73,
+          "homeCityIndex": 1,
+          "homeCityName": "Vienna",
+          "homeCityOwnerCandidate": 3
+        },
+        {
+          "index": 338,
+          "ownerCandidate": 6,
+          "x": 40,
+          "y": 22,
+          "homeCityIndex": 82,
+          "homeCityName": "Batum",
+          "homeCityOwnerCandidate": 1
+        },
+        {
+          "index": 339,
+          "ownerCandidate": 6,
+          "x": 40,
+          "y": 22,
+          "homeCityIndex": 83,
+          "homeCityName": "Voronezh",
+          "homeCityOwnerCandidate": 1
+        },
+        {
+          "index": 340,
+          "ownerCandidate": 6,
+          "x": 40,
+          "y": 22,
+          "homeCityIndex": 84,
+          "homeCityName": "Uralsk",
+          "homeCityOwnerCandidate": 1
+        },
+        {
+          "index": 342,
+          "ownerCandidate": 6,
+          "x": 40,
+          "y": 22,
+          "homeCityIndex": 86,
+          "homeCityName": "Novosibirsk",
+          "homeCityOwnerCandidate": 1
+        }
+      ]
+    },
+    {
+      "civ2Name": "Destroyer",
+      "reason": "home city belongs to different mapped player",
+      "units": [
+        {
+          "index": 328,
+          "ownerCandidate": 6,
+          "x": 3,
+          "y": 25,
+          "homeCityIndex": 77,
+          "homeCityName": "Magnitogorsk",
+          "homeCityOwnerCandidate": 1
+        },
+        {
+          "index": 343,
+          "ownerCandidate": 6,
+          "x": 33,
+          "y": 31,
+          "homeCityIndex": 93,
+          "homeCityName": "Bordeaux",
+          "homeCityOwnerCandidate": 7
+        },
+        {
+          "index": 345,
+          "ownerCandidate": 6,
+          "x": 38,
+          "y": 32,
+          "homeCityIndex": 92,
+          "homeCityName": "Amsterdam",
+          "homeCityOwnerCandidate": 5
+        }
+      ]
+    },
+    {
+      "civ2Name": "Engineers",
+      "reason": "home city belongs to different mapped player",
+      "units": [
+        {
+          "index": 9,
+          "ownerCandidate": 1,
+          "x": 76,
+          "y": 34,
+          "homeCityIndex": 49,
+          "homeCityName": "Izmir",
+          "homeCityOwnerCandidate": 2
+        }
+      ]
+    },
+    {
+      "civ2Name": "Fanatics",
+      "reason": "home city belongs to different mapped player",
+      "units": [
+        {
+          "index": 4,
+          "ownerCandidate": 0,
+          "x": 83,
+          "y": 105,
+          "homeCityIndex": 32,
+          "homeCityName": "Budapest",
+          "homeCityOwnerCandidate": 3
+        }
+      ]
+    },
+    {
+      "civ2Name": "Fighter",
+      "reason": "home city belongs to different mapped player",
+      "units": [
+        {
+          "index": 206,
+          "ownerCandidate": 3,
+          "x": 53,
+          "y": 73,
+          "homeCityIndex": 15,
+          "homeCityName": "London",
+          "homeCityOwnerCandidate": 6
+        },
+        {
+          "index": 310,
+          "ownerCandidate": 6,
+          "x": 38,
+          "y": 46,
+          "homeCityIndex": 90,
+          "homeCityName": "Stockholm",
+          "homeCityOwnerCandidate": 5
+        },
+        {
+          "index": 311,
+          "ownerCandidate": 6,
+          "x": 37,
+          "y": 39,
+          "homeCityIndex": 88,
+          "homeCityName": "Helsinki",
+          "homeCityOwnerCandidate": 3
+        }
+      ]
+    },
+    {
+      "civ2Name": "Marines",
+      "reason": "home city belongs to different mapped player",
+      "units": [
+        {
+          "index": 290,
+          "ownerCandidate": 6,
+          "x": 38,
+          "y": 46,
+          "homeCityIndex": 34,
+          "homeCityName": "Tripoli",
+          "homeCityOwnerCandidate": 3
+        },
+        {
+          "index": 320,
+          "ownerCandidate": 6,
+          "x": 1,
+          "y": 31,
+          "homeCityIndex": 69,
+          "homeCityName": "Kuibyshev",
+          "homeCityOwnerCandidate": 1
+        },
+        {
+          "index": 321,
+          "ownerCandidate": 6,
+          "x": 1,
+          "y": 31,
+          "homeCityIndex": 65,
+          "homeCityName": "Krasnovodsk",
+          "homeCityOwnerCandidate": 1
+        },
+        {
+          "index": 334,
+          "ownerCandidate": 6,
+          "x": 2,
+          "y": 22,
+          "homeCityIndex": 78,
+          "homeCityName": "Orsk",
+          "homeCityOwnerCandidate": 1
+        },
+        {
+          "index": 335,
+          "ownerCandidate": 6,
+          "x": 2,
+          "y": 22,
+          "homeCityIndex": 79,
+          "homeCityName": "Murmansk",
+          "homeCityOwnerCandidate": 1
+        }
+      ]
+    },
+    {
+      "civ2Name": "Partisans",
+      "reason": "home city belongs to different mapped player",
+      "units": [
+        {
+          "index": 24,
+          "ownerCandidate": 0,
+          "x": 31,
+          "y": 33,
+          "homeCityIndex": 93,
+          "homeCityName": "Bordeaux",
+          "homeCityOwnerCandidate": 7
+        }
+      ]
+    },
+    {
+      "civ2Name": "Riflemen",
+      "reason": "home city belongs to different mapped player",
+      "units": [
+        {
+          "index": 12,
+          "ownerCandidate": 3,
+          "x": 67,
+          "y": 25,
+          "homeCityIndex": 13,
+          "homeCityName": "Beirut",
+          "homeCityOwnerCandidate": 7
+        },
+        {
+          "index": 34,
+          "ownerCandidate": 7,
+          "x": 46,
+          "y": 64,
+          "homeCityIndex": 34,
+          "homeCityName": "Tripoli",
+          "homeCityOwnerCandidate": 3
+        },
+        {
+          "index": 36,
+          "ownerCandidate": 1,
+          "x": 76,
+          "y": 34,
+          "homeCityIndex": 36,
+          "homeCityName": "Bergen",
+          "homeCityOwnerCandidate": 3
+        },
+        {
+          "index": 37,
+          "ownerCandidate": 1,
+          "x": 76,
+          "y": 34,
+          "homeCityIndex": 37,
+          "homeCityName": "Tobruk",
+          "homeCityOwnerCandidate": 3
+        },
+        {
+          "index": 39,
+          "ownerCandidate": 1,
+          "x": 68,
+          "y": 26,
+          "homeCityIndex": 39,
+          "homeCityName": "Tangiers",
+          "homeCityOwnerCandidate": 4
+        },
+        {
+          "index": 41,
+          "ownerCandidate": 1,
+          "x": 64,
+          "y": 36,
+          "homeCityIndex": 41,
+          "homeCityName": "Barcelona",
+          "homeCityOwnerCandidate": 4
+        },
+        {
+          "index": 42,
+          "ownerCandidate": 1,
+          "x": 69,
+          "y": 43,
+          "homeCityIndex": 91,
+          "homeCityName": "Tehran",
+          "homeCityOwnerCandidate": 5
+        },
+        {
+          "index": 43,
+          "ownerCandidate": 1,
+          "x": 69,
+          "y": 43,
+          "homeCityIndex": 43,
+          "homeCityName": "Seville",
+          "homeCityOwnerCandidate": 4
+        },
+        {
+          "index": 45,
+          "ownerCandidate": 1,
+          "x": 72,
+          "y": 38,
+          "homeCityIndex": 45,
+          "homeCityName": "Valencia",
+          "homeCityOwnerCandidate": 4
+        },
+        {
+          "index": 47,
+          "ownerCandidate": 1,
+          "x": 71,
+          "y": 53,
+          "homeCityIndex": 47,
+          "homeCityName": "Ankara",
+          "homeCityOwnerCandidate": 2
+        },
+        {
+          "index": 53,
+          "ownerCandidate": 1,
+          "x": 79,
+          "y": 53,
+          "homeCityIndex": 53,
+          "homeCityName": "Basra",
+          "homeCityOwnerCandidate": 6
+        },
+        {
+          "index": 55,
+          "ownerCandidate": 1,
+          "x": 82,
+          "y": 62,
+          "homeCityIndex": 55,
+          "homeCityName": "Suez",
+          "homeCityOwnerCandidate": 6
+        },
+        {
+          "index": 89,
+          "ownerCandidate": 1,
+          "x": 146,
+          "y": 40,
+          "homeCityIndex": 89,
+          "homeCityName": "Belgrade",
+          "homeCityOwnerCandidate": 5
+        },
+        {
+          "index": 96,
+          "ownerCandidate": 4,
+          "x": 37,
+          "y": 87,
+          "homeCityIndex": 96,
+          "homeCityName": "Strasbourg",
+          "homeCityOwnerCandidate": 7
+        },
+        {
+          "index": 98,
+          "ownerCandidate": 4,
+          "x": 42,
+          "y": 84,
+          "homeCityIndex": 98,
+          "homeCityName": "Athens",
+          "homeCityOwnerCandidate": 6
+        },
+        {
+          "index": 211,
+          "ownerCandidate": 3,
+          "x": 63,
+          "y": 67,
+          "homeCityIndex": 14,
+          "homeCityName": "Damascus",
+          "homeCityOwnerCandidate": 7
+        },
+        {
+          "index": 289,
+          "ownerCandidate": 6,
+          "x": 38,
+          "y": 46,
+          "homeCityIndex": 33,
+          "homeCityName": "Bucharest",
+          "homeCityOwnerCandidate": 3
+        },
+        {
+          "index": 292,
+          "ownerCandidate": 6,
+          "x": 37,
+          "y": 39,
+          "homeCityIndex": 36,
+          "homeCityName": "Bergen",
+          "homeCityOwnerCandidate": 3
+        },
+        {
+          "index": 293,
+          "ownerCandidate": 6,
+          "x": 37,
+          "y": 39,
+          "homeCityIndex": 37,
+          "homeCityName": "Tobruk",
+          "homeCityOwnerCandidate": 3
+        },
+        {
+          "index": 294,
+          "ownerCandidate": 6,
+          "x": 38,
+          "y": 32,
+          "homeCityIndex": 50,
+          "homeCityName": "Antioch",
+          "homeCityOwnerCandidate": 2
+        },
+        {
+          "index": 295,
+          "ownerCandidate": 6,
+          "x": 38,
+          "y": 32,
+          "homeCityIndex": 39,
+          "homeCityName": "Tangiers",
+          "homeCityOwnerCandidate": 4
+        },
+        {
+          "index": 296,
+          "ownerCandidate": 6,
+          "x": 38,
+          "y": 32,
+          "homeCityIndex": 40,
+          "homeCityName": "Lisbon",
+          "homeCityOwnerCandidate": 4
+        },
+        {
+          "index": 297,
+          "ownerCandidate": 6,
+          "x": 38,
+          "y": 26,
+          "homeCityIndex": 89,
+          "homeCityName": "Belgrade",
+          "homeCityOwnerCandidate": 5
+        },
+        {
+          "index": 298,
+          "ownerCandidate": 6,
+          "x": 38,
+          "y": 26,
+          "homeCityIndex": 42,
+          "homeCityName": "Zaragosa",
+          "homeCityOwnerCandidate": 4
+        },
+        {
+          "index": 299,
+          "ownerCandidate": 6,
+          "x": 38,
+          "y": 26,
+          "homeCityIndex": 43,
+          "homeCityName": "Seville",
+          "homeCityOwnerCandidate": 4
+        },
+        {
+          "index": 301,
+          "ownerCandidate": 6,
+          "x": 40,
+          "y": 22,
+          "homeCityIndex": 45,
+          "homeCityName": "Valencia",
+          "homeCityOwnerCandidate": 4
+        },
+        {
+          "index": 302,
+          "ownerCandidate": 6,
+          "x": 33,
+          "y": 31,
+          "homeCityIndex": 80,
+          "homeCityName": "Gorky",
+          "homeCityOwnerCandidate": 1
+        },
+        {
+          "index": 303,
+          "ownerCandidate": 6,
+          "x": 33,
+          "y": 31,
+          "homeCityIndex": 47,
+          "homeCityName": "Ankara",
+          "homeCityOwnerCandidate": 2
+        },
+        {
+          "index": 304,
+          "ownerCandidate": 6,
+          "x": 33,
+          "y": 31,
+          "homeCityIndex": 48,
+          "homeCityName": "Istanbul",
+          "homeCityOwnerCandidate": 2
+        },
+        {
+          "index": 318,
+          "ownerCandidate": 6,
+          "x": 2,
+          "y": 22,
+          "homeCityIndex": 62,
+          "homeCityName": "Sevastopol",
+          "homeCityOwnerCandidate": 1
+        },
+        {
+          "index": 319,
+          "ownerCandidate": 6,
+          "x": 2,
+          "y": 22,
+          "homeCityIndex": 63,
+          "homeCityName": "Moscow",
+          "homeCityOwnerCandidate": 1
+        },
+        {
+          "index": 322,
+          "ownerCandidate": 6,
+          "x": 1,
+          "y": 31,
+          "homeCityIndex": 66,
+          "homeCityName": "Astrakhan",
+          "homeCityOwnerCandidate": 1
+        },
+        {
+          "index": 323,
+          "ownerCandidate": 6,
+          "x": 1,
+          "y": 31,
+          "homeCityIndex": 67,
+          "homeCityName": "Grozny",
+          "homeCityOwnerCandidate": 1
+        },
+        {
+          "index": 324,
+          "ownerCandidate": 6,
+          "x": 1,
+          "y": 31,
+          "homeCityIndex": 68,
+          "homeCityName": "Dnepropetrovsk",
+          "homeCityOwnerCandidate": 1
+        },
+        {
+          "index": 325,
+          "ownerCandidate": 6,
+          "x": 2,
+          "y": 22,
+          "homeCityIndex": 29,
+          "homeCityName": "Warsaw",
+          "homeCityOwnerCandidate": 3
+        },
+        {
+          "index": 326,
+          "ownerCandidate": 6,
+          "x": 2,
+          "y": 22,
+          "homeCityIndex": 70,
+          "homeCityName": "Rostov",
+          "homeCityOwnerCandidate": 1
+        },
+        {
+          "index": 327,
+          "ownerCandidate": 6,
+          "x": 2,
+          "y": 22,
+          "homeCityIndex": 71,
+          "homeCityName": "Kiev",
+          "homeCityOwnerCandidate": 1
+        },
+        {
+          "index": 351,
+          "ownerCandidate": 6,
+          "x": 38,
+          "y": 92,
+          "homeCityIndex": 95,
+          "homeCityName": "Paris",
+          "homeCityOwnerCandidate": 7
+        }
+      ]
+    },
+    {
+      "civ2Name": "Transport",
+      "reason": "home city belongs to different mapped player",
+      "units": [
+        {
+          "index": 347,
+          "ownerCandidate": 6,
+          "x": 41,
+          "y": 43,
+          "homeCityIndex": 91,
+          "homeCityName": "Tehran",
+          "homeCityOwnerCandidate": 5
+        }
+      ]
+    }
+  ],
+  "transportedUnits": {
+    "transportedUnitCount": 0,
+    "transporterInstanceCount": 0,
+    "instances": []
+  },
+  "diplomacy": {
+    "notes": [
+      "Civ2 attitude values are mapped linearly to Freeciv AI love: 0 -> 1000, 50 -> 0, 100 -> -1000.",
+      "Effective Civ2 contact is true when the treaty CONTACT bit is set or lastContactTurn is 0 or greater.",
+      "formalTreatyWithoutContactBit lists treaty-looking Civ2 rows where the explicit CONTACT bit is not set; some still have contact through lastContactTurn."
+    ],
+    "counts": {
+      "neverMetPairs": 7,
+      "raw0cNeverMetPairs": 0,
+      "asymmetricPairs": 21,
+      "formalTreatyWithoutContactBit": 0
+    },
+    "neverMet": [
+      {
+        "a": "Stalin",
+        "b": "Barbarians",
+        "aOwner": 1,
+        "bOwner": 0,
+        "aToB": {
+          "rawBytes": "",
+          "state": "Never met",
+          "hasContact": false,
+          "contactBit": false,
+          "lastContactTurn": null,
+          "embassy": false,
+          "civ2Attitude": null,
+          "civ2AttitudeName": "",
+          "freecivLove": null
+        },
+        "bToA": {
+          "rawBytes": "00 00 00 00",
+          "state": "Cease-fire",
+          "hasContact": true,
+          "contactBit": false,
+          "lastContactTurn": 1,
+          "embassy": false,
+          "civ2Attitude": 100,
+          "civ2AttitudeName": "hostile",
+          "freecivLove": -1000
+        }
+      },
+      {
+        "a": "Inonu",
+        "b": "Barbarians",
+        "aOwner": 2,
+        "bOwner": 0,
+        "aToB": {
+          "rawBytes": "",
+          "state": "Never met",
+          "hasContact": false,
+          "contactBit": false,
+          "lastContactTurn": null,
+          "embassy": false,
+          "civ2Attitude": null,
+          "civ2AttitudeName": "",
+          "freecivLove": null
+        },
+        "bToA": {
+          "rawBytes": "00 00 00 00",
+          "state": "Cease-fire",
+          "hasContact": true,
+          "contactBit": false,
+          "lastContactTurn": 1,
+          "embassy": false,
+          "civ2Attitude": 100,
+          "civ2AttitudeName": "hostile",
+          "freecivLove": -1000
+        }
+      },
+      {
+        "a": "Hitler",
+        "b": "Barbarians",
+        "aOwner": 3,
+        "bOwner": 0,
+        "aToB": {
+          "rawBytes": "",
+          "state": "Never met",
+          "hasContact": false,
+          "contactBit": false,
+          "lastContactTurn": null,
+          "embassy": false,
+          "civ2Attitude": null,
+          "civ2AttitudeName": "",
+          "freecivLove": null
+        },
+        "bToA": {
+          "rawBytes": "00 00 00 00",
+          "state": "Cease-fire",
+          "hasContact": true,
+          "contactBit": false,
+          "lastContactTurn": 1,
+          "embassy": false,
+          "civ2Attitude": 100,
+          "civ2AttitudeName": "hostile",
+          "freecivLove": -1000
+        }
+      },
+      {
+        "a": "Franco",
+        "b": "Barbarians",
+        "aOwner": 4,
+        "bOwner": 0,
+        "aToB": {
+          "rawBytes": "",
+          "state": "Never met",
+          "hasContact": false,
+          "contactBit": false,
+          "lastContactTurn": null,
+          "embassy": false,
+          "civ2Attitude": null,
+          "civ2AttitudeName": "",
+          "freecivLove": null
+        },
+        "bToA": {
+          "rawBytes": "00 00 00 00",
+          "state": "Cease-fire",
+          "hasContact": true,
+          "contactBit": false,
+          "lastContactTurn": 1,
+          "embassy": false,
+          "civ2Attitude": 100,
+          "civ2AttitudeName": "hostile",
+          "freecivLove": -1000
+        }
+      },
+      {
+        "a": "Neutral Leader",
+        "b": "Barbarians",
+        "aOwner": 5,
+        "bOwner": 0,
+        "aToB": {
+          "rawBytes": "",
+          "state": "Never met",
+          "hasContact": false,
+          "contactBit": false,
+          "lastContactTurn": null,
+          "embassy": false,
+          "civ2Attitude": null,
+          "civ2AttitudeName": "",
+          "freecivLove": null
+        },
+        "bToA": {
+          "rawBytes": "00 00 00 00",
+          "state": "Cease-fire",
+          "hasContact": true,
+          "contactBit": false,
+          "lastContactTurn": 1,
+          "embassy": false,
+          "civ2Attitude": 100,
+          "civ2AttitudeName": "hostile",
+          "freecivLove": -1000
+        }
+      },
+      {
+        "a": "Churchill",
+        "b": "Barbarians",
+        "aOwner": 6,
+        "bOwner": 0,
+        "aToB": {
+          "rawBytes": "",
+          "state": "Never met",
+          "hasContact": false,
+          "contactBit": false,
+          "lastContactTurn": null,
+          "embassy": false,
+          "civ2Attitude": null,
+          "civ2AttitudeName": "",
+          "freecivLove": null
+        },
+        "bToA": {
+          "rawBytes": "00 00 00 00",
+          "state": "Cease-fire",
+          "hasContact": true,
+          "contactBit": false,
+          "lastContactTurn": 1,
+          "embassy": false,
+          "civ2Attitude": 100,
+          "civ2AttitudeName": "hostile",
+          "freecivLove": -1000
+        }
+      },
+      {
+        "a": "Petain",
+        "b": "Barbarians",
+        "aOwner": 7,
+        "bOwner": 0,
+        "aToB": {
+          "rawBytes": "",
+          "state": "Never met",
+          "hasContact": false,
+          "contactBit": false,
+          "lastContactTurn": null,
+          "embassy": false,
+          "civ2Attitude": null,
+          "civ2AttitudeName": "",
+          "freecivLove": null
+        },
+        "bToA": {
+          "rawBytes": "00 00 00 00",
+          "state": "Cease-fire",
+          "hasContact": true,
+          "contactBit": false,
+          "lastContactTurn": 1,
+          "embassy": false,
+          "civ2Attitude": 100,
+          "civ2AttitudeName": "hostile",
+          "freecivLove": -1000
+        }
+      }
+    ],
+    "raw0cNeverMet": [],
+    "asymmetric": [
+      {
+        "a": "Stalin",
+        "b": "Inonu",
+        "aOwner": 1,
+        "bOwner": 2,
+        "aToB": {
+          "rawBytes": "85 00 00 00",
+          "state": "Peace",
+          "hasContact": true,
+          "contactBit": true,
+          "lastContactTurn": 1,
+          "embassy": true,
+          "civ2Attitude": 56,
+          "civ2AttitudeName": "neutral",
+          "freecivLove": -120
+        },
+        "bToA": {
+          "rawBytes": "05 00 00 00",
+          "state": "Peace",
+          "hasContact": true,
+          "contactBit": true,
+          "lastContactTurn": 1,
+          "embassy": false,
+          "civ2Attitude": 56,
+          "civ2AttitudeName": "neutral",
+          "freecivLove": -120
+        }
+      },
+      {
+        "a": "Stalin",
+        "b": "Franco",
+        "aOwner": 1,
+        "bOwner": 4,
+        "aToB": {
+          "rawBytes": "85 00 00 00",
+          "state": "Peace",
+          "hasContact": true,
+          "contactBit": true,
+          "lastContactTurn": 1,
+          "embassy": true,
+          "civ2Attitude": 55,
+          "civ2AttitudeName": "neutral",
+          "freecivLove": -100
+        },
+        "bToA": {
+          "rawBytes": "05 00 00 00",
+          "state": "Peace",
+          "hasContact": true,
+          "contactBit": true,
+          "lastContactTurn": 1,
+          "embassy": false,
+          "civ2Attitude": 55,
+          "civ2AttitudeName": "neutral",
+          "freecivLove": -100
+        }
+      },
+      {
+        "a": "Stalin",
+        "b": "Neutral Leader",
+        "aOwner": 1,
+        "bOwner": 5,
+        "aToB": {
+          "rawBytes": "85 00 00 00",
+          "state": "Peace",
+          "hasContact": true,
+          "contactBit": true,
+          "lastContactTurn": 1,
+          "embassy": true,
+          "civ2Attitude": 48,
+          "civ2AttitudeName": "neutral",
+          "freecivLove": 40
+        },
+        "bToA": {
+          "rawBytes": "05 00 00 00",
+          "state": "Peace",
+          "hasContact": true,
+          "contactBit": true,
+          "lastContactTurn": 1,
+          "embassy": false,
+          "civ2Attitude": 48,
+          "civ2AttitudeName": "neutral",
+          "freecivLove": 40
+        }
+      },
+      {
+        "a": "Stalin",
+        "b": "Barbarians",
+        "aOwner": 1,
+        "bOwner": 0,
+        "aToB": {
+          "rawBytes": "",
+          "state": "Never met",
+          "hasContact": false,
+          "contactBit": false,
+          "lastContactTurn": null,
+          "embassy": false,
+          "civ2Attitude": null,
+          "civ2AttitudeName": "",
+          "freecivLove": null
+        },
+        "bToA": {
+          "rawBytes": "00 00 00 00",
+          "state": "Cease-fire",
+          "hasContact": true,
+          "contactBit": false,
+          "lastContactTurn": 1,
+          "embassy": false,
+          "civ2Attitude": 100,
+          "civ2AttitudeName": "hostile",
+          "freecivLove": -1000
+        }
+      },
+      {
+        "a": "Inonu",
+        "b": "Hitler",
+        "aOwner": 2,
+        "bOwner": 3,
+        "aToB": {
+          "rawBytes": "07 00 00 00",
+          "state": "Peace",
+          "hasContact": true,
+          "contactBit": true,
+          "lastContactTurn": 1,
+          "embassy": false,
+          "civ2Attitude": 38,
+          "civ2AttitudeName": "receptive",
+          "freecivLove": 240
+        },
+        "bToA": {
+          "rawBytes": "87 00 00 00",
+          "state": "Peace",
+          "hasContact": true,
+          "contactBit": true,
+          "lastContactTurn": 1,
+          "embassy": true,
+          "civ2Attitude": 38,
+          "civ2AttitudeName": "receptive",
+          "freecivLove": 240
+        }
+      },
+      {
+        "a": "Inonu",
+        "b": "Franco",
+        "aOwner": 2,
+        "bOwner": 4,
+        "aToB": {
+          "rawBytes": "85 00 00 00",
+          "state": "Peace",
+          "hasContact": true,
+          "contactBit": true,
+          "lastContactTurn": 1,
+          "embassy": true,
+          "civ2Attitude": 25,
+          "civ2AttitudeName": "cordial",
+          "freecivLove": 500
+        },
+        "bToA": {
+          "rawBytes": "05 00 00 00",
+          "state": "Peace",
+          "hasContact": true,
+          "contactBit": true,
+          "lastContactTurn": 1,
+          "embassy": false,
+          "civ2Attitude": 25,
+          "civ2AttitudeName": "cordial",
+          "freecivLove": 500
+        }
+      },
+      {
+        "a": "Inonu",
+        "b": "Neutral Leader",
+        "aOwner": 2,
+        "bOwner": 5,
+        "aToB": {
+          "rawBytes": "85 00 00 00",
+          "state": "Peace",
+          "hasContact": true,
+          "contactBit": true,
+          "lastContactTurn": 1,
+          "embassy": true,
+          "civ2Attitude": 50,
+          "civ2AttitudeName": "neutral",
+          "freecivLove": 0
+        },
+        "bToA": {
+          "rawBytes": "05 00 00 00",
+          "state": "Peace",
+          "hasContact": true,
+          "contactBit": true,
+          "lastContactTurn": 1,
+          "embassy": false,
+          "civ2Attitude": 50,
+          "civ2AttitudeName": "neutral",
+          "freecivLove": 0
+        }
+      },
+      {
+        "a": "Inonu",
+        "b": "Churchill",
+        "aOwner": 2,
+        "bOwner": 6,
+        "aToB": {
+          "rawBytes": "05 00 00 00",
+          "state": "Peace",
+          "hasContact": true,
+          "contactBit": true,
+          "lastContactTurn": 1,
+          "embassy": false,
+          "civ2Attitude": 12,
+          "civ2AttitudeName": "cordial",
+          "freecivLove": 760
+        },
+        "bToA": {
+          "rawBytes": "85 00 00 00",
+          "state": "Peace",
+          "hasContact": true,
+          "contactBit": true,
+          "lastContactTurn": 1,
+          "embassy": true,
+          "civ2Attitude": 40,
+          "civ2AttitudeName": "neutral",
+          "freecivLove": 200
+        }
+      },
+      {
+        "a": "Inonu",
+        "b": "Petain",
+        "aOwner": 2,
+        "bOwner": 7,
+        "aToB": {
+          "rawBytes": "05 00 00 00",
+          "state": "Peace",
+          "hasContact": true,
+          "contactBit": true,
+          "lastContactTurn": 1,
+          "embassy": false,
+          "civ2Attitude": 81,
+          "civ2AttitudeName": "icy",
+          "freecivLove": -620
+        },
+        "bToA": {
+          "rawBytes": "85 00 00 00",
+          "state": "Peace",
+          "hasContact": true,
+          "contactBit": true,
+          "lastContactTurn": 1,
+          "embassy": true,
+          "civ2Attitude": 81,
+          "civ2AttitudeName": "icy",
+          "freecivLove": -620
+        }
+      },
+      {
+        "a": "Inonu",
+        "b": "Barbarians",
+        "aOwner": 2,
+        "bOwner": 0,
+        "aToB": {
+          "rawBytes": "",
+          "state": "Never met",
+          "hasContact": false,
+          "contactBit": false,
+          "lastContactTurn": null,
+          "embassy": false,
+          "civ2Attitude": null,
+          "civ2AttitudeName": "",
+          "freecivLove": null
+        },
+        "bToA": {
+          "rawBytes": "00 00 00 00",
+          "state": "Cease-fire",
+          "hasContact": true,
+          "contactBit": false,
+          "lastContactTurn": 1,
+          "embassy": false,
+          "civ2Attitude": 100,
+          "civ2AttitudeName": "hostile",
+          "freecivLove": -1000
+        }
+      },
+      {
+        "a": "Hitler",
+        "b": "Franco",
+        "aOwner": 3,
+        "bOwner": 4,
+        "aToB": {
+          "rawBytes": "87 00 00 00",
+          "state": "Peace",
+          "hasContact": true,
+          "contactBit": true,
+          "lastContactTurn": 1,
+          "embassy": true,
+          "civ2Attitude": 54,
+          "civ2AttitudeName": "neutral",
+          "freecivLove": -80
+        },
+        "bToA": {
+          "rawBytes": "07 00 00 00",
+          "state": "Peace",
+          "hasContact": true,
+          "contactBit": true,
+          "lastContactTurn": 1,
+          "embassy": false,
+          "civ2Attitude": 54,
+          "civ2AttitudeName": "neutral",
+          "freecivLove": -80
+        }
+      },
+      {
+        "a": "Hitler",
+        "b": "Barbarians",
+        "aOwner": 3,
+        "bOwner": 0,
+        "aToB": {
+          "rawBytes": "",
+          "state": "Never met",
+          "hasContact": false,
+          "contactBit": false,
+          "lastContactTurn": null,
+          "embassy": false,
+          "civ2Attitude": null,
+          "civ2AttitudeName": "",
+          "freecivLove": null
+        },
+        "bToA": {
+          "rawBytes": "00 00 00 00",
+          "state": "Cease-fire",
+          "hasContact": true,
+          "contactBit": false,
+          "lastContactTurn": 1,
+          "embassy": false,
+          "civ2Attitude": 100,
+          "civ2AttitudeName": "hostile",
+          "freecivLove": -1000
+        }
+      },
+      {
+        "a": "Franco",
+        "b": "Neutral Leader",
+        "aOwner": 4,
+        "bOwner": 5,
+        "aToB": {
+          "rawBytes": "85 00 00 00",
+          "state": "Peace",
+          "hasContact": true,
+          "contactBit": true,
+          "lastContactTurn": 1,
+          "embassy": true,
+          "civ2Attitude": 70,
+          "civ2AttitudeName": "uncooperative",
+          "freecivLove": -400
+        },
+        "bToA": {
+          "rawBytes": "05 00 00 00",
+          "state": "Peace",
+          "hasContact": true,
+          "contactBit": true,
+          "lastContactTurn": 1,
+          "embassy": false,
+          "civ2Attitude": 70,
+          "civ2AttitudeName": "uncooperative",
+          "freecivLove": -400
+        }
+      },
+      {
+        "a": "Franco",
+        "b": "Churchill",
+        "aOwner": 4,
+        "bOwner": 6,
+        "aToB": {
+          "rawBytes": "05 00 00 00",
+          "state": "Peace",
+          "hasContact": true,
+          "contactBit": true,
+          "lastContactTurn": 1,
+          "embassy": false,
+          "civ2Attitude": 27,
+          "civ2AttitudeName": "receptive",
+          "freecivLove": 460
+        },
+        "bToA": {
+          "rawBytes": "85 00 00 00",
+          "state": "Peace",
+          "hasContact": true,
+          "contactBit": true,
+          "lastContactTurn": 1,
+          "embassy": true,
+          "civ2Attitude": 55,
+          "civ2AttitudeName": "neutral",
+          "freecivLove": -100
+        }
+      },
+      {
+        "a": "Franco",
+        "b": "Petain",
+        "aOwner": 4,
+        "bOwner": 7,
+        "aToB": {
+          "rawBytes": "05 00 00 00",
+          "state": "Peace",
+          "hasContact": true,
+          "contactBit": true,
+          "lastContactTurn": 1,
+          "embassy": false,
+          "civ2Attitude": 78,
+          "civ2AttitudeName": "icy",
+          "freecivLove": -560
+        },
+        "bToA": {
+          "rawBytes": "85 00 00 00",
+          "state": "Peace",
+          "hasContact": true,
+          "contactBit": true,
+          "lastContactTurn": 1,
+          "embassy": true,
+          "civ2Attitude": 78,
+          "civ2AttitudeName": "icy",
+          "freecivLove": -560
+        }
+      },
+      {
+        "a": "Franco",
+        "b": "Barbarians",
+        "aOwner": 4,
+        "bOwner": 0,
+        "aToB": {
+          "rawBytes": "",
+          "state": "Never met",
+          "hasContact": false,
+          "contactBit": false,
+          "lastContactTurn": null,
+          "embassy": false,
+          "civ2Attitude": null,
+          "civ2AttitudeName": "",
+          "freecivLove": null
+        },
+        "bToA": {
+          "rawBytes": "00 00 00 00",
+          "state": "Cease-fire",
+          "hasContact": true,
+          "contactBit": false,
+          "lastContactTurn": 1,
+          "embassy": false,
+          "civ2Attitude": 100,
+          "civ2AttitudeName": "hostile",
+          "freecivLove": -1000
+        }
+      },
+      {
+        "a": "Neutral Leader",
+        "b": "Churchill",
+        "aOwner": 5,
+        "bOwner": 6,
+        "aToB": {
+          "rawBytes": "0d 00 00 00",
+          "state": "Alliance",
+          "hasContact": true,
+          "contactBit": true,
+          "lastContactTurn": 1,
+          "embassy": false,
+          "civ2Attitude": 80,
+          "civ2AttitudeName": "icy",
+          "freecivLove": -600
+        },
+        "bToA": {
+          "rawBytes": "8d 00 00 00",
+          "state": "Alliance",
+          "hasContact": true,
+          "contactBit": true,
+          "lastContactTurn": 1,
+          "embassy": true,
+          "civ2Attitude": 10,
+          "civ2AttitudeName": "enthusiastic",
+          "freecivLove": 800
+        }
+      },
+      {
+        "a": "Neutral Leader",
+        "b": "Petain",
+        "aOwner": 5,
+        "bOwner": 7,
+        "aToB": {
+          "rawBytes": "05 00 00 00",
+          "state": "Peace",
+          "hasContact": true,
+          "contactBit": true,
+          "lastContactTurn": 1,
+          "embassy": false,
+          "civ2Attitude": 12,
+          "civ2AttitudeName": "cordial",
+          "freecivLove": 760
+        },
+        "bToA": {
+          "rawBytes": "85 00 00 00",
+          "state": "Peace",
+          "hasContact": true,
+          "contactBit": true,
+          "lastContactTurn": 1,
+          "embassy": true,
+          "civ2Attitude": 12,
+          "civ2AttitudeName": "cordial",
+          "freecivLove": 760
+        }
+      },
+      {
+        "a": "Neutral Leader",
+        "b": "Barbarians",
+        "aOwner": 5,
+        "bOwner": 0,
+        "aToB": {
+          "rawBytes": "",
+          "state": "Never met",
+          "hasContact": false,
+          "contactBit": false,
+          "lastContactTurn": null,
+          "embassy": false,
+          "civ2Attitude": null,
+          "civ2AttitudeName": "",
+          "freecivLove": null
+        },
+        "bToA": {
+          "rawBytes": "00 00 00 00",
+          "state": "Cease-fire",
+          "hasContact": true,
+          "contactBit": false,
+          "lastContactTurn": 1,
+          "embassy": false,
+          "civ2Attitude": 100,
+          "civ2AttitudeName": "hostile",
+          "freecivLove": -1000
+        }
+      },
+      {
+        "a": "Churchill",
+        "b": "Barbarians",
+        "aOwner": 6,
+        "bOwner": 0,
+        "aToB": {
+          "rawBytes": "",
+          "state": "Never met",
+          "hasContact": false,
+          "contactBit": false,
+          "lastContactTurn": null,
+          "embassy": false,
+          "civ2Attitude": null,
+          "civ2AttitudeName": "",
+          "freecivLove": null
+        },
+        "bToA": {
+          "rawBytes": "00 00 00 00",
+          "state": "Cease-fire",
+          "hasContact": true,
+          "contactBit": false,
+          "lastContactTurn": 1,
+          "embassy": false,
+          "civ2Attitude": 100,
+          "civ2AttitudeName": "hostile",
+          "freecivLove": -1000
+        }
+      },
+      {
+        "a": "Petain",
+        "b": "Barbarians",
+        "aOwner": 7,
+        "bOwner": 0,
+        "aToB": {
+          "rawBytes": "",
+          "state": "Never met",
+          "hasContact": false,
+          "contactBit": false,
+          "lastContactTurn": null,
+          "embassy": false,
+          "civ2Attitude": null,
+          "civ2AttitudeName": "",
+          "freecivLove": null
+        },
+        "bToA": {
+          "rawBytes": "00 00 00 00",
+          "state": "Cease-fire",
+          "hasContact": true,
+          "contactBit": false,
+          "lastContactTurn": 1,
+          "embassy": false,
+          "civ2Attitude": 100,
+          "civ2AttitudeName": "hostile",
+          "freecivLove": -1000
+        }
+      }
+    ],
+    "formalTreatyWithoutContactBit": []
+  },
+  "visibility": [
+    {
+      "playerId": 0,
+      "ownerCandidate": 1,
+      "name": "Stalin",
+      "source": "civ2",
+      "knownTiles": 9000,
+      "totalTiles": 9000,
+      "knownPercent": 100,
+      "hasVisibleFeatureRows": true
+    },
+    {
+      "playerId": 1,
+      "ownerCandidate": 2,
+      "name": "Inonu",
+      "source": "civ2",
+      "knownTiles": 9000,
+      "totalTiles": 9000,
+      "knownPercent": 100,
+      "hasVisibleFeatureRows": true
+    },
+    {
+      "playerId": 2,
+      "ownerCandidate": 3,
+      "name": "Hitler",
+      "source": "civ2",
+      "knownTiles": 9000,
+      "totalTiles": 9000,
+      "knownPercent": 100,
+      "hasVisibleFeatureRows": true
+    },
+    {
+      "playerId": 3,
+      "ownerCandidate": 4,
+      "name": "Franco",
+      "source": "civ2",
+      "knownTiles": 9000,
+      "totalTiles": 9000,
+      "knownPercent": 100,
+      "hasVisibleFeatureRows": true
+    },
+    {
+      "playerId": 4,
+      "ownerCandidate": 5,
+      "name": "Neutral Leader",
+      "source": "civ2",
+      "knownTiles": 9000,
+      "totalTiles": 9000,
+      "knownPercent": 100,
+      "hasVisibleFeatureRows": true
+    },
+    {
+      "playerId": 5,
+      "ownerCandidate": 6,
+      "name": "Churchill",
+      "source": "civ2",
+      "knownTiles": 9000,
+      "totalTiles": 9000,
+      "knownPercent": 100,
+      "hasVisibleFeatureRows": true
+    },
+    {
+      "playerId": 6,
+      "ownerCandidate": 7,
+      "name": "Petain",
+      "source": "civ2",
+      "knownTiles": 9000,
+      "totalTiles": 9000,
+      "knownPercent": 100,
+      "hasVisibleFeatureRows": true
+    },
+    {
+      "playerId": 7,
+      "ownerCandidate": 0,
+      "name": "Barbarians",
+      "source": "fallback-full-map",
+      "knownTiles": 9000,
+      "totalTiles": 9000,
+      "knownPercent": 100,
+      "hasVisibleFeatureRows": false
+    }
+  ]
+}

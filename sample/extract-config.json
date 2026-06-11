@@ -1,0 +1,6 @@
+{
+    "input":  "ww2.SCN",
+    "outputPrefix":  "ww2",
+    "outputDir":  "extracted-civ2",
+    "rules":  "RULES.TXT"
+}

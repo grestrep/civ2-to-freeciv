@@ -1,0 +1,761 @@
+{
+  "notes": [
+    "Only same-owner converted cities are assigned as Freeciv unit homecities.",
+    "Units listed here were left unhomed with homecity=0."
+  ],
+  "entries": [
+    {
+      "civ2Name": "Alpine Troops",
+      "reason": "home city belongs to different mapped player",
+      "units": [
+        {
+          "index": 30,
+          "ownerCandidate": 7,
+          "x": 49,
+          "y": 73,
+          "homeCityIndex": 74,
+          "homeCityName": "Stalingrad",
+          "homeCityOwnerCandidate": 1
+        },
+        {
+          "index": 31,
+          "ownerCandidate": 7,
+          "x": 49,
+          "y": 73,
+          "homeCityIndex": 31,
+          "homeCityName": "Krakow",
+          "homeCityOwnerCandidate": 3
+        },
+        {
+          "index": 33,
+          "ownerCandidate": 7,
+          "x": 46,
+          "y": 64,
+          "homeCityIndex": 33,
+          "homeCityName": "Bucharest",
+          "homeCityOwnerCandidate": 3
+        },
+        {
+          "index": 64,
+          "ownerCandidate": 3,
+          "x": 63,
+          "y": 5,
+          "homeCityIndex": 66,
+          "homeCityName": "Astrakhan",
+          "homeCityOwnerCandidate": 1
+        },
+        {
+          "index": 90,
+          "ownerCandidate": 1,
+          "x": 146,
+          "y": 40,
+          "homeCityIndex": 90,
+          "homeCityName": "Stockholm",
+          "homeCityOwnerCandidate": 5
+        }
+      ]
+    },
+    {
+      "civ2Name": "Armor",
+      "reason": "home city belongs to different mapped player",
+      "units": [
+        {
+          "index": 131,
+          "ownerCandidate": 3,
+          "x": 56,
+          "y": 54,
+          "homeCityIndex": 15,
+          "homeCityName": "London",
+          "homeCityOwnerCandidate": 6
+        },
+        {
+          "index": 306,
+          "ownerCandidate": 6,
+          "x": 37,
+          "y": 39,
+          "homeCityIndex": 87,
+          "homeCityName": "Omsk",
+          "homeCityOwnerCandidate": 1
+        },
+        {
+          "index": 307,
+          "ownerCandidate": 6,
+          "x": 37,
+          "y": 39,
+          "homeCityIndex": 51,
+          "homeCityName": "Kars",
+          "homeCityOwnerCandidate": 2
+        },
+        {
+          "index": 315,
+          "ownerCandidate": 6,
+          "x": 2,
+          "y": 22,
+          "homeCityIndex": 59,
+          "homeCityName": "Minsk",
+          "homeCityOwnerCandidate": 1
+        },
+        {
+          "index": 316,
+          "ownerCandidate": 6,
+          "x": 2,
+          "y": 22,
+          "homeCityIndex": 60,
+          "homeCityName": "Smolensk",
+          "homeCityOwnerCandidate": 1
+        },
+        {
+          "index": 317,
+          "ownerCandidate": 6,
+          "x": 2,
+          "y": 22,
+          "homeCityIndex": 61,
+          "homeCityName": "Odessa",
+          "homeCityOwnerCandidate": 1
+        },
+        {
+          "index": 331,
+          "ownerCandidate": 6,
+          "x": 1,
+          "y": 31,
+          "homeCityIndex": 75,
+          "homeCityName": "Kazan",
+          "homeCityOwnerCandidate": 1
+        },
+        {
+          "index": 332,
+          "ownerCandidate": 6,
+          "x": 1,
+          "y": 31,
+          "homeCityIndex": 76,
+          "homeCityName": "Kursk",
+          "homeCityOwnerCandidate": 1
+        }
+      ]
+    },
+    {
+      "civ2Name": "Artillery",
+      "reason": "home city belongs to different mapped player",
+      "units": [
+        {
+          "index": 305,
+          "ownerCandidate": 6,
+          "x": 33,
+          "y": 31,
+          "homeCityIndex": 49,
+          "homeCityName": "Izmir",
+          "homeCityOwnerCandidate": 2
+        }
+      ]
+    },
+    {
+      "civ2Name": "Battleship",
+      "reason": "home city belongs to different mapped player",
+      "units": [
+        {
+          "index": 337,
+          "ownerCandidate": 6,
+          "x": 40,
+          "y": 22,
+          "homeCityIndex": 81,
+          "homeCityName": "Vologda",
+          "homeCityOwnerCandidate": 1
+        },
+        {
+          "index": 341,
+          "ownerCandidate": 6,
+          "x": 40,
+          "y": 22,
+          "homeCityIndex": 85,
+          "homeCityName": "Krasnoyarsk",
+          "homeCityOwnerCandidate": 1
+        }
+      ]
+    },
+    {
+      "civ2Name": "Cruiser",
+      "reason": "home city belongs to different mapped player",
+      "units": [
+        {
+          "index": 256,
+          "ownerCandidate": 7,
+          "x": 49,
+          "y": 73,
+          "homeCityIndex": 0,
+          "homeCityName": "Berlin",
+          "homeCityOwnerCandidate": 3
+        },
+        {
+          "index": 257,
+          "ownerCandidate": 7,
+          "x": 49,
+          "y": 73,
+          "homeCityIndex": 1,
+          "homeCityName": "Vienna",
+          "homeCityOwnerCandidate": 3
+        },
+        {
+          "index": 338,
+          "ownerCandidate": 6,
+          "x": 40,
+          "y": 22,
+          "homeCityIndex": 82,
+          "homeCityName": "Batum",
+          "homeCityOwnerCandidate": 1
+        },
+        {
+          "index": 339,
+          "ownerCandidate": 6,
+          "x": 40,
+          "y": 22,
+          "homeCityIndex": 83,
+          "homeCityName": "Voronezh",
+          "homeCityOwnerCandidate": 1
+        },
+        {
+          "index": 340,
+          "ownerCandidate": 6,
+          "x": 40,
+          "y": 22,
+          "homeCityIndex": 84,
+          "homeCityName": "Uralsk",
+          "homeCityOwnerCandidate": 1
+        },
+        {
+          "index": 342,
+          "ownerCandidate": 6,
+          "x": 40,
+          "y": 22,
+          "homeCityIndex": 86,
+          "homeCityName": "Novosibirsk",
+          "homeCityOwnerCandidate": 1
+        }
+      ]
+    },
+    {
+      "civ2Name": "Destroyer",
+      "reason": "home city belongs to different mapped player",
+      "units": [
+        {
+          "index": 328,
+          "ownerCandidate": 6,
+          "x": 3,
+          "y": 25,
+          "homeCityIndex": 77,
+          "homeCityName": "Magnitogorsk",
+          "homeCityOwnerCandidate": 1
+        },
+        {
+          "index": 343,
+          "ownerCandidate": 6,
+          "x": 33,
+          "y": 31,
+          "homeCityIndex": 93,
+          "homeCityName": "Bordeaux",
+          "homeCityOwnerCandidate": 7
+        },
+        {
+          "index": 345,
+          "ownerCandidate": 6,
+          "x": 38,
+          "y": 32,
+          "homeCityIndex": 92,
+          "homeCityName": "Amsterdam",
+          "homeCityOwnerCandidate": 5
+        }
+      ]
+    },
+    {
+      "civ2Name": "Engineers",
+      "reason": "home city belongs to different mapped player",
+      "units": [
+        {
+          "index": 9,
+          "ownerCandidate": 1,
+          "x": 76,
+          "y": 34,
+          "homeCityIndex": 49,
+          "homeCityName": "Izmir",
+          "homeCityOwnerCandidate": 2
+        }
+      ]
+    },
+    {
+      "civ2Name": "Fanatics",
+      "reason": "home city belongs to different mapped player",
+      "units": [
+        {
+          "index": 4,
+          "ownerCandidate": 0,
+          "x": 83,
+          "y": 105,
+          "homeCityIndex": 32,
+          "homeCityName": "Budapest",
+          "homeCityOwnerCandidate": 3
+        }
+      ]
+    },
+    {
+      "civ2Name": "Fighter",
+      "reason": "home city belongs to different mapped player",
+      "units": [
+        {
+          "index": 206,
+          "ownerCandidate": 3,
+          "x": 53,
+          "y": 73,
+          "homeCityIndex": 15,
+          "homeCityName": "London",
+          "homeCityOwnerCandidate": 6
+        },
+        {
+          "index": 310,
+          "ownerCandidate": 6,
+          "x": 38,
+          "y": 46,
+          "homeCityIndex": 90,
+          "homeCityName": "Stockholm",
+          "homeCityOwnerCandidate": 5
+        },
+        {
+          "index": 311,
+          "ownerCandidate": 6,
+          "x": 37,
+          "y": 39,
+          "homeCityIndex": 88,
+          "homeCityName": "Helsinki",
+          "homeCityOwnerCandidate": 3
+        }
+      ]
+    },
+    {
+      "civ2Name": "Marines",
+      "reason": "home city belongs to different mapped player",
+      "units": [
+        {
+          "index": 290,
+          "ownerCandidate": 6,
+          "x": 38,
+          "y": 46,
+          "homeCityIndex": 34,
+          "homeCityName": "Tripoli",
+          "homeCityOwnerCandidate": 3
+        },
+        {
+          "index": 320,
+          "ownerCandidate": 6,
+          "x": 1,
+          "y": 31,
+          "homeCityIndex": 69,
+          "homeCityName": "Kuibyshev",
+          "homeCityOwnerCandidate": 1
+        },
+        {
+          "index": 321,
+          "ownerCandidate": 6,
+          "x": 1,
+          "y": 31,
+          "homeCityIndex": 65,
+          "homeCityName": "Krasnovodsk",
+          "homeCityOwnerCandidate": 1
+        },
+        {
+          "index": 334,
+          "ownerCandidate": 6,
+          "x": 2,
+          "y": 22,
+          "homeCityIndex": 78,
+          "homeCityName": "Orsk",
+          "homeCityOwnerCandidate": 1
+        },
+        {
+          "index": 335,
+          "ownerCandidate": 6,
+          "x": 2,
+          "y": 22,
+          "homeCityIndex": 79,
+          "homeCityName": "Murmansk",
+          "homeCityOwnerCandidate": 1
+        }
+      ]
+    },
+    {
+      "civ2Name": "Partisans",
+      "reason": "home city belongs to different mapped player",
+      "units": [
+        {
+          "index": 24,
+          "ownerCandidate": 0,
+          "x": 31,
+          "y": 33,
+          "homeCityIndex": 93,
+          "homeCityName": "Bordeaux",
+          "homeCityOwnerCandidate": 7
+        }
+      ]
+    },
+    {
+      "civ2Name": "Riflemen",
+      "reason": "home city belongs to different mapped player",
+      "units": [
+        {
+          "index": 12,
+          "ownerCandidate": 3,
+          "x": 67,
+          "y": 25,
+          "homeCityIndex": 13,
+          "homeCityName": "Beirut",
+          "homeCityOwnerCandidate": 7
+        },
+        {
+          "index": 34,
+          "ownerCandidate": 7,
+          "x": 46,
+          "y": 64,
+          "homeCityIndex": 34,
+          "homeCityName": "Tripoli",
+          "homeCityOwnerCandidate": 3
+        },
+        {
+          "index": 36,
+          "ownerCandidate": 1,
+          "x": 76,
+          "y": 34,
+          "homeCityIndex": 36,
+          "homeCityName": "Bergen",
+          "homeCityOwnerCandidate": 3
+        },
+        {
+          "index": 37,
+          "ownerCandidate": 1,
+          "x": 76,
+          "y": 34,
+          "homeCityIndex": 37,
+          "homeCityName": "Tobruk",
+          "homeCityOwnerCandidate": 3
+        },
+        {
+          "index": 39,
+          "ownerCandidate": 1,
+          "x": 68,
+          "y": 26,
+          "homeCityIndex": 39,
+          "homeCityName": "Tangiers",
+          "homeCityOwnerCandidate": 4
+        },
+        {
+          "index": 41,
+          "ownerCandidate": 1,
+          "x": 64,
+          "y": 36,
+          "homeCityIndex": 41,
+          "homeCityName": "Barcelona",
+          "homeCityOwnerCandidate": 4
+        },
+        {
+          "index": 42,
+          "ownerCandidate": 1,
+          "x": 69,
+          "y": 43,
+          "homeCityIndex": 91,
+          "homeCityName": "Tehran",
+          "homeCityOwnerCandidate": 5
+        },
+        {
+          "index": 43,
+          "ownerCandidate": 1,
+          "x": 69,
+          "y": 43,
+          "homeCityIndex": 43,
+          "homeCityName": "Seville",
+          "homeCityOwnerCandidate": 4
+        },
+        {
+          "index": 45,
+          "ownerCandidate": 1,
+          "x": 72,
+          "y": 38,
+          "homeCityIndex": 45,
+          "homeCityName": "Valencia",
+          "homeCityOwnerCandidate": 4
+        },
+        {
+          "index": 47,
+          "ownerCandidate": 1,
+          "x": 71,
+          "y": 53,
+          "homeCityIndex": 47,
+          "homeCityName": "Ankara",
+          "homeCityOwnerCandidate": 2
+        },
+        {
+          "index": 53,
+          "ownerCandidate": 1,
+          "x": 79,
+          "y": 53,
+          "homeCityIndex": 53,
+          "homeCityName": "Basra",
+          "homeCityOwnerCandidate": 6
+        },
+        {
+          "index": 55,
+          "ownerCandidate": 1,
+          "x": 82,
+          "y": 62,
+          "homeCityIndex": 55,
+          "homeCityName": "Suez",
+          "homeCityOwnerCandidate": 6
+        },
+        {
+          "index": 89,
+          "ownerCandidate": 1,
+          "x": 146,
+          "y": 40,
+          "homeCityIndex": 89,
+          "homeCityName": "Belgrade",
+          "homeCityOwnerCandidate": 5
+        },
+        {
+          "index": 96,
+          "ownerCandidate": 4,
+          "x": 37,
+          "y": 87,
+          "homeCityIndex": 96,
+          "homeCityName": "Strasbourg",
+          "homeCityOwnerCandidate": 7
+        },
+        {
+          "index": 98,
+          "ownerCandidate": 4,
+          "x": 42,
+          "y": 84,
+          "homeCityIndex": 98,
+          "homeCityName": "Athens",
+          "homeCityOwnerCandidate": 6
+        },
+        {
+          "index": 211,
+          "ownerCandidate": 3,
+          "x": 63,
+          "y": 67,
+          "homeCityIndex": 14,
+          "homeCityName": "Damascus",
+          "homeCityOwnerCandidate": 7
+        },
+        {
+          "index": 289,
+          "ownerCandidate": 6,
+          "x": 38,
+          "y": 46,
+          "homeCityIndex": 33,
+          "homeCityName": "Bucharest",
+          "homeCityOwnerCandidate": 3
+        },
+        {
+          "index": 292,
+          "ownerCandidate": 6,
+          "x": 37,
+          "y": 39,
+          "homeCityIndex": 36,
+          "homeCityName": "Bergen",
+          "homeCityOwnerCandidate": 3
+        },
+        {
+          "index": 293,
+          "ownerCandidate": 6,
+          "x": 37,
+          "y": 39,
+          "homeCityIndex": 37,
+          "homeCityName": "Tobruk",
+          "homeCityOwnerCandidate": 3
+        },
+        {
+          "index": 294,
+          "ownerCandidate": 6,
+          "x": 38,
+          "y": 32,
+          "homeCityIndex": 50,
+          "homeCityName": "Antioch",
+          "homeCityOwnerCandidate": 2
+        },
+        {
+          "index": 295,
+          "ownerCandidate": 6,
+          "x": 38,
+          "y": 32,
+          "homeCityIndex": 39,
+          "homeCityName": "Tangiers",
+          "homeCityOwnerCandidate": 4
+        },
+        {
+          "index": 296,
+          "ownerCandidate": 6,
+          "x": 38,
+          "y": 32,
+          "homeCityIndex": 40,
+          "homeCityName": "Lisbon",
+          "homeCityOwnerCandidate": 4
+        },
+        {
+          "index": 297,
+          "ownerCandidate": 6,
+          "x": 38,
+          "y": 26,
+          "homeCityIndex": 89,
+          "homeCityName": "Belgrade",
+          "homeCityOwnerCandidate": 5
+        },
+        {
+          "index": 298,
+          "ownerCandidate": 6,
+          "x": 38,
+          "y": 26,
+          "homeCityIndex": 42,
+          "homeCityName": "Zaragosa",
+          "homeCityOwnerCandidate": 4
+        },
+        {
+          "index": 299,
+          "ownerCandidate": 6,
+          "x": 38,
+          "y": 26,
+          "homeCityIndex": 43,
+          "homeCityName": "Seville",
+          "homeCityOwnerCandidate": 4
+        },
+        {
+          "index": 301,
+          "ownerCandidate": 6,
+          "x": 40,
+          "y": 22,
+          "homeCityIndex": 45,
+          "homeCityName": "Valencia",
+          "homeCityOwnerCandidate": 4
+        },
+        {
+          "index": 302,
+          "ownerCandidate": 6,
+          "x": 33,
+          "y": 31,
+          "homeCityIndex": 80,
+          "homeCityName": "Gorky",
+          "homeCityOwnerCandidate": 1
+        },
+        {
+          "index": 303,
+          "ownerCandidate": 6,
+          "x": 33,
+          "y": 31,
+          "homeCityIndex": 47,
+          "homeCityName": "Ankara",
+          "homeCityOwnerCandidate": 2
+        },
+        {
+          "index": 304,
+          "ownerCandidate": 6,
+          "x": 33,
+          "y": 31,
+          "homeCityIndex": 48,
+          "homeCityName": "Istanbul",
+          "homeCityOwnerCandidate": 2
+        },
+        {
+          "index": 318,
+          "ownerCandidate": 6,
+          "x": 2,
+          "y": 22,
+          "homeCityIndex": 62,
+          "homeCityName": "Sevastopol",
+          "homeCityOwnerCandidate": 1
+        },
+        {
+          "index": 319,
+          "ownerCandidate": 6,
+          "x": 2,
+          "y": 22,
+          "homeCityIndex": 63,
+          "homeCityName": "Moscow",
+          "homeCityOwnerCandidate": 1
+        },
+        {
+          "index": 322,
+          "ownerCandidate": 6,
+          "x": 1,
+          "y": 31,
+          "homeCityIndex": 66,
+          "homeCityName": "Astrakhan",
+          "homeCityOwnerCandidate": 1
+        },
+        {
+          "index": 323,
+          "ownerCandidate": 6,
+          "x": 1,
+          "y": 31,
+          "homeCityIndex": 67,
+          "homeCityName": "Grozny",
+          "homeCityOwnerCandidate": 1
+        },
+        {
+          "index": 324,
+          "ownerCandidate": 6,
+          "x": 1,
+          "y": 31,
+          "homeCityIndex": 68,
+          "homeCityName": "Dnepropetrovsk",
+          "homeCityOwnerCandidate": 1
+        },
+        {
+          "index": 325,
+          "ownerCandidate": 6,
+          "x": 2,
+          "y": 22,
+          "homeCityIndex": 29,
+          "homeCityName": "Warsaw",
+          "homeCityOwnerCandidate": 3
+        },
+        {
+          "index": 326,
+          "ownerCandidate": 6,
+          "x": 2,
+          "y": 22,
+          "homeCityIndex": 70,
+          "homeCityName": "Rostov",
+          "homeCityOwnerCandidate": 1
+        },
+        {
+          "index": 327,
+          "ownerCandidate": 6,
+          "x": 2,
+          "y": 22,
+          "homeCityIndex": 71,
+          "homeCityName": "Kiev",
+          "homeCityOwnerCandidate": 1
+        },
+        {
+          "index": 351,
+          "ownerCandidate": 6,
+          "x": 38,
+          "y": 92,
+          "homeCityIndex": 95,
+          "homeCityName": "Paris",
+          "homeCityOwnerCandidate": 7
+        }
+      ]
+    },
+    {
+      "civ2Name": "Transport",
+      "reason": "home city belongs to different mapped player",
+      "units": [
+        {
+          "index": 347,
+          "ownerCandidate": 6,
+          "x": 41,
+          "y": 43,
+          "homeCityIndex": 91,
+          "homeCityName": "Tehran",
+          "homeCityOwnerCandidate": 5
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2550 @@
+{
+  "input": "ww2.SCN",
+  "header": {
+    "magic": "CIVILIZE\u0000",
+    "marker": 26,
+    "version": 39
+  },
+  "calendar": {
+    "notes": [
+      "Raw candidate fields only; the visible Civ2 month/year is not decoded from these yet.",
+      "In the Civil War scenario, turnCounterCandidate 1 displays as July 1861 and 2 displays as August 1861."
+    ],
+    "turnCounterCandidate": 1,
+    "turnCounterOffset": 28,
+    "dateWordCandidate": 23285,
+    "dateWordHex": "0x5af5",
+    "dateWordOffset": 30,
+    "rawHeaderBytes0x10To0x27": "16 00 04 00 d4 00 00 00 16 00 00 00 01 00 f5 5a ff ff 7f 00 00 00 00 03"
+  },
+  "layout": "Classic/CiC",
+  "inferred": {
+    "tribeInfoOffset": 2264,
+    "tribeInfoRecordSize": 1396,
+    "treatiesOffsetInTribeInfoRecord": 36,
+    "treatyRecordSize": 4,
+    "treatyRecordCountPerTribe": 7,
+    "attitudeOffsetFormula": "tribeInfoRecord + 64 + targetOwnerCandidate",
+    "lastContactOffsetInTribeInfoRecord": 964,
+    "lastContactRecordSize": 2
+  },
+  "notes": [
+    "Diplomacy extraction decodes treaty bits and directional Civ2 attitude values.",
+    "Each tribe-info block contains seven 4-byte treaty records for ownerCandidate 1..7, using slot otherCandidate - 1.",
+    "Civ2 attitude ranges from 0 (like) to 100 (dislike); freecivLove maps it linearly to 1000..-1000.",
+    "lastContactTurn is a signed 16-bit field; -1 appears to mean no previous contact, while 0 or greater means contact has occurred.",
+    "Only pairs between playable ownerCandidate values 1..7 that own at least one extracted city or one extracted unit are listed in pairs.",
+    "decoded.relation uses Freeciv21's known formal treaty bits; Civ2 attitude labels such as neutral/icy/enraged are represented numerically as civ2Attitude."
+  ],
+  "factions": [
+    {
+      "ownerCandidate": 1,
+      "leader": "Stalin",
+      "plural": "Russians",
+      "adjective": "Russian"
+    },
+    {
+      "ownerCandidate": 2,
+      "leader": "Inonu",
+      "plural": "Turks",
+      "adjective": "Turkish"
+    },
+    {
+      "ownerCandidate": 3,
+      "leader": "Hitler",
+      "plural": "Axis",
+      "adjective": "Axis"
+    },
+    {
+      "ownerCandidate": 4,
+      "leader": "Franco",
+      "plural": "Spanish",
+      "adjective": "Spanish"
+    },
+    {
+      "ownerCandidate": 5,
+      "leader": "Neutral Leader",
+      "plural": "Neutrals",
+      "adjective": "Neutral"
+    },
+    {
+      "ownerCandidate": 6,
+      "leader": "Churchill",
+      "plural": "Allies",
+      "adjective": "Allied"
+    },
+    {
+      "ownerCandidate": 7,
+      "leader": "Petain",
+      "plural": "French",
+      "adjective": "French"
+    }
+  ],
+  "byOwner": [
+    {
+      "ownerCandidate": 0,
+      "treatiesOffset": 2300,
+      "treaties": [
+        {
+          "otherCandidate": 1,
+          "offset": 2300,
+          "rawBytes": "00 00 00 00",
+          "rawUInt32": 0,
+          "attitudeOffset": 2329,
+          "civ2Attitude": 100,
+          "civ2AttitudeName": "hostile",
+          "freecivLove": -1000,
+          "lastContactOffset": 3228,
+          "lastContactTurn": 1,
+          "decoded": {
+            "relation": "Unknown",
+            "flags": {
+              "contact": false,
+              "ceaseFire": false,
+              "peace": false,
+              "alliance": false,
+              "vendetta": false,
+              "embassy": false,
+              "war": false
+            }
+          }
+        },
+        {
+          "otherCandidate": 2,
+          "offset": 2304,
+          "rawBytes": "00 00 00 00",
+          "rawUInt32": 0,
+          "attitudeOffset": 2330,
+          "civ2Attitude": 100,
+          "civ2AttitudeName": "hostile",
+          "freecivLove": -1000,
+          "lastContactOffset": 3230,
+          "lastContactTurn": 1,
+          "decoded": {
+            "relation": "Unknown",
+            "flags": {
+              "contact": false,
+              "ceaseFire": false,
+              "peace": false,
+              "alliance": false,
+              "vendetta": false,
+              "embassy": false,
+              "war": false
+            }
+          }
+        },
+        {
+          "otherCandidate": 3,
+          "offset": 2308,
+          "rawBytes": "00 00 00 00",
+          "rawUInt32": 0,
+          "attitudeOffset": 2331,
+          "civ2Attitude": 100,
+          "civ2AttitudeName": "hostile",
+          "freecivLove": -1000,
+          "lastContactOffset": 3232,
+          "lastContactTurn": 1,
+          "decoded": {
+            "relation": "Unknown",
+            "flags": {
+              "contact": false,
+              "ceaseFire": false,
+              "peace": false,
+              "alliance": false,
+              "vendetta": false,
+              "embassy": false,
+              "war": false
+            }
+          }
+        },
+        {
+          "otherCandidate": 4,
+          "offset": 2312,
+          "rawBytes": "00 00 00 00",
+          "rawUInt32": 0,
+          "attitudeOffset": 2332,
+          "civ2Attitude": 100,
+          "civ2AttitudeName": "hostile",
+          "freecivLove": -1000,
+          "lastContactOffset": 3234,
+          "lastContactTurn": 1,
+          "decoded": {
+            "relation": "Unknown",
+            "flags": {
+              "contact": false,
+              "ceaseFire": false,
+              "peace": false,
+              "alliance": false,
+              "vendetta": false,
+              "embassy": false,
+              "war": false
+            }
+          }
+        },
+        {
+          "otherCandidate": 5,
+          "offset": 2316,
+          "rawBytes": "00 00 00 00",
+          "rawUInt32": 0,
+          "attitudeOffset": 2333,
+          "civ2Attitude": 100,
+          "civ2AttitudeName": "hostile",
+          "freecivLove": -1000,
+          "lastContactOffset": 3236,
+          "lastContactTurn": 1,
+          "decoded": {
+            "relation": "Unknown",
+            "flags": {
+              "contact": false,
+              "ceaseFire": false,
+              "peace": false,
+              "alliance": false,
+              "vendetta": false,
+              "embassy": false,
+              "war": false
+            }
+          }
+        },
+        {
+          "otherCandidate": 6,
+          "offset": 2320,
+          "rawBytes": "00 00 00 00",
+          "rawUInt32": 0,
+          "attitudeOffset": 2334,
+          "civ2Attitude": 100,
+          "civ2AttitudeName": "hostile",
+          "freecivLove": -1000,
+          "lastContactOffset": 3238,
+          "lastContactTurn": 1,
+          "decoded": {
+            "relation": "Unknown",
+            "flags": {
+              "contact": false,
+              "ceaseFire": false,
+              "peace": false,
+              "alliance": false,
+              "vendetta": false,
+              "embassy": false,
+              "war": false
+            }
+          }
+        },
+        {
+          "otherCandidate": 7,
+          "offset": 2324,
+          "rawBytes": "00 00 00 00",
+          "rawUInt32": 0,
+          "attitudeOffset": 2335,
+          "civ2Attitude": 100,
+          "civ2AttitudeName": "hostile",
+          "freecivLove": -1000,
+          "lastContactOffset": 3240,
+          "lastContactTurn": 1,
+          "decoded": {
+            "relation": "Unknown",
+            "flags": {
+              "contact": false,
+              "ceaseFire": false,
+              "peace": false,
+              "alliance": false,
+              "vendetta": false,
+              "embassy": false,
+              "war": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "ownerCandidate": 1,
+      "treatiesOffset": 3696,
+      "treaties": [
+        {
+          "otherCandidate": 1,
+          "offset": 3696,
+          "rawBytes": "00 00 00 00",
+          "rawUInt32": 0,
+          "attitudeOffset": 3725,
+          "civ2Attitude": 0,
+          "civ2AttitudeName": "worshipful",
+          "freecivLove": 1000,
+          "lastContactOffset": 4624,
+          "lastContactTurn": 1,
+          "decoded": {
+            "relation": "Unknown",
+            "flags": {
+              "contact": false,
+              "ceaseFire": false,
+              "peace": false,
+              "alliance": false,
+              "vendetta": false,
+              "embassy": false,
+              "war": false
+            }
+          }
+        },
+        {
+          "otherCandidate": 2,
+          "offset": 3700,
+          "rawBytes": "85 00 00 00",
+          "rawUInt32": 133,
+          "attitudeOffset": 3726,
+          "civ2Attitude": 56,
+          "civ2AttitudeName": "neutral",
+          "freecivLove": -120,
+          "lastContactOffset": 4626,
+          "lastContactTurn": 1,
+          "decoded": {
+            "relation": "Peace",
+            "flags": {
+              "contact": true,
+              "ceaseFire": false,
+              "peace": true,
+              "alliance": false,
+              "vendetta": false,
+              "embassy": true,
+              "war": false
+            }
+          }
+        },
+        {
+          "otherCandidate": 3,
+          "offset": 3704,
+          "rawBytes": "83 44 00 00",
+          "rawUInt32": 17539,
+          "attitudeOffset": 3727,
+          "civ2Attitude": 33,
+          "civ2AttitudeName": "receptive",
+          "freecivLove": 340,
+          "lastContactOffset": 4628,
+          "lastContactTurn": 1,
+          "decoded": {
+            "relation": "Cease-fire",
+            "flags": {
+              "contact": true,
+              "ceaseFire": true,
+              "peace": false,
+              "alliance": false,
+              "vendetta": false,
+              "embassy": true,
+              "war": false
+            }
+          }
+        },
+        {
+          "otherCandidate": 4,
+          "offset": 3708,
+          "rawBytes": "85 00 00 00",
+          "rawUInt32": 133,
+          "attitudeOffset": 3728,
+          "civ2Attitude": 55,
+          "civ2AttitudeName": "neutral",
+          "freecivLove": -100,
+          "lastContactOffset": 4630,
+          "lastContactTurn": 1,
+          "decoded": {
+            "relation": "Peace",
+            "flags": {
+              "contact": true,
+              "ceaseFire": false,
+              "peace": true,
+              "alliance": false,
+              "vendetta": false,
+              "embassy": true,
+              "war": false
+            }
+          }
+        },
+        {
+          "otherCandidate": 5,
+          "offset": 3712,
+          "rawBytes": "85 00 00 00",
+          "rawUInt32": 133,
+          "attitudeOffset": 3729,
+          "civ2Attitude": 48,
+          "civ2AttitudeName": "neutral",
+          "freecivLove": 40,
+          "lastContactOffset": 4632,
+          "lastContactTurn": 1,
+          "decoded": {
+            "relation": "Peace",
+            "flags": {
+              "contact": true,
+              "ceaseFire": false,
+              "peace": true,
+              "alliance": false,
+              "vendetta": false,
+              "embassy": true,
+              "war": false
+            }
+          }
+        },
+        {
+          "otherCandidate": 6,
+          "offset": 3716,
+          "rawBytes": "85 00 00 00",
+          "rawUInt32": 133,
+          "attitudeOffset": 3730,
+          "civ2Attitude": 28,
+          "civ2AttitudeName": "receptive",
+          "freecivLove": 440,
+          "lastContactOffset": 4634,
+          "lastContactTurn": 1,
+          "decoded": {
+            "relation": "Peace",
+            "flags": {
+              "contact": true,
+              "ceaseFire": false,
+              "peace": true,
+              "alliance": false,
+              "vendetta": false,
+              "embassy": true,
+              "war": false
+            }
+          }
+        },
+        {
+          "otherCandidate": 7,
+          "offset": 3720,
+          "rawBytes": "85 00 00 00",
+          "rawUInt32": 133,
+          "attitudeOffset": 3731,
+          "civ2Attitude": 63,
+          "civ2AttitudeName": "uncooperative",
+          "freecivLove": -260,
+          "lastContactOffset": 4636,
+          "lastContactTurn": 1,
+          "decoded": {
+            "relation": "Peace",
+            "flags": {
+              "contact": true,
+              "ceaseFire": false,
+              "peace": true,
+              "alliance": false,
+              "vendetta": false,
+              "embassy": true,
+              "war": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "ownerCandidate": 2,
+      "treatiesOffset": 5092,
+      "treaties": [
+        {
+          "otherCandidate": 1,
+          "offset": 5092,
+          "rawBytes": "05 00 00 00",
+          "rawUInt32": 5,
+          "attitudeOffset": 5121,
+          "civ2Attitude": 56,
+          "civ2AttitudeName": "neutral",
+          "freecivLove": -120,
+          "lastContactOffset": 6020,
+          "lastContactTurn": 1,
+          "decoded": {
+            "relation": "Peace",
+            "flags": {
+              "contact": true,
+              "ceaseFire": false,
+              "peace": true,
+              "alliance": false,
+              "vendetta": false,
+              "embassy": false,
+              "war": false
+            }
+          }
+        },
+        {
+          "otherCandidate": 2,
+          "offset": 5096,
+          "rawBytes": "00 00 00 00",
+          "rawUInt32": 0,
+          "attitudeOffset": 5122,
+          "civ2Attitude": 14,
+          "civ2AttitudeName": "cordial",
+          "freecivLove": 720,
+          "lastContactOffset": 6022,
+          "lastContactTurn": 1,
+          "decoded": {
+            "relation": "Unknown",
+            "flags": {
+              "contact": false,
+              "ceaseFire": false,
+              "peace": false,
+              "alliance": false,
+              "vendetta": false,
+              "embassy": false,
+              "war": false
+            }
+          }
+        },
+        {
+          "otherCandidate": 3,
+          "offset": 5100,
+          "rawBytes": "07 00 00 00",
+          "rawUInt32": 7,
+          "attitudeOffset": 5123,
+          "civ2Attitude": 38,
+          "civ2AttitudeName": "receptive",
+          "freecivLove": 240,
+          "lastContactOffset": 6024,
+          "lastContactTurn": 1,
+          "decoded": {
+            "relation": "Peace",
+            "flags": {
+              "contact": true,
+              "ceaseFire": true,
+              "peace": true,
+              "alliance": false,
+              "vendetta": false,
+              "embassy": false,
+              "war": false
+            }
+          }
+        },
+        {
+          "otherCandidate": 4,
+          "offset": 5104,
+          "rawBytes": "85 00 00 00",
+          "rawUInt32": 133,
+          "attitudeOffset": 5124,
+          "civ2Attitude": 25,
+          "civ2AttitudeName": "cordial",
+          "freecivLove": 500,
+          "lastContactOffset": 6026,
+          "lastContactTurn": 1,
+          "decoded": {
+            "relation": "Peace",
+            "flags": {
+              "contact": true,
+              "ceaseFire": false,
+              "peace": true,
+              "alliance": false,
+              "vendetta": false,
+              "embassy": true,
+              "war": false
+            }
+          }
+        },
+        {
+          "otherCandidate": 5,
+          "offset": 5108,
+          "rawBytes": "85 00 00 00",
+          "rawUInt32": 133,
+          "attitudeOffset": 5125,
+          "civ2Attitude": 50,
+          "civ2AttitudeName": "neutral",
+          "freecivLove": 0,
+          "lastContactOffset": 6028,
+          "lastContactTurn": 1,
+          "decoded": {
+            "relation": "Peace",
+            "flags": {
+              "contact": true,
+              "ceaseFire": false,
+              "peace": true,
+              "alliance": false,
+              "vendetta": false,
+              "embassy": true,
+              "war": false
+            }
+          }
+        },
+        {
+          "otherCandidate": 6,
+          "offset": 5112,
+          "rawBytes": "05 00 00 00",
+          "rawUInt32": 5,
+          "attitudeOffset": 5126,
+          "civ2Attitude": 12,
+          "civ2AttitudeName": "cordial",
+          "freecivLove": 760,
+          "lastContactOffset": 6030,
+          "lastContactTurn": 1,
+          "decoded": {
+            "relation": "Peace",
+            "flags": {
+              "contact": true,
+              "ceaseFire": false,
+              "peace": true,
+              "alliance": false,
+              "vendetta": false,
+              "embassy": false,
+              "war": false
+            }
+          }
+        },
+        {
+          "otherCandidate": 7,
+          "offset": 5116,
+          "rawBytes": "05 00 00 00",
+          "rawUInt32": 5,
+          "attitudeOffset": 5127,
+          "civ2Attitude": 81,
+          "civ2AttitudeName": "icy",
+          "freecivLove": -620,
+          "lastContactOffset": 6032,
+          "lastContactTurn": 1,
+          "decoded": {
+            "relation": "Peace",
+            "flags": {
+              "contact": true,
+              "ceaseFire": false,
+              "peace": true,
+              "alliance": false,
+              "vendetta": false,
+              "embassy": false,
+              "war": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "ownerCandidate": 3,
+      "treatiesOffset": 6488,
+      "treaties": [
+        {
+          "otherCandidate": 1,
+          "offset": 6488,
+          "rawBytes": "93 44 00 00",
+          "rawUInt32": 17555,
+          "attitudeOffset": 6517,
+          "civ2Attitude": 33,
+          "civ2AttitudeName": "receptive",
+          "freecivLove": 340,
+          "lastContactOffset": 7416,
+          "lastContactTurn": 1,
+          "decoded": {
+            "relation": "Cease-fire",
+            "flags": {
+              "contact": true,
+              "ceaseFire": true,
+              "peace": false,
+              "alliance": false,
+              "vendetta": true,
+              "embassy": true,
+              "war": false
+            }
+          }
+        },
+        {
+          "otherCandidate": 2,
+          "offset": 6492,
+          "rawBytes": "87 00 00 00",
+          "rawUInt32": 135,
+          "attitudeOffset": 6518,
+          "civ2Attitude": 38,
+          "civ2AttitudeName": "receptive",
+          "freecivLove": 240,
+          "lastContactOffset": 7418,
+          "lastContactTurn": 1,
+          "decoded": {
+            "relation": "Peace",
+            "flags": {
+              "contact": true,
+              "ceaseFire": true,
+              "peace": true,
+              "alliance": false,
+              "vendetta": false,
+              "embassy": true,
+              "war": false
+            }
+          }
+        },
+        {
+          "otherCandidate": 3,
+          "offset": 6496,
+          "rawBytes": "00 00 00 00",
+          "rawUInt32": 0,
+          "attitudeOffset": 6519,
+          "civ2Attitude": 0,
+          "civ2AttitudeName": "worshipful",
+          "freecivLove": 1000,
+          "lastContactOffset": 7420,
+          "lastContactTurn": 1,
+          "decoded": {
+            "relation": "Unknown",
+            "flags": {
+              "contact": false,
+              "ceaseFire": false,
+              "peace": false,
+              "alliance": false,
+              "vendetta": false,
+              "embassy": false,
+              "war": false
+            }
+          }
+        },
+        {
+          "otherCandidate": 4,
+          "offset": 6500,
+          "rawBytes": "87 00 00 00",
+          "rawUInt32": 135,
+          "attitudeOffset": 6520,
+          "civ2Attitude": 54,
+          "civ2AttitudeName": "neutral",
+          "freecivLove": -80,
+          "lastContactOffset": 7422,
+          "lastContactTurn": 1,
+          "decoded": {
+            "relation": "Peace",
+            "flags": {
+              "contact": true,
+              "ceaseFire": true,
+              "peace": true,
+              "alliance": false,
+              "vendetta": false,
+              "embassy": true,
+              "war": false
+            }
+          }
+        },
+        {
+          "otherCandidate": 5,
+          "offset": 6504,
+          "rawBytes": "11 20 20 00",
+          "rawUInt32": 2105361,
+          "attitudeOffset": 6521,
+          "civ2Attitude": 63,
+          "civ2AttitudeName": "uncooperative",
+          "freecivLove": -260,
+          "lastContactOffset": 7424,
+          "lastContactTurn": 1,
+          "decoded": {
+            "relation": "War",
+            "flags": {
+              "contact": true,
+              "ceaseFire": false,
+              "peace": false,
+              "alliance": false,
+              "vendetta": true,
+              "embassy": false,
+              "war": true
+            }
+          }
+        },
+        {
+          "otherCandidate": 6,
+          "offset": 6508,
+          "rawBytes": "91 64 20 00",
+          "rawUInt32": 2122897,
+          "attitudeOffset": 6522,
+          "civ2Attitude": 75,
+          "civ2AttitudeName": "uncooperative",
+          "freecivLove": -500,
+          "lastContactOffset": 7426,
+          "lastContactTurn": 1,
+          "decoded": {
+            "relation": "War",
+            "flags": {
+              "contact": true,
+              "ceaseFire": false,
+              "peace": false,
+              "alliance": false,
+              "vendetta": true,
+              "embassy": true,
+              "war": true
+            }
+          }
+        },
+        {
+          "otherCandidate": 7,
+          "offset": 6512,
+          "rawBytes": "91 64 20 00",
+          "rawUInt32": 2122897,
+          "attitudeOffset": 6523,
+          "civ2Attitude": 75,
+          "civ2AttitudeName": "uncooperative",
+          "freecivLove": -500,
+          "lastContactOffset": 7428,
+          "lastContactTurn": 1,
+          "decoded": {
+            "relation": "War",
+            "flags": {
+              "contact": true,
+              "ceaseFire": false,
+              "peace": false,
+              "alliance": false,
+              "vendetta": true,
+              "embassy": true,
+              "war": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "ownerCandidate": 4,
+      "treatiesOffset": 7884,
+      "treaties": [
+        {
+          "otherCandidate": 1,
+          "offset": 7884,
+          "rawBytes": "05 00 00 00",
+          "rawUInt32": 5,
+          "attitudeOffset": 7913,
+          "civ2Attitude": 55,
+          "civ2AttitudeName": "neutral",
+          "freecivLove": -100,
+          "lastContactOffset": 8812,
+          "lastContactTurn": 1,
+          "decoded": {
+            "relation": "Peace",
+            "flags": {
+              "contact": true,
+              "ceaseFire": false,
+              "peace": true,
+              "alliance": false,
+              "vendetta": false,
+              "embassy": false,
+              "war": false
+            }
+          }
+        },
+        {
+          "otherCandidate": 2,
+          "offset": 7888,
+          "rawBytes": "05 00 00 00",
+          "rawUInt32": 5,
+          "attitudeOffset": 7914,
+          "civ2Attitude": 25,
+          "civ2AttitudeName": "cordial",
+          "freecivLove": 500,
+          "lastContactOffset": 8814,
+          "lastContactTurn": 1,
+          "decoded": {
+            "relation": "Peace",
+            "flags": {
+              "contact": true,
+              "ceaseFire": false,
+              "peace": true,
+              "alliance": false,
+              "vendetta": false,
+              "embassy": false,
+              "war": false
+            }
+          }
+        },
+        {
+          "otherCandidate": 3,
+          "offset": 7892,
+          "rawBytes": "07 00 00 00",
+          "rawUInt32": 7,
+          "attitudeOffset": 7915,
+          "civ2Attitude": 54,
+          "civ2AttitudeName": "neutral",
+          "freecivLove": -80,
+          "lastContactOffset": 8816,
+          "lastContactTurn": 1,
+          "decoded": {
+            "relation": "Peace",
+            "flags": {
+              "contact": true,
+              "ceaseFire": true,
+              "peace": true,
+              "alliance": false,
+              "vendetta": false,
+              "embassy": false,
+              "war": false
+            }
+          }
+        },
+        {
+          "otherCandidate": 4,
+          "offset": 7896,
+          "rawBytes": "00 00 00 00",
+          "rawUInt32": 0,
+          "attitudeOffset": 7916,
+          "civ2Attitude": 46,
+          "civ2AttitudeName": "neutral",
+          "freecivLove": 80,
+          "lastContactOffset": 8818,
+          "lastContactTurn": 1,
+          "decoded": {
+            "relation": "Unknown",
+            "flags": {
+              "contact": false,
+              "ceaseFire": false,
+              "peace": false,
+              "alliance": false,
+              "vendetta": false,
+              "embassy": false,
+              "war": false
+            }
+          }
+        },
+        {
+          "otherCandidate": 5,
+          "offset": 7900,
+          "rawBytes": "85 00 00 00",
+          "rawUInt32": 133,
+          "attitudeOffset": 7917,
+          "civ2Attitude": 70,
+          "civ2AttitudeName": "uncooperative",
+          "freecivLove": -400,
+          "lastContactOffset": 8820,
+          "lastContactTurn": 1,
+          "decoded": {
+            "relation": "Peace",
+            "flags": {
+              "contact": true,
+              "ceaseFire": false,
+              "peace": true,
+              "alliance": false,
+              "vendetta": false,
+              "embassy": true,
+              "war": false
+            }
+          }
+        },
+        {
+          "otherCandidate": 6,
+          "offset": 7904,
+          "rawBytes": "05 00 00 00",
+          "rawUInt32": 5,
+          "attitudeOffset": 7918,
+          "civ2Attitude": 27,
+          "civ2AttitudeName": "receptive",
+          "freecivLove": 460,
+          "lastContactOffset": 8822,
+          "lastContactTurn": 1,
+          "decoded": {
+            "relation": "Peace",
+            "flags": {
+              "contact": true,
+              "ceaseFire": false,
+              "peace": true,
+              "alliance": false,
+              "vendetta": false,
+              "embassy": false,
+              "war": false
+            }
+          }
+        },
+        {
+          "otherCandidate": 7,
+          "offset": 7908,
+          "rawBytes": "05 00 00 00",
+          "rawUInt32": 5,
+          "attitudeOffset": 7919,
+          "civ2Attitude": 78,
+          "civ2AttitudeName": "icy",
+          "freecivLove": -560,
+          "lastContactOffset": 8824,
+          "lastContactTurn": 1,
+          "decoded": {
+            "relation": "Peace",
+            "flags": {
+              "contact": true,
+              "ceaseFire": false,
+              "peace": true,
+              "alliance": false,
+              "vendetta": false,
+              "embassy": false,
+              "war": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "ownerCandidate": 5,
+      "treatiesOffset": 9280,
+      "treaties": [
+        {
+          "otherCandidate": 1,
+          "offset": 9280,
+          "rawBytes": "05 00 00 00",
+          "rawUInt32": 5,
+          "attitudeOffset": 9309,
+          "civ2Attitude": 48,
+          "civ2AttitudeName": "neutral",
+          "freecivLove": 40,
+          "lastContactOffset": 10208,
+          "lastContactTurn": 1,
+          "decoded": {
+            "relation": "Peace",
+            "flags": {
+              "contact": true,
+              "ceaseFire": false,
+              "peace": true,
+              "alliance": false,
+              "vendetta": false,
+              "embassy": false,
+              "war": false
+            }
+          }
+        },
+        {
+          "otherCandidate": 2,
+          "offset": 9284,
+          "rawBytes": "05 00 00 00",
+          "rawUInt32": 5,
+          "attitudeOffset": 9310,
+          "civ2Attitude": 50,
+          "civ2AttitudeName": "neutral",
+          "freecivLove": 0,
+          "lastContactOffset": 10210,
+          "lastContactTurn": 1,
+          "decoded": {
+            "relation": "Peace",
+            "flags": {
+              "contact": true,
+              "ceaseFire": false,
+              "peace": true,
+              "alliance": false,
+              "vendetta": false,
+              "embassy": false,
+              "war": false
+            }
+          }
+        },
+        {
+          "otherCandidate": 3,
+          "offset": 9288,
+          "rawBytes": "01 20 20 00",
+          "rawUInt32": 2105345,
+          "attitudeOffset": 9311,
+          "civ2Attitude": 63,
+          "civ2AttitudeName": "uncooperative",
+          "freecivLove": -260,
+          "lastContactOffset": 10212,
+          "lastContactTurn": 1,
+          "decoded": {
+            "relation": "War",
+            "flags": {
+              "contact": true,
+              "ceaseFire": false,
+              "peace": false,
+              "alliance": false,
+              "vendetta": false,
+              "embassy": false,
+              "war": true
+            }
+          }
+        },
+        {
+          "otherCandidate": 4,
+          "offset": 9292,
+          "rawBytes": "05 00 00 00",
+          "rawUInt32": 5,
+          "attitudeOffset": 9312,
+          "civ2Attitude": 70,
+          "civ2AttitudeName": "uncooperative",
+          "freecivLove": -400,
+          "lastContactOffset": 10214,
+          "lastContactTurn": 1,
+          "decoded": {
+            "relation": "Peace",
+            "flags": {
+              "contact": true,
+              "ceaseFire": false,
+              "peace": true,
+              "alliance": false,
+              "vendetta": false,
+              "embassy": false,
+              "war": false
+            }
+          }
+        },
+        {
+          "otherCandidate": 5,
+          "offset": 9296,
+          "rawBytes": "00 00 00 00",
+          "rawUInt32": 0,
+          "attitudeOffset": 9313,
+          "civ2Attitude": 68,
+          "civ2AttitudeName": "uncooperative",
+          "freecivLove": -360,
+          "lastContactOffset": 10216,
+          "lastContactTurn": 1,
+          "decoded": {
+            "relation": "Unknown",
+            "flags": {
+              "contact": false,
+              "ceaseFire": false,
+              "peace": false,
+              "alliance": false,
+              "vendetta": false,
+              "embassy": false,
+              "war": false
+            }
+          }
+        },
+        {
+          "otherCandidate": 6,
+          "offset": 9300,
+          "rawBytes": "0d 00 00 00",
+          "rawUInt32": 13,
+          "attitudeOffset": 9314,
+          "civ2Attitude": 80,
+          "civ2AttitudeName": "icy",
+          "freecivLove": -600,
+          "lastContactOffset": 10218,
+          "lastContactTurn": 1,
+          "decoded": {
+            "relation": "Alliance",
+            "flags": {
+              "contact": true,
+              "ceaseFire": false,
+              "peace": true,
+              "alliance": true,
+              "vendetta": false,
+              "embassy": false,
+              "war": false
+            }
+          }
+        },
+        {
+          "otherCandidate": 7,
+          "offset": 9304,
+          "rawBytes": "05 00 00 00",
+          "rawUInt32": 5,
+          "attitudeOffset": 9315,
+          "civ2Attitude": 12,
+          "civ2AttitudeName": "cordial",
+          "freecivLove": 760,
+          "lastContactOffset": 10220,
+          "lastContactTurn": 1,
+          "decoded": {
+            "relation": "Peace",
+            "flags": {
+              "contact": true,
+              "ceaseFire": false,
+              "peace": true,
+              "alliance": false,
+              "vendetta": false,
+              "embassy": false,
+              "war": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "ownerCandidate": 6,
+      "treatiesOffset": 10676,
+      "treaties": [
+        {
+          "otherCandidate": 1,
+          "offset": 10676,
+          "rawBytes": "85 00 00 00",
+          "rawUInt32": 133,
+          "attitudeOffset": 10705,
+          "civ2Attitude": 40,
+          "civ2AttitudeName": "neutral",
+          "freecivLove": 200,
+          "lastContactOffset": 11604,
+          "lastContactTurn": 1,
+          "decoded": {
+            "relation": "Peace",
+            "flags": {
+              "contact": true,
+              "ceaseFire": false,
+              "peace": true,
+              "alliance": false,
+              "vendetta": false,
+              "embassy": true,
+              "war": false
+            }
+          }
+        },
+        {
+          "otherCandidate": 2,
+          "offset": 10680,
+          "rawBytes": "85 00 00 00",
+          "rawUInt32": 133,
+          "attitudeOffset": 10706,
+          "civ2Attitude": 40,
+          "civ2AttitudeName": "neutral",
+          "freecivLove": 200,
+          "lastContactOffset": 11606,
+          "lastContactTurn": 1,
+          "decoded": {
+            "relation": "Peace",
+            "flags": {
+              "contact": true,
+              "ceaseFire": false,
+              "peace": true,
+              "alliance": false,
+              "vendetta": false,
+              "embassy": true,
+              "war": false
+            }
+          }
+        },
+        {
+          "otherCandidate": 3,
+          "offset": 10684,
+          "rawBytes": "91 64 20 00",
+          "rawUInt32": 2122897,
+          "attitudeOffset": 10707,
+          "civ2Attitude": 100,
+          "civ2AttitudeName": "hostile",
+          "freecivLove": -1000,
+          "lastContactOffset": 11608,
+          "lastContactTurn": 1,
+          "decoded": {
+            "relation": "War",
+            "flags": {
+              "contact": true,
+              "ceaseFire": false,
+              "peace": false,
+              "alliance": false,
+              "vendetta": true,
+              "embassy": true,
+              "war": true
+            }
+          }
+        },
+        {
+          "otherCandidate": 4,
+          "offset": 10688,
+          "rawBytes": "85 00 00 00",
+          "rawUInt32": 133,
+          "attitudeOffset": 10708,
+          "civ2Attitude": 55,
+          "civ2AttitudeName": "neutral",
+          "freecivLove": -100,
+          "lastContactOffset": 11610,
+          "lastContactTurn": 1,
+          "decoded": {
+            "relation": "Peace",
+            "flags": {
+              "contact": true,
+              "ceaseFire": false,
+              "peace": true,
+              "alliance": false,
+              "vendetta": false,
+              "embassy": true,
+              "war": false
+            }
+          }
+        },
+        {
+          "otherCandidate": 5,
+          "offset": 10692,
+          "rawBytes": "8d 00 00 00",
+          "rawUInt32": 141,
+          "attitudeOffset": 10709,
+          "civ2Attitude": 10,
+          "civ2AttitudeName": "enthusiastic",
+          "freecivLove": 800,
+          "lastContactOffset": 11612,
+          "lastContactTurn": 1,
+          "decoded": {
+            "relation": "Alliance",
+            "flags": {
+              "contact": true,
+              "ceaseFire": false,
+              "peace": true,
+              "alliance": true,
+              "vendetta": false,
+              "embassy": true,
+              "war": false
+            }
+          }
+        },
+        {
+          "otherCandidate": 6,
+          "offset": 10696,
+          "rawBytes": "00 00 00 00",
+          "rawUInt32": 0,
+          "attitudeOffset": 10710,
+          "civ2Attitude": 0,
+          "civ2AttitudeName": "worshipful",
+          "freecivLove": 1000,
+          "lastContactOffset": 11614,
+          "lastContactTurn": 1,
+          "decoded": {
+            "relation": "Unknown",
+            "flags": {
+              "contact": false,
+              "ceaseFire": false,
+              "peace": false,
+              "alliance": false,
+              "vendetta": false,
+              "embassy": false,
+              "war": false
+            }
+          }
+        },
+        {
+          "otherCandidate": 7,
+          "offset": 10700,
+          "rawBytes": "8d 44 00 00",
+          "rawUInt32": 17549,
+          "attitudeOffset": 10711,
+          "civ2Attitude": 28,
+          "civ2AttitudeName": "receptive",
+          "freecivLove": 440,
+          "lastContactOffset": 11616,
+          "lastContactTurn": -1,
+          "decoded": {
+            "relation": "Alliance",
+            "flags": {
+              "contact": true,
+              "ceaseFire": false,
+              "peace": true,
+              "alliance": true,
+              "vendetta": false,
+              "embassy": true,
+              "war": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "ownerCandidate": 7,
+      "treatiesOffset": 12072,
+      "treaties": [
+        {
+          "otherCandidate": 1,
+          "offset": 12072,
+          "rawBytes": "85 00 00 00",
+          "rawUInt32": 133,
+          "attitudeOffset": 12101,
+          "civ2Attitude": 63,
+          "civ2AttitudeName": "uncooperative",
+          "freecivLove": -260,
+          "lastContactOffset": 13000,
+          "lastContactTurn": 1,
+          "decoded": {
+            "relation": "Peace",
+            "flags": {
+              "contact": true,
+              "ceaseFire": false,
+              "peace": true,
+              "alliance": false,
+              "vendetta": false,
+              "embassy": true,
+              "war": false
+            }
+          }
+        },
+        {
+          "otherCandidate": 2,
+          "offset": 12076,
+          "rawBytes": "85 00 00 00",
+          "rawUInt32": 133,
+          "attitudeOffset": 12102,
+          "civ2Attitude": 81,
+          "civ2AttitudeName": "icy",
+          "freecivLove": -620,
+          "lastContactOffset": 13002,
+          "lastContactTurn": 1,
+          "decoded": {
+            "relation": "Peace",
+            "flags": {
+              "contact": true,
+              "ceaseFire": false,
+              "peace": true,
+              "alliance": false,
+              "vendetta": false,
+              "embassy": true,
+              "war": false
+            }
+          }
+        },
+        {
+          "otherCandidate": 3,
+          "offset": 12080,
+          "rawBytes": "81 64 20 00",
+          "rawUInt32": 2122881,
+          "attitudeOffset": 12103,
+          "civ2Attitude": 75,
+          "civ2AttitudeName": "uncooperative",
+          "freecivLove": -500,
+          "lastContactOffset": 13004,
+          "lastContactTurn": 1,
+          "decoded": {
+            "relation": "War",
+            "flags": {
+              "contact": true,
+              "ceaseFire": false,
+              "peace": false,
+              "alliance": false,
+              "vendetta": false,
+              "embassy": true,
+              "war": true
+            }
+          }
+        },
+        {
+          "otherCandidate": 4,
+          "offset": 12084,
+          "rawBytes": "85 00 00 00",
+          "rawUInt32": 133,
+          "attitudeOffset": 12104,
+          "civ2Attitude": 78,
+          "civ2AttitudeName": "icy",
+          "freecivLove": -560,
+          "lastContactOffset": 13006,
+          "lastContactTurn": 1,
+          "decoded": {
+            "relation": "Peace",
+            "flags": {
+              "contact": true,
+              "ceaseFire": false,
+              "peace": true,
+              "alliance": false,
+              "vendetta": false,
+              "embassy": true,
+              "war": false
+            }
+          }
+        },
+        {
+          "otherCandidate": 5,
+          "offset": 12088,
+          "rawBytes": "85 00 00 00",
+          "rawUInt32": 133,
+          "attitudeOffset": 12105,
+          "civ2Attitude": 12,
+          "civ2AttitudeName": "cordial",
+          "freecivLove": 760,
+          "lastContactOffset": 13008,
+          "lastContactTurn": 1,
+          "decoded": {
+            "relation": "Peace",
+            "flags": {
+              "contact": true,
+              "ceaseFire": false,
+              "peace": true,
+              "alliance": false,
+              "vendetta": false,
+              "embassy": true,
+              "war": false
+            }
+          }
+        },
+        {
+          "otherCandidate": 6,
+          "offset": 12092,
+          "rawBytes": "8d 44 00 00",
+          "rawUInt32": 17549,
+          "attitudeOffset": 12106,
+          "civ2Attitude": 54,
+          "civ2AttitudeName": "neutral",
+          "freecivLove": -80,
+          "lastContactOffset": 13010,
+          "lastContactTurn": -1,
+          "decoded": {
+            "relation": "Alliance",
+            "flags": {
+              "contact": true,
+              "ceaseFire": false,
+              "peace": true,
+              "alliance": true,
+              "vendetta": false,
+              "embassy": true,
+              "war": false
+            }
+          }
+        },
+        {
+          "otherCandidate": 7,
+          "offset": 12096,
+          "rawBytes": "00 00 00 00",
+          "rawUInt32": 0,
+          "attitudeOffset": 12107,
+          "civ2Attitude": 81,
+          "civ2AttitudeName": "icy",
+          "freecivLove": -620,
+          "lastContactOffset": 13012,
+          "lastContactTurn": 1,
+          "decoded": {
+            "relation": "Unknown",
+            "flags": {
+              "contact": false,
+              "ceaseFire": false,
+              "peace": false,
+              "alliance": false,
+              "vendetta": false,
+              "embassy": false,
+              "war": false
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "pairs": [
+    {
+      "a": 1,
+      "aName": "Stalin",
+      "b": 2,
+      "bName": "Inonu",
+      "aToB": {
+        "rawBytes": "85 00 00 00",
+        "rawUInt32": 133,
+        "attitudeOffset": 3726,
+        "civ2Attitude": 56,
+        "civ2AttitudeName": "neutral",
+        "freecivLove": -120,
+        "lastContactOffset": 4626,
+        "lastContactTurn": 1,
+        "decoded": {
+          "relation": "Peace",
+          "flags": {
+            "contact": true,
+            "ceaseFire": false,
+            "peace": true,
+            "alliance": false,
+            "vendetta": false,
+            "embassy": true,
+            "war": false
+          }
+        }
+      },
+      "bToA": {
+        "rawBytes": "05 00 00 00",
+        "rawUInt32": 5,
+        "attitudeOffset": 5121,
+        "civ2Attitude": 56,
+        "civ2AttitudeName": "neutral",
+        "freecivLove": -120,
+        "lastContactOffset": 6020,
+        "lastContactTurn": 1,
+        "decoded": {
+          "relation": "Peace",
+          "flags": {
+            "contact": true,
+            "ceaseFire": false,
+            "peace": true,
+            "alliance": false,
+            "vendetta": false,
+            "embassy": false,
+            "war": false
+          }
+        }
+      },
+      "symmetric": false
+    },
+    {
+      "a": 1,
+      "aName": "Stalin",
+      "b": 3,
+      "bName": "Hitler",
+      "aToB": {
+        "rawBytes": "83 44 00 00",
+        "rawUInt32": 17539,
+        "attitudeOffset": 3727,
+        "civ2Attitude": 33,
+        "civ2AttitudeName": "receptive",
+        "freecivLove": 340,
+        "lastContactOffset": 4628,
+        "lastContactTurn": 1,
+        "decoded": {
+          "relation": "Cease-fire",
+          "flags": {
+            "contact": true,
+            "ceaseFire": true,
+            "peace": false,
+            "alliance": false,
+            "vendetta": false,
+            "embassy": true,
+            "war": false
+          }
+        }
+      },
+      "bToA": {
+        "rawBytes": "93 44 00 00",
+        "rawUInt32": 17555,
+        "attitudeOffset": 6517,
+        "civ2Attitude": 33,
+        "civ2AttitudeName": "receptive",
+        "freecivLove": 340,
+        "lastContactOffset": 7416,
+        "lastContactTurn": 1,
+        "decoded": {
+          "relation": "Cease-fire",
+          "flags": {
+            "contact": true,
+            "ceaseFire": true,
+            "peace": false,
+            "alliance": false,
+            "vendetta": true,
+            "embassy": true,
+            "war": false
+          }
+        }
+      },
+      "symmetric": false
+    },
+    {
+      "a": 1,
+      "aName": "Stalin",
+      "b": 4,
+      "bName": "Franco",
+      "aToB": {
+        "rawBytes": "85 00 00 00",
+        "rawUInt32": 133,
+        "attitudeOffset": 3728,
+        "civ2Attitude": 55,
+        "civ2AttitudeName": "neutral",
+        "freecivLove": -100,
+        "lastContactOffset": 4630,
+        "lastContactTurn": 1,
+        "decoded": {
+          "relation": "Peace",
+          "flags": {
+            "contact": true,
+            "ceaseFire": false,
+            "peace": true,
+            "alliance": false,
+            "vendetta": false,
+            "embassy": true,
+            "war": false
+          }
+        }
+      },
+      "bToA": {
+        "rawBytes": "05 00 00 00",
+        "rawUInt32": 5,
+        "attitudeOffset": 7913,
+        "civ2Attitude": 55,
+        "civ2AttitudeName": "neutral",
+        "freecivLove": -100,
+        "lastContactOffset": 8812,
+        "lastContactTurn": 1,
+        "decoded": {
+          "relation": "Peace",
+          "flags": {
+            "contact": true,
+            "ceaseFire": false,
+            "peace": true,
+            "alliance": false,
+            "vendetta": false,
+            "embassy": false,
+            "war": false
+          }
+        }
+      },
+      "symmetric": false
+    },
+    {
+      "a": 1,
+      "aName": "Stalin",
+      "b": 5,
+      "bName": "Neutral Leader",
+      "aToB": {
+        "rawBytes": "85 00 00 00",
+        "rawUInt32": 133,
+        "attitudeOffset": 3729,
+        "civ2Attitude": 48,
+        "civ2AttitudeName": "neutral",
+        "freecivLove": 40,
+        "lastContactOffset": 4632,
+        "lastContactTurn": 1,
+        "decoded": {
+          "relation": "Peace",
+          "flags": {
+            "contact": true,
+            "ceaseFire": false,
+            "peace": true,
+            "alliance": false,
+            "vendetta": false,
+            "embassy": true,
+            "war": false
+          }
+        }
+      },
+      "bToA": {
+        "rawBytes": "05 00 00 00",
+        "rawUInt32": 5,
+        "attitudeOffset": 9309,
+        "civ2Attitude": 48,
+        "civ2AttitudeName": "neutral",
+        "freecivLove": 40,
+        "lastContactOffset": 10208,
+        "lastContactTurn": 1,
+        "decoded": {
+          "relation": "Peace",
+          "flags": {
+            "contact": true,
+            "ceaseFire": false,
+            "peace": true,
+            "alliance": false,
+            "vendetta": false,
+            "embassy": false,
+            "war": false
+          }
+        }
+      },
+      "symmetric": false
+    },
+    {
+      "a": 1,
+      "aName": "Stalin",
+      "b": 6,
+      "bName": "Churchill",
+      "aToB": {
+        "rawBytes": "85 00 00 00",
+        "rawUInt32": 133,
+        "attitudeOffset": 3730,
+        "civ2Attitude": 28,
+        "civ2AttitudeName": "receptive",
+        "freecivLove": 440,
+        "lastContactOffset": 4634,
+        "lastContactTurn": 1,
+        "decoded": {
+          "relation": "Peace",
+          "flags": {
+            "contact": true,
+            "ceaseFire": false,
+            "peace": true,
+            "alliance": false,
+            "vendetta": false,
+            "embassy": true,
+            "war": false
+          }
+        }
+      },
+      "bToA": {
+        "rawBytes": "85 00 00 00",
+        "rawUInt32": 133,
+        "attitudeOffset": 10705,
+        "civ2Attitude": 40,
+        "civ2AttitudeName": "neutral",
+        "freecivLove": 200,
+        "lastContactOffset": 11604,
+        "lastContactTurn": 1,
+        "decoded": {
+          "relation": "Peace",
+          "flags": {
+            "contact": true,
+            "ceaseFire": false,
+            "peace": true,
+            "alliance": false,
+            "vendetta": false,
+            "embassy": true,
+            "war": false
+          }
+        }
+      },
+      "symmetric": true
+    },
+    {
+      "a": 1,
+      "aName": "Stalin",
+      "b": 7,
+      "bName": "Petain",
+      "aToB": {
+        "rawBytes": "85 00 00 00",
+        "rawUInt32": 133,
+        "attitudeOffset": 3731,
+        "civ2Attitude": 63,
+        "civ2AttitudeName": "uncooperative",
+        "freecivLove": -260,
+        "lastContactOffset": 4636,
+        "lastContactTurn": 1,
+        "decoded": {
+          "relation": "Peace",
+          "flags": {
+            "contact": true,
+            "ceaseFire": false,
+            "peace": true,
+            "alliance": false,
+            "vendetta": false,
+            "embassy": true,
+            "war": false
+          }
+        }
+      },
+      "bToA": {
+        "rawBytes": "85 00 00 00",
+        "rawUInt32": 133,
+        "attitudeOffset": 12101,
+        "civ2Attitude": 63,
+        "civ2AttitudeName": "uncooperative",
+        "freecivLove": -260,
+        "lastContactOffset": 13000,
+        "lastContactTurn": 1,
+        "decoded": {
+          "relation": "Peace",
+          "flags": {
+            "contact": true,
+            "ceaseFire": false,
+            "peace": true,
+            "alliance": false,
+            "vendetta": false,
+            "embassy": true,
+            "war": false
+          }
+        }
+      },
+      "symmetric": true
+    },
+    {
+      "a": 2,
+      "aName": "Inonu",
+      "b": 3,
+      "bName": "Hitler",
+      "aToB": {
+        "rawBytes": "07 00 00 00",
+        "rawUInt32": 7,
+        "attitudeOffset": 5123,
+        "civ2Attitude": 38,
+        "civ2AttitudeName": "receptive",
+        "freecivLove": 240,
+        "lastContactOffset": 6024,
+        "lastContactTurn": 1,
+        "decoded": {
+          "relation": "Peace",
+          "flags": {
+            "contact": true,
+            "ceaseFire": true,
+            "peace": true,
+            "alliance": false,
+            "vendetta": false,
+            "embassy": false,
+            "war": false
+          }
+        }
+      },
+      "bToA": {
+        "rawBytes": "87 00 00 00",
+        "rawUInt32": 135,
+        "attitudeOffset": 6518,
+        "civ2Attitude": 38,
+        "civ2AttitudeName": "receptive",
+        "freecivLove": 240,
+        "lastContactOffset": 7418,
+        "lastContactTurn": 1,
+        "decoded": {
+          "relation": "Peace",
+          "flags": {
+            "contact": true,
+            "ceaseFire": true,
+            "peace": true,
+            "alliance": false,
+            "vendetta": false,
+            "embassy": true,
+            "war": false
+          }
+        }
+      },
+      "symmetric": false
+    },
+    {
+      "a": 2,
+      "aName": "Inonu",
+      "b": 4,
+      "bName": "Franco",
+      "aToB": {
+        "rawBytes": "85 00 00 00",
+        "rawUInt32": 133,
+        "attitudeOffset": 5124,
+        "civ2Attitude": 25,
+        "civ2AttitudeName": "cordial",
+        "freecivLove": 500,
+        "lastContactOffset": 6026,
+        "lastContactTurn": 1,
+        "decoded": {
+          "relation": "Peace",
+          "flags": {
+            "contact": true,
+            "ceaseFire": false,
+            "peace": true,
+            "alliance": false,
+            "vendetta": false,
+            "embassy": true,
+            "war": false
+          }
+        }
+      },
+      "bToA": {
+        "rawBytes": "05 00 00 00",
+        "rawUInt32": 5,
+        "attitudeOffset": 7914,
+        "civ2Attitude": 25,
+        "civ2AttitudeName": "cordial",
+        "freecivLove": 500,
+        "lastContactOffset": 8814,
+        "lastContactTurn": 1,
+        "decoded": {
+          "relation": "Peace",
+          "flags": {
+            "contact": true,
+            "ceaseFire": false,
+            "peace": true,
+            "alliance": false,
+            "vendetta": false,
+            "embassy": false,
+            "war": false
+          }
+        }
+      },
+      "symmetric": false
+    },
+    {
+      "a": 2,
+      "aName": "Inonu",
+      "b": 5,
+      "bName": "Neutral Leader",
+      "aToB": {
+        "rawBytes": "85 00 00 00",
+        "rawUInt32": 133,
+        "attitudeOffset": 5125,
+        "civ2Attitude": 50,
+        "civ2AttitudeName": "neutral",
+        "freecivLove": 0,
+        "lastContactOffset": 6028,
+        "lastContactTurn": 1,
+        "decoded": {
+          "relation": "Peace",
+          "flags": {
+            "contact": true,
+            "ceaseFire": false,
+            "peace": true,
+            "alliance": false,
+            "vendetta": false,
+            "embassy": true,
+            "war": false
+          }
+        }
+      },
+      "bToA": {
+        "rawBytes": "05 00 00 00",
+        "rawUInt32": 5,
+        "attitudeOffset": 9310,
+        "civ2Attitude": 50,
+        "civ2AttitudeName": "neutral",
+        "freecivLove": 0,
+        "lastContactOffset": 10210,
+        "lastContactTurn": 1,
+        "decoded": {
+          "relation": "Peace",
+          "flags": {
+            "contact": true,
+            "ceaseFire": false,
+            "peace": true,
+            "alliance": false,
+            "vendetta": false,
+            "embassy": false,
+            "war": false
+          }
+        }
+      },
+      "symmetric": false
+    },
+    {
+      "a": 2,
+      "aName": "Inonu",
+      "b": 6,
+      "bName": "Churchill",
+      "aToB": {
+        "rawBytes": "05 00 00 00",
+        "rawUInt32": 5,
+        "attitudeOffset": 5126,
+        "civ2Attitude": 12,
+        "civ2AttitudeName": "cordial",
+        "freecivLove": 760,
+        "lastContactOffset": 6030,
+        "lastContactTurn": 1,
+        "decoded": {
+          "relation": "Peace",
+          "flags": {
+            "contact": true,
+            "ceaseFire": false,
+            "peace": true,
+            "alliance": false,
+            "vendetta": false,
+            "embassy": false,
+            "war": false
+          }
+        }
+      },
+      "bToA": {
+        "rawBytes": "85 00 00 00",
+        "rawUInt32": 133,
+        "attitudeOffset": 10706,
+        "civ2Attitude": 40,
+        "civ2AttitudeName": "neutral",
+        "freecivLove": 200,
+        "lastContactOffset": 11606,
+        "lastContactTurn": 1,
+        "decoded": {
+          "relation": "Peace",
+          "flags": {
+            "contact": true,
+            "ceaseFire": false,
+            "peace": true,
+            "alliance": false,
+            "vendetta": false,
+            "embassy": true,
+            "war": false
+          }
+        }
+      },
+      "symmetric": false
+    },
+    {
+      "a": 2,
+      "aName": "Inonu",
+      "b": 7,
+      "bName": "Petain",
+      "aToB": {
+        "rawBytes": "05 00 00 00",
+        "rawUInt32": 5,
+        "attitudeOffset": 5127,
+        "civ2Attitude": 81,
+        "civ2AttitudeName": "icy",
+        "freecivLove": -620,
+        "lastContactOffset": 6032,
+        "lastContactTurn": 1,
+        "decoded": {
+          "relation": "Peace",
+          "flags": {
+            "contact": true,
+            "ceaseFire": false,
+            "peace": true,
+            "alliance": false,
+            "vendetta": false,
+            "embassy": false,
+            "war": false
+          }
+        }
+      },
+      "bToA": {
+        "rawBytes": "85 00 00 00",
+        "rawUInt32": 133,
+        "attitudeOffset": 12102,
+        "civ2Attitude": 81,
+        "civ2AttitudeName": "icy",
+        "freecivLove": -620,
+        "lastContactOffset": 13002,
+        "lastContactTurn": 1,
+        "decoded": {
+          "relation": "Peace",
+          "flags": {
+            "contact": true,
+            "ceaseFire": false,
+            "peace": true,
+            "alliance": false,
+            "vendetta": false,
+            "embassy": true,
+            "war": false
+          }
+        }
+      },
+      "symmetric": false
+    },
+    {
+      "a": 3,
+      "aName": "Hitler",
+      "b": 4,
+      "bName": "Franco",
+      "aToB": {
+        "rawBytes": "87 00 00 00",
+        "rawUInt32": 135,
+        "attitudeOffset": 6520,
+        "civ2Attitude": 54,
+        "civ2AttitudeName": "neutral",
+        "freecivLove": -80,
+        "lastContactOffset": 7422,
+        "lastContactTurn": 1,
+        "decoded": {
+          "relation": "Peace",
+          "flags": {
+            "contact": true,
+            "ceaseFire": true,
+            "peace": true,
+            "alliance": false,
+            "vendetta": false,
+            "embassy": true,
+            "war": false
+          }
+        }
+      },
+      "bToA": {
+        "rawBytes": "07 00 00 00",
+        "rawUInt32": 7,
+        "attitudeOffset": 7915,
+        "civ2Attitude": 54,
+        "civ2AttitudeName": "neutral",
+        "freecivLove": -80,
+        "lastContactOffset": 8816,
+        "lastContactTurn": 1,
+        "decoded": {
+          "relation": "Peace",
+          "flags": {
+            "contact": true,
+            "ceaseFire": true,
+            "peace": true,
+            "alliance": false,
+            "vendetta": false,
+            "embassy": false,
+            "war": false
+          }
+        }
+      },
+      "symmetric": false
+    },
+    {
+      "a": 3,
+      "aName": "Hitler",
+      "b": 5,
+      "bName": "Neutral Leader",
+      "aToB": {
+        "rawBytes": "11 20 20 00",
+        "rawUInt32": 2105361,
+        "attitudeOffset": 6521,
+        "civ2Attitude": 63,
+        "civ2AttitudeName": "uncooperative",
+        "freecivLove": -260,
+        "lastContactOffset": 7424,
+        "lastContactTurn": 1,
+        "decoded": {
+          "relation": "War",
+          "flags": {
+            "contact": true,
+            "ceaseFire": false,
+            "peace": false,
+            "alliance": false,
+            "vendetta": true,
+            "embassy": false,
+            "war": true
+          }
+        }
+      },
+      "bToA": {
+        "rawBytes": "01 20 20 00",
+        "rawUInt32": 2105345,
+        "attitudeOffset": 9311,
+        "civ2Attitude": 63,
+        "civ2AttitudeName": "uncooperative",
+        "freecivLove": -260,
+        "lastContactOffset": 10212,
+        "lastContactTurn": 1,
+        "decoded": {
+          "relation": "War",
+          "flags": {
+            "contact": true,
+            "ceaseFire": false,
+            "peace": false,
+            "alliance": false,
+            "vendetta": false,
+            "embassy": false,
+            "war": true
+          }
+        }
+      },
+      "symmetric": false
+    },
+    {
+      "a": 3,
+      "aName": "Hitler",
+      "b": 6,
+      "bName": "Churchill",
+      "aToB": {
+        "rawBytes": "91 64 20 00",
+        "rawUInt32": 2122897,
+        "attitudeOffset": 6522,
+        "civ2Attitude": 75,
+        "civ2AttitudeName": "uncooperative",
+        "freecivLove": -500,
+        "lastContactOffset": 7426,
+        "lastContactTurn": 1,
+        "decoded": {
+          "relation": "War",
+          "flags": {
+            "contact": true,
+            "ceaseFire": false,
+            "peace": false,
+            "alliance": false,
+            "vendetta": true,
+            "embassy": true,
+            "war": true
+          }
+        }
+      },
+      "bToA": {
+        "rawBytes": "91 64 20 00",
+        "rawUInt32": 2122897,
+        "attitudeOffset": 10707,
+        "civ2Attitude": 100,
+        "civ2AttitudeName": "hostile",
+        "freecivLove": -1000,
+        "lastContactOffset": 11608,
+        "lastContactTurn": 1,
+        "decoded": {
+          "relation": "War",
+          "flags": {
+            "contact": true,
+            "ceaseFire": false,
+            "peace": false,
+            "alliance": false,
+            "vendetta": true,
+            "embassy": true,
+            "war": true
+          }
+        }
+      },
+      "symmetric": true
+    },
+    {
+      "a": 3,
+      "aName": "Hitler",
+      "b": 7,
+      "bName": "Petain",
+      "aToB": {
+        "rawBytes": "91 64 20 00",
+        "rawUInt32": 2122897,
+        "attitudeOffset": 6523,
+        "civ2Attitude": 75,
+        "civ2AttitudeName": "uncooperative",
+        "freecivLove": -500,
+        "lastContactOffset": 7428,
+        "lastContactTurn": 1,
+        "decoded": {
+          "relation": "War",
+          "flags": {
+            "contact": true,
+            "ceaseFire": false,
+            "peace": false,
+            "alliance": false,
+            "vendetta": true,
+            "embassy": true,
+            "war": true
+          }
+        }
+      },
+      "bToA": {
+        "rawBytes": "81 64 20 00",
+        "rawUInt32": 2122881,
+        "attitudeOffset": 12103,
+        "civ2Attitude": 75,
+        "civ2AttitudeName": "uncooperative",
+        "freecivLove": -500,
+        "lastContactOffset": 13004,
+        "lastContactTurn": 1,
+        "decoded": {
+          "relation": "War",
+          "flags": {
+            "contact": true,
+            "ceaseFire": false,
+            "peace": false,
+            "alliance": false,
+            "vendetta": false,
+            "embassy": true,
+            "war": true
+          }
+        }
+      },
+      "symmetric": false
+    },
+    {
+      "a": 4,
+      "aName": "Franco",
+      "b": 5,
+      "bName": "Neutral Leader",
+      "aToB": {
+        "rawBytes": "85 00 00 00",
+        "rawUInt32": 133,
+        "attitudeOffset": 7917,
+        "civ2Attitude": 70,
+        "civ2AttitudeName": "uncooperative",
+        "freecivLove": -400,
+        "lastContactOffset": 8820,
+        "lastContactTurn": 1,
+        "decoded": {
+          "relation": "Peace",
+          "flags": {
+            "contact": true,
+            "ceaseFire": false,
+            "peace": true,
+            "alliance": false,
+            "vendetta": false,
+            "embassy": true,
+            "war": false
+          }
+        }
+      },
+      "bToA": {
+        "rawBytes": "05 00 00 00",
+        "rawUInt32": 5,
+        "attitudeOffset": 9312,
+        "civ2Attitude": 70,
+        "civ2AttitudeName": "uncooperative",
+        "freecivLove": -400,
+        "lastContactOffset": 10214,
+        "lastContactTurn": 1,
+        "decoded": {
+          "relation": "Peace",
+          "flags": {
+            "contact": true,
+            "ceaseFire": false,
+            "peace": true,
+            "alliance": false,
+            "vendetta": false,
+            "embassy": false,
+            "war": false
+          }
+        }
+      },
+      "symmetric": false
+    },
+    {
+      "a": 4,
+      "aName": "Franco",
+      "b": 6,
+      "bName": "Churchill",
+      "aToB": {
+        "rawBytes": "05 00 00 00",
+        "rawUInt32": 5,
+        "attitudeOffset": 7918,
+        "civ2Attitude": 27,
+        "civ2AttitudeName": "receptive",
+        "freecivLove": 460,
+        "lastContactOffset": 8822,
+        "lastContactTurn": 1,
+        "decoded": {
+          "relation": "Peace",
+          "flags": {
+            "contact": true,
+            "ceaseFire": false,
+            "peace": true,
+            "alliance": false,
+            "vendetta": false,
+            "embassy": false,
+            "war": false
+          }
+        }
+      },
+      "bToA": {
+        "rawBytes": "85 00 00 00",
+        "rawUInt32": 133,
+        "attitudeOffset": 10708,
+        "civ2Attitude": 55,
+        "civ2AttitudeName": "neutral",
+        "freecivLove": -100,
+        "lastContactOffset": 11610,
+        "lastContactTurn": 1,
+        "decoded": {
+          "relation": "Peace",
+          "flags": {
+            "contact": true,
+            "ceaseFire": false,
+            "peace": true,
+            "alliance": false,
+            "vendetta": false,
+            "embassy": true,
+            "war": false
+          }
+        }
+      },
+      "symmetric": false
+    },
+    {
+      "a": 4,
+      "aName": "Franco",
+      "b": 7,
+      "bName": "Petain",
+      "aToB": {
+        "rawBytes": "05 00 00 00",
+        "rawUInt32": 5,
+        "attitudeOffset": 7919,
+        "civ2Attitude": 78,
+        "civ2AttitudeName": "icy",
+        "freecivLove": -560,
+        "lastContactOffset": 8824,
+        "lastContactTurn": 1,
+        "decoded": {
+          "relation": "Peace",
+          "flags": {
+            "contact": true,
+            "ceaseFire": false,
+            "peace": true,
+            "alliance": false,
+            "vendetta": false,
+            "embassy": false,
+            "war": false
+          }
+        }
+      },
+      "bToA": {
+        "rawBytes": "85 00 00 00",
+        "rawUInt32": 133,
+        "attitudeOffset": 12104,
+        "civ2Attitude": 78,
+        "civ2AttitudeName": "icy",
+        "freecivLove": -560,
+        "lastContactOffset": 13006,
+        "lastContactTurn": 1,
+        "decoded": {
+          "relation": "Peace",
+          "flags": {
+            "contact": true,
+            "ceaseFire": false,
+            "peace": true,
+            "alliance": false,
+            "vendetta": false,
+            "embassy": true,
+            "war": false
+          }
+        }
+      },
+      "symmetric": false
+    },
+    {
+      "a": 5,
+      "aName": "Neutral Leader",
+      "b": 6,
+      "bName": "Churchill",
+      "aToB": {
+        "rawBytes": "0d 00 00 00",
+        "rawUInt32": 13,
+        "attitudeOffset": 9314,
+        "civ2Attitude": 80,
+        "civ2AttitudeName": "icy",
+        "freecivLove": -600,
+        "lastContactOffset": 10218,
+        "lastContactTurn": 1,
+        "decoded": {
+          "relation": "Alliance",
+          "flags": {
+            "contact": true,
+            "ceaseFire": false,
+            "peace": true,
+            "alliance": true,
+            "vendetta": false,
+            "embassy": false,
+            "war": false
+          }
+        }
+      },
+      "bToA": {
+        "rawBytes": "8d 00 00 00",
+        "rawUInt32": 141,
+        "attitudeOffset": 10709,
+        "civ2Attitude": 10,
+        "civ2AttitudeName": "enthusiastic",
+        "freecivLove": 800,
+        "lastContactOffset": 11612,
+        "lastContactTurn": 1,
+        "decoded": {
+          "relation": "Alliance",
+          "flags": {
+            "contact": true,
+            "ceaseFire": false,
+            "peace": true,
+            "alliance": true,
+            "vendetta": false,
+            "embassy": true,
+            "war": false
+          }
+        }
+      },
+      "symmetric": false
+    },
+    {
+      "a": 5,
+      "aName": "Neutral Leader",
+      "b": 7,
+      "bName": "Petain",
+      "aToB": {
+        "rawBytes": "05 00 00 00",
+        "rawUInt32": 5,
+        "attitudeOffset": 9315,
+        "civ2Attitude": 12,
+        "civ2AttitudeName": "cordial",
+        "freecivLove": 760,
+        "lastContactOffset": 10220,
+        "lastContactTurn": 1,
+        "decoded": {
+          "relation": "Peace",
+          "flags": {
+            "contact": true,
+            "ceaseFire": false,
+            "peace": true,
+            "alliance": false,
+            "vendetta": false,
+            "embassy": false,
+            "war": false
+          }
+        }
+      },
+      "bToA": {
+        "rawBytes": "85 00 00 00",
+        "rawUInt32": 133,
+        "attitudeOffset": 12105,
+        "civ2Attitude": 12,
+        "civ2AttitudeName": "cordial",
+        "freecivLove": 760,
+        "lastContactOffset": 13008,
+        "lastContactTurn": 1,
+        "decoded": {
+          "relation": "Peace",
+          "flags": {
+            "contact": true,
+            "ceaseFire": false,
+            "peace": true,
+            "alliance": false,
+            "vendetta": false,
+            "embassy": true,
+            "war": false
+          }
+        }
+      },
+      "symmetric": false
+    },
+    {
+      "a": 6,
+      "aName": "Churchill",
+      "b": 7,
+      "bName": "Petain",
+      "aToB": {
+        "rawBytes": "8d 44 00 00",
+        "rawUInt32": 17549,
+        "attitudeOffset": 10711,
+        "civ2Attitude": 28,
+        "civ2AttitudeName": "receptive",
+        "freecivLove": 440,
+        "lastContactOffset": 11616,
+        "lastContactTurn": -1,
+        "decoded": {
+          "relation": "Alliance",
+          "flags": {
+            "contact": true,
+            "ceaseFire": false,
+            "peace": true,
+            "alliance": true,
+            "vendetta": false,
+            "embassy": true,
+            "war": false
+          }
+        }
+      },
+      "bToA": {
+        "rawBytes": "8d 44 00 00",
+        "rawUInt32": 17549,
+        "attitudeOffset": 12106,
+        "civ2Attitude": 54,
+        "civ2AttitudeName": "neutral",
+        "freecivLove": -80,
+        "lastContactOffset": 13010,
+        "lastContactTurn": -1,
+        "decoded": {
+          "relation": "Alliance",
+          "flags": {
+            "contact": true,
+            "ceaseFire": false,
+            "peace": true,
+            "alliance": true,
+            "vendetta": false,
+            "embassy": true,
+            "war": false
+          }
+        }
+      },
+      "symmetric": true
+    }
+  ]
+}

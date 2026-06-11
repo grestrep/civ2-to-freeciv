@@ -1,0 +1,422 @@
+index,typeIndex,typeName,ownerCandidate,x,y,nativeX,movesUsed,hpLost,workProgress,commodity,orders,orderName,civ2State,freecivActivity,homeCityIndex,homeCityName,gotoX,gotoY,links,flagBytes,movedCandidate,veteranCandidate,starCandidate
+0,10,"Alpine Troops",3,54,48,27,0,0,0,0,0,"Unknown (0)","Fortify","Fortifying",0,"Berlin",,,"","27 00 03",false,false,true
+1,10,"Alpine Troops",3,54,48,27,0,255,255,255,0,"Unknown (0)","Fortify","Fortifying",1,"Vienna",,,"","00 01 03",false,false,true
+2,11,"Riflemen",3,54,48,27,0,255,255,0,0,"Unknown (0)","Fortify","Fortifying",2,"Munich",,,"","00 01 03",false,false,true
+3,11,"Riflemen",7,46,64,23,0,255,255,1,0,"Unknown (0)","Idle","Idle",,"",,,"","00 01 00",false,false,false
+4,8,"Fanatics",0,83,105,41,255,255,255,255,7,"Mine","Idle","Idle",32,"Budapest",,,"","00 ff 00",false,true,false
+5,8,"Fanatics",0,85,101,42,255,255,255,255,255,"None","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+6,8,"Fanatics",0,91,105,45,255,255,255,255,255,"None","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+7,8,"Fanatics",0,89,111,44,255,255,255,255,255,"None","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+8,1,"Engineers",1,75,57,37,0,255,255,255,255,"None","Idle","Idle",,"",,,"","00 ff 06",false,true,false
+9,1,"Engineers",1,76,34,38,0,255,255,255,255,"None","Idle","Idle",49,"Izmir",,,"","00 ff 00",false,true,false
+10,11,"Riflemen",3,69,19,34,0,255,255,255,63,"Unknown (63)","FortifiedCandidate","Idle",35,"Oslo",,,"","00 ff 00",false,true,false
+11,10,"Alpine Troops",3,66,26,33,2,255,255,255,88,"Unknown (88)","Idle","Idle",,"",,,"","00 02 00",false,false,false
+12,11,"Riflemen",3,67,25,33,2,255,255,255,88,"Unknown (88)","Idle","Idle",13,"Beirut",,,"","00 ff 00",false,true,false
+13,11,"Riflemen",3,66,26,33,2,255,255,255,88,"Unknown (88)","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+14,10,"Alpine Troops",3,64,28,32,0,255,255,11,88,"Unknown (88)","Fortify","Fortifying",,"",,,"","00 ff 03",false,true,true
+15,22,"Armor",3,50,52,25,0,255,255,255,88,"Unknown (88)","FortifiedCandidate","Idle",,"",,,"","00 01 00",false,false,false
+16,11,"Riflemen",5,62,72,31,0,255,255,130,0,"Unknown (0)","Fortify","Fortifying",,"",,,"","00 ff 03",false,true,true
+17,10,"Alpine Troops",0,52,68,26,255,255,255,255,255,"None","Idle","Idle",,"",,,"","00 01 00",false,false,false
+18,10,"Alpine Troops",0,50,68,25,255,255,255,255,255,"None","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+19,9,"Partisans",0,32,38,16,255,255,255,255,255,"None","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+20,11,"Riflemen",7,50,72,25,8,255,255,255,255,"None","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+21,11,"Riflemen",4,45,75,22,0,255,255,255,8,"Transform","Fortify","Fortifying",,"",,,"","00 02 03",false,false,true
+22,11,"Riflemen",4,43,73,21,128,255,255,255,41,"Unknown (41)","Fortify","Fortifying",,"",,,"","00 02 03",false,false,true
+23,10,"Alpine Troops",4,39,79,19,0,255,255,255,42,"Unknown (42)","Fortify","Fortifying",,"",,,"","00 02 03",false,false,true
+24,9,"Partisans",0,31,33,15,255,255,255,255,38,"Unknown (38)","Idle","Idle",93,"Bordeaux",,,"","00 01 00",false,false,false
+25,11,"Riflemen",6,67,91,33,0,255,255,255,255,"None","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+26,7,"Musketeers",6,93,97,46,0,255,255,255,255,"None","Fortify","Fortifying",,"",,,"","00 ff 03",false,true,true
+27,7,"Musketeers",6,101,107,50,0,255,255,255,52,"Unknown (52)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+28,7,"Musketeers",6,92,90,46,0,255,255,255,53,"Unknown (53)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+29,43,"Transport",6,1,31,0,0,255,255,255,54,"Unknown (54)","Idle","Idle",,"",,,"","00 01 06",false,false,false
+30,10,"Alpine Troops",7,49,73,24,8,255,255,68,16,"Unknown (16)","Fortify","Fortifying",74,"Stalingrad",,,"","00 ff 03",false,true,true
+31,10,"Alpine Troops",7,49,73,24,8,255,255,255,8,"Transform","Fortify","Fortifying",31,"Krakow",,,"","00 01 03",false,false,true
+32,10,"Alpine Troops",7,46,64,23,0,255,255,30,8,"Transform","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+33,10,"Alpine Troops",7,46,64,23,0,255,255,3,7,"Mine","Fortify","Fortifying",33,"Bucharest",,,"","00 01 03",false,false,true
+34,11,"Riflemen",7,46,64,23,0,255,255,32,7,"Mine","Fortify","Fortifying",34,"Tripoli",,,"","00 01 03",false,false,true
+35,11,"Riflemen",1,76,34,38,0,255,255,33,7,"Mine","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+36,11,"Riflemen",1,76,34,38,0,255,255,9,63,"Unknown (63)","Fortify","Fortifying",36,"Bergen",,,"","00 01 03",false,false,true
+37,11,"Riflemen",1,76,34,38,0,255,255,35,63,"Unknown (63)","Fortify","Fortifying",37,"Tobruk",,,"","00 01 03",false,false,true
+38,11,"Riflemen",1,68,26,34,0,255,255,36,63,"Unknown (63)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+39,11,"Riflemen",1,68,26,34,0,255,255,255,57,"Unknown (57)","Fortify","Fortifying",39,"Tangiers",,,"","00 01 03",false,false,true
+40,11,"Riflemen",1,64,36,32,0,255,255,38,57,"Unknown (57)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+41,11,"Riflemen",1,64,36,32,0,255,255,255,58,"Unknown (58)","Fortify","Fortifying",41,"Barcelona",,,"","00 01 03",false,false,true
+42,11,"Riflemen",1,69,43,34,0,255,255,40,58,"Unknown (58)","Fortify","Fortifying",91,"Tehran",,,"","00 01 03",false,false,true
+43,11,"Riflemen",1,69,43,34,0,255,255,255,59,"Unknown (59)","Fortify","Fortifying",43,"Seville",,,"","00 01 03",false,false,true
+44,11,"Riflemen",1,72,38,36,0,255,255,42,59,"Unknown (59)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+45,11,"Riflemen",1,72,38,36,0,255,255,255,60,"Unknown (60)","Fortify","Fortifying",45,"Valencia",,,"","00 01 03",false,false,true
+46,11,"Riflemen",1,71,53,35,0,255,255,44,60,"Unknown (60)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+47,11,"Riflemen",1,71,53,35,0,255,255,255,71,"Unknown (71)","Fortify","Fortifying",47,"Ankara",,,"","00 01 03",false,false,true
+48,11,"Riflemen",1,76,46,38,0,255,255,46,71,"Unknown (71)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+49,11,"Riflemen",1,75,57,37,0,255,255,255,76,"Unknown (76)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+50,11,"Riflemen",1,71,65,35,0,255,255,8,68,"Unknown (68)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+51,11,"Riflemen",1,74,68,37,0,255,255,255,61,"Unknown (61)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+52,11,"Riflemen",1,79,53,39,0,255,255,255,62,"Unknown (62)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+53,11,"Riflemen",1,79,53,39,0,255,255,255,73,"Unknown (73)","Fortify","Fortifying",53,"Basra",,,"","00 01 03",false,false,true
+54,11,"Riflemen",1,82,62,41,0,255,255,52,73,"Unknown (73)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+55,11,"Riflemen",1,82,62,41,0,255,255,255,70,"Unknown (70)","Fortify","Fortifying",55,"Suez",,,"","00 01 03",false,false,true
+56,11,"Riflemen",1,86,66,43,0,255,255,54,70,"Unknown (70)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+57,10,"Alpine Troops",1,92,68,46,0,255,255,255,72,"Unknown (72)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+58,10,"Alpine Troops",1,87,77,43,4,255,255,255,67,"Unknown (67)","Fortify","Fortifying",59,"Minsk",,,"","00 01 03",false,false,true
+59,10,"Alpine Troops",1,92,68,46,0,255,255,255,82,"Unknown (82)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+60,11,"Riflemen",1,88,54,44,0,255,255,57,67,"Unknown (67)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+61,11,"Riflemen",1,88,54,44,0,255,255,255,74,"Unknown (74)","Fortify","Fortifying",61,"Odessa",,,"","00 01 03",false,false,true
+62,11,"Riflemen",1,88,54,44,0,255,255,60,74,"Unknown (74)","Fortify","Fortifying",62,"Sevastopol",,,"","00 01 03",false,false,true
+63,10,"Alpine Troops",1,73,5,36,0,255,255,61,74,"Unknown (74)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+64,10,"Alpine Troops",3,63,5,31,0,255,255,255,79,"Unknown (79)","Idle","Idle",66,"Astrakhan",,,"","00 01 00",false,false,false
+65,10,"Alpine Troops",3,56,14,28,0,255,255,255,36,"Unknown (36)","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+66,11,"Riflemen",1,73,5,36,0,255,255,255,35,"Unknown (35)","Fortify","Fortifying",,"",,,"","00 ff 03",false,true,true
+67,11,"Riflemen",1,78,26,39,0,255,255,63,79,"Unknown (79)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+68,11,"Riflemen",1,83,41,41,0,255,255,255,81,"Unknown (81)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+69,11,"Riflemen",1,83,41,41,0,255,255,255,83,"Unknown (83)","Fortify","Fortifying",69,"Kuibyshev",,,"","00 01 03",false,false,true
+70,11,"Riflemen",1,84,32,42,0,255,255,68,83,"Unknown (83)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+71,11,"Riflemen",1,84,32,42,0,255,255,255,80,"Unknown (80)","Fortify","Fortifying",71,"Kiev",,,"","00 01 03",false,false,true
+72,11,"Riflemen",1,92,36,46,0,255,255,70,80,"Unknown (80)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+73,11,"Riflemen",1,92,36,46,0,255,255,255,75,"Unknown (75)","Fortify","Fortifying",73,"Kharkov",,,"","00 01 03",false,false,true
+74,11,"Riflemen",1,92,42,46,0,255,255,72,75,"Unknown (75)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+75,11,"Riflemen",1,97,61,48,0,255,255,255,69,"Unknown (69)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+76,11,"Riflemen",1,97,61,48,0,255,255,255,66,"Unknown (66)","Fortify","Fortifying",76,"Kursk",,,"","00 01 03",false,false,true
+77,11,"Riflemen",1,97,61,48,0,255,255,75,66,"Unknown (66)","Fortify","Fortifying",77,"Magnitogorsk",,,"","00 01 03",false,false,true
+78,11,"Riflemen",1,101,53,50,0,255,255,76,66,"Unknown (66)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+79,11,"Riflemen",1,102,36,51,0,255,255,255,84,"Unknown (84)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+80,11,"Riflemen",1,102,36,51,0,255,255,255,64,"Unknown (64)","Fortify","Fortifying",80,"Gorky",,,"","00 01 03",false,false,true
+81,11,"Riflemen",1,102,36,51,0,255,255,79,64,"Unknown (64)","Fortify","Fortifying",81,"Vologda",,,"","00 01 03",false,false,true
+82,11,"Riflemen",1,105,41,52,0,255,255,80,64,"Unknown (64)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+83,11,"Riflemen",1,105,41,52,0,255,255,255,77,"Unknown (77)","Fortify","Fortifying",83,"Voronezh",,,"","00 01 03",false,false,true
+84,11,"Riflemen",1,106,46,53,0,255,255,82,77,"Unknown (77)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+85,11,"Riflemen",1,121,43,60,0,255,255,255,78,"Unknown (78)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+86,11,"Riflemen",1,134,44,67,0,255,255,255,87,"Unknown (87)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+87,11,"Riflemen",1,134,44,67,0,255,255,255,86,"Unknown (86)","Fortify","Fortifying",87,"Omsk",,,"","00 01 03",false,false,true
+88,11,"Riflemen",1,146,40,73,0,255,255,86,86,"Unknown (86)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+89,11,"Riflemen",1,146,40,73,0,255,255,255,85,"Unknown (85)","Fortify","Fortifying",89,"Belgrade",,,"","00 01 03",false,false,true
+90,10,"Alpine Troops",1,146,40,73,0,255,255,88,85,"Unknown (85)","Fortify","Fortifying",90,"Stockholm",,,"","00 01 03",false,false,true
+91,11,"Riflemen",1,64,36,32,0,255,255,89,85,"Unknown (85)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+92,11,"Riflemen",1,102,76,51,0,255,255,41,58,"Unknown (58)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+93,11,"Riflemen",4,39,79,19,0,255,255,255,65,"Unknown (65)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+94,11,"Riflemen",4,46,86,23,0,255,255,23,38,"Unknown (38)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+95,11,"Riflemen",4,37,87,18,0,255,255,255,45,"Unknown (45)","Idle","Idle",,"",,,"","00 01 00",false,false,false
+96,11,"Riflemen",4,37,87,18,0,255,255,255,43,"Unknown (43)","Idle","Idle",96,"Strasbourg",,,"","00 ff 00",false,true,false
+97,11,"Riflemen",4,42,84,21,0,255,255,95,43,"Unknown (43)","Fortify","Fortifying",,"",,,"","00 ff 03",false,true,true
+98,11,"Riflemen",4,42,84,21,0,255,255,255,45,"Unknown (45)","Fortify","Fortifying",98,"Athens",,,"","00 01 03",false,false,true
+99,11,"Riflemen",4,45,77,22,0,255,255,97,45,"Unknown (45)","Idle","Idle",,"",,,"","00 01 00",false,false,false
+100,11,"Riflemen",4,41,75,20,0,255,255,255,41,"Unknown (41)","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+101,11,"Riflemen",4,35,73,17,0,255,255,255,42,"Unknown (42)","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+102,11,"Riflemen",4,35,89,17,0,255,255,255,44,"Unknown (44)","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+103,11,"Riflemen",4,35,95,17,0,255,255,255,46,"Unknown (46)","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+104,11,"Riflemen",2,70,80,35,0,255,255,255,39,"Unknown (39)","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+105,11,"Riflemen",2,70,80,35,0,255,255,255,48,"Unknown (48)","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+106,11,"Riflemen",2,78,82,39,0,255,255,104,48,"Unknown (48)","Fortify","Fortifying",,"",,,"","00 ff 03",false,true,true
+107,11,"Riflemen",2,78,82,39,0,255,255,255,47,"Unknown (47)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+108,10,"Alpine Troops",2,88,80,44,2,255,255,106,47,"Unknown (47)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+109,11,"Riflemen",2,88,80,44,2,255,255,255,51,"Unknown (51)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+110,11,"Riflemen",2,70,86,35,0,255,255,108,51,"Unknown (51)","Idle","Idle",,"",,,"","00 01 00",false,false,false
+111,11,"Riflemen",2,79,87,39,0,255,255,255,49,"Unknown (49)","Fortify","Fortifying",,"",,,"","00 ff 03",false,true,true
+112,11,"Riflemen",2,79,87,39,0,255,255,255,50,"Unknown (50)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+113,11,"Riflemen",2,78,82,39,0,255,255,111,50,"Unknown (50)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+114,11,"Riflemen",5,62,72,31,0,255,255,107,47,"Unknown (47)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+115,11,"Riflemen",5,62,72,31,0,255,255,16,89,"Unknown (89)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+116,11,"Riflemen",5,46,46,23,0,255,255,114,89,"Unknown (89)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+117,10,"Alpine Troops",5,58,26,29,0,255,255,255,92,"Unknown (92)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+118,10,"Alpine Troops",5,58,26,29,0,255,255,255,90,"Unknown (90)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+119,11,"Riflemen",5,58,26,29,0,255,255,117,90,"Unknown (90)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+120,11,"Riflemen",5,103,93,51,0,255,255,118,90,"Unknown (90)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+121,11,"Riflemen",5,103,93,51,0,255,255,255,91,"Unknown (91)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+122,22,"Armor",3,49,53,24,192,255,255,120,91,"Unknown (91)","Idle","Idle",,"",,,"","00 01 00",false,false,false
+123,22,"Armor",3,49,53,24,192,255,255,255,24,"Unknown (24)","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+124,22,"Armor",3,49,53,24,192,255,255,122,24,"Unknown (24)","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+125,22,"Armor",3,49,53,24,192,255,255,123,24,"Unknown (24)","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+126,22,"Armor",3,50,46,25,32,255,255,124,24,"Unknown (24)","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+127,22,"Armor",3,49,53,24,128,255,255,255,25,"Unknown (25)","FortifiedCandidate","Idle",,"",,,"","00 ff 00",false,true,false
+128,22,"Armor",3,51,53,25,0,255,255,125,25,"Unknown (25)","FortifiedCandidate","Idle",,"",,,"","00 ff 00",false,true,false
+129,22,"Armor",3,51,53,25,0,255,255,129,26,"Unknown (26)","FortifiedCandidate","Idle",,"",,,"","00 ff 00",false,true,false
+130,22,"Armor",3,50,52,25,0,255,255,255,26,"Unknown (26)","FortifiedCandidate","Idle",,"",,,"","00 ff 00",false,true,false
+131,22,"Armor",3,56,54,28,0,255,255,255,0,"Unknown (0)","Idle","Idle",15,"London",,,"","00 ff 00",false,true,false
+132,22,"Armor",3,52,54,26,0,255,255,255,27,"Unknown (27)","FortifiedCandidate","Idle",,"",,,"","00 ff 00",false,true,false
+133,10,"Alpine Troops",3,51,43,25,0,255,255,255,26,"Unknown (26)","Fortify","Fortifying",,"",,,"","00 ff 03",false,true,true
+134,11,"Riflemen",3,51,43,25,0,255,255,255,25,"Unknown (25)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+135,11,"Riflemen",3,51,43,25,0,255,255,133,25,"Unknown (25)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+136,10,"Alpine Troops",3,50,54,25,0,255,255,134,25,"Unknown (25)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+137,11,"Riflemen",3,50,54,25,0,255,255,255,24,"Unknown (24)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+138,11,"Riflemen",3,50,54,25,0,255,255,136,24,"Unknown (24)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+139,12,"Marines",3,51,43,25,0,255,255,137,24,"Unknown (24)","Idle","Idle",,"",,,"","00 01 00",false,false,false
+140,11,"Riflemen",3,52,58,26,0,255,255,135,25,"Unknown (25)","Fortify","Fortifying",,"",,,"","00 ff 03",false,true,true
+141,11,"Riflemen",3,52,58,26,0,255,255,255,26,"Unknown (26)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+142,10,"Alpine Troops",3,55,63,27,0,255,255,140,26,"Unknown (26)","Idle","Idle",,"",,,"","00 01 00",false,false,false
+143,11,"Riflemen",3,55,63,27,0,255,255,255,2,"Fortified","Fortify","Fortifying",,"",,,"","00 ff 03",false,true,true
+144,11,"Riflemen",3,55,63,27,0,255,255,142,2,"Fortified","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+145,10,"Alpine Troops",3,48,50,24,64,255,255,143,2,"Fortified","Idle","Idle",,"",,,"","00 01 00",false,false,false
+146,10,"Alpine Troops",3,49,55,24,128,255,255,255,255,"None","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+147,11,"Riflemen",3,50,58,25,128,255,255,255,24,"Unknown (24)","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+148,11,"Riflemen",3,51,61,25,128,255,255,255,26,"Unknown (26)","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+149,11,"Riflemen",3,49,45,24,32,255,255,255,255,"None","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+150,10,"Alpine Troops",3,61,7,30,0,255,255,255,255,"None","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+151,10,"Alpine Troops",3,49,25,24,0,255,255,255,35,"Unknown (35)","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+152,11,"Riflemen",3,49,25,24,0,255,255,255,36,"Unknown (36)","Fortify","Fortifying",,"",,,"","00 ff 03",false,true,true
+153,10,"Alpine Troops",3,53,29,26,0,255,255,151,36,"Unknown (36)","Idle","Idle",,"",,,"","00 01 00",false,false,false
+154,11,"Riflemen",3,53,29,26,0,255,255,255,35,"Unknown (35)","Fortify","Fortifying",,"",,,"","00 ff 03",false,true,true
+155,27,"Fighter",3,50,54,25,0,255,255,153,35,"Unknown (35)","Idle","Idle",,"",,,"","00 01 00",false,false,false
+156,27,"Fighter",3,51,43,25,0,255,255,138,24,"Unknown (24)","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+157,27,"Fighter",3,52,58,26,0,255,255,139,25,"Unknown (25)","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+158,27,"Fighter",3,55,63,27,0,255,255,141,26,"Unknown (26)","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+159,27,"Fighter",3,50,54,25,0,255,255,144,2,"Fortified","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+160,27,"Fighter",3,50,54,25,0,255,255,155,24,"Unknown (24)","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+161,28,"Bomber",3,54,48,27,0,255,255,159,24,"Unknown (24)","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+162,28,"Bomber",3,54,48,27,0,255,255,2,0,"Unknown (0)","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+163,28,"Bomber",3,56,54,28,0,255,255,161,0,"Unknown (0)","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+164,28,"Bomber",3,50,54,25,0,255,255,131,27,"Unknown (27)","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+165,40,"Battleship",3,52,38,26,0,255,255,160,24,"Unknown (24)","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+166,40,"Battleship",3,51,43,25,0,255,255,255,25,"Unknown (25)","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+167,38,"Cruiser",3,51,43,25,0,255,255,156,25,"Unknown (25)","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+168,38,"Cruiser",3,62,44,31,0,255,255,166,25,"Unknown (25)","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+169,37,"Destroyer",3,49,25,24,0,255,255,255,30,"Unknown (30)","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+170,13,"Paratroopers",3,59,59,29,0,255,255,152,36,"Unknown (36)","Fortify","Fortifying",,"",,,"","00 ff 03",false,true,true
+171,11,"Riflemen",3,62,44,31,0,255,255,217,27,"Unknown (27)","Fortify","Fortifying",,"",,,"","00 ff 03",false,true,true
+172,11,"Riflemen",3,62,44,31,0,255,255,168,30,"Unknown (30)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+173,11,"Riflemen",3,63,51,31,0,255,255,171,30,"Unknown (30)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+174,11,"Riflemen",3,63,51,31,0,255,255,255,29,"Unknown (29)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+175,1,"Engineers",3,63,51,31,0,255,255,173,29,"Unknown (29)","Idle","Idle",,"",,,"","00 01 00",false,false,false
+176,1,"Engineers",3,54,48,27,0,255,255,174,29,"Unknown (29)","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+177,1,"Engineers",3,56,54,28,0,255,255,162,0,"Unknown (0)","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+178,1,"Engineers",3,59,59,29,0,255,255,163,27,"Unknown (27)","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+179,11,"Riflemen",3,63,57,31,0,255,255,255,28,"Unknown (28)","Fortify","Fortifying",,"",,,"","00 ff 03",false,true,true
+180,11,"Riflemen",3,63,57,31,0,255,255,255,31,"Unknown (31)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+181,11,"Riflemen",3,63,51,31,0,255,255,179,31,"Unknown (31)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+182,12,"Marines",3,62,44,31,0,255,255,175,29,"Unknown (29)","Idle","Idle",,"",,,"","00 01 00",false,false,false
+183,11,"Riflemen",3,65,105,32,0,255,255,172,30,"Unknown (30)","Fortify","Fortifying",,"",,,"","00 ff 03",false,true,true
+184,22,"Armor",3,65,105,32,0,255,255,255,37,"Unknown (37)","Idle","Idle",,"",,,"","00 01 00",false,false,false
+185,22,"Armor",3,54,104,27,0,255,255,183,37,"Unknown (37)","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+186,10,"Alpine Troops",3,54,104,27,0,255,255,255,34,"Unknown (34)","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+187,11,"Riflemen",3,54,104,27,0,255,255,185,34,"Unknown (34)","Fortify","Fortifying",,"",,,"","00 ff 03",false,true,true
+188,43,"Transport",3,61,87,30,0,255,255,186,34,"Unknown (34)","Idle","Idle",,"",,,"","00 01 00",false,false,false
+189,43,"Transport",3,61,87,30,0,255,255,255,6,"Irrigate/Farmland","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+190,40,"Battleship",3,61,87,30,0,255,255,188,6,"Irrigate/Farmland","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+191,38,"Cruiser",3,61,87,30,0,255,255,189,6,"Irrigate/Farmland","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+192,38,"Cruiser",3,61,87,30,0,255,255,190,6,"Irrigate/Farmland","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+193,37,"Destroyer",3,61,87,30,0,255,255,191,6,"Irrigate/Farmland","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+194,11,"Riflemen",3,61,87,30,0,255,255,192,6,"Irrigate/Farmland","Fortify","Fortifying",,"",,,"","00 ff 03",false,true,true
+195,11,"Riflemen",3,61,87,30,0,255,255,193,6,"Irrigate/Farmland","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+196,11,"Riflemen",3,56,82,28,0,255,255,194,6,"Irrigate/Farmland","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+197,11,"Riflemen",3,56,82,28,0,255,255,255,3,"Sentry","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+198,11,"Riflemen",3,56,82,28,0,255,255,196,3,"Sentry","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+199,10,"Alpine Troops",3,53,73,26,128,255,255,197,3,"Sentry","Idle","Idle",,"",,,"","00 01 00",false,false,false
+200,11,"Riflemen",3,53,73,26,128,255,255,255,4,"Build Fortress","Fortify","Fortifying",,"",,,"","00 ff 03",false,true,true
+201,11,"Riflemen",3,53,73,26,128,255,255,199,4,"Build Fortress","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+202,11,"Riflemen",3,56,72,28,0,255,255,200,4,"Build Fortress","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+203,11,"Riflemen",3,56,72,28,0,255,255,255,5,"Build Road/Railroad","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+204,10,"Alpine Troops",3,53,73,26,128,255,255,202,5,"Build Road/Railroad","Idle","Idle",,"",,,"","00 01 00",false,false,false
+205,27,"Fighter",3,56,82,28,0,255,255,201,4,"Build Fortress","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+206,27,"Fighter",3,53,73,26,128,255,255,198,3,"Sentry","Idle","Idle",15,"London",,,"","00 ff 00",false,true,false
+207,28,"Bomber",3,53,73,26,128,255,255,204,4,"Build Fortress","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+208,10,"Alpine Troops",3,66,74,33,0,255,255,206,4,"Build Fortress","Fortify","Fortifying",,"",,,"","00 ff 03",false,true,true
+209,10,"Alpine Troops",3,66,74,33,0,255,255,255,33,"Unknown (33)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+210,11,"Riflemen",3,66,74,33,0,255,255,208,33,"Unknown (33)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+211,11,"Riflemen",3,63,67,31,0,255,255,209,33,"Unknown (33)","Fortify","Fortifying",14,"Damascus",,,"","00 01 03",false,false,true
+212,11,"Riflemen",3,63,67,31,0,255,255,255,32,"Unknown (32)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+213,11,"Riflemen",3,59,65,29,0,255,255,211,32,"Unknown (32)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+214,11,"Riflemen",3,59,65,29,0,255,255,255,1,"Fortify","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+215,11,"Riflemen",3,59,65,29,0,255,255,213,1,"Fortify","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+216,11,"Riflemen",3,59,59,29,0,255,255,214,1,"Fortify","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+217,11,"Riflemen",3,59,59,29,0,255,255,178,28,"Unknown (28)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+218,11,"Riflemen",3,56,54,28,0,255,255,216,28,"Unknown (28)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+219,11,"Riflemen",3,56,54,28,0,255,255,177,27,"Unknown (27)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+220,11,"Riflemen",3,56,54,28,0,255,255,218,27,"Unknown (27)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+221,41,"Submarine",3,8,28,4,0,255,255,219,27,"Unknown (27)","Idle","Idle",,"",,,"","00 01 00",false,false,false
+222,41,"Submarine",3,4,40,2,0,255,255,255,255,"None","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+223,41,"Submarine",3,10,36,5,0,255,255,255,255,"None","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+224,41,"Submarine",3,13,15,6,0,255,255,255,255,"None","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+225,41,"Submarine",3,23,15,11,0,255,255,255,255,"None","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+226,41,"Submarine",3,18,22,9,0,255,255,255,255,"None","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+227,41,"Submarine",3,26,26,13,0,255,255,255,255,"None","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+228,41,"Submarine",3,29,55,14,0,255,255,255,255,"None","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+229,41,"Submarine",3,20,44,10,0,255,255,255,255,"None","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+230,41,"Submarine",3,10,48,5,0,255,255,255,255,"None","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+231,41,"Submarine",3,29,89,14,0,255,255,255,255,"None","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+232,41,"Submarine",3,21,89,10,0,255,255,255,255,"None","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+233,41,"Submarine",3,27,79,13,0,255,255,255,255,"None","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+234,41,"Submarine",3,33,63,16,0,255,255,255,255,"None","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+235,41,"Submarine",3,19,63,9,0,255,255,255,255,"None","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+236,11,"Riflemen",7,47,53,23,72,255,255,255,255,"None","FortifiedCandidate","Idle",,"",,,"","00 ff 00",false,true,false
+237,11,"Riflemen",7,47,55,23,72,255,255,255,95,"Unknown (95)","FortifiedCandidate","Idle",,"",,,"","00 02 00",false,false,false
+238,11,"Riflemen",7,48,58,24,8,255,255,255,95,"Unknown (95)","Fortify","Fortifying",,"",,,"","00 02 03",false,false,true
+239,11,"Riflemen",7,49,59,24,8,255,255,255,96,"Unknown (96)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+240,11,"Riflemen",7,49,63,24,0,255,255,255,96,"Unknown (96)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+241,11,"Riflemen",7,49,65,24,0,255,255,255,96,"Unknown (96)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+242,22,"Armor",7,48,58,24,8,255,255,255,7,"Mine","Idle","Idle",,"",,,"","00 01 00",false,false,false
+243,22,"Armor",7,49,59,24,8,255,255,238,96,"Unknown (96)","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+244,11,"Riflemen",7,45,53,22,0,255,255,239,96,"Unknown (96)","Fortify","Fortifying",,"",,,"","00 ff 03",false,true,true
+245,11,"Riflemen",7,45,53,22,0,255,255,255,95,"Unknown (95)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+246,11,"Riflemen",7,45,53,22,0,255,255,244,95,"Unknown (95)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+247,11,"Riflemen",7,45,53,22,0,255,255,245,95,"Unknown (95)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+248,11,"Riflemen",7,41,49,20,0,255,255,246,95,"Unknown (95)","Fortify","Fortifying",12,"Casablanca",,,"","00 01 03",false,false,true
+249,11,"Riflemen",7,41,49,20,0,255,255,255,94,"Unknown (94)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+250,11,"Riflemen",7,40,58,20,0,255,255,248,94,"Unknown (94)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+251,11,"Riflemen",7,43,69,21,0,255,255,255,9,"Clean Pollution","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+252,11,"Riflemen",7,49,73,24,8,255,255,255,93,"Unknown (93)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+253,11,"Riflemen",7,49,61,24,0,255,255,31,8,"Transform","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+254,11,"Riflemen",7,49,61,24,0,255,255,255,96,"Unknown (96)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+255,43,"Transport",7,49,73,24,8,255,255,253,96,"Unknown (96)","Idle","Idle",,"",,,"","00 01 00",false,false,false
+256,38,"Cruiser",7,49,73,24,8,255,255,252,8,"Transform","Idle","Idle",0,"Berlin",,,"","00 ff 00",false,true,false
+257,38,"Cruiser",7,49,73,24,8,255,255,255,8,"Transform","Idle","Idle",1,"Vienna",,,"","00 ff 00",false,true,false
+258,11,"Riflemen",6,47,49,23,40,255,255,0,8,"Transform","Fortify","Fortifying",,"",,,"","00 ff 03",false,true,true
+259,11,"Riflemen",6,47,51,23,136,255,255,255,255,"None","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+260,22,"Armor",6,45,49,22,160,255,255,255,255,"None","Idle","Idle",,"",,,"","00 01 00",false,false,false
+261,22,"Armor",6,46,50,23,168,255,255,255,255,"None","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+262,11,"Riflemen",7,50,94,25,0,255,255,255,255,"None","Fortify","Fortifying",,"",,,"","00 ff 03",false,true,true
+263,11,"Riflemen",7,43,95,21,0,255,255,255,10,"Build Airbase","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+264,11,"Riflemen",7,43,95,21,0,255,255,255,11,"Go To","Fortify","Fortifying",8,"Marseilles",,,"","00 01 03",false,false,true
+265,11,"Riflemen",7,79,93,39,0,255,255,7,11,"Go To","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+266,11,"Riflemen",7,31,97,15,0,255,255,255,13,"Unknown (13)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+267,11,"Riflemen",7,83,93,41,0,255,255,255,12,"Unknown (12)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+268,27,"Fighter",7,45,53,22,0,255,255,255,14,"Unknown (14)","Idle","Idle",,"",,,"","00 01 00",false,false,false
+269,27,"Fighter",7,45,53,22,0,255,255,247,95,"Unknown (95)","Idle","Idle",13,"Beirut",,,"","00 ff 00",false,true,false
+270,22,"Armor",3,66,74,33,0,255,255,12,95,"Unknown (95)","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+271,25,"Artillery",3,56,82,28,0,255,255,210,33,"Unknown (33)","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+272,1,"Engineers",6,41,43,20,0,255,255,205,3,"Sentry","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+273,11,"Riflemen",6,41,43,20,0,255,255,255,15,"Unknown (15)","Fortify","Fortifying",17,"Manchester",,,"","00 ff 03",false,true,true
+274,12,"Marines",6,41,43,20,0,255,255,16,15,"Unknown (15)","Fortify","Fortifying",18,"Belfast",,,"","00 01 03",false,false,true
+275,12,"Marines",6,41,43,20,0,255,255,17,15,"Unknown (15)","Fortify","Fortifying",19,"Newcastle",,,"","00 01 03",false,false,true
+276,11,"Riflemen",6,41,43,20,0,255,255,18,15,"Unknown (15)","Fortify","Fortifying",20,"Edinburgh",,,"","00 01 03",false,false,true
+277,11,"Riflemen",6,42,40,21,0,255,255,19,15,"Unknown (15)","Fortify","Fortifying",52,"Baghdad",,,"","00 01 03",false,false,true
+278,11,"Riflemen",6,42,42,21,0,255,255,255,15,"Unknown (15)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+279,11,"Riflemen",6,42,44,21,0,255,255,255,15,"Unknown (15)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+280,11,"Riflemen",6,41,45,20,128,255,255,255,15,"Unknown (15)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+281,11,"Riflemen",6,41,41,20,0,255,255,255,15,"Unknown (15)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+282,11,"Riflemen",6,40,44,20,0,255,255,255,15,"Unknown (15)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+283,11,"Riflemen",6,36,42,18,0,255,255,255,15,"Unknown (15)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+284,11,"Riflemen",6,36,44,18,0,255,255,255,17,"Unknown (17)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+285,11,"Riflemen",6,36,48,18,0,255,255,255,16,"Unknown (16)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+286,11,"Riflemen",6,38,36,19,0,255,255,255,16,"Unknown (16)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+287,11,"Riflemen",6,40,38,20,0,255,255,255,17,"Unknown (17)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+288,11,"Riflemen",6,38,46,19,0,255,255,255,17,"Unknown (17)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+289,11,"Riflemen",6,38,46,19,0,255,255,255,16,"Unknown (16)","Fortify","Fortifying",33,"Bucharest",,,"","00 01 03",false,false,true
+290,12,"Marines",6,38,46,19,0,255,255,32,16,"Unknown (16)","Fortify","Fortifying",34,"Tripoli",,,"","00 01 03",false,false,true
+291,12,"Marines",6,37,39,18,0,255,255,33,16,"Unknown (16)","Fortify","Fortifying",54,"Mosul",,,"","00 01 03",false,false,true
+292,11,"Riflemen",6,37,39,18,0,255,255,255,17,"Unknown (17)","Fortify","Fortifying",36,"Bergen",,,"","00 01 03",false,false,true
+293,11,"Riflemen",6,37,39,18,0,255,255,35,17,"Unknown (17)","Fortify","Fortifying",37,"Tobruk",,,"","00 01 03",false,false,true
+294,11,"Riflemen",6,38,32,19,0,255,255,36,17,"Unknown (17)","Fortify","Fortifying",50,"Antioch",,,"","00 01 03",false,false,true
+295,11,"Riflemen",6,38,32,19,0,255,255,255,19,"Unknown (19)","Fortify","Fortifying",39,"Tangiers",,,"","00 01 03",false,false,true
+296,11,"Riflemen",6,38,32,19,0,255,255,38,19,"Unknown (19)","Fortify","Fortifying",40,"Lisbon",,,"","00 01 03",false,false,true
+297,11,"Riflemen",6,38,26,19,0,255,255,39,19,"Unknown (19)","Fortify","Fortifying",89,"Belgrade",,,"","00 01 03",false,false,true
+298,11,"Riflemen",6,38,26,19,0,255,255,255,20,"Unknown (20)","Fortify","Fortifying",42,"Zaragosa",,,"","00 01 03",false,false,true
+299,11,"Riflemen",6,38,26,19,0,255,255,41,20,"Unknown (20)","Fortify","Fortifying",43,"Seville",,,"","00 01 03",false,false,true
+300,11,"Riflemen",6,40,22,20,0,255,255,42,20,"Unknown (20)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+301,11,"Riflemen",6,40,22,20,0,255,255,255,97,"Unknown (97)","Fortify","Fortifying",45,"Valencia",,,"","00 01 03",false,false,true
+302,11,"Riflemen",6,33,31,16,0,255,255,44,97,"Unknown (97)","Fortify","Fortifying",80,"Gorky",,,"","00 01 03",false,false,true
+303,11,"Riflemen",6,33,31,16,0,255,255,255,18,"Unknown (18)","Fortify","Fortifying",47,"Ankara",,,"","00 01 03",false,false,true
+304,11,"Riflemen",6,33,31,16,0,255,255,46,18,"Unknown (18)","Fortify","Fortifying",48,"Istanbul",,,"","00 01 03",false,false,true
+305,25,"Artillery",6,33,31,16,0,255,255,47,18,"Unknown (18)","Idle","Idle",49,"Izmir",,,"","00 01 00",false,false,false
+306,22,"Armor",6,37,39,18,0,255,255,48,18,"Unknown (18)","Idle","Idle",87,"Omsk",,,"","00 ff 00",false,true,false
+307,22,"Armor",6,37,39,18,0,255,255,37,17,"Unknown (17)","Idle","Idle",51,"Kars",,,"","00 ff 00",false,true,false
+308,27,"Fighter",6,41,43,20,0,255,255,50,17,"Unknown (17)","Idle","Idle",55,"Suez",,,"","00 ff 00",false,true,false
+309,27,"Fighter",6,41,43,20,0,255,255,20,15,"Unknown (15)","Idle","Idle",53,"Basra",,,"","00 ff 00",false,true,false
+310,27,"Fighter",6,38,46,19,0,255,255,52,15,"Unknown (15)","Idle","Idle",90,"Stockholm",,,"","00 ff 00",false,true,false
+311,27,"Fighter",6,37,39,18,0,255,255,34,16,"Unknown (16)","Idle","Idle",88,"Helsinki",,,"","00 ff 00",false,true,false
+312,43,"Transport",6,3,23,1,8,255,255,51,17,"Unknown (17)","Idle","Idle",,"",,,"","00 ff 03",false,true,true
+313,43,"Transport",6,3,31,1,8,255,255,255,22,"Unknown (22)","Idle","Idle",,"",,,"","00 ff 03",false,true,true
+314,22,"Armor",6,2,22,1,0,255,255,255,21,"Unknown (21)","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+315,22,"Armor",6,2,22,1,0,255,255,255,22,"Unknown (22)","Idle","Idle",59,"Minsk",,,"","00 ff 00",false,true,false
+316,22,"Armor",6,2,22,1,0,255,255,58,22,"Unknown (22)","Idle","Idle",60,"Smolensk",,,"","00 ff 00",false,true,false
+317,22,"Armor",6,2,22,1,0,255,255,59,22,"Unknown (22)","Idle","Idle",61,"Odessa",,,"","00 ff 00",false,true,false
+318,11,"Riflemen",6,2,22,1,0,255,255,60,22,"Unknown (22)","Fortify","Fortifying",62,"Sevastopol",,,"","00 ff 03",false,true,true
+319,11,"Riflemen",6,2,22,1,0,255,255,61,22,"Unknown (22)","Fortify","Fortifying",63,"Moscow",,,"","00 01 03",false,false,true
+320,12,"Marines",6,1,31,0,0,255,255,62,22,"Unknown (22)","Idle","Idle",69,"Kuibyshev",,,"","00 01 00",false,false,false
+321,12,"Marines",6,1,31,0,0,255,255,255,21,"Unknown (21)","Idle","Idle",65,"Krasnovodsk",,,"","00 ff 00",false,true,false
+322,11,"Riflemen",6,1,31,0,0,255,255,64,21,"Unknown (21)","Fortify","Fortifying",66,"Astrakhan",,,"","00 ff 03",false,true,true
+323,11,"Riflemen",6,1,31,0,0,255,255,65,21,"Unknown (21)","Fortify","Fortifying",67,"Grozny",,,"","00 01 03",false,false,true
+324,11,"Riflemen",6,1,31,0,0,255,255,66,21,"Unknown (21)","Fortify","Fortifying",68,"Dnepropetrovsk",,,"","00 01 03",false,false,true
+325,11,"Riflemen",6,2,22,1,0,255,255,67,21,"Unknown (21)","Fortify","Fortifying",29,"Warsaw",,,"","00 01 03",false,false,true
+326,11,"Riflemen",6,2,22,1,0,255,255,63,22,"Unknown (22)","Fortify","Fortifying",70,"Rostov",,,"","00 01 03",false,false,true
+327,11,"Riflemen",6,2,22,1,0,255,255,69,22,"Unknown (22)","Fortify","Fortifying",71,"Kiev",,,"","00 01 03",false,false,true
+328,37,"Destroyer",6,3,25,1,0,255,255,70,22,"Unknown (22)","Idle","Idle",77,"Magnitogorsk",,,"","00 01 00",false,false,false
+329,37,"Destroyer",6,4,30,2,0,255,255,255,22,"Unknown (22)","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+330,22,"Armor",6,1,31,0,0,255,255,255,21,"Unknown (21)","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+331,22,"Armor",6,1,31,0,0,255,255,29,21,"Unknown (21)","Idle","Idle",75,"Kazan",,,"","00 ff 00",false,true,false
+332,22,"Armor",6,1,31,0,0,255,255,74,21,"Unknown (21)","Idle","Idle",76,"Kursk",,,"","00 ff 00",false,true,false
+333,12,"Marines",6,2,22,1,0,255,255,75,21,"Unknown (21)","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+334,12,"Marines",6,2,22,1,0,255,255,71,22,"Unknown (22)","Idle","Idle",78,"Orsk",,,"","00 ff 00",false,true,false
+335,12,"Marines",6,2,22,1,0,255,255,77,22,"Unknown (22)","Idle","Idle",79,"Murmansk",,,"","00 ff 00",false,true,false
+336,40,"Battleship",6,40,22,20,0,255,255,78,22,"Unknown (22)","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+337,40,"Battleship",6,40,22,20,0,255,255,45,16,"Unknown (16)","Idle","Idle",81,"Vologda",,,"","00 ff 00",false,true,false
+338,38,"Cruiser",6,40,22,20,0,255,255,80,16,"Unknown (16)","Idle","Idle",82,"Batum",,,"","00 ff 00",false,true,false
+339,38,"Cruiser",6,40,22,20,0,255,255,81,16,"Unknown (16)","Idle","Idle",83,"Voronezh",,,"","00 ff 00",false,true,false
+340,38,"Cruiser",6,40,22,20,0,255,255,82,16,"Unknown (16)","Idle","Idle",84,"Uralsk",,,"","00 ff 00",false,true,false
+341,40,"Battleship",6,40,22,20,0,255,255,83,16,"Unknown (16)","Idle","Idle",85,"Krasnoyarsk",,,"","00 ff 00",false,true,false
+342,38,"Cruiser",6,40,22,20,0,255,255,84,16,"Unknown (16)","Idle","Idle",86,"Novosibirsk",,,"","00 ff 00",false,true,false
+343,37,"Destroyer",6,33,31,16,0,255,255,85,16,"Unknown (16)","Idle","Idle",93,"Bordeaux",,,"","00 ff 00",false,true,false
+344,37,"Destroyer",6,38,46,19,0,255,255,49,18,"Unknown (18)","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+345,37,"Destroyer",6,38,32,19,0,255,255,54,16,"Unknown (16)","Idle","Idle",92,"Amsterdam",,,"","00 ff 00",false,true,false
+346,37,"Destroyer",6,41,43,20,0,255,255,40,19,"Unknown (19)","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+347,43,"Transport",6,41,43,20,0,255,255,53,15,"Unknown (15)","Idle","Idle",91,"Tehran",,,"","00 ff 00",false,true,false
+348,43,"Transport",6,38,46,19,0,255,255,90,15,"Unknown (15)","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+349,43,"Transport",6,40,22,20,0,255,255,88,16,"Unknown (16)","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+350,11,"Riflemen",6,38,92,19,0,255,255,86,16,"Unknown (16)","Fortify","Fortifying",,"",,,"","00 ff 03",false,true,true
+351,11,"Riflemen",6,38,92,19,0,255,255,255,255,"None","Fortify","Fortifying",95,"Paris",,,"","00 01 03",false,false,true
+352,11,"Riflemen",6,39,91,19,0,255,255,94,255,"None","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+353,27,"Fighter",6,39,91,19,0,255,255,255,255,"None","Idle","Idle",97,"Scapa Flow",,,"","00 01 00",false,false,false
+354,40,"Battleship",6,39,93,19,0,255,255,96,255,"None","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+355,38,"Cruiser",6,38,94,19,16,255,255,255,255,"None","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+356,27,"Fighter",6,56,98,28,0,255,255,255,255,"None","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+357,11,"Riflemen",6,67,91,33,0,255,255,255,255,"None","Fortify","Fortifying",,"",,,"","00 ff 03",false,true,true
+358,43,"Transport",6,73,105,36,0,255,255,25,98,"Unknown (98)","Idle","Idle",,"",,,"","00 01 00",false,false,false
+359,11,"Riflemen",6,73,105,36,0,255,255,255,23,"Unknown (23)","Fortify","Fortifying",,"",,,"","00 ff 03",false,true,true
+360,11,"Riflemen",6,77,107,38,0,255,255,102,23,"Unknown (23)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+361,11,"Riflemen",6,77,107,38,0,255,255,255,55,"Unknown (55)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+362,22,"Armor",6,77,107,38,0,255,255,104,55,"Unknown (55)","Idle","Idle",,"",,,"","00 01 00",false,false,false
+363,11,"Riflemen",6,69,105,34,8,255,255,105,55,"Unknown (55)","Fortify","Fortifying",,"",,,"","00 ff 03",false,true,true
+364,38,"Cruiser",6,73,105,36,0,255,255,255,255,"None","Idle","Idle",,"",,,"","00 01 00",false,false,false
+365,43,"Transport",6,77,107,38,0,255,255,103,23,"Unknown (23)","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+366,11,"Riflemen",6,80,102,40,0,255,255,106,55,"Unknown (55)","Fortify","Fortifying",,"",,,"","00 ff 03",false,true,true
+367,22,"Armor",3,52,50,26,0,255,255,255,56,"Unknown (56)","Idle","Idle",,"",,,"","00 01 00",false,false,false
+368,22,"Armor",3,53,49,26,0,255,255,255,0,"Unknown (0)","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+369,22,"Armor",3,54,50,27,0,255,255,255,0,"Unknown (0)","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+370,22,"Armor",3,56,54,28,0,255,255,255,0,"Unknown (0)","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+371,22,"Armor",1,149,41,74,0,255,255,220,27,"Unknown (27)","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+372,22,"Armor",1,149,39,74,0,255,255,255,255,"None","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+373,22,"Armor",1,148,38,74,0,255,255,255,255,"None","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+374,22,"Armor",1,148,40,74,0,255,255,255,255,"None","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+375,22,"Armor",1,148,38,74,0,255,255,255,255,"None","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+376,22,"Armor",1,148,40,74,0,255,255,117,255,"None","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+377,11,"Riflemen",1,143,39,71,0,255,255,118,255,"None","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+378,11,"Riflemen",1,138,40,69,0,255,255,255,85,"Unknown (85)","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+379,11,"Riflemen",1,141,39,70,0,255,255,255,86,"Unknown (86)","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+380,11,"Riflemen",1,134,44,67,0,255,255,255,85,"Unknown (85)","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+381,10,"Alpine Troops",1,130,44,65,0,255,255,87,86,"Unknown (86)","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+382,11,"Riflemen",1,127,43,63,0,255,255,255,86,"Unknown (86)","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+383,11,"Riflemen",1,123,43,61,0,255,255,255,87,"Unknown (87)","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+384,22,"Armor",1,72,38,36,0,255,255,255,87,"Unknown (87)","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+385,22,"Armor",1,68,26,34,0,255,255,45,60,"Unknown (60)","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+386,22,"Armor",1,76,34,38,0,255,255,39,57,"Unknown (57)","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+387,22,"Armor",1,79,53,39,0,255,255,37,63,"Unknown (63)","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+388,27,"Fighter",1,71,53,35,0,255,255,53,73,"Unknown (73)","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+389,27,"Fighter",1,64,36,32,0,255,255,47,71,"Unknown (71)","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+390,27,"Fighter",1,69,43,34,0,255,255,91,58,"Unknown (58)","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+391,11,"Riflemen",1,70,68,35,0,255,255,43,59,"Unknown (59)","Fortify","Fortifying",,"",,,"","00 ff 03",false,true,true
+392,11,"Riflemen",1,69,65,34,0,255,255,255,61,"Unknown (61)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+393,11,"Riflemen",1,69,61,34,0,255,255,255,61,"Unknown (61)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+394,11,"Riflemen",1,69,57,34,0,255,255,255,61,"Unknown (61)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+395,11,"Riflemen",1,68,54,34,0,255,255,255,71,"Unknown (71)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+396,11,"Riflemen",1,66,48,33,0,255,255,255,71,"Unknown (71)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+397,11,"Riflemen",1,66,44,33,8,255,255,255,255,"None","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+398,11,"Riflemen",1,64,40,32,0,255,255,255,59,"Unknown (59)","Fortify","Fortifying",,"",,,"","00 01 03",false,false,true
+399,1,"Engineers",1,68,26,34,0,255,255,255,58,"Unknown (58)","Idle","Idle",,"",,,"","00 01 00",false,false,false
+400,38,"Cruiser",1,74,68,37,0,255,255,129,57,"Unknown (57)","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+401,43,"Transport",1,74,68,37,0,255,255,51,62,"Unknown (62)","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+402,38,"Cruiser",1,74,68,37,0,255,255,144,62,"Unknown (62)","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+403,13,"Paratroopers",1,102,36,51,0,255,255,145,62,"Unknown (62)","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+404,22,"Armor",2,78,82,39,0,255,255,81,64,"Unknown (64)","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+405,22,"Armor",2,70,80,35,0,255,255,113,47,"Unknown (47)","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+406,22,"Armor",4,39,79,19,0,255,255,105,48,"Unknown (48)","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+407,1,"Engineers",6,1,23,0,0,255,255,93,38,"Unknown (38)","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+408,28,"Bomber",3,50,54,25,0,255,255,255,22,"Unknown (22)","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+409,28,"Bomber",3,50,54,25,0,255,255,164,24,"Unknown (24)","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+410,10,"Alpine Troops",3,50,50,25,0,255,255,152,24,"Unknown (24)","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+411,10,"Alpine Troops",3,52,52,26,0,255,255,255,24,"Unknown (24)","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+412,38,"Cruiser",6,3,31,1,0,255,255,255,24,"Unknown (24)","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+413,1,"Engineers",3,52,58,26,0,255,255,57,21,"Unknown (21)","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+414,27,"Fighter",1,76,34,38,0,255,255,157,26,"Unknown (26)","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+415,37,"Destroyer",6,13,25,6,0,255,255,130,63,"Unknown (63)","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+416,38,"Cruiser",6,32,30,16,0,255,255,255,22,"Unknown (22)","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+417,11,"Riflemen",6,80,94,40,128,255,255,255,18,"Unknown (18)","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+418,37,"Destroyer",6,57,99,28,0,255,255,255,255,"None","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+419,38,"Cruiser",6,77,105,38,0,255,255,255,255,"None","Idle","Idle",,"",,,"","00 ff 00",false,true,false
+420,11,"Riflemen",6,69,95,34,0,255,255,255,55,"Unknown (55)","Idle","Idle",,"",,,"","00 ff 00",false,true,false

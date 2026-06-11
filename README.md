@@ -38,6 +38,8 @@ template-tech-map.json
 template-government-map.json
 ```
 
+## Build Config
+
 Scenario metadata can be set in `build-config.json`. The builder writes these
 values into the Freeciv `[scenario]` section, inserting missing fields when the
 template does not already contain them:
@@ -54,6 +56,265 @@ template does not already contain them:
 
 The older top-level `scenarioName`, `scenarioNames`, `scenarioAuthors`, and
 `scenarioDescription` fields are also accepted for existing scenario configs.
+
+Long scenario descriptions can be read from a separate text file:
+
+```json
+{
+  "scenario": {
+    "name": "Spanish-American War - Civ2",
+    "authors": "Lucius Papirius Cursor",
+    "description": "Fallback description if the file is missing.",
+    "descriptionFile": "Havana.txt",
+    "descriptionEncoding": "windows-1252"
+  }
+}
+```
+
+If `descriptionFile` is missing, invalid, or cannot be decoded with the
+requested encoding, the builder falls back to `description`.
+
+## Conversion Config
+
+`conversion-config.json` controls scenario-specific conversion behavior. The
+build config points to it with:
+
+```json
+{
+  "conversionConfig": "conversion-config.json"
+}
+```
+
+A minimal conversion config looks like this:
+
+```json
+{
+  "year": "1898",
+  "players": [
+    {
+      "owner": 1,
+      "name": "Sagasta",
+      "gender": "male",
+      "nation": "Spanish",
+      "government": "Monarchy",
+      "gold": "500",
+      "style": "European",
+      "color": [200, 0, 0]
+    }
+  ]
+}
+```
+
+### Top-Level Fields
+
+- `year`: optional string integer written to the Freeciv save year.
+- `players`: required array mapping Civ2 owner ids to Freeciv players.
+- `mapFeatureOverrides`: optionally skips Civ2 tile features during build.
+- `mapFeatureTransforms`: optionally converts one Civ2 tile feature into another.
+- `terrainOverrides`: optionally converts terrain types and can add extras to changed tiles.
+- `resourceOverrides`: optionally removes resource bonuses from the map.
+- `cityImprovementOverrides`: optionally adds or removes city improvements by city name.
+
+### Players
+
+Each `players` entry maps one Civ2 owner/faction to one Freeciv player:
+
+```json
+{
+  "owner": 1,
+  "name": "Sagasta",
+  "gender": "male",
+  "nation": "Spanish",
+  "government": "Monarchy",
+  "gold": "500",
+  "style": "European",
+  "color": [200, 0, 0],
+  "barbarianType": "Land"
+}
+```
+
+Fields:
+
+- `owner`: required Civ2 owner id from extraction.
+- `name`: optional Freeciv leader name. If empty, the extracted Civ2 leader is used.
+- `gender`: optional `male` or `female`.
+- `nation`: required Freeciv nation name. It must exist in the target ruleset.
+- `government`: optional Freeciv government name. If empty, the builder maps the Civ2 government through the government map.
+- `gold`: optional string integer. If empty, the extracted Civ2 gold is used.
+- `style`: optional city style name. Defaults to `European`.
+- `color`: required RGB array, for example `[200, 0, 0]`.
+- `barbarianType`: optional for barbarian players. Defaults to `Land` when the player is barbarian.
+
+Nation, government, style, unit, improvement, tech, terrain, extra, and resource
+names are target-ruleset dependent. If the Freeciv server says a nation is
+invalid, check that the `nation` value exists in the target ruleset's nations
+file.
+
+### Player Tech Overrides
+
+`techOverrides` can be set inside a player entry:
+
+```json
+{
+  "owner": 1,
+  "name": "Sagasta",
+  "nation": "Spanish",
+  "color": [200, 0, 0],
+  "techOverrides": {
+    "add": ["Railroad", "Industrialization"],
+    "remove": ["Theology"],
+    "copyFromOwner": 2
+  }
+}
+```
+
+- `add`: Freeciv tech names to grant to this player.
+- `remove`: Freeciv tech names to remove from this player.
+- `copyFromOwner`: copies mapped techs from another Civ2 owner id after normal tech mapping. This behaves like a union; it does not remove techs the destination player already has.
+
+### Map Feature Overrides
+
+`mapFeatureOverrides` skips Civ2 features from being written as Freeciv extras:
+
+```json
+{
+  "mapFeatureOverrides": {
+    "skip": ["airbase", "pollution"]
+  }
+}
+```
+
+The older `skipCiv2Features` field is also accepted:
+
+```json
+{
+  "mapFeatureOverrides": {
+    "skipCiv2Features": ["airbase"]
+  }
+}
+```
+
+Common aliases include `river`, `irrigation`, `mine`, `farmland`, `road`,
+`railroad`, `fortress`, `airbase`, `pollution`, `resource`, and `hut`.
+
+### Map Feature Transforms
+
+`mapFeatureTransforms` converts one Civ2 tile feature into another as the map is
+built:
+
+```json
+{
+  "mapFeatureTransforms": {
+    "replace": {
+      "airbase": "fortress",
+      "road": "railroad"
+    }
+  }
+}
+```
+
+This transforms Civ2 features coming from the scenario. It does not transform
+arbitrary extras that already exist in the Freeciv template.
+
+### Terrain Overrides
+
+`terrainOverrides` converts one terrain type into another:
+
+```json
+{
+  "terrainOverrides": {
+    "replace": {
+      "tundra": "plains",
+      "glacier": "ocean"
+    }
+  }
+}
+```
+
+Use an object value to convert terrain and add tile improvements/extras to the
+tiles that were changed:
+
+```json
+{
+  "terrainOverrides": {
+    "replace": {
+      "tundra": {
+        "terrain": "grassland",
+        "add": ["farmland", "road"]
+      },
+      "glacier": {
+        "terrain": "hills",
+        "add": ["mine"]
+      }
+    }
+  }
+}
+```
+
+Terrain names are resolved against the target `terrain.ruleset`. Common aliases
+such as `grassland`, `plains`, `hills`, `mountains`, `ocean`, and `lake` are
+accepted when the target ruleset supports them. `inaccessible` is supported as a
+target terrain, but not as a source terrain.
+
+The `add` list currently supports tile improvements/extras such as `irrigation`,
+`farmland`, `mine`, `road`, `railroad`, `fort`, `fortress`, and `airbase` when
+those extras exist in the target template/ruleset. It does not currently add
+resource bonuses.
+
+### Resource Overrides
+
+`resourceOverrides` removes resource bonuses globally:
+
+```json
+{
+  "resourceOverrides": {
+    "remove": ["ivory", "resources"]
+  }
+}
+```
+
+Resource names are read from the target `terrain.ruleset` resource sections and
+validated against the Freeciv template's `extras_vector`.
+
+### City Improvement Overrides
+
+`cityImprovementOverrides` manually adds or removes improvements from named
+cities:
+
+```json
+{
+  "cityImprovementOverrides": {
+    "Rome": {
+      "add": ["Palace", "Barracks"],
+      "remove": ["Granary"]
+    }
+  }
+}
+```
+
+Improvement names are resolved through the improvement map and target buildings
+ruleset. Duplicate improvements are not added twice; the final city improvement
+vector is a bitset.
+
+### Empty Mapping Values
+
+The unit, improvement, and tech map files can intentionally skip an item by
+mapping it to an empty string:
+
+```json
+{
+  "A. Regulars": ""
+}
+```
+
+For units, the build terminal distinguishes grouped report entries from actual
+unit instance counts:
+
+```text
+Unmapped unit report entries: 2
+Units skipped by empty unit map entry: 1
+Mapped units not placed on map: 0
+```
 
 Government maps are keyed by the Civ2 government name from `rules.txt`, for example
 `"Communism": "Communism"`. The builder still accepts older raw-byte keys such as

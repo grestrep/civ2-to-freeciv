@@ -1,0 +1,103 @@
+{
+    "year":  "1939",
+    "players":  [
+                    {
+                        "owner":  1,
+                        "name":  "",
+						"gender": "",
+                        "nation":  "Soviet",
+						"government": "",
+						"gold": "",
+                        "color":  [
+                                      255,
+                                      0,
+                                      0
+                                  ],
+                        "style":  "European"
+                    },
+                    {
+                        "owner":  2,
+                        "name":  "",
+						"gender": "",
+                        "nation":  "Turkish",
+						"government": "",
+						"gold": "",
+                        "color":  [
+                                      128,
+                                      0,
+                                      128
+                                  ],
+                        "style":  "European"
+                    },
+                    {
+                        "owner":  3,
+                        "name":  "",
+						"gender": "",
+                        "nation":  "German",
+						"government": "",
+						"gold": "",
+                        "color":  [
+                                      255,
+                                      255,
+                                      0
+                                  ],
+                        "style":  "European"
+                    },
+                    {
+                        "owner":  4,
+                        "name":  "",
+						"gender": "",
+                        "nation":  "Spanish",
+						"government": "",
+						"gold": "",
+                        "color":  [
+                                      255,
+                                      165,
+                                      0
+                                  ],
+                        "style":  "European"
+                    },
+                    {
+                        "owner":  5,
+                        "name":  "",
+						"gender": "",
+                        "nation":  "UN",
+						"government": "",
+						"gold": "",
+                        "color":  [
+                                      64,
+                                      224,
+                                      208
+                                  ],
+                        "style":  "European"
+                    },
+                    {
+                        "owner":  6,
+                        "name":  "",
+						"gender": "",
+                        "nation":  "British",
+						"government": "",
+						"gold": "",
+                        "color":  [
+                                      0,
+                                      0,
+                                      255
+                                  ],
+                        "style":  "European"
+                    },
+                    {
+                        "owner":  7,
+                        "name":  "",
+						"gender": "",
+                        "nation":  "French",
+						"government": "",
+						"gold": "",
+                        "color":  [
+                                      250,
+                                      250,
+                                      250
+                                  ],
+                        "style":  "European"
+                    }
+                ]
+}

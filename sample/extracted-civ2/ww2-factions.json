@@ -1,0 +1,1222 @@
+{
+  "input": "ww2.SCN",
+  "header": {
+    "magic": "CIVILIZE\u0000",
+    "marker": 26,
+    "version": 39
+  },
+  "calendar": {
+    "notes": [
+      "Raw candidate fields only; the visible Civ2 month/year is not decoded from these yet.",
+      "In the Civil War scenario, turnCounterCandidate 1 displays as July 1861 and 2 displays as August 1861."
+    ],
+    "turnCounterCandidate": 1,
+    "turnCounterOffset": 28,
+    "dateWordCandidate": 23285,
+    "dateWordHex": "0x5af5",
+    "dateWordOffset": 30,
+    "rawHeaderBytes0x10To0x27": "16 00 04 00 d4 00 00 00 16 00 00 00 01 00 f5 5a ff ff 7f 00 00 00 00 03"
+  },
+  "layout": "Classic/CiC",
+  "inferred": {
+    "tribeNameOffset": 570,
+    "tribeNameRecordSize": 242,
+    "tribeInfoOffset": 2264,
+    "tribeInfoRecordSize": 1396
+  },
+  "notes": [
+    "ownerCandidate is the Civ2 tribe/player id seen in city and unit records.",
+    "Faction entries include ownerCandidate values that own at least one extracted city or one extracted unit.",
+    "Unit-only faction detection ignores inactive MGE unit slots and unit owner candidates outside 0..7.",
+    "ownerCandidate 0 is barbarian; playable tribe-name records cover ownerCandidate 1..7.",
+    "Use this file to decide the manual Freeciv conversion config players array.",
+    "governmentName is decoded from the Civ2 @GOVERNMENTS section when rules.txt is configured."
+  ],
+  "governments": [
+    {
+      "index": 0,
+      "name": "Anarchy",
+      "maleTitle": "Mr.",
+      "femaleTitle": "Ms.",
+      "raw": "Anarchy,        Mr.,         Ms."
+    },
+    {
+      "index": 1,
+      "name": "Despotism",
+      "maleTitle": "Emperor",
+      "femaleTitle": "Empress",
+      "raw": "Despotism,      Emperor,     Empress"
+    },
+    {
+      "index": 2,
+      "name": "Monarchy",
+      "maleTitle": "King",
+      "femaleTitle": "Queen",
+      "raw": "Monarchy,       King,        Queen"
+    },
+    {
+      "index": 3,
+      "name": "Communism",
+      "maleTitle": "Comrade",
+      "femaleTitle": "Comrade",
+      "raw": "Communism,      Comrade,     Comrade"
+    },
+    {
+      "index": 4,
+      "name": "Fundamentalism",
+      "maleTitle": "High Priest",
+      "femaleTitle": "High Priestess",
+      "raw": "Fundamentalism, High Priest, High Priestess"
+    },
+    {
+      "index": 5,
+      "name": "Republic",
+      "maleTitle": "Consul",
+      "femaleTitle": "Consul",
+      "raw": "Republic,       Consul,      Consul"
+    },
+    {
+      "index": 6,
+      "name": "Democracy",
+      "maleTitle": "President",
+      "femaleTitle": "President",
+      "raw": "Democracy,      President,   President"
+    }
+  ],
+  "rulesLeaders": [
+    {
+      "index": 0,
+      "maleLeader": "Caesar",
+      "femaleLeader": "Livia",
+      "femaleLeaderPreferred": false,
+      "color": 1,
+      "style": 1,
+      "plural": "Romans",
+      "adjective": "Roman",
+      "raw": "Caesar,       Livia,               0, 1, 1, Romans,      Roman,       0,  1,  1,     1, Dictator, Dictator, 2, Imperator, Imperatrix"
+    },
+    {
+      "index": 1,
+      "maleLeader": "Hammurabi",
+      "femaleLeader": "Ishtari",
+      "femaleLeaderPreferred": false,
+      "color": 2,
+      "style": 0,
+      "plural": "Babylonians",
+      "adjective": "Babylonian",
+      "raw": "Hammurabi,    Ishtari,             0, 2, 0, Babylonians, Babylonian, -1, -1,  1,"
+    },
+    {
+      "index": 2,
+      "maleLeader": "Frederick",
+      "femaleLeader": "Maria Theresa",
+      "femaleLeaderPreferred": false,
+      "color": 3,
+      "style": 3,
+      "plural": "Germans",
+      "adjective": "German",
+      "raw": "Frederick,    Maria Theresa,       0, 3, 3, Germans,     German,      1, -1,  1,     4, Archbishop, Archbishop, 6, Chancellor, Chancellor"
+    },
+    {
+      "index": 3,
+      "maleLeader": "Ramesses",
+      "femaleLeader": "Cleopatra",
+      "femaleLeaderPreferred": true,
+      "color": 4,
+      "style": 0,
+      "plural": "Egyptians",
+      "adjective": "Egyptian",
+      "raw": "Ramesses,     Cleopatra,           1, 4, 0, Egyptians,   Egyptian,    0,  0,  1,     1, Pharaoh, Pharaoh, 2, Great Pharaoh, Great Pharaoh"
+    },
+    {
+      "index": 4,
+      "maleLeader": "Abe Lincoln",
+      "femaleLeader": "E. Roosevelt",
+      "femaleLeaderPreferred": false,
+      "color": 5,
+      "style": 1,
+      "plural": "Americans",
+      "adjective": "American",
+      "raw": "Abe Lincoln,  E. Roosevelt,        0, 5, 1, Americans,   American,   -1,  0,  1,     4, Reverend, Reverend, 5, Speaker, Speaker"
+    },
+    {
+      "index": 5,
+      "maleLeader": "Alexander",
+      "femaleLeader": "Hippolyta",
+      "femaleLeaderPreferred": true,
+      "color": 6,
+      "style": 1,
+      "plural": "Greeks",
+      "adjective": "Greek",
+      "raw": "Alexander,    Hippolyta,           1, 6, 1, Greeks,      Greek,       0,  1, -1,     6, Prime Minister, Prime Minister"
+    },
+    {
+      "index": 6,
+      "maleLeader": "Mohandas Gandhi",
+      "femaleLeader": "Indira Gandhi",
+      "femaleLeaderPreferred": false,
+      "color": 7,
+      "style": 2,
+      "plural": "Indians",
+      "adjective": "Indian",
+      "raw": "Mohandas Gandhi,Indira Gandhi,     0, 7, 2, Indians,     Indian,     -1, -1,  0,     2, Maharaja, Maharaja,"
+    },
+    {
+      "index": 7,
+      "maleLeader": "Lenin",
+      "femaleLeader": "Catherine the Great",
+      "femaleLeaderPreferred": true,
+      "color": 1,
+      "style": 3,
+      "plural": "Russians",
+      "adjective": "Russian",
+      "raw": "Lenin,        Catherine the Great, 1, 1, 3, Russians,    Russian,     1,  0, -1,     2, Czar, Czarina, 4, Patriarch, Matriarch"
+    },
+    {
+      "index": 8,
+      "maleLeader": "Shaka",
+      "femaleLeader": "Shakala",
+      "femaleLeaderPreferred": false,
+      "color": 2,
+      "style": 0,
+      "plural": "Zulus",
+      "adjective": "Zulu",
+      "raw": "Shaka,        Shakala,             0, 2, 0, Zulus,       Zulu,        1,  0,  0,"
+    },
+    {
+      "index": 9,
+      "maleLeader": "Louis XIV",
+      "femaleLeader": "Joan of Arc",
+      "femaleLeaderPreferred": false,
+      "color": 3,
+      "style": 3,
+      "plural": "French",
+      "adjective": "French",
+      "raw": "Louis XIV,    Joan of Arc,         0, 3, 3, French,      French,      1,  1,  1,     4, Archbishop, Archbishop, 6, Premier, Premier"
+    },
+    {
+      "index": 10,
+      "maleLeader": "Montezuma",
+      "femaleLeader": "Nazca",
+      "femaleLeaderPreferred": false,
+      "color": 4,
+      "style": 0,
+      "plural": "Aztecs",
+      "adjective": "Aztec",
+      "raw": "Montezuma,    Nazca,               0, 4, 0, Aztecs,      Aztec,       0, -1,  1,"
+    },
+    {
+      "index": 11,
+      "maleLeader": "Mao Tse Tung",
+      "femaleLeader": "Wu Zhao",
+      "femaleLeaderPreferred": false,
+      "color": 5,
+      "style": 2,
+      "plural": "Chinese",
+      "adjective": "Chinese",
+      "raw": "Mao Tse Tung, Wu Zhao,             0, 5, 2, Chinese,     Chinese,     0,  0,  1,     3, Chairman, Chairperson"
+    },
+    {
+      "index": 12,
+      "maleLeader": "Henry VIII",
+      "femaleLeader": "Elizabeth I",
+      "femaleLeaderPreferred": true,
+      "color": 6,
+      "style": 3,
+      "plural": "English",
+      "adjective": "English",
+      "raw": "Henry VIII,   Elizabeth I,         1, 6, 3, English,     English,     0,  1,  0,     4, Lord Protector, Lady Protector, 6, Prime Minister, Prime Minister"
+    },
+    {
+      "index": 13,
+      "maleLeader": "Genghis Khan",
+      "femaleLeader": "Bortei",
+      "femaleLeaderPreferred": false,
+      "color": 7,
+      "style": 0,
+      "plural": "Mongols",
+      "adjective": "Mongol",
+      "raw": "Genghis Khan, Bortei,              0, 7, 0, Mongols,     Mongol,      1,  1, -1,"
+    },
+    {
+      "index": 14,
+      "maleLeader": "Cunobelin",
+      "femaleLeader": "Boadicea",
+      "femaleLeaderPreferred": true,
+      "color": 1,
+      "style": 0,
+      "plural": "Celts",
+      "adjective": "Celtic",
+      "raw": "Cunobelin,    Boadicea,            1, 1, 0, Celts,       Celtic,     -1,  1,  0,     4, Druid, Druid"
+    },
+    {
+      "index": 15,
+      "maleLeader": "Tokugawa",
+      "femaleLeader": "Amaterasu",
+      "femaleLeaderPreferred": false,
+      "color": 2,
+      "style": 2,
+      "plural": "Japanese",
+      "adjective": "Japanese",
+      "raw": "Tokugawa,     Amaterasu,           0, 2, 2, Japanese,    Japanese,    1, -1, -1,     2, Shogun, Shogun, 6, Prime Minister, Prime Minister"
+    },
+    {
+      "index": 16,
+      "maleLeader": "Canute",
+      "femaleLeader": "Gunnhild",
+      "femaleLeaderPreferred": true,
+      "color": 3,
+      "style": 3,
+      "plural": "Vikings",
+      "adjective": "Viking",
+      "raw": "Canute,       Gunnhild,            1, 3, 3, Vikings,     Viking,      1,  1,  0,     1, Warlord, Warlord"
+    },
+    {
+      "index": 17,
+      "maleLeader": "Philip II",
+      "femaleLeader": "Isabella",
+      "femaleLeaderPreferred": true,
+      "color": 4,
+      "style": 3,
+      "plural": "Spanish",
+      "adjective": "Spanish",
+      "raw": "Philip II,    Isabella,            1, 4, 3, Spanish,     Spanish,    -1,  1, -1,     4, Archbishop, Archbishop"
+    },
+    {
+      "index": 18,
+      "maleLeader": "Xerxes",
+      "femaleLeader": "Scheherezade",
+      "femaleLeaderPreferred": false,
+      "color": 5,
+      "style": 0,
+      "plural": "Persians",
+      "adjective": "Persian",
+      "raw": "Xerxes,       Scheherezade,        0, 5, 0, Persians,    Persian,     0, -1,  0,     2, Shah, Shah,  4, Ayatollah, Ayatollah"
+    },
+    {
+      "index": 19,
+      "maleLeader": "Hannibal",
+      "femaleLeader": "Dido",
+      "femaleLeaderPreferred": false,
+      "color": 6,
+      "style": 1,
+      "plural": "Carthaginians",
+      "adjective": "Carthaginian",
+      "raw": "Hannibal,     Dido,                0, 6, 1, Carthaginians, Carthaginian, 0,  0, -1,"
+    },
+    {
+      "index": 20,
+      "maleLeader": "Sitting Bull",
+      "femaleLeader": "Sacajawea",
+      "femaleLeaderPreferred": false,
+      "color": 7,
+      "style": 0,
+      "plural": "Sioux",
+      "adjective": "Sioux",
+      "raw": "Sitting Bull, Sacajawea,           0, 7, 0, Sioux,       Sioux,       0,  0,  0,     1, Chief, Chief, 2, Great Chief, Great Chief"
+    },
+    {
+      "index": 21,
+      "maleLeader": "Saladin",
+      "femaleLeader": "...",
+      "femaleLeaderPreferred": false,
+      "color": 5,
+      "style": null,
+      "plural": "Arab",
+      "adjective": "1",
+      "raw": "Saladin,    ...,     0, 5, Arabs,       Arab,        1,  0,  1,     4, Ayatollah, Ayatollah, 2, Sultan, Sultana"
+    },
+    {
+      "index": 22,
+      "maleLeader": "Atawallpa",
+      "femaleLeader": "...",
+      "femaleLeaderPreferred": false,
+      "color": 1,
+      "style": null,
+      "plural": "Inca",
+      "adjective": "-1",
+      "raw": "Atawallpa,  ...,     0, 1, Incas,       Inca,       -1,  1,  1,"
+    }
+  ],
+  "factions": [
+    {
+      "ownerCandidate": 0,
+      "kind": "barbarian",
+      "leader": "",
+      "plural": "",
+      "adjective": "",
+      "nameSources": {
+        "leader": "empty",
+        "plural": "empty",
+        "adjective": "empty"
+      },
+      "rulesLeaderFallback": null,
+      "cityStyleRaw": null,
+      "cityStyle": "Unknown",
+      "leaderTitles": {},
+      "savedNameStrings": [],
+      "nameStrings": [],
+      "cityCount": 0,
+      "cityExamples": [],
+      "unitCount": 8,
+      "unitExamples": [
+        {
+          "index": 4,
+          "typeName": "Fanatics",
+          "x": 83,
+          "y": 105
+        },
+        {
+          "index": 5,
+          "typeName": "Fanatics",
+          "x": 85,
+          "y": 101
+        },
+        {
+          "index": 6,
+          "typeName": "Fanatics",
+          "x": 91,
+          "y": 105
+        },
+        {
+          "index": 7,
+          "typeName": "Fanatics",
+          "x": 89,
+          "y": 111
+        },
+        {
+          "index": 17,
+          "typeName": "Alpine Troops",
+          "x": 52,
+          "y": 68
+        },
+        {
+          "index": 18,
+          "typeName": "Alpine Troops",
+          "x": 50,
+          "y": 68
+        },
+        {
+          "index": 19,
+          "typeName": "Partisans",
+          "x": 32,
+          "y": 38
+        },
+        {
+          "index": 24,
+          "typeName": "Partisans",
+          "x": 31,
+          "y": 33
+        }
+      ],
+      "treasury": 0,
+      "genderByte": 0,
+      "gender": "male",
+      "nationByte": 0,
+      "governmentByte": 1,
+      "governmentName": "Despotism",
+      "taxRate": 20,
+      "scienceRate": 60,
+      "luxuryRate": 20,
+      "currentResearchIndex": null,
+      "currentResearchName": "",
+      "researchProgress": 0,
+      "knownTechnologyCount": 0
+    },
+    {
+      "ownerCandidate": 1,
+      "kind": "tribe",
+      "leader": "Stalin",
+      "plural": "Russians",
+      "adjective": "Russian",
+      "nameSources": {
+        "leader": "save",
+        "plural": "save",
+        "adjective": "save"
+      },
+      "rulesLeaderFallback": {
+        "index": 7,
+        "maleLeader": "Lenin",
+        "femaleLeader": "Catherine the Great",
+        "plural": "Russians",
+        "adjective": "Russian"
+      },
+      "cityStyleRaw": 0,
+      "cityStyle": "Bronze Age",
+      "leaderTitles": {
+        "Anarchy": "",
+        "Despotism": "",
+        "Monarchy": "",
+        "Communism": "",
+        "Fundamentalism": "",
+        "Republic": "",
+        "Democracy": ""
+      },
+      "savedNameStrings": [
+        "Stalin",
+        "Russians",
+        "Russian"
+      ],
+      "nameStrings": [
+        "Stalin",
+        "Russians",
+        "Russian"
+      ],
+      "cityCount": 31,
+      "cityExamples": [
+        "Leningrad",
+        "Riga",
+        "Minsk",
+        "Smolensk",
+        "Odessa",
+        "Sevastopol",
+        "Moscow",
+        "Sverdlovsk"
+      ],
+      "unitCount": 92,
+      "unitExamples": [
+        {
+          "index": 8,
+          "typeName": "Engineers",
+          "x": 75,
+          "y": 57
+        },
+        {
+          "index": 9,
+          "typeName": "Engineers",
+          "x": 76,
+          "y": 34
+        },
+        {
+          "index": 35,
+          "typeName": "Riflemen",
+          "x": 76,
+          "y": 34
+        },
+        {
+          "index": 36,
+          "typeName": "Riflemen",
+          "x": 76,
+          "y": 34
+        },
+        {
+          "index": 37,
+          "typeName": "Riflemen",
+          "x": 76,
+          "y": 34
+        },
+        {
+          "index": 38,
+          "typeName": "Riflemen",
+          "x": 68,
+          "y": 26
+        },
+        {
+          "index": 39,
+          "typeName": "Riflemen",
+          "x": 68,
+          "y": 26
+        },
+        {
+          "index": 40,
+          "typeName": "Riflemen",
+          "x": 64,
+          "y": 36
+        }
+      ],
+      "treasury": 900,
+      "genderByte": 0,
+      "gender": "male",
+      "nationByte": 7,
+      "governmentByte": 3,
+      "governmentName": "Communism",
+      "taxRate": 80,
+      "scienceRate": 10,
+      "luxuryRate": 10,
+      "currentResearchIndex": null,
+      "currentResearchName": "",
+      "researchProgress": 35,
+      "knownTechnologyCount": 63
+    },
+    {
+      "ownerCandidate": 2,
+      "kind": "tribe",
+      "leader": "Inonu",
+      "plural": "Turks",
+      "adjective": "Turkish",
+      "nameSources": {
+        "leader": "save",
+        "plural": "save",
+        "adjective": "save"
+      },
+      "rulesLeaderFallback": {
+        "index": 1,
+        "maleLeader": "Hammurabi",
+        "femaleLeader": "Ishtari",
+        "plural": "Babylonians",
+        "adjective": "Babylonian"
+      },
+      "cityStyleRaw": 0,
+      "cityStyle": "Bronze Age",
+      "leaderTitles": {
+        "Anarchy": "",
+        "Despotism": "",
+        "Monarchy": "",
+        "Communism": "",
+        "Fundamentalism": "",
+        "Republic": "",
+        "Democracy": ""
+      },
+      "savedNameStrings": [
+        "Inonu",
+        "Turks",
+        "Turkish"
+      ],
+      "nameStrings": [
+        "Inonu",
+        "Turks",
+        "Turkish"
+      ],
+      "cityCount": 5,
+      "cityExamples": [
+        "Ankara",
+        "Istanbul",
+        "Izmir",
+        "Antioch",
+        "Kars"
+      ],
+      "unitCount": 12,
+      "unitExamples": [
+        {
+          "index": 104,
+          "typeName": "Riflemen",
+          "x": 70,
+          "y": 80
+        },
+        {
+          "index": 105,
+          "typeName": "Riflemen",
+          "x": 70,
+          "y": 80
+        },
+        {
+          "index": 106,
+          "typeName": "Riflemen",
+          "x": 78,
+          "y": 82
+        },
+        {
+          "index": 107,
+          "typeName": "Riflemen",
+          "x": 78,
+          "y": 82
+        },
+        {
+          "index": 108,
+          "typeName": "Alpine Troops",
+          "x": 88,
+          "y": 80
+        },
+        {
+          "index": 109,
+          "typeName": "Riflemen",
+          "x": 88,
+          "y": 80
+        },
+        {
+          "index": 110,
+          "typeName": "Riflemen",
+          "x": 70,
+          "y": 86
+        },
+        {
+          "index": 111,
+          "typeName": "Riflemen",
+          "x": 79,
+          "y": 87
+        }
+      ],
+      "treasury": 50,
+      "genderByte": 0,
+      "gender": "male",
+      "nationByte": 1,
+      "governmentByte": 2,
+      "governmentName": "Monarchy",
+      "taxRate": 50,
+      "scienceRate": 40,
+      "luxuryRate": 10,
+      "currentResearchIndex": null,
+      "currentResearchName": "",
+      "researchProgress": 0,
+      "knownTechnologyCount": 61
+    },
+    {
+      "ownerCandidate": 3,
+      "kind": "tribe",
+      "leader": "Hitler",
+      "plural": "Axis",
+      "adjective": "Axis",
+      "nameSources": {
+        "leader": "save",
+        "plural": "save",
+        "adjective": "save"
+      },
+      "rulesLeaderFallback": {
+        "index": 2,
+        "maleLeader": "Frederick",
+        "femaleLeader": "Maria Theresa",
+        "plural": "Germans",
+        "adjective": "German"
+      },
+      "cityStyleRaw": 1,
+      "cityStyle": "Classical",
+      "leaderTitles": {
+        "Anarchy": "",
+        "Despotism": "",
+        "Monarchy": "",
+        "Communism": "",
+        "Fundamentalism": "",
+        "Republic": "",
+        "Democracy": ""
+      },
+      "savedNameStrings": [
+        "Hitler",
+        "Axis",
+        "Axis"
+      ],
+      "nameStrings": [
+        "Hitler",
+        "Axis"
+      ],
+      "cityCount": 22,
+      "cityExamples": [
+        "Berlin",
+        "Vienna",
+        "Munich",
+        "Rome",
+        "Milan",
+        "Venice",
+        "Taranto",
+        "Cologne"
+      ],
+      "unitCount": 136,
+      "unitExamples": [
+        {
+          "index": 0,
+          "typeName": "Alpine Troops",
+          "x": 54,
+          "y": 48
+        },
+        {
+          "index": 1,
+          "typeName": "Alpine Troops",
+          "x": 54,
+          "y": 48
+        },
+        {
+          "index": 2,
+          "typeName": "Riflemen",
+          "x": 54,
+          "y": 48
+        },
+        {
+          "index": 10,
+          "typeName": "Riflemen",
+          "x": 69,
+          "y": 19
+        },
+        {
+          "index": 11,
+          "typeName": "Alpine Troops",
+          "x": 66,
+          "y": 26
+        },
+        {
+          "index": 12,
+          "typeName": "Riflemen",
+          "x": 67,
+          "y": 25
+        },
+        {
+          "index": 13,
+          "typeName": "Riflemen",
+          "x": 66,
+          "y": 26
+        },
+        {
+          "index": 14,
+          "typeName": "Alpine Troops",
+          "x": 64,
+          "y": 28
+        }
+      ],
+      "treasury": 1500,
+      "genderByte": 0,
+      "gender": "male",
+      "nationByte": 2,
+      "governmentByte": 5,
+      "governmentName": "Republic",
+      "taxRate": 50,
+      "scienceRate": 30,
+      "luxuryRate": 20,
+      "currentResearchIndex": 73,
+      "currentResearchName": "Rocketry",
+      "researchProgress": 1,
+      "knownTechnologyCount": 66
+    },
+    {
+      "ownerCandidate": 4,
+      "kind": "tribe",
+      "leader": "Franco",
+      "plural": "Spanish",
+      "adjective": "Spanish",
+      "nameSources": {
+        "leader": "save",
+        "plural": "save",
+        "adjective": "save"
+      },
+      "rulesLeaderFallback": {
+        "index": 17,
+        "maleLeader": "Philip II",
+        "femaleLeader": "Isabella",
+        "plural": "Spanish",
+        "adjective": "Spanish"
+      },
+      "cityStyleRaw": 0,
+      "cityStyle": "Bronze Age",
+      "leaderTitles": {
+        "Anarchy": "",
+        "Despotism": "",
+        "Monarchy": "",
+        "Communism": "",
+        "Fundamentalism": "",
+        "Republic": "",
+        "Democracy": ""
+      },
+      "savedNameStrings": [
+        "Franco",
+        "Spanish",
+        "Spanish"
+      ],
+      "nameStrings": [
+        "Franco",
+        "Spanish"
+      ],
+      "cityCount": 9,
+      "cityExamples": [
+        "Madrid",
+        "Tangiers",
+        "Lisbon",
+        "Barcelona",
+        "Zaragosa",
+        "Seville",
+        "Vigo",
+        "Valencia"
+      ],
+      "unitCount": 15,
+      "unitExamples": [
+        {
+          "index": 21,
+          "typeName": "Riflemen",
+          "x": 45,
+          "y": 75
+        },
+        {
+          "index": 22,
+          "typeName": "Riflemen",
+          "x": 43,
+          "y": 73
+        },
+        {
+          "index": 23,
+          "typeName": "Alpine Troops",
+          "x": 39,
+          "y": 79
+        },
+        {
+          "index": 93,
+          "typeName": "Riflemen",
+          "x": 39,
+          "y": 79
+        },
+        {
+          "index": 94,
+          "typeName": "Riflemen",
+          "x": 46,
+          "y": 86
+        },
+        {
+          "index": 95,
+          "typeName": "Riflemen",
+          "x": 37,
+          "y": 87
+        },
+        {
+          "index": 96,
+          "typeName": "Riflemen",
+          "x": 37,
+          "y": 87
+        },
+        {
+          "index": 97,
+          "typeName": "Riflemen",
+          "x": 42,
+          "y": 84
+        }
+      ],
+      "treasury": 50,
+      "genderByte": 0,
+      "gender": "male",
+      "nationByte": 17,
+      "governmentByte": 2,
+      "governmentName": "Monarchy",
+      "taxRate": 70,
+      "scienceRate": 20,
+      "luxuryRate": 10,
+      "currentResearchIndex": null,
+      "currentResearchName": "",
+      "researchProgress": 0,
+      "knownTechnologyCount": 61
+    },
+    {
+      "ownerCandidate": 5,
+      "kind": "tribe",
+      "leader": "Neutral Leader",
+      "plural": "Neutrals",
+      "adjective": "Neutral",
+      "nameSources": {
+        "leader": "save",
+        "plural": "save",
+        "adjective": "save"
+      },
+      "rulesLeaderFallback": {
+        "index": 18,
+        "maleLeader": "Xerxes",
+        "femaleLeader": "Scheherezade",
+        "plural": "Persians",
+        "adjective": "Persian"
+      },
+      "cityStyleRaw": 0,
+      "cityStyle": "Bronze Age",
+      "leaderTitles": {
+        "Anarchy": "",
+        "Despotism": "",
+        "Monarchy": "",
+        "Communism": "",
+        "Fundamentalism": "",
+        "Republic": "",
+        "Democracy": ""
+      },
+      "savedNameStrings": [
+        "Neutral Leader",
+        "Neutrals",
+        "Neutral"
+      ],
+      "nameStrings": [
+        "Neutral Leader",
+        "Neutrals",
+        "Neutral"
+      ],
+      "cityCount": 4,
+      "cityExamples": [
+        "Belgrade",
+        "Stockholm",
+        "Tehran",
+        "Amsterdam"
+      ],
+      "unitCount": 9,
+      "unitExamples": [
+        {
+          "index": 16,
+          "typeName": "Riflemen",
+          "x": 62,
+          "y": 72
+        },
+        {
+          "index": 114,
+          "typeName": "Riflemen",
+          "x": 62,
+          "y": 72
+        },
+        {
+          "index": 115,
+          "typeName": "Riflemen",
+          "x": 62,
+          "y": 72
+        },
+        {
+          "index": 116,
+          "typeName": "Riflemen",
+          "x": 46,
+          "y": 46
+        },
+        {
+          "index": 117,
+          "typeName": "Alpine Troops",
+          "x": 58,
+          "y": 26
+        },
+        {
+          "index": 118,
+          "typeName": "Alpine Troops",
+          "x": 58,
+          "y": 26
+        },
+        {
+          "index": 119,
+          "typeName": "Riflemen",
+          "x": 58,
+          "y": 26
+        },
+        {
+          "index": 120,
+          "typeName": "Riflemen",
+          "x": 103,
+          "y": 93
+        }
+      ],
+      "treasury": 1500,
+      "genderByte": 0,
+      "gender": "male",
+      "nationByte": 18,
+      "governmentByte": 2,
+      "governmentName": "Monarchy",
+      "taxRate": 60,
+      "scienceRate": 30,
+      "luxuryRate": 10,
+      "currentResearchIndex": null,
+      "currentResearchName": "",
+      "researchProgress": 0,
+      "knownTechnologyCount": 57
+    },
+    {
+      "ownerCandidate": 6,
+      "kind": "tribe",
+      "leader": "Churchill",
+      "plural": "Allies",
+      "adjective": "Allied",
+      "nameSources": {
+        "leader": "save",
+        "plural": "save",
+        "adjective": "save"
+      },
+      "rulesLeaderFallback": {
+        "index": 12,
+        "maleLeader": "Henry VIII",
+        "femaleLeader": "Elizabeth I",
+        "plural": "English",
+        "adjective": "English"
+      },
+      "cityStyleRaw": 0,
+      "cityStyle": "Bronze Age",
+      "leaderTitles": {
+        "Anarchy": "",
+        "Despotism": "",
+        "Monarchy": "",
+        "Communism": "",
+        "Fundamentalism": "",
+        "Republic": "",
+        "Democracy": ""
+      },
+      "savedNameStrings": [
+        "Churchill",
+        "Allies",
+        "Allied"
+      ],
+      "nameStrings": [
+        "Churchill",
+        "Allies",
+        "Allied"
+      ],
+      "cityCount": 16,
+      "cityExamples": [
+        "London",
+        "Southampton",
+        "Manchester",
+        "Belfast",
+        "Newcastle",
+        "Edinburgh",
+        "Washington",
+        "New York"
+      ],
+      "unitCount": 112,
+      "unitExamples": [
+        {
+          "index": 25,
+          "typeName": "Riflemen",
+          "x": 67,
+          "y": 91
+        },
+        {
+          "index": 26,
+          "typeName": "Musketeers",
+          "x": 93,
+          "y": 97
+        },
+        {
+          "index": 27,
+          "typeName": "Musketeers",
+          "x": 101,
+          "y": 107
+        },
+        {
+          "index": 28,
+          "typeName": "Musketeers",
+          "x": 92,
+          "y": 90
+        },
+        {
+          "index": 29,
+          "typeName": "Transport",
+          "x": 1,
+          "y": 31
+        },
+        {
+          "index": 258,
+          "typeName": "Riflemen",
+          "x": 47,
+          "y": 49
+        },
+        {
+          "index": 259,
+          "typeName": "Riflemen",
+          "x": 47,
+          "y": 51
+        },
+        {
+          "index": 260,
+          "typeName": "Armor",
+          "x": 45,
+          "y": 49
+        }
+      ],
+      "treasury": 1250,
+      "genderByte": 0,
+      "gender": "male",
+      "nationByte": 12,
+      "governmentByte": 6,
+      "governmentName": "Democracy",
+      "taxRate": 40,
+      "scienceRate": 40,
+      "luxuryRate": 20,
+      "currentResearchIndex": 0,
+      "currentResearchName": "Advanced Flight",
+      "researchProgress": 184,
+      "knownTechnologyCount": 69
+    },
+    {
+      "ownerCandidate": 7,
+      "kind": "tribe",
+      "leader": "Petain",
+      "plural": "French",
+      "adjective": "French",
+      "nameSources": {
+        "leader": "save",
+        "plural": "save",
+        "adjective": "save"
+      },
+      "rulesLeaderFallback": {
+        "index": 6,
+        "maleLeader": "Mohandas Gandhi",
+        "femaleLeader": "Indira Gandhi",
+        "plural": "Indians",
+        "adjective": "Indian"
+      },
+      "cityStyleRaw": 0,
+      "cityStyle": "Bronze Age",
+      "leaderTitles": {
+        "Anarchy": "",
+        "Despotism": "",
+        "Monarchy": "",
+        "Communism": "",
+        "Fundamentalism": "",
+        "Republic": "",
+        "Democracy": ""
+      },
+      "savedNameStrings": [
+        "Petain",
+        "French",
+        "French"
+      ],
+      "nameStrings": [
+        "Petain",
+        "French"
+      ],
+      "cityCount": 12,
+      "cityExamples": [
+        "Vichy",
+        "Marseilles",
+        "St. Nazaire",
+        "Tunis",
+        "Algiers",
+        "Casablanca",
+        "Beirut",
+        "Damascus"
+      ],
+      "unitCount": 37,
+      "unitExamples": [
+        {
+          "index": 3,
+          "typeName": "Riflemen",
+          "x": 46,
+          "y": 64
+        },
+        {
+          "index": 20,
+          "typeName": "Riflemen",
+          "x": 50,
+          "y": 72
+        },
+        {
+          "index": 30,
+          "typeName": "Alpine Troops",
+          "x": 49,
+          "y": 73
+        },
+        {
+          "index": 31,
+          "typeName": "Alpine Troops",
+          "x": 49,
+          "y": 73
+        },
+        {
+          "index": 32,
+          "typeName": "Alpine Troops",
+          "x": 46,
+          "y": 64
+        },
+        {
+          "index": 33,
+          "typeName": "Alpine Troops",
+          "x": 46,
+          "y": 64
+        },
+        {
+          "index": 34,
+          "typeName": "Riflemen",
+          "x": 46,
+          "y": 64
+        },
+        {
+          "index": 236,
+          "typeName": "Riflemen",
+          "x": 47,
+          "y": 53
+        }
+      ],
+      "treasury": 2000,
+      "genderByte": 0,
+      "gender": "male",
+      "nationByte": 6,
+      "governmentByte": 6,
+      "governmentName": "Democracy",
+      "taxRate": 40,
+      "scienceRate": 40,
+      "luxuryRate": 20,
+      "currentResearchIndex": null,
+      "currentResearchName": "",
+      "researchProgress": 0,
+      "knownTechnologyCount": 64
+    }
+  ]
+}
