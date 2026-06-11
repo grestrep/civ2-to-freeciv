@@ -46,6 +46,44 @@ template-tech-map.json
 template-government-map.json
 ```
 
+## New Scenario Checklist
+
+Use this checklist when starting a new Civ2 scenario conversion:
+
+1. Create a scenario folder.
+2. Put the Civ2 `.SCN` or `.SAV` file in that folder.
+3. Put the matching Civ2 `RULES.TXT` in that folder when the scenario has one.
+4. Create `extract-config.json`.
+5. Run `extract.js`.
+6. Copy or rename the generated `template-*-map.json` files into scenario-specific mapping files.
+7. Fill in the unit, improvement, tech, and government maps with target Freeciv names.
+8. Create `conversion-config.json` with the player/faction setup.
+9. Create `build-config.json` pointing to the extracted files, mapping files, conversion config, template, and ruleset files.
+10. Run `build.js`.
+11. Review the terminal output and validation/unmapped reports.
+12. Load the generated `.sav.zst` in the Freeciv server.
+
+The main relationship between files is:
+
+```text
+extract-config.json
+  -> extract.js
+  -> extracted-civ2/* and template-*-map.json
+
+template-*-map.json
+  -> copied/renamed and filled in manually
+  -> unitMap / improvementMap / techMap / governmentMap
+
+build-config.json
+  -> points to extracted files, rulesets, template, maps, and conversionConfig
+  -> build.js
+  -> generated Freeciv .sav and .sav.zst
+
+conversion-config.json
+  -> controls players, diplomacy-adjacent player metadata, terrain overrides,
+     feature transforms, resources, tech overrides, and city improvement overrides
+```
+
 ## Extract Config
 
 `extract-config.json` tells the extractor where the Civ2 scenario/save is and
@@ -306,6 +344,44 @@ Long scenario descriptions can be read from a separate text file:
 If `descriptionFile` is missing, invalid, or cannot be decoded with the
 requested encoding, the builder falls back to `description`.
 
+## Rulesets, Templates, And Versions
+
+Choose the Freeciv target ruleset before filling in maps. The template and
+ruleset files should match each other.
+
+Common choices:
+
+- `civ2civ3`: broad Freeciv ruleset with many modern technologies, units, extras, and resources.
+- `civ2`: closer to the classic Civ2 ruleset, with a smaller nation/tech/unit set.
+- `classic`: Freeciv classic ruleset.
+
+For example, if using `civ2civ3`, use the `civ2civ3` ruleset files and a
+`civ2civ3` save template:
+
+```json
+{
+  "template": "D:/freeciv/projects/civ2-freeciv-converter/templates/freeciv-template-civ2civ3.sav",
+  "freecivUnitsRuleset": "D:/freeciv/3.2.1/qt6/data/civ2civ3/units.ruleset",
+  "freecivBuildingsRuleset": "D:/freeciv/3.2.1/qt6/data/civ2civ3/buildings.ruleset",
+  "freecivTechsRuleset": "D:/freeciv/3.2.1/qt6/data/civ2civ3/techs.ruleset",
+  "freecivTerrainRuleset": "D:/freeciv/3.2.1/qt6/data/civ2civ3/terrain.ruleset"
+}
+```
+
+Supported Civ2 scenario/save versions currently include:
+
+- `39`: Classic/CiC
+- `40`: Fantastic Worlds
+- `44`: MGE
+
+Test of Time versions `49` and `50` have been analyzed, but are not normal
+supported extraction targets yet.
+
+The builder uses Freeciv21/native-width map geometry. In native-width mode, Civ2
+x coordinates are converted with `Math.floor(civ2X / 2)` for Freeciv tile
+coordinates. The extractor keeps Civ2 coordinates in reports where useful, so
+debugging can refer back to the original Civ2 map.
+
 ## Conversion Config
 
 `conversion-config.json` controls scenario-specific conversion behavior. The
@@ -548,9 +624,231 @@ Units skipped by empty unit map entry: 1
 Mapped units not placed on map: 0
 ```
 
+## Mapping File Examples
+
+The four mapping files are ordinary JSON objects whose keys are Civ2 names from
+extraction and whose values are target Freeciv names.
+
+### Unit Map
+
+Simple string form:
+
+```json
+{
+  "Riflemen": "Riflemen",
+  "Mechanized Infantry": "Mech. Inf.",
+  "Transport": "Transport"
+}
+```
+
+Object form with unit activity and veterancy:
+
+```json
+{
+  "Mechanized Infantry": {
+    "unit": "Mech. Inf.",
+    "activity": "sentry",
+    "veteran": 2
+  }
+}
+```
+
+Supported activity aliases include:
+
+```text
+idle, none, sentry, sleep, sleeping, fortified, fortify, fortifying
+```
+
+`veteran` is currently an integer. For common `classic`/`civ2civ3` rulesets:
+
+```text
+0 = green
+1 = veteran
+2 = hardened
+3 = elite
+```
+
+For the `civ2` ruleset, the normal global levels are:
+
+```text
+0 = green
+1 = veteran
+```
+
+Empty string skips all units of that Civ2 type:
+
+```json
+{
+  "A. Regulars": ""
+}
+```
+
+### Improvement Map
+
+```json
+{
+  "Barracks": "Barracks",
+  "Granary": "Granary",
+  "City Walls": "City Walls",
+  "Colosseum": "Colosseum"
+}
+```
+
+The builder resolves both Freeciv display names and `rule_name` values where the
+target ruleset provides them.
+
+### Tech Map
+
+```json
+{
+  "Industrialization": "Industrialization",
+  "Railroad": "Railroad",
+  "Mobile Warfare": "Mobile Warfare"
+}
+```
+
+Empty string intentionally skips the Civ2 technology:
+
+```json
+{
+  "Future Tech.": ""
+}
+```
+
+### Government Map
+
 Government maps are keyed by the Civ2 government name from `rules.txt`, for example
 `"Communism": "Communism"`. The builder still accepts older raw-byte keys such as
 `"3": "Communism"` for existing scenarios, but name keys are the preferred format.
+
+```json
+{
+  "Anarchy": "Anarchy",
+  "Despotism": "Despotism",
+  "Monarchy": "Monarchy",
+  "Communism": "Communism",
+  "Republic": "Republic",
+  "Democracy": "Democracy"
+}
+```
+
+## Build Terminal Output
+
+The build terminal output is intended to show whether the conversion is healthy.
+Important lines include:
+
+- `Unmapped unit report entries`: number of grouped unit mapping/placement report entries. This is not a unit instance count.
+- `Units skipped by empty unit map entry`: actual number of unit instances skipped because their unit map value was empty.
+- `Mapped units not placed on map`: actual number of unit instances that mapped to a Freeciv unit but could not be written to the map.
+- `Unmapped improvements`: number of grouped improvement mapping report entries.
+- `Unmapped techs`: number of grouped technology mapping report entries.
+- `playerN ...`: per-player city, unit, mapped-tech, and unmapped-tech summary.
+- `Palace cities`: cities where each faction has a Palace.
+- `Factions without Palace`: factions with no Palace in any city.
+
+The validation report contains more detail than the terminal output and should
+be checked whenever the server refuses to load a generated save.
+
+## Common Warnings And Errors
+
+### Invalid Nation
+
+Example:
+
+```text
+Eduardo Santos had invalid nation; changing to Spanish.
+```
+
+Cause: the `nation` in `conversion-config.json` does not exist in the target
+Freeciv ruleset. Fix the player `nation`, or use a ruleset that contains that
+nation.
+
+### Unknown Building, Unit, Or Technology
+
+Example:
+
+```text
+unknown "Building" "Amphitheater"
+```
+
+Cause: a map file points to a Freeciv name that does not exist in the target
+ruleset. Check the corresponding mapping file and the target ruleset. Some
+rulesets use `rule_name` values that differ from display names.
+
+### Invalid Researching Technology Or Technology Goal
+
+Cause: a current research or goal value did not map to a valid target Freeciv
+technology. Check `techMap`, `technologies`, and any `techOverrides`.
+
+### Missing City Fields
+
+Example:
+
+```text
+"player0.c0.x" entry doesn't exist.
+```
+
+Cause: the generated save says a player has cities, but the city table was not
+written correctly. This usually indicates a template/save-structure mismatch or
+a builder bug.
+
+### Faction Has No Palace
+
+The build terminal prints factions with no Palace. Freeciv can behave oddly for
+players with no capital, especially for city workers and specialists. Add a
+Palace through the improvement map or `cityImprovementOverrides` when the
+scenario needs a capital.
+
+### Horizontal Map Wrapping Looks Wrong
+
+Check the generated save's `wrap` setting and the extractor's inferred map
+shape. The builder writes `WRAPX` for horizontally wrapping Civ2 maps and an
+empty wrap setting for non-wrapping maps.
+
+## Generated Vs Manual Files
+
+Generated files can be overwritten whenever you rerun extraction or build.
+Manual files are the scenario-specific files you should edit and keep.
+
+Usually generated by extraction:
+
+```text
+extracted-civ2/<prefix>-map-and-cities.json
+extracted-civ2/<prefix>-factions.json
+extracted-civ2/<prefix>-diplomacy.json
+extracted-civ2/<prefix>-technologies.json
+extracted-civ2/<prefix>-units.json
+extracted-civ2/<prefix>-*.csv
+extracted-civ2/<prefix>-*-preview.txt
+extracted-civ2/<prefix>-freeciv-map-fragment.sav
+extracted-civ2/<prefix>-freeciv-native-map-fragment.sav
+extracted-civ2/<prefix>-freeciv-city-fragment.sav
+extracted-civ2/template-*-map.json
+```
+
+Usually edited manually:
+
+```text
+extract-config.json
+build-config.json
+conversion-config.json
+*-unit-map.json
+*-improvement-map.json
+*-tech-map.json
+*-government-map.json
+```
+
+Usually generated by build:
+
+```text
+*.sav
+*.sav.zst
+*-validation-report.json
+*-unmapped-units.json
+*-unmapped-techs.json
+*-unmapped-improvements.json
+*-unit-homecity-issues.json
+```
 
 Diplomacy extraction includes directional Civ2 attitude values from each
 `tribe_info` record. Civ2 stores attitude as `0` meaning most favorable and
