@@ -8,7 +8,7 @@ At a high level the workflow is as follows:
 1) extract.js: This script decodes a Civ2 SCN/SAV file into JSON human-readable files.
 2) build.js: This script takes as input the files from Extract.js and outputs a playable Freeciv save file. For this to work, you have to provide a "Conversion Config" file to map certain Civ2 elements over to Freeciv representations. More documentation on this below.
 
-You can find a sample converted scenario (Civ2 WW2 scenario) with all relevant files required for conversion inside the "sample" folder that you can use as a starting point. It contains also extract and build bat files that you can use for your workflow.
+You can find samples of converted scenarios with all relevant files required for conversion inside the "samples" folder that you can use as a starting point. It contains also extract and build bat files that you can use for your workflow.
 
 ## Workflow
 

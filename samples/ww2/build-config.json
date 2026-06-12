@@ -6,7 +6,7 @@
     "description": "",
     "descriptionFile": "WWII.txt"
   },
-  "template": "../templates/freeciv-template-civ2civ3.sav",
+  "template": "../../templates/freeciv-template-civ2civ3.sav",
   "freecivUnitsRuleset": "D:/freeciv/3.2.1/qt6/data/civ2civ3/units.ruleset",
   "freecivBuildingsRuleset": "D:/freeciv/3.2.1/qt6/data/civ2civ3/buildings.ruleset",
   "freecivTechsRuleset": "D:/freeciv/3.2.1/qt6/data/civ2civ3/techs.ruleset",
