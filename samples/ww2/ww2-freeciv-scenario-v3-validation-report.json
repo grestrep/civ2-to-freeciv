@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-06-12T14:24:42.855Z",
+  "generatedAt": "2026-06-21T11:52:19.716Z",
   "scenarioName": "",
   "mode": "freeciv21V3",
-  "output": "D:\\freeciv\\projects\\civ2-freeciv-converter\\sample\\ww2\\ww2-freeciv-scenario-v3.sav",
+  "output": "D:\\freeciv\\projects\\civ2-freeciv-converter\\samples\\ww2\\ww2-freeciv-scenario-v3.sav",
   "inputs": {
-    "extracted": "D:\\freeciv\\projects\\civ2-freeciv-converter\\sample\\ww2\\extracted-civ2\\ww2-map-and-cities.json",
-    "diplomacy": "D:\\freeciv\\projects\\civ2-freeciv-converter\\sample\\ww2\\extracted-civ2\\ww2-diplomacy.json",
-    "technologies": "D:\\freeciv\\projects\\civ2-freeciv-converter\\sample\\ww2\\extracted-civ2\\ww2-technologies.json",
-    "unitMap": "D:\\freeciv\\projects\\civ2-freeciv-converter\\sample\\ww2\\ww2-unit-map.json",
-    "improvementMap": "D:\\freeciv\\projects\\civ2-freeciv-converter\\sample\\ww2\\ww2-improvement-map.json",
-    "techMap": "D:\\freeciv\\projects\\civ2-freeciv-converter\\sample\\ww2\\ww2-tech-map.json",
-    "governmentMap": "D:\\freeciv\\projects\\civ2-freeciv-converter\\sample\\ww2\\ww2-government-map.json",
+    "extracted": "D:\\freeciv\\projects\\civ2-freeciv-converter\\samples\\ww2\\extracted-civ2\\ww2-map-and-cities.json",
+    "diplomacy": "D:\\freeciv\\projects\\civ2-freeciv-converter\\samples\\ww2\\extracted-civ2\\ww2-diplomacy.json",
+    "technologies": "D:\\freeciv\\projects\\civ2-freeciv-converter\\samples\\ww2\\extracted-civ2\\ww2-technologies.json",
+    "unitMap": "D:\\freeciv\\projects\\civ2-freeciv-converter\\samples\\ww2\\ww2-unit-map.json",
+    "improvementMap": "D:\\freeciv\\projects\\civ2-freeciv-converter\\samples\\ww2\\ww2-improvement-map.json",
+    "techMap": "D:\\freeciv\\projects\\civ2-freeciv-converter\\samples\\ww2\\ww2-tech-map.json",
+    "governmentMap": "D:\\freeciv\\projects\\civ2-freeciv-converter\\samples\\ww2\\ww2-government-map.json",
     "freecivTerrainRuleset": "D:\\freeciv\\3.2.1\\qt6\\data\\civ2civ3\\terrain.ruleset"
   },
   "totals": {
@@ -30,7 +30,9 @@
     "unitHomecityIssueEntries": 13
   },
   "mapFeatureOverrides": {
-    "skippedCiv2Features": []
+    "skippedCiv2Features": [
+      "huts"
+    ]
   },
   "mapFeatureTransforms": {
     "replace": {}
@@ -102,8 +104,8 @@
     "huts": {
       "extractedNativeTileCount": 183,
       "extractedFreecivTileCount": 366,
-      "writtenTileCount": 183,
-      "skipped": false,
+      "writtenTileCount": 0,
+      "skipped": true,
       "targetExtraName": "Hut",
       "targetExtraPresent": true
     }

@@ -1,5 +1,8 @@
 {
     "year":  "1939",
+	"mapFeatureOverrides": {
+		"skip": ["hut"]
+	},
     "players":  [
                     {
                         "owner":  1,

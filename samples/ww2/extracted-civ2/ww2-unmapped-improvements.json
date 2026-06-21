@@ -1,6 +1,6 @@
 {
   "freecivBuildingsRuleset": "D:\\freeciv\\3.2.1\\qt6\\data\\civ2civ3\\buildings.ruleset",
-  "improvementMap": "D:\\freeciv\\projects\\civ2-freeciv-converter\\sample\\ww2\\ww2-improvement-map.json",
+  "improvementMap": "D:\\freeciv\\projects\\civ2-freeciv-converter\\samples\\ww2\\ww2-improvement-map.json",
   "freecivBuildingCount": 73,
   "entries": []
 }
