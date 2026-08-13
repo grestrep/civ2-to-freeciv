@@ -121,6 +121,11 @@ governments, leaders, plurals, and adjectives. If `rules` is omitted, extraction
 can still run, but generated mapping templates and faction metadata may be less
 complete.
 
+The extractor also reads the scenario's global Civ2 barbarian activity setting
+from the common header. It is written as `header.barbarianActivity` in the JSON
+reports and printed in the terminal. The supported values are `0` (Villages
+Only), `1` (Roving Bands), `2` (Restless Tribes), and `3` (Raging Hordes).
+
 The extractor writes files such as:
 
 ```text

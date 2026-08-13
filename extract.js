@@ -934,10 +934,25 @@ function freecivCityRow(city) {
   ].join(",");
 }
 
+const civ2BarbarianActivityNames = [
+  "Villages Only",
+  "Roving Bands",
+  "Restless Tribes",
+  "Raging Hordes",
+];
+const barbarianActivityOffset = 0x2d;
+const barbarianActivityValue = bytes[barbarianActivityOffset];
+
 const header = {
   magic: bytes.subarray(0, 9).toString("latin1"),
   marker: bytes[9],
   version: bytes.readUInt16LE(10),
+  barbarianActivity: {
+    value: barbarianActivityValue,
+    name: civ2BarbarianActivityNames[barbarianActivityValue] || "Unknown",
+    offset: barbarianActivityOffset,
+    offsetHex: `0x${barbarianActivityOffset.toString(16).padStart(2, "0")}`,
+  },
 };
 
 if (header.magic !== "CIVILIZE\0") {
@@ -2235,6 +2250,14 @@ fs.writeFileSync(`${outputPrefix}-freeciv-native-map-fragment.sav`, `${nativeMap
 fs.writeFileSync(`${outputPrefix}-freeciv-city-fragment.sav`, `${cityFragment.join("\n")}`);
 
 console.log(`Civ2 version: ${header.version} (${civ2VersionNames[header.version] || "Unknown"})`);
+console.log(
+  `Barbarian activity: ${header.barbarianActivity.name} (${header.barbarianActivity.value})`,
+);
+if (header.barbarianActivity.name === "Unknown") {
+  console.warn(
+    `Warning: unsupported Civ2 barbarian activity value ${header.barbarianActivity.value} at ${header.barbarianActivity.offsetHex}`,
+  );
+}
 if (header.version === 40) {
   console.log(
     `Fantastic Worlds city layout: ${offsets.cityLayoutVariant}, city table delta ${offsets.cityRecordOffset - offsets.computedCityRecordOffset}`,
