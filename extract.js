@@ -457,6 +457,7 @@ const civ2Layouts = {
     cityFields: {
       x: 16,
       y: 18,
+      objectiveFlags: 23,
       sizeCandidate: 14,
       populationSize: 25,
       ownerCandidate: 24,
@@ -485,6 +486,7 @@ const civ2Layouts = {
     cityFields: {
       x: 16,
       y: 18,
+      objectiveFlags: 23,
       sizeCandidate: 14,
       populationSize: 25,
       ownerCandidate: 24,
@@ -513,6 +515,7 @@ const civ2Layouts = {
     cityFields: {
       x: 0,
       y: 2,
+      objectiveFlags: 7,
       sizeCandidate: 9,
       populationSize: 9,
       ownerCandidate: 8,
@@ -1367,6 +1370,16 @@ function hexByte(value) {
   return value.toString(16).padStart(2, "0");
 }
 
+function decodeCityObjective(flags) {
+  if ((flags & 0x10) !== 0) {
+    return { type: "ObjectiveX3", value: 3 };
+  }
+  if ((flags & 0x04) !== 0) {
+    return { type: "Objective", value: 1 };
+  }
+  return { type: "None", value: 0 };
+}
+
 function signed16(value) {
   return value >= 0x8000 ? value - 0x10000 : value;
 }
@@ -1476,6 +1489,8 @@ for (let index = 0; index < citiesCount; index++) {
   const foodbox = bytes.readInt16LE(offset + cityFields.foodbox);
   const shieldbox = bytes.readInt16LE(offset + cityFields.shieldbox);
   const baseTrade = bytes.readInt16LE(offset + cityFields.baseTrade);
+  const objectiveFlags = bytes[offset + cityFields.objectiveFlags];
+  const objective = decodeCityObjective(objectiveFlags);
   cities.push({
     index,
     name,
@@ -1488,6 +1503,11 @@ for (let index = 0; index < citiesCount; index++) {
     foodbox,
     shieldbox,
     baseTrade,
+    objective: {
+      ...objective,
+      rawFlags: objectiveFlags,
+      rawFlagsHex: `0x${hexByte(objectiveFlags)}`,
+    },
     improvementMask,
     improvementBytes: improvementBytes
       .map((value) => value.toString(16).padStart(2, "0"))
@@ -1575,7 +1595,7 @@ for (const city of cities) {
 }
 
 const csvLines = [
-  "index,name,x,y,sizeCandidate,populationSize,ownerCandidate,founderCandidate,foodbox,shieldbox,baseTrade,b6,b12,b14,b16,b18,b24,b26,b38,b40,b42",
+  "index,name,x,y,sizeCandidate,populationSize,ownerCandidate,founderCandidate,foodbox,shieldbox,baseTrade,b6,b12,b14,b16,b18,b24,b26,b38,b40,b42,objectiveType,objectiveValue,objectiveFlagsHex",
   ...cities.map((city) =>
     [
       city.index,
@@ -1599,6 +1619,9 @@ const csvLines = [
       city.raw.b38,
       city.raw.b40,
       city.raw.b42,
+      city.objective.type,
+      city.objective.value,
+      city.objective.rawFlagsHex,
     ].join(",")
   ),
 ];
@@ -2048,6 +2071,7 @@ const report = {
     cityRecordOffset,
     cityRecordSize,
     cityNameOffset,
+    cityObjectiveFlagsOffset: offsets.cityFields.objectiveFlags,
     cityImprovementMaskOffset: offsets.cityFields.improvements,
     rulesPath: rulesPath ? path.basename(rulesPath) : null,
   },

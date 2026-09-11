@@ -974,6 +974,24 @@ So `0 -> 1000`, `50 -> 0`, and `100 -> -1000`.
 
 ## Decoding Notes
 
+City objective status is decoded into each city's `objective` object in the
+`*-map-and-cities.json` report and into the objective columns in
+`*-cities.csv`. The standard Civ2 flags are interpreted with ObjectiveX3
+taking precedence:
+
+```text
+Classic/CiC v39 and Fantastic Worlds v40: city record +23
+MGE v44:                                  city record +7
+
+flags & 0x10 -> ObjectiveX3 (value 3)
+flags & 0x04 -> Objective   (value 1)
+otherwise    -> None        (value 0)
+```
+
+The raw byte is retained as `rawFlags` and `rawFlagsHex` because unrelated
+city flags may share the byte. For example, `0x0c` is decoded as a regular
+Objective because it contains the `0x04` bit.
+
 MGE v44 city records use a different layout from Classic/CiC v39. Current
 evidence from the Croscres MGE saves and the Freeciv21 loader indicates:
 
